@@ -136,6 +136,13 @@ input[type="radio"].radioTy2:checked + label:before {background-image:url('../im
 
 
 /****************** 카테고리 ******************/
+
+/* 상품목록 */
+.prdList{}
+.prdList > li > a{position:relative;display:block;padding:0 0 0 46vw;color:inherit;font-weight:400;}
+.prdList .thumb{overflow:hidden;position:absolute;top:0;left:0;width:42.3vw;height:42.3vw;border:1px solid #eee;border-radius:5px;}
+
+
 /* 상품코드로 주문하기 */
 
 /****************** 장바구니 ******************/
