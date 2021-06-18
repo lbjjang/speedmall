@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_del_ccc" width="12" height="12" viewBox="0 0 12 12">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#ccc}
+        </style>
+    </defs>
+    <path id="guide" fill="none" d="M0 0H12V12H0z" opacity="0.5"/>
+    <path id="패스_2623" d="M9399 4912l-9 9" class="cls-2" transform="translate(-9388.5 -4910.5)"/>
+    <path id="패스_2624" d="M9390 4912l9 9" class="cls-2" transform="translate(-9388.5 -4910.5)"/>
+</svg>
