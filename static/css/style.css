@@ -163,7 +163,7 @@ input[type="radio"].radioTy2:checked + label:before {background-image:url('../im
 .prdList .detail .prdSet > * + *:before{content:'';position:absolute;top:0;left:0;width:1px;height:5.1vw;background:#e8e8e8;}
 
 .prdList .lineTwo{margin:-12.8vw 0 0 -4.1vw;}
-.prdList .lineTwo li{float:left;width:50%;padding:12.8vw 0 0 4.1vw;}
+.prdList .lineTwo li{float:left;width:50%;height:118.4vw;padding:12.8vw 0 0 4.1vw;}
 .prdList .lineTwo > li + li{margin-top:0;}
 .prdList .lineTwo .thumb{position:relative;margin:0 auto;}
 .prdList .lineTwo .detail .title{margin-top:0;}
