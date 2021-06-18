@@ -138,10 +138,40 @@ input[type="radio"].radioTy2:checked + label:before {background-image:url('../im
 /****************** 카테고리 ******************/
 
 /* 상품목록 */
-.prdList{}
-.prdList > li > a{position:relative;display:block;padding:0 0 0 46vw;color:inherit;font-weight:400;}
-.prdList .thumb{overflow:hidden;position:absolute;top:0;left:0;width:42.3vw;height:42.3vw;border:1px solid #eee;border-radius:5px;}
+.labelTag{}
+.labelTag .label{display:inline-block;padding:0 1.2vw;font-size:3.07vw;line-height:5.1vw;border-radius:2px;}
+.labelTag .label.red{border:1px solid #f41300;color:#f41300;}
+.labelTag .label.blue{border:1px solid #623dc7;color:#623dc7;}
 
+.prdList ul:after{content:'';display:block;clear:both;}
+.prdList ul > li{position:relative;display:block;padding:0 0 0 46vw;}
+.prdList ul > li + li{margin-top:12.8vw;}
+.prdList .thumb{overflow:hidden;position:absolute;top:0;left:0;width:42.3vw;height:42.3vw;border:1px solid #e8e8e8;border-radius:5px;}
+.prdList .thumb a{display:block;}
+.prdList .detail > a{display:block;}
+.prdList .detail > a > *:not(.labelTag){display:block;margin-top:1.3vw;}
+.prdList .detail .title{font-size:3.9vw;color:#111;}
+.prdList .detail .prdCode{font-size:3.3vw;color:#111;}
+.prdList .detail .prdOption{font-size:3.3vw;color:#898989;}
+.prdList .detail .baseDiscount{margin-top:2.6vw;}
+.prdList .detail .baseDiscount .percentage{display:inline-block;font-size:4.1vw;color:#f41300;font-weight:700;vertical-align:bottom;}
+.prdList .detail .baseDiscount .basePrice{display:inline-block;font-size:3.5vw;color:#888;text-decoration:line-through;vertical-align:bottom;}
+.prdList .detail .baseDiscount .price{display:block;font-size:4.6vw;}
+.prdList .detail .prdSet{margin-top:3.8vw;text-align:right;}
+.prdList .detail .prdSet > *{display:inline-block;vertical-align:middle;}
+.prdList .detail .prdSet > * + *{position:relative;margin-left:5.1vw;padding-left:5.1vw;}
+.prdList .detail .prdSet > * + *:before{content:'';position:absolute;top:0;left:0;width:1px;height:5.1vw;background:#e8e8e8;}
+
+.prdList .lineTwo{margin:-12.8vw 0 0 -4.1vw;}
+.prdList .lineTwo li{float:left;width:50%;padding:12.8vw 0 0 4.1vw;}
+.prdList .lineTwo > li + li{margin-top:0;}
+.prdList .lineTwo .thumb{position:relative;margin:0 auto;}
+.prdList .lineTwo .detail .title{margin-top:0;}
+.prdList .lineTwo .detail .prdSet{overflow:hidden;margin:3.8vw 0;}
+.prdList .lineTwo .detail .prdSet > *{float:left;width:50%;text-align:center;}
+.prdList .lineTwo .detail .prdSet > * + *{margin:0;padding:0;}
+.prdList .lineTwo .detail .prdSet .btn{display:inline-block;}
+.prdList .lineTwo .detail .labelTag{margin-top:2.5vw;}
 
 /* 상품코드로 주문하기 */
 
