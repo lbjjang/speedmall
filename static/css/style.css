@@ -55,6 +55,7 @@ textarea:-ms-input-placeholder{color: #898989;}
 .btn.gradation1 a{text-align:center;font-weight:500;color:#fff;}
 .btn.fixed a{font-size:4.6vw;padding-top:3.8vw;padding-bottom:10vw;}
 
+.btn.prev{width:3.07vw;height:5.64vw;background-image:url('../images/ic_back.svg');} /* 뒤로가기 */
 .btn.home{width:5.64vw;height:5.64vw;background-image:url('../images/ic_home.svg');} /* 홈버튼 */
 .btn.search{width:5.64vw;height:5.64vw;background-image:url('../images/ic_search_bl.svg');} /* 검색버튼 */
 .btn.alarm{width:5.64vw;height:5.64vw;background-image:url('../images/ic_alarm.svg');position:relative;} /* 알림버튼 */

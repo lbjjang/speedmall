@@ -16,6 +16,13 @@
 .swiper-button-next span, .swiper-button-prev span{display:block;text-indent:-99999px;}
 
 /* header */
+header{height:14.35vw;display:flex;flex-wrap:wrap;width:100%;padding:0 5.1vw;justify-content: space-between;align-items: center;}
+header .off{display:none;}
+header > h1{flex:auto;text-align:center;font-size:4.1vw;font-weight:700;}
+header > ul{display:flex;}
+header > ul li + li{margin-left:5.1vw;}
+
+
 
 
 /* footer */

@@ -26,10 +26,6 @@
     <script src="static/js/ui.js"></script>
 <body>
 
-<!-- header 영역 -->
-<header>
-</header>
-<!-- //header 영역 -->  
 
 <!-- 컨텐츠 영역 -->
 <style>     
@@ -49,6 +45,48 @@
 .guide .wd100{width:100%;margin-left:0 !important;}
 .guide .mt5{margin-top:5px;}
 </style>
+
+<!-- header 영역 -->
+<!-- 
+	현재 header 부분 2가지 타입 
+	1. 백버튼 + 타이틀
+	2. 백버튼 + 홈버튼, 검색버튼, 알림버튼
+-->
+<!-- <header>
+	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
+	<h1 class="off">타이틀</h1>
+	<ul>
+		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
+		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
+		<li>
+			<div class="btn alarm">
+				<a href="#">
+					<span class="count">30</span> 카운트있을때만 count클래스 추가 없을땐 삭제
+					<span class="hide">알림 바로가기</span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</header> -->
+<header>
+	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
+	<h1>타이틀</h1>
+	<ul class="off">
+		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
+		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
+		<li>
+			<div class="btn alarm">
+				<a href="#">
+					<span class="count">30</span>
+					<span class="hide">알림 바로가기</span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</header>
+<!-- //header 영역 -->  
+
+
 <div class="guide">
 	<section class="con">
 		<h1>모바일에서만 확인</h1>
