@@ -47,6 +47,13 @@ $(document).ready(function () {
 		}
 	});
 
+	//검색버튼
+	$('.btn.search.pop').click(function(){
+		$('.layerPop.popSearch').addClass('on');
+	});
+	$('.layerPop.popSearch .btn.prev').click(function(){
+		$('.layerPop.popSearch').removeClass('on');
+	});
 
 /*
 	//레이어 하단 팝업

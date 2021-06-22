@@ -6,12 +6,18 @@
 /* 모바일 제이쿼리 css 리셋 */
 
 /* input */
-input::placeholder,
-textarea::placeholder,
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder{color: #898989;}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #898989;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #898989;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #898989;
+}
 
 .inputBox + .inputBox{margin-top:7.69vw;}
 .inputBox .tit{font-weight:700;}
@@ -35,8 +41,6 @@ textarea:-ms-input-placeholder{color: #898989;}
 .inputBox .selBox.tel .ui-input-text{padding-left:0;text-align:center;}
 .inputBox .selBox.tel .ui-input-text input{text-align:center;}
 .inputBox textarea{width:100%;height:71.79vw !important;line-height:1.4 !important;padding:5.12vw;}
-
-
 
 
 /* 버튼 및 아이콘 */
@@ -125,9 +129,16 @@ input[type="radio"].radioTy2:checked + label:before {background-image:url('../im
 
 /* 팝업 */
 .dimmed{}
-.layerBtPop{}
-
-
+.layerPop{position:fixed;width:100%;right:-100%;top:0;height:100%;background:#fff;-webkit-transition:all 0.6s;transition:all 0.6s;}
+.layerPop.on{right:0;}
+.layerPop .top{height:12.3vw;display:flex;flex-wrap:wrap;align-items:center;width:100%;padding:0 5.1vw;margin:5.12vw 0;}
+.layerPop .top .searchBox{margin-left:5.64vw;width: calc(100% - 5.64vw - 3.07vw);position:relative;}
+.layerPop .top .searchBox:before{content:'';position:absolute;background-image:url('../images/ic_search_w.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;width:5.64vw;height:5.64vw;left:5.12vw;top:3.33vw;z-index:1;}
+.layerPop .top .searchBox .ui-input-text{position:relative;box-shadow:none;border-radius:0.76vw;height:12.3vw;line-height:12.3vw;box-sizing:border-box;}
+.layerPop .top .searchBox input{height:100%;line-height:100%;padding:0;font-size:3.84vw;color:#fff;border:none;width:100%;outline:none;vertical-align:top;border-radius: 1.53vw;padding-left:13.33vw;}
+.layerPop .top .searchBox ::placeholder{color: #fff;}
+.layerPop .top .searchBox :-ms-input-placeholder{color: #fff;}
+.layerPop .top .searchBox ::-ms-input-placeholder{color: #fff;}
 
 
 /* 텍스트 */
