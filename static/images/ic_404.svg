@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <style>
+            .cls-11,.cls-5,.cls-6{fill:none}.cls-9{fill:#fff}.cls-5{stroke:#111}.cls-6{opacity:.5}.cls-7{fill:#111}.cls-10{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_404" transform="translate(-4 -84)">
+        <circle id="O" cx="40" cy="40" r="40" fill="#fff6ef" transform="translate(4 84)"/>
+        <g id="그룹_1907">
+            <path id="guide" fill="none" d="M0 0H48V48H0z" opacity="0.455" transform="translate(20 100)"/>
+            <g id="x_x" transform="translate(0 1)">
+                <g id="사각형_3625" fill="#fff" stroke="#111">
+                    <path d="M0 0h40v16a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6V0z" class="cls-10" transform="translate(22 112)"/>
+                    <path d="M1 .5h38a.5.5 0 0 1 .5.5v15a5.5 5.5 0 0 1-5.5 5.5H6A5.5 5.5 0 0 1 .5 16V1A.5.5 0 0 1 1 .5z" class="cls-11" transform="translate(22 112)"/>
+                </g>
+                <g id="사각형_3630" fill="#fbcea8" stroke="#111">
+                    <path d="M6 0h28a6 6 0 0 1 6 6v2H0V6a6 6 0 0 1 6-6z" class="cls-10" transform="translate(22 105)"/>
+                    <path d="M6 .5h28A5.5 5.5 0 0 1 39.5 6v1a.5.5 0 0 1-.5.5H1A.5.5 0 0 1 .5 7V6A5.5 5.5 0 0 1 6 .5z" class="cls-11" transform="translate(22 105)"/>
+                </g>
+                <g id="사각형_3626" class="cls-5" transform="translate(22 112)">
+                    <path d="M0 0H40V1H0z" class="cls-10"/>
+                    <rect width="39" x=".5" y=".5" class="cls-11"/>
+                </g>
+                <g id="x" transform="translate(33.707 117.683)">
+                    <path id="guide-2" d="M0 0H5V5H0z" class="cls-6" transform="translate(0.293 0.317)"/>
+                    <path id="패스_2623" d="M9393 4912l-3 3" class="cls-5" transform="translate(-9388.709 -4910.685)"/>
+                    <path id="패스_2624" d="M9390 4912l3 3" class="cls-5" transform="translate(-9388.709 -4910.685)"/>
+                </g>
+                <g id="x-2" transform="translate(44.707 117.683)">
+                    <path id="guide-3" d="M0 0H5V5H0z" class="cls-6" transform="translate(0.293 0.317)"/>
+                    <path id="패스_2623-2" d="M9393 4912l-3 3" class="cls-5" transform="translate(-9388.709 -4910.685)"/>
+                    <path id="패스_2624-2" d="M9390 4912l3 3" class="cls-5" transform="translate(-9388.709 -4910.685)"/>
+                </g>
+                <path id="_--" d="M0 0H10V1H0z" class="cls-7" transform="translate(37 126)"/>
+                <circle id="타원_507" cx="1" cy="1" r="1" class="cls-7" transform="translate(50 108)"/>
+                <circle id="타원_508" cx="1" cy="1" r="1" class="cls-7" transform="translate(54 108)"/>
+            </g>
+            <g id="_" transform="translate(-2 -2)">
+                <circle id="타원_509" cx="8" cy="8" r="8" fill="#f41300" transform="translate(52 128)"/>
+                <rect id="사각형_3627" width="2" height="5" class="cls-9" rx="1" transform="translate(59 132)"/>
+                <rect id="사각형_3628" width="2" height="2" class="cls-9" rx="1" transform="translate(59 138)"/>
+            </g>
+        </g>
+    </g>
+</svg>
