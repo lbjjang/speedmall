@@ -5,6 +5,9 @@ function maxLengthCheck(object){
 	}    
 }
 
+
+
+
 $(document).ready(function () {
 	//슬라이드 열고 닫기
 	$('.slideCon .top a').click(function(e){
@@ -58,10 +61,15 @@ $(document).ready(function () {
 
 	//하단 팝업
 	$('.btn.popBt').click(function(){
-		$('.layerBtPop').addClass('on');
+		var popname = $(this).children().attr('data-pop-name');
+		$('.layerBtPop' + '.' + popname).addClass('on');
+		$('.dimmed').fadeIn();
+		$('body').addClass('scLock');
 	});
 	$('.layerBtPop .btn.popClose').click(function(){
+		$('.dimmed').fadeOut();
 		$('.layerBtPop').removeClass('on');
+		$('body').removeClass('scLock');
 	});
 
 
