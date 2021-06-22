@@ -73,6 +73,20 @@ $(document).ready(function () {
 	});
 
 
+	//풀팝업
+	$('.btn.popFull').click(function(){
+		var popname = $(this).children().attr('data-pop-name');
+		$('.layerFullPop' + '.' + popname).fadeIn();
+		$('body').addClass('scLock');
+	});
+	$('.layerFullPop .btn.popClose').click(function(){
+		$('.layerFullPop').fadeOut();
+		$('body').removeClass('scLock');
+	});
+
+
+
+
 
 /*
 	//레이어 하단 팝업

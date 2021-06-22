@@ -150,9 +150,16 @@ input[type="radio"].radioTy2:checked + label:before {background-image:url('../im
 .layerPop .top .searchBox :-ms-input-placeholder{color: #fff;}
 .layerPop .top .searchBox ::-ms-input-placeholder{color: #fff;}
 
+/* 하단팝업 */
 .layerBtPop{position:fixed;bottom:-100%;left:0;width:100%;border-radius:7.69vw 7.69vw 0 0;background:#fff;max-height:calc(100% - 20.5vw);-webkit-transition:all 0.6s;transition:all 0.6s;z-index:20;}
 .layerBtPop .con{height:100%;overflow-y:scroll;}
 .layerBtPop.on{bottom:0;}
+
+/* 풀팝업 */
+.layerFullPop{position:fixed;top:0;left:0;width:100%;background:#fff;height:100%;z-index:20;display:none;}
+.layerFullPop .con{height:calc(100% - 14.35vw);overflow-y: scroll;}
+.layerFullPop .top{height:14.35vw;display:flex;flex-wrap:wrap;width:100%;padding:0 5.1vw;justify-content: space-between;align-items: center;}
+.layerFullPop .top .tit{font-size:4.1vw;font-weight:700;}
 
 
 /* 텍스트 */

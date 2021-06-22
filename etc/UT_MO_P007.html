@@ -26,14 +26,22 @@
     <script src="../static/js/ui.js"></script>
 <body>
 
-<!-- header 영역 -->
-<header>
-</header>
-<!-- //header 영역 -->
+<div style="position:relative;height:100vh;">
+	<div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width:50%;">
+
+		<div class="btn popFull rd gradation1"><a href="#" data-pop-name="cooperPage">제휴/입점 안내 팝업</a></div>
+
+	</div>
+</div>
+
 
 <!-- 컨텐츠 영역 -->
-<div class="etc cooperPage"> <!-- class="1depth + 상세" -->
-	<section class="con">
+<div class="etc cooperPage layerFullPop"> <!-- class="1depth + 상세" -->
+	<div class="top">
+		<p class="tit">풀팝업</p>
+		<div class="btn popClose"><a href="#"><span class="hide">닫기</span></a></div>
+	</div>
+	<div class="con">
 		<div class="cooperCon">
 			<p>스피드몰에서는 기업의 업종에 상관없이 모든 분야에 적용될 수 있는 상품들로 구색을 갖춰놓고 있습니다.</p>
 			<p>스피드몰이 추구하는 전략과 Vision을 공유하고 상호 Win-Win할 수 있는 비즈니스를 구상하고 계신 분들의 적극적인 참여를 기다리고 있습니다.</p>
@@ -120,8 +128,9 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 </div>
+
 
 <!-- footer 영역 -->
 <footer>
