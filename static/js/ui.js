@@ -55,6 +55,17 @@ $(document).ready(function () {
 		$('.layerPop.popSearch').removeClass('on');
 	});
 
+
+	//하단 팝업
+	$('.btn.popBt').click(function(){
+		$('.layerBtPop').addClass('on');
+	});
+	$('.layerBtPop .btn.popClose').click(function(){
+		$('.layerBtPop').removeClass('on');
+	});
+
+
+
 /*
 	//레이어 하단 팝업
 	$('.btn.filter').click(function(){
