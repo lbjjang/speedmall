@@ -158,8 +158,8 @@ input[type="radio"].radioTy2:checked + label:before {background-image:url('../im
 /* 풀팝업 */
 .layerFullPop{position:fixed;top:0;left:0;width:100%;background:#fff;height:100%;z-index:20;display:none;}
 .layerFullPop .con{height:calc(100% - 14.35vw);overflow-y: scroll;}
-.layerFullPop .top{height:14.35vw;display:flex;flex-wrap:wrap;width:100%;padding:0 5.1vw;justify-content: space-between;align-items: center;}
-.layerFullPop .top .tit{font-size:4.1vw;font-weight:700;}
+.layerFullPop > .top{height:14.35vw;display:flex;flex-wrap:wrap;width:100%;padding:0 5.1vw;justify-content: space-between;align-items: center;}
+.layerFullPop > .top .tit{font-size:4.1vw;font-weight:700;}
 
 
 /* 텍스트 */
@@ -176,6 +176,31 @@ input[type="radio"].radioTy2:checked + label:before {background-image:url('../im
 
 
 /****************** 카테고리 ******************/
+.catergoryPop .top .tit a.under{display:inline-block;text-decoration:underline;}
+.catergoryPop .top .grade{padding-left:8.71vw;position:relative;}
+.catergoryPop .top .grade:before{content:'';position:absolute;left:0;top:0;width:6.15vw;height:6.15vw;background-size: 100% auto;background-repeat: no-repeat;background-position:0 0;}
+.catergoryPop .top .grade.pla:before{background-image:url('../images/img_grade_platinum.svg');}
+.catergoryPop .top .grade.vvip:before{background-image:url('../images/img_grade_vvip.svg');}
+.catergoryPop .top .grade.vip:before{background-image:url('../images/img_grade_vip.svg');}
+.catergoryPop .top .grade.mem:before{background-image:url('../images/img_grade_member.svg');}
+.catergoryPop .top .grade.notm:before{background-image:url('../images/img_grade_notmember.svg');}
+.catergoryPop .topBanner{display:flex;padding:0;margin-bottom:2.56vw;margin-top:3.58vw;}
+.catergoryPop .topBanner > div{width:50%;}
+.catergoryPop .topBanner > div + div{margin-left:4.1vw;}
+.catergoryPop .topBanner > div a{text-align:center;border-radius: 3.07vw;background: #fff6ef;padding:5.12vw 0;}
+.catergoryPop .topBanner > div a span{position:relative;padding-left:7.69vw;font-size:3.84vw;font-weight:500;}
+.catergoryPop .topBanner > div a span:before{content:'';position:absolute;width:5.12vw;height:5.12vw;left:0;top:0.5vw;background-size: 100% auto;background-repeat: no-repeat;background-position:0 0;}
+.catergoryPop .topBanner > div.btnShipping a span:before{background-image: url('../images/ic_truck.svg');}
+.catergoryPop .topBanner > div.btnCoupon a span:before{background-image: url('../images/ic_coupon.svg');}
+.catergoryPop .slideCon .bottom{background:#f8f8f8;}
+.catergoryPop .slideCon .bottom ul{display:flex;flex-wrap:wrap;}
+.catergoryPop .slideCon .bottom ul li{width:50%;border-bottom:1px solid #eee;border-right:1px solid #eee;}
+.catergoryPop .slideCon .bottom ul li:nth-last-child(-n+2){border-bottom:0;}
+.catergoryPop .slideCon .bottom ul li:nth-child(even){border-right:0;border-bottom:1px solid #eee;}
+.catergoryPop .slideCon .bottom ul li:last-child{border-bottom:0;}
+.catergoryPop .slideCon .bottom ul li a{font-size:3.58vw;height:12.82vw;line-height:12.82vw;padding-left:5.12vw;}
+.catergoryPop .slideCon .bottom ul li.on a{color:#f41300;text-decoration:underline;}
+
 
 /* 상품목록 */
 .labelTag{}

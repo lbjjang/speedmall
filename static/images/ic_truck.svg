@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_truck" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:#fa3726}.cls-5{fill:#fff}.cls-6,.cls-7{stroke:none}.cls-7{fill:#fa3726}
+        </style>
+    </defs>
+    <path id="guide" fill="none" d="M0 0H20V20H0z" opacity="0.5" transform="translate(0)"/>
+    <path id="패스_17345" d="M320.109 180.29l2.308-3.91a.765.765 0 0 1 .66-.38h5.385a.776.776 0 0 1 .769.782v7.818a.776.776 0 0 1-.769.782h-7.692a.776.776 0 0 1-.77-.782v-3.91a.78.78 0 0 1 .109-.4z" class="cls-2" transform="translate(-320 -170)"/>
+    <path id="패스_17346" fill="#fafafa" d="M388.488 208h-2.642L384 211.077h4.488z" transform="translate(-382.334 -200.307)"/>
+    <path id="패스_17347" fill="#ffbe2c" d="M96.644 112h9.02a.667.667 0 0 1 .644.688v9.625a.667.667 0 0 1-.644.688H96v-10.314a.667.667 0 0 1 .644-.687z" transform="translate(-88.308 -109)"/>
+    <path id="패스_17349" d="M96 307.077h9.538a.77.77 0 0 0 .769-.769V304H96z" class="cls-2" transform="translate(-88.308 -291.692)"/>
+    <g id="패스_17350" class="cls-5">
+        <path d="M162 307.375c-.758 0-1.375-.617-1.375-1.375s.617-1.375 1.375-1.375 1.375.617 1.375 1.375-.617 1.375-1.375 1.375z" class="cls-6" transform="translate(-148.001 -291)"/>
+        <path d="M162 306.75c.414 0 .75-.336.75-.75s-.336-.75-.75-.75-.75.336-.75.75.336.75.75.75m0 1.25c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z" class="cls-7" transform="translate(-148.001 -291)"/>
+    </g>
+    <g id="패스_17372" class="cls-5">
+        <path d="M162 307.375c-.758 0-1.375-.617-1.375-1.375s.617-1.375 1.375-1.375 1.375.617 1.375 1.375-.617 1.375-1.375 1.375z" class="cls-6" transform="translate(-157.001 -291)"/>
+        <path d="M162 306.75c.414 0 .75-.336.75-.75s-.336-.75-.75-.75-.75.336-.75.75.336.75.75.75m0 1.25c-1.103 0-2-.897-2-2s.897-2 2-2 2 .897 2 2-.897 2-2 2z" class="cls-7" transform="translate(-157.001 -291)"/>
+    </g>
+    <rect id="사각형_3791" width="5" height="1" class="cls-2" rx=".5" transform="translate(15 5)"/>
+    <rect id="사각형_3792" width="5" height="1" class="cls-2" rx=".5" transform="translate(14 7)"/>
+    <rect id="사각형_3793" width="5" height="1" class="cls-2" rx=".5" transform="translate(15 9)"/>
+</svg>

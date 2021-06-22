@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56">
+    <defs>
+        <linearGradient id="1ofwbuttla" x1=".253" x2=".833" y1=".138" y2=".869" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ff4141"/>
+            <stop offset="1" stop-color="#a913e0"/>
+        </linearGradient>
+    </defs>
+    <g transform="translate(-28 -126)">
+        <circle cx="28" cy="28" r="28" fill="url(#1ofwbuttla)" transform="translate(28 126)"/>
+        <text fill="#fff" font-family="NotoSansCJKkr-Bold, Noto Sans CJK KR" font-size="20px" font-weight="700" letter-spacing="-0.025em" transform="translate(57 162)">
+            <tspan x="-12.23" y="0">VV</tspan>
+        </text>
+        <g fill="none" stroke="#fff" opacity="0.4" transform="translate(30 128)">
+            <circle cx="26" cy="26" r="26" stroke="none"/>
+            <circle cx="26" cy="26" r="25.5"/>
+        </g>
+    </g>
+</svg>
