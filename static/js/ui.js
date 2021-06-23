@@ -1,3 +1,5 @@
+var optionBarPT;
+var windowScrollT;
 //input type number 최대값
 function maxLengthCheck(object){
 	if (object.value.length > object.maxLength){
@@ -54,6 +56,7 @@ $(document).ready(function () {
 	$('.btn.search.pop').click(function(){
 		$('.layerPop.popSearch').addClass('on');
 	});
+
 	$('.layerPop.popSearch .btn.prev').click(function(){
 		$('.layerPop.popSearch').removeClass('on');
 	});
@@ -84,8 +87,10 @@ $(document).ready(function () {
 		$('body').removeClass('scLock');
 	});
 
-
-
+	//카테고리 필터부분 위치
+	if($('.optionBar').length > 0){
+		optionBarPT = $('.optionBar').offset().top;
+	}
 
 
 /*
@@ -179,4 +184,21 @@ $(document).ready(function () {
 	$window.trigger('scroll');
 
 */
+});
+
+
+$(document).scroll(function() {
+	// 카테고리 필터 부분 fixed
+	if($('.optionBar').length > 0){
+		var windowScrollT = $(window).scrollTop();
+		var optionBarP = $('.optionBar').offset().top;
+		if(windowScrollT >= optionBarP){
+			$('.optionBar').addClass('fixed');
+		} 
+		if(windowScrollT < optionBarPT){
+			$('.optionBar').removeClass('fixed');
+		}
+	}
+
+
 });
