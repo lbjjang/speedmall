@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" sizes="192x192" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
+	<link rel="icon" href="" type="image/x-icon">
+    <title>스피드몰 - 회원가입</title>
+	<!-- 사용안하는 플러그인은 추후 삭제 -->
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
+<!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="../static/css/mobiscroll.jquery.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../static/css/swiper.min.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/mobiscroll.jquery.min.js"></script>
+    <script src="../static/js/ui.js"></script>
+<body>
+
+<!-- header 영역 -->
+<header>
+</header>
+<!-- //header 영역 -->
+
+<!-- 컨텐츠 영역 -->
+<div class="join joinIpt"> <!-- class="1depth + 상세" -->
+	<section class="con">
+		<div class="wrap">
+			<form>
+				<strong class="iptTitle">로그인 정보</strong>
+				<div class="inputBox">
+					<div class="tit">아이디 <span class="star">*</span></div>
+					<p class="txt">6~16자의 영문/숫자 입력( ~ 특수문자 제외)</p>
+					<input type="text" placeholder="아이디를 입력해주세요." data-clear-btn="true">
+				</div>
+				<div class="inputBox">
+					<div class="tit">비밀번호 <span class="star">*</span></div>
+					<p class="txt">연속되거나 3자이상 중복되지 않는 8~15자 <br>영문 대, 소문자, 숫자, 특수문자 중 3가지 조합</p>
+					<input type="text" placeholder="비밀번호를 입력해주세요." data-clear-btn="true">
+				</div>
+				<div class="inputBox">
+					<div class="tit">비밀번호확인 <span class="star">*</span></div>
+					<input type="text" placeholder="비밀번호를 입력해주세요." data-clear-btn="true">
+				</div>
+
+				<strong class="iptTitle">사업자 정보</strong>
+				<p class="titSub">세금계산서 발행시 사용할 회사정보를 입력해주세요.</p>
+				<div class="inputBox">
+					<div class="tit">대표자명 <span class="star">*</span></div>
+					<input type="text" placeholder="대표자명을 입력해주세요." data-clear-btn="true">
+				</div>
+				<div class="inputBox">
+					<div class="tit">사업자등록번호 <span class="star">*</span></div>
+					<div class="businessNum">
+						<input type="number" disabled="disabled" maxlength="6" oninput="maxLengthCheck(this)" value="123">
+						<input type="number" disabled="disabled" maxlength="6" oninput="maxLengthCheck(this)" value="45">
+						<input type="number" disabled="disabled" maxlength="6" oninput="maxLengthCheck(this)" value="67899">
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">법인명 <span class="star">*</span></div>
+					<input type="text" disabled="disabled" value="행복나래 주식회사">
+				</div>
+				<div class="inputBox">
+					<div class="tit">업태 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true">
+				</div>
+				<div class="inputBox">
+					<div class="tit">종목 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true">
+				</div>
+				<div class="inputBox">
+					<div class="tit">주소 <span class="star">*</span></div>
+					<p class="txt">사업자등록증 상의 주소를 넣어주세요</p>
+					<div class="addressFind">
+						<div class="btnBox onlyType">
+							<div class="btn rd2 black">
+								<a href="#"><span>주소찾기</span></a>
+							</div>
+						</div>
+						<input type="text" disabled="disabled" />
+						<input type="text" disabled="disabled" />
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">구매규모</div>
+					<div class="clickType">
+						<input id="radio1-1" name="radio" type="radio" class="radioTy1" checked="">
+						<label for="radio1-1">회사전체구매</label>
+						<input id="radio1-2" name="radio" type="radio" class="radioTy1" checked="">
+						<label for="radio1-2">부서/현장별구매</label>
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">직원수</div>
+					<input type="text" data-clear-btn="true">
+				</div>
+				
+				<strong class="iptTitle">고객 정보</strong>
+				<p class="titSub">주문/배송안내를 포함한 정보가 발송될 정보를 입력해주세요.</p>
+				<div class="inputBox">
+					<div class="tit">고객명 <span class="star">*</span></div>
+					<input type="text" disabled="disabled" value="아무개">
+				</div>
+				<div class="inputBox">
+					<div class="tit">직위</div>
+					<input type="text" data-clear-btn="true">
+				</div>
+				<div class="inputBox">
+					<div class="tit">부서</div>
+					<input type="text" data-clear-btn="true">
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">기타연락처</div>
+					<div class="selBox tel">
+						<select name="telBox">
+							<option value="010" selected>010</option>
+							<option value="02">02</option>
+							<option value="033">033</option>
+							<option value="063">063</option>
+						</select>
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">휴대전화번호 <span class="star">*</span></div>
+					<div class="selBox tel">
+						<select name="telBox">
+							<option value="010" selected>010</option>
+							<option value="02">02</option>
+							<option value="033">033</option>
+							<option value="063">063</option>
+						</select>
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+					</div>
+					<div class="receiveMarket">
+						<span class="tit">SMS 마케팅 수신동의</span>
+						<p>수신 동의 시 500포인트를 즉시 적립</p>
+						<div class="clickType">
+							<input id="radio2-1" name="radio2" type="radio" class="radioTy1" checked="">
+							<label for="radio2-1">예</label>
+							<input id="radio2-2" name="radio2" type="radio" class="radioTy1" checked="">
+							<label for="radio2-2">아니오</label>
+						</div>
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">이메일 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="예) speedmall@speed.com">
+					<div class="receiveMarket">
+						<span class="tit">이메일 마케팅 수신동의</span>
+						<p>수신 동의 시 500포인트를 즉시 적립</p>
+						<div class="clickType">
+							<input id="radio3-1" name="radio3" type="radio" class="radioTy1" checked="">
+							<label for="radio3-1">예</label>
+							<input id="radio3-2" name="radio3" type="radio" class="radioTy1" checked="">
+							<label for="radio3-2">아니오</label>
+						</div>
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">주소 <span class="star">*</span></div>
+					<p class="txt">상품을 수령하실 곳의 주소를 입력해주세요.</p>
+					<div class="addressFind">
+						<div class="btnBox onlyType">
+							<div class="btn rd2 black">
+								<a href="#"><span>주소찾기</span></a>
+							</div>
+						</div>
+						<input type="text" disabled="disabled" />
+						<input type="text" disabled="disabled" />
+					</div>
+				</div>
+
+				<strong class="iptTitle">세금계산서 담당자 정보</strong>
+				<p class="titSub">세금계산서 신청시 전자세금계산서가 전송될 정보를 입력해주세요.</p>
+				<div class="inputBox">
+					<input id="checkbox1" name="checkbox" type="checkbox" class="checkTy1">
+					<label for="checkbox1">고객 정보와 동일</label>
+				</div>
+				<div class="inputBox">
+					<div class="tit">담당자명 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="담당자명을 입력해주세요." >
+				</div>
+				<div class="inputBox">
+					<div class="tit">부서 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="부서명을 입력해주세요." >
+				</div>
+				<div class="inputBox">
+					<div class="tit">휴대전화번호 <span class="star">*</span></div>
+					<p class="txt">SMS를 수신할 휴대전화번호를 입력해주세요.</p>
+					<div class="selBox tel">
+						<select name="telBox">
+							<option value="010" selected>010</option>
+							<option value="02">02</option>
+							<option value="033">033</option>
+							<option value="063">063</option>
+						</select>
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">세금계산서 이메일 주소 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="이메일을 입력해주세요." >
+				</div>
+			</form>
+		</div>
+		
+		<div class="btn gradation1 fixed col2">
+			<a href="#" class="cancel"><span>취소</span></a>
+			<a href="#"><span>가입하기</span></a>
+		</div>
+	</section>
+</div>
+
+<!-- footer 영역 -->
+<footer>
+
+</footer>
+
+</body>
+</html>

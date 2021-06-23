@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <defs>
+        <style>
+            .cls-2{fill:#fff;stroke:#000}.cls-5{stroke:none}.cls-6{fill:none}
+        </style>
+    </defs>
+    <g id="포인트icon" transform="translate(-147.999 -98)">
+        <g id="사각형_3739" class="cls-2" transform="translate(153 125)">
+            <rect width="26" height="8" class="cls-5" rx="3"/>
+            <rect width="25" height="7" x=".5" y=".5" class="cls-6" rx="2.5"/>
+        </g>
+        <g id="사각형_3745" class="cls-2" transform="translate(151 118)">
+            <rect width="26" height="8" class="cls-5" rx="3"/>
+            <rect width="25" height="7" x=".5" y=".5" class="cls-6" rx="2.5"/>
+        </g>
+        <g id="사각형_3746" class="cls-2" transform="translate(154 111)">
+            <rect width="26" height="8" class="cls-5" rx="3"/>
+            <rect width="25" height="7" x=".5" y=".5" class="cls-6" rx="2.5"/>
+        </g>
+        <g id="사각형_3747" class="cls-2" transform="translate(151 104)">
+            <rect width="26" height="8" class="cls-5" rx="3"/>
+            <rect width="25" height="7" x=".5" y=".5" class="cls-6" rx="2.5"/>
+        </g>
+        <g id="타원_557" fill="#fbcea8" stroke="#111" transform="translate(166 116)">
+            <circle cx="10" cy="10" r="10" class="cls-5"/>
+            <circle cx="10" cy="10" r="9.5" class="cls-6"/>
+        </g>
+        <text id="P" fill="#111" font-family="NotoSansCJKkr-Medium, Noto Sans CJK KR" font-size="12px" font-weight="500" letter-spacing="-0.025em" transform="translate(176 131)">
+            <tspan x="-3.882" y="0">P</tspan>
+        </text>
+    </g>
+</svg>
