@@ -32,19 +32,35 @@
 <!-- //header 영역 -->
 
 <!-- 컨텐츠 영역 -->
-<div class="join joinWel"> <!-- class="1depth + 상세" -->
+<div class="join joinIpt"> <!-- class="1depth + 상세" -->
 	<section class="con">
 		<div class="wrap">
-			<strong class="title">회원가입이 <br>완료되었습니다.</strong>
-			<p>스피드몰의 가족이 되신 것을 <br>환영합니다.</p>
-			<div class="btnBox btn2">
-				<div class="btn rd gray">
-					<a href="#"><span>이전 화면으로</span></a>
-				</div>
-				<div class="btn rd gradation1">
-					<a href="#"><span>홈으로 가기</span></a>
-				</div>
+			<strong class="iptTitle">약관동의</strong>
+			<div class="termAgree">
+				<span class="allChk">
+					<input id="checkbox1-1" name="checkbox" type="checkbox" class="checkTy1">
+					<label for="checkbox1-1">전체 동의합니다.</label>
+				</span>
+				<span>
+					<input id="checkbox1-3" name="checkbox" type="checkbox" class="checkTy1">
+					<label for="checkbox1-3">개인정보처리방침 동의<em>(필수)</em></label>
+					<a href="#" class="termMore"><span class="hide">더보기</span></a>
+				</span>
+				<span>
+					<input id="checkbox1-4" name="checkbox" type="checkbox" class="checkTy1">
+					<label for="checkbox1-4">개인정보 수집 및 이용 동의<em>(필수)</em></label>
+					<a href="#" class="termMore"><span class="hide">더보기</span></a>
+				</span>
 			</div>
+			<strong class="iptTitle">본인인증 수단 선택</strong>
+			<ul class="accreditOpt">
+				<li class="phone">
+					<a href="#"><span><strong>휴대폰</strong>으로<br>인증하기</span></a>
+				</li>
+				<li class="iPin">
+					<a href="#"><span><strong>아이핀(I-PIN)</strong>으로<br>인증하기</span></a>
+				</li>
+			</ul>
 		</div>
 	</section>
 </div>

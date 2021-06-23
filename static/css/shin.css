@@ -3,3 +3,20 @@
 /************** 임시 css파일 ******************/
 
 
+/* 회원가입 */
+.joinWel{padding-top:15.3vw;}
+.joinWel .title{display:block;font-size:6.15vw;}
+.joinWel .title + p{margin-top:2.6vw;font-size:6.15vw;font-weight:200;}
+.joinWel .btnBox{margin-top:15.3vw;}
+
+.termMent.layerFullPop .con{padding-bottom:7.69vw;}
+.termAgree > *{font-size:3.58vw;line-height:1.5;}
+.termAgree .title{display:block;margin:5.1vw 0;font-size:4.1vw;}
+.termAgree p{margin-top:2.5vw;}
+.termAgree .mark{position:relative;padding-left:5.1vw;}
+.termAgree .mark:before{content:'※';position:absolute;top:0;left:0;}
+.termAgree ol > li{padding-left:5.1vw;text-indent:-4.2vw;}
+.termAgree ol > li + li{margin-top:2.6vw;}
+.termAgree ol > li > ul{margin:2.6vw 0 0;}
+.termAgree ol > li > ul > li{padding-left:3.8vw;text-indent:-3.8vw;}
+.termMent .btnBox{margin-top:12.8vw;}
