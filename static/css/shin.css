@@ -2,6 +2,9 @@
 
 /************** 임시 css파일 ******************/
 
+/* 텍스트 */
+.listType.dash > li:before {content:'-';top: 0;left: 0;}
+.listType .listType{margin-top:2.6vw;}
 
 /* 회원가입 */
 .joinWel{padding-top:15.3vw;}
@@ -15,8 +18,15 @@
 .termAgree p{margin-top:2.5vw;}
 .termAgree .mark{position:relative;padding-left:5.1vw;}
 .termAgree .mark:before{content:'※';position:absolute;top:0;left:0;}
-.termAgree ol > li{padding-left:5.1vw;text-indent:-4.2vw;}
-.termAgree ol > li + li{margin-top:2.6vw;}
-.termAgree ol > li > ul{margin:2.6vw 0 0;}
-.termAgree ol > li > ul > li{padding-left:3.8vw;text-indent:-3.8vw;}
+.termAgree .olList + .olList{margin-top:2.6vw;}
+.termAgree .olList > li{padding-left:5.1vw;text-indent:-4.2vw;}
+.termAgree .olList > li + li{margin-top:2.6vw;}
+.termAgree .olList > li > ul{margin:2.6vw 0 0;}
+.termAgree .olList > li > ul > li{padding-left:3.8vw;text-indent:-3.8vw;}
+.termAgree .tableView{overflow-x:auto;margin-top:5.1vw;}
+.termAgree table{width:120vw;border:1px solid #898989;}
+.termAgree table th{padding:5.1vw 2.6vw;border-left:1px solid #898989;}
+.termAgree table td{padding:5.1vw 2.6vw;border-left:1px solid #898989;border-top:1px solid #898989;}
+.termAgree table td.tit{text-align:center;}
+
 .termMent .btnBox{margin-top:12.8vw;}

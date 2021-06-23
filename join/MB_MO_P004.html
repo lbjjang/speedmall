@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" sizes="192x192" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
+	<link rel="icon" href="" type="image/x-icon">
+    <title>스피드몰 - 개인정보 수집 및 이용</title>
+	<!-- 사용안하는 플러그인은 추후 삭제 -->
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
+<!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="../static/css/mobiscroll.jquery.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../static/css/swiper.min.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/mobiscroll.jquery.min.js"></script>
+    <script src="../static/js/ui.js"></script>
+<body>
+
+<div style="position:relative;height:100vh;">
+	<div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width:50%;">
+
+		<div class="btn popFull rd gradation1"><a href="#" data-pop-name="termPop">개인정보 수집 및 이용</a></div>
+
+	</div>
+</div>
+
+
+<!-- 컨텐츠 영역 -->
+<div class="termMent termPop layerFullPop"> <!-- class="1depth + 상세" -->
+	<div class="top">
+		<p class="tit">개인정보 수집 및 이용</p>
+		<div class="btn popClose"><a href="#"><span class="hide">닫기</span></a></div>
+	</div>
+	<div class="con">
+		<div class="wrap">
+			<div class="termAgree">
+				<div class="tableView">
+					<table>
+						<colgroup>
+							<col width="5%;">
+							<col width="8%;">
+							<col width="8%;">
+							<col width="8%;">
+							<col width="">
+							<col width="">
+							<col width="">
+						</colgroup>
+						<thead>
+							<tr align="center">
+								<th colspan="3">구분</th>
+								<th>수집<br>시점</th>
+								<th>수집 항목</th>
+								<th>이용 목적</th>
+								<th>보유 기간</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr align="center">
+								<td rowspan="12">회원</td>
+								<td>공통</td>
+								<td>필수</td>
+								<td>회원가입</td>
+								<td align="left">이름, 휴대전화번호, 생년월일, 성별, 통신사, 중복가입확인정보(DI), 연계정보(CI)</td>
+								<td align="left">본인확인</td>
+								<td align="left" rowspan="12">회원탈퇴 시 즉시 파기(단, 주문내역이 있는 경우 법정 의무 보관기간)</td>
+							</tr>
+							<tr align="center">
+								<td rowspan="4">개인</td>
+								<td rowspan="2">필수</td>
+								<td>회원가입</td>
+								<td align="left">이름, 생년월일, 성별, 이메일주소,아이핀번호(아이핀 인증일 경우), 휴대폰번호, 아이디, 비밀번호</td>
+								<td align="left">이용자의 식별 및 회원서비스 제공, 주문내역 안내, 서비스 이용에 대한 공지 및 상담 등 미성년자 확인, 가입의사 확인 및 가입횟수 제한</td>
+							</tr>
+							<tr align="center">
+								<td>주문</td>
+								<td align="left">결제정보(카드번호, 계좌번호, 휴대폰번호), 배송정보(주문자 및 수취인의 주소, 전화번호, 휴대폰번호)</td>
+								<td align="left">주문 상품의 결제 및 환불, 배송 청구서 발송, 대금추심</td>
+							</tr>
+							<tr align="center">
+								<td rowspan="2">선택</td>
+								<td rowspan="2">회원가입</td>
+								<td align="left">휴대폰번호, 이메일주소</td>
+								<td align="left">이벤트, 상품안내 등 고객 맞춤형 콘텐츠 제공, 이벤트/경품당펌 결과 안내</td>
+							</tr>
+							<tr align="center">
+								<td align="left">전화번호</td>
+								<td align="left">이용자의 식별 및 서비스 이용에 대한 상담 등</td>
+							</tr>
+							<tr align="center">
+								<td rowspan="7">법인</td>
+								<td rowspan="4">필수</td>
+								<td rowspan="3">회원가입</td>
+								<td align="left">구매담당자 정보(이름, 생년월일, 성별, 이메일주소,아이핀번호(아이핀 인증일 경우), 휴대폰번호, 아이디, 비밀번호)</td>
+								<td align="left">이용자의 식별 및 회원서비스 제공, 주문내역 안내, 서비스 이용에 대한 공지 및 상담 등 미성년자 확인, 가입의사 확인 및 가입횟수 제한</td>
+							</tr>
+							<tr align="center">
+								<td align="left">회사정보(대표자명, 사업자등록번호, 기업명), 사업장 주소</td>
+								<td align="left">기업정보 식별 및 서비스 제공, 주문내역 확인 등</td>
+							</tr>
+							<tr align="center">
+								<td align="left">세금계산서 담당자 정보(이름, 부서, 이메일주소)</td>
+								<td align="left">세금계산서 발행 및 전송</td>
+							</tr>
+							<tr align="center">
+								<td>주문</td>
+								<td align="left">결제정보(카드번호, 계좌번호, 휴대폰번호), 배송정보(주문자 및 수취인의 주소, 전화번호, 휴대폰번호)</td>
+								<td align="left">주문 상품의 결제 및 환불, 배송 등</td>
+							</tr>
+							<tr align="center">
+								<td rowspan="3">선택</td>
+								<td rowspan="3">회원가입</td>
+								<td align="left">휴대폰번호, 이메일주소</td>
+								<td align="left">이벤트, 상품안내 등 고객 맞춤형 마케팅</td>
+							</tr>
+							<tr align="center">
+								<td align="left">전화번호</td>
+								<td align="left">이용자의 식별 및 서비스 이용에 대한 상담 등</td>
+							</tr>
+							<tr align="center">
+								<td align="left">세금계산서 담당자 정보(휴대폰번호)</td>
+								<td align="left">세금계산서 발행 SMS 안내</td>
+							</tr>
+							<tr align="center">
+								<td rowspan="4">비회원</td>
+								<td rowspan="4">-</td>
+								<td rowspan="3">필수</td>
+								<td rowspan="3">주문</td>
+								<td align="left">이름, 휴대전화번호, 생년월일, 성별, 통신사</td>
+								<td align="left">본인확인</td>
+								<td rowspan="4">법정 의무 보관기간</td>
+							</tr>
+							<tr align="center">
+								<td align="left">이름, 이메일주소, 아이핀번호(아이핀 인증일 경우), 휴대폰번호, 비밀번호</td>
+								<td align="left">이용자의 식별 및 미성년자 확인, 주문내역 안내</td>
+							</tr>
+							<tr align="center">
+								<td align="left">결제정보(카드번호, 계좌번호, 휴대폰번호), 배송정보(주문자 및 수취인의 주소, 전화번호, 휴대폰번호)</td>
+								<td align="left">주문 상품의 결제 및 환불, 배송 등</td>
+							</tr>
+							<tr align="center">
+								<td>선택</td>
+								<td>주문</td>
+								<td align="left">전화번호</td>
+								<td align="left">이용자의 식별 및 서비스 이용에 대한 상담 등</td>
+							</tr>
+							<tr align="center">
+								<td colspan="4">서비스 이용시 생성되는 수집되는 정보</td>
+								<td align="left">IP주소, 서비스 이용기록, 접속시간 등 로그, 쿠키, 모바일기기정보(OS버전, 광고식별자 등)</td>
+								<td align="left">접속 빈도, 방문 시간, 접속 페이지 분석, 관심상품 분석을 통한 타겟 마케팅 및 고객 맞춤 서비스 제공</td>
+								<td>쿠키 저장 거부 시까지</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="btnBox btn2">
+				<div class="btn rd gray">
+					<a href="#"><span>확인</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- footer 영역 -->
+<footer>
+
+</footer>
+
+</body>
+</html>
