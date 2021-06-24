@@ -73,6 +73,8 @@ body.scLock{overflow:hidden;}
 .btnBox.btn2 > div{width:50%;}
 .btnBox.onlyType > div{width:100%;}
 .btnBox.btn2 > div + div{margin-left:2.56vw;}
+.btnBox.btnCt{justify-content: center;}
+.btnBox.btnCt > div{width:43.58vw;}
 
 .btn,
 .btn a:before{background-repeat:no-repeat;background-position:0 0;background-size:cover;}
@@ -311,7 +313,7 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 
 
 /****************** 회원가입 ******************/
-.joinIpt{}
+.joinIpt{margin-top:7.69vw;}
 .joinIpt .wrap{margin-bottom:15.3vw;}
 
 .newMemEvt{padding:7.69vw 0 3.8vw;background-color: #f2f4ff;}
