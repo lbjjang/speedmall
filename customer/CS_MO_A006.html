@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" sizes="192x192" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
+	<link rel="icon" href="" type="image/x-icon">
+    <title>스피드몰 - 고객센터</title>
+	<!-- 사용안하는 플러그인은 추후 삭제 -->
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
+<!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="../static/css/mobiscroll.jquery.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../static/css/swiper.min.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/mobiscroll.jquery.min.js"></script>
+    <script src="../static/js/ui.js"></script>
+<body>
+
+<!-- header 영역 -->
+<header>
+</header>
+<!-- //header 영역 -->
+
+<!-- 컨텐츠 영역 -->
+<div class="customer qnaPage"> <!-- class="1depth + 상세" -->
+	<section class="con">
+		<div class="titleTab">
+			<ul>
+				<li class="active"><a href="#">문의하기</a></li>
+				<li><a href="#">내 상담내역</a></li>
+			</ul>
+		</div>
+		<div class="subTitleTab">
+			<ul>
+				<li><a href="#">이용문의</a></li>
+				<li class="active"><a href="#">거래상담</a></li>
+				<li><a href="#">상품등록요청</a></li>
+			</ul>
+		</div>
+		<div class="qnaIpt wrap">
+			<form>
+				<strong class="iptTitle">답변 받으실 분</strong>
+				<div class="inputBox">
+					<div class="tit">회사명 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true">
+				</div>
+				<div class="inputBox">
+					<div class="tit">사업자등록번호 <span class="star">*</span></div>
+					<div class="businessNum">
+						<input type="number" maxlength="6" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="6" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="6" oninput="maxLengthCheck(this)">
+					</div>
+				</div>
+				<div class="inputBox">
+					<div class="tit">고객명 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true">
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">이메일 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="예) speedmall@speed.com">
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">휴대전화번호 <span class="star">*</span></div>
+					<p class="txt">답변 등록 시 SMS로 안내해드립니다.</p>
+					<div class="selBox tel">
+						<select name="telBox">
+							<option value="010" selected>010</option>
+							<option value="02">02</option>
+							<option value="033">033</option>
+							<option value="063">063</option>
+						</select>
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+					</div>
+				</div>
+
+				<strong class="iptTitle">문의하기</strong>
+
+				<div class="inputBox">
+					<div class="tit">상담종류 <span class="star">*</span></div>
+					<select name="">
+						<option value="" selected>선택해주세요.</option>
+						<option value="">회원가입</option>
+						<option value="">취소/교환/반품/배송</option>
+						<option value="">상품문의</option>
+						<option value="">세금계산서/증빙서류</option>
+						<option value="">불편신고</option>
+						<option value="">기타</option>
+					</select>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">문의내용</div>
+					<input type="text" data-clear-btn="true" placeholder="제목을 입력해주세요.">
+					<textarea placeholder="placeholder" placeholder="상세 내용을 입력해주세요."></textarea>
+
+					<div class="uploadFile">
+						<div class="uploadWrap">
+							<span class="word">첨부파일</span>
+							<ul class="fileName">
+								<li><a href="#">사업자등록증.pdf</a></li>
+							</ul>
+							<input type="file" id="file1" />
+							<label for="file1">파일첨부</label>
+						</div>
+						<p class="txt">10MB 이하 크기의 파일 1개만 첨부 가능합니다.</p>
+					</div>
+				</div>
+
+				<div class="nonmember">
+					<span>
+						<input id="checkbox1" name="checkbox" type="checkbox" checked="" class="checkTy1">
+						<label for="checkbox1">개인정보 수집 및 이용 동의(필수)</label>
+						<a href="#" class="termMore"><span class="hide">더보기</span></a>
+					</span>
+				</div>
+
+				<div class="btnBox btn2">
+					<div class="btn rd gray">
+						<a href="#"><span>취소</span></a>
+					</div>
+					<div class="btn rd gradation1">
+						<a href="#"><span>문의 접수하기</span></a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+</div>
+
+<!-- footer 영역 -->
+<footer>
+
+</footer>
+
+</body>
+</html>

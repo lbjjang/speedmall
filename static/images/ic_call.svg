@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <filter id="타원_575" width="1.5" height="1.5" x="14.25" y="4.5" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur"/>
+            <feFlood flood-opacity=".2"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="타원_576" width="1.5" height="1.5" x="11.75" y="4.5" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-2"/>
+            <feFlood flood-opacity=".2"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="타원_577" width="1.5" height="1.5" x="9.25" y="4.5" filterUnits="userSpaceOnUse">
+            <feOffset/>
+            <feGaussianBlur result="blur-3"/>
+            <feFlood flood-opacity=".2"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <style>
+            .cls-4{fill:#fff}
+        </style>
+    </defs>
+    <g id="ico_call" transform="translate(0)">
+        <path id="guide" fill="none" d="M0 0H20V20H0z" opacity="0.5" transform="translate(0)"/>
+        <g id="그룹_2021" transform="translate(1 -29)">
+            <path id="패스_17384" fill="#ffbe2c" d="M188.849 31h-4.7a4.349 4.349 0 0 0-.587 8.622v1.9a.62.62 0 0 0 .362.572.566.566 0 0 0 .64-.134l1.934-2.038.243-.256h2.106a4.337 4.337 0 0 0 0-8.666z" transform="translate(-175 -1)"/>
+            <path id="패스_17386" fill="#f41300" d="M13 109.393v2.042a1.528 1.528 0 0 1-1.524 1.531 11.5 11.5 0 0 1-7.943-3.515A11.431 11.431 0 0 1 0 101.524 1.527 1.527 0 0 1 1.531 100h2.042a.51.51 0 0 1 .484.349l1.021 3.051a.511.511 0 0 1-.059.445l-.866 1.3a8 8 0 0 0 1.579 2.1 8.311 8.311 0 0 0 2.119 1.562l1.3-.866a.511.511 0 0 1 .445-.059l3.063 1.021a.5.5 0 0 1 .342.484z" transform="translate(0 -65.003)"/>
+            <g filter="url(#타원_575)" transform="matrix(1, 0, 0, 1, -1, 29)">
+                <circle id="타원_575-2" cx=".75" cy=".75" r=".75" class="cls-4" transform="translate(14.25 4.5)"/>
+            </g>
+            <g filter="url(#타원_576)" transform="matrix(1, 0, 0, 1, -1, 29)">
+                <circle id="타원_576-2" cx=".75" cy=".75" r=".75" class="cls-4" transform="translate(11.75 4.5)"/>
+            </g>
+            <g filter="url(#타원_577)" transform="matrix(1, 0, 0, 1, -1, 29)">
+                <circle id="타원_577-2" cx=".75" cy=".75" r=".75" class="cls-4" transform="translate(9.25 4.5)"/>
+            </g>
+        </g>
+    </g>
+</svg>

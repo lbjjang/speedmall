@@ -36,9 +36,7 @@ body.scLock{overflow:hidden;}
 .inputBox .ui-state-disabled{opacity:1;background:#f4f4f4;}
 .inputBox .ui-state-disabled input{color:#898989;}
 .inputBox .selBox{display:flex;flex-wrap:wrap;flex-flow:row;margin-top:2.56vw;position:relative;box-shadow:none;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;padding-left:5.12vw;box-sizing:border-box;}
-.inputBox .selBox .ui-select{position:relative;min-width:17.94vw;height:calc(12.3vw - 2px);line-height:calc(12.3vw - 2px);padding-right:3.8vw;}
-.inputBox .selBox .ui-select:before{content:'';position:absolute;width:3.07vw;height:2.05vw;right:0;top:50%;margin-top:-1.025vw;background-image:url('../images/ic_arrow_d.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
-.inputBox .selBox select{position:absolute;left:0;top:0;opacity:0;height:12.3vw;}
+.inputBox .selBox .ui-select{min-width:17.94vw;height:calc(12.3vw - 2px);margin-top:0;line-height:calc(12.3vw - 2px);padding-left:0;padding-right:3.8vw;border:0;}
 .inputBox .selBox .ui-input-text{margin-top:0;border:none;height:calc(12.3vw - 2px);line-height:calc(12.3vw - 2px);}
 .inputBox .selBox.tel .ui-input-text{padding-left:0;text-align:center;}
 .inputBox .selBox.tel .ui-input-text input{text-align:center;}

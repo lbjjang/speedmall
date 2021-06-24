@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-5{fill:none}.cls-3{fill:#fff}.cls-5{stroke:#fff;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="ico_cs" transform="translate(1.66 -76.548)">
+        <path id="guide" fill="none" d="M0 0H20V20H0z" opacity="0.5" transform="translate(-1.66 76.548)"/>
+        <rect id="사각형_3803" width="12" height="16" fill="#ffbe2c" rx="2" transform="translate(-0.66 78.548)"/>
+        <rect id="사각형_3804" width="6" height="1" class="cls-3" rx=".5" transform="translate(2.34 81.548)"/>
+        <rect id="사각형_3806" width="6" height="1" class="cls-3" rx=".5" transform="translate(2.34 84.548)"/>
+        <rect id="사각형_3807" width="3" height="1" class="cls-3" rx=".5" transform="translate(2.34 87.548)"/>
+        <path id="합치기_32" fill="#f41300" d="M7656 7671.52c-.73-.73.483-3.4.483-3.4l6.569-6.569 2.919 2.919-6.569 6.569a8.341 8.341 0 0 1-2.643.717 1.06 1.06 0 0 1-.759-.236zm7.055-9.97l.62-.622a1.4 1.4 0 0 1 1.974 0l.943.945a1.4 1.4 0 0 1 0 1.974l-.618.622z" transform="translate(-7649.659 -7578.971)"/>
+        <path id="패스_17406" d="M48.425 29.457l2.92 2.92z" class="cls-5" transform="translate(-35.535 53.621)"/>
+        <path id="패스_17407" d="M48.425 29.457l2.92 2.92z" class="cls-5" transform="translate(-35.535 53.621)"/>
+    </g>
+</svg>
