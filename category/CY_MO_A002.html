@@ -28,13 +28,81 @@
 
 <!-- header 영역 -->
 <header>
+	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
+	<h1 class="off">타이틀</h1>
+	<ul>
+		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
+		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
+		<li>
+			<div class="btn alarm">
+				<a href="#">
+					<span class="count">30</span>
+					<span class="hide">알림 바로가기</span>
+				</a>
+			</div>
+		</li>
+	</ul>
 </header>
 <!-- //header 영역 -->
 
 <!-- 컨텐츠 영역 -->
 <div class="category list"> <!-- class="1depth + 상세" -->
-	<section class="con">
+	<div class="menu">
 		<div class="wrap">
+			<p class="tit">컴퓨터/전산용품</p>
+			<div class="depth">
+				<ul>
+					<li><a href="#"><span>전체</span></a></li>
+					<li><a href="#"><span>케이블</span></a></li>
+					<li><a href="#"><span>전산용품</span></a></li>
+					<li><a href="#"><span>스마트악세사리</span></a></li>
+					<li><a href="#"><span>저장장치</span></a></li>
+					<li><a href="#"><span>네트워크장비</span></a></li>
+					<li><a href="#"><span>노트북/PC/모니터</span></a></li>
+					<li><a href="#"><span>컴퓨터부품</span></a></li>
+					<li><a href="#"><span>프린터/복합기/스캐너</span></a></li>
+					<li><a href="#"><span>소프트웨어(S/W)</span></a></li>
+				</ul>
+				<div>
+					<div class="btn dropMenu"><a href="#"><span class="hide">펼쳐보기</span></a></div>
+				</div>
+			</div>
+		</div>
+	</div> 	
+	
+	<section class="con">
+		<div class="optionBar">
+			<div class="count">총 <span>28</span>개</div>
+			<div class="option">
+				<div class="btn filter popBt"><a href="#" data-pop-name="popupBt1"><span>필터</span></a></div>
+				<div class="btn listTy ty2"><a href="#"><span class="hide">리스트 타입</span></a></div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="align">
+				<div class="check">
+					<div>
+						<input id="checkbox1" name="checkbox1" type="checkbox" checked="" class="checkTy2">
+						<label for="checkbox1">할인</label>
+					</div>
+					<div>
+						<input id="checkbox2" name="checkbox1" type="checkbox" checked="" class="checkTy2">
+						<label for="checkbox2">오늘발송</label>
+					</div>
+				</div>
+				<div class="selectDrop">
+					<select name="align">
+						<option value="정확도순">정확도순</option>
+						<option value="인기순" selected>인기순</option>
+						<option value="낮은가격순">낮은가격순</option>
+						<option value="높은가격순">높은가격순</option>
+						<option value="상품이름순">상품이름순</option>
+						<option value="제조사순">제조사순</option>
+						<option value="빠른배송순">빠른배송순</option>
+						<option value="신상품순">신상품순</option>
+					</select>
+				</div>								
+			</div>
 			<div class="prdList">
 				<ul class="lineTwo">
 					<li>
@@ -156,7 +224,382 @@
 		</div>
 	</section>
 </div>
-
+<!-- 팝업-->
+<div class="dimmed"></div>
+<div class="layerBtPop popupBt1 popFilter">
+	<div class="top">
+		<p class="tit">필터 설정</p>
+		<div>
+			<div class="btn reset"><a href="#"><span>초기화</span></a></div>
+			<div class="btn popClose"><a href="#"><span class="hide">닫기</span></a></div>
+		</div>
+	</div>
+	<div class="con">
+		<div>
+			<div class="slideCon cate">
+				<div class="top">
+					<a href="#">
+						<p>카테고리</p>
+					</a>
+				</div>
+				<div class="bottom">
+					<div class="bar">
+						<ul>
+							<li>사무/식음료/생활</li>
+							<li class="on">컴퓨터/전산용품</li>
+						</ul>
+					</div>
+					<ul class="">
+						<li>
+							<div>
+								<input id="radio1" name="radio" type="radio" class="radioTy1">
+								<label for="radio1">USB메모리(77)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="radio1" name="radio" type="radio" class="radioTy1">
+								<label for="radio1">플래시 메모리카드(47)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="radio1" name="radio" type="radio" class="radioTy1">
+								<label for="radio1">외장하드/NAS/DAS(25)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="radio1" name="radio" type="radio" class="radioTy1">
+								<label for="radio1">광미디어(7)</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="slideCon brand">
+				<div class="top">
+					<a href="#">
+						<p>브랜드 <span>4</span></p>
+					</a>
+				</div>
+				<div class="bottom">
+					<ul>
+						<li>
+							<div>
+								<input id="checkbox1" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox1">삼성전자(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox2" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox2">샌디스크(27)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox3" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox3">매머드(MAMMOTH)(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox4" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox4">이메이션(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox5" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox5">트랜샌드(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox6" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox6">SANDISK(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox7" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox7">HP(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox8" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox8">POLA(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox9" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox9">ULTRA(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox10" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox10">ipTIME(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox11" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox11">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox12" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox12">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox13" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox13">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox14" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox14">테스트(39)</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<input id="checkbox15" name="checkbox" type="checkbox" checked="" class="checkTy1">
+								<label for="checkbox15">테스트(39)</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="btn gradation1 fixed">
+		<a href="#"><span>적용하기 (123)</span></a>
+	</div>
+</div>
 <!-- footer 영역 -->
 <footer>
 

@@ -1,34 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
     <defs>
         <style>
-            .cls-4{fill:none}.cls-2{fill:#fff;stroke:#111}.cls-3{stroke:none}
+            .cls-5{fill:none}.cls-2{fill:#fff;stroke:#111}.cls-3{fill:#111}.cls-4{stroke:none}
         </style>
     </defs>
     <g id="ico_list_type_2" transform="translate(-20 -249)">
         <path id="guide" fill="none" d="M0 0H20V20H0z" opacity="0.25" transform="translate(20 249)"/>
         <g id="사각형_1271" class="cls-2" transform="translate(21 251)">
-            <rect width="7" height="7" class="cls-3" rx="1"/>
-            <rect width="6" height="6" x=".5" y=".5" class="cls-4" rx=".5"/>
+            <rect width="7" height="7" class="cls-4" rx="1"/>
+            <rect width="6" height="6" x=".5" y=".5" class="cls-5" rx=".5"/>
         </g>
         <g id="사각형_1279" class="cls-2" transform="translate(21 260)">
-            <rect width="7" height="7" class="cls-3" rx="1"/>
-            <rect width="6" height="6" x=".5" y=".5" class="cls-4" rx=".5"/>
+            <rect width="7" height="7" class="cls-4" rx="1"/>
+            <rect width="6" height="6" x=".5" y=".5" class="cls-5" rx=".5"/>
         </g>
-        <g id="사각형_1272" class="cls-2" transform="translate(30 252)">
-            <rect width="9" height="1" class="cls-3" rx=".5"/>
-            <rect width="8" x=".5" y=".5" class="cls-4"/>
-        </g>
-        <g id="사각형_1277" class="cls-2" transform="translate(30 256)">
-            <rect width="9" height="1" class="cls-3" rx=".5"/>
-            <rect width="8" x=".5" y=".5" class="cls-4"/>
-        </g>
-        <g id="사각형_1273" class="cls-2" transform="translate(30 261)">
-            <rect width="9" height="1" class="cls-3" rx=".5"/>
-            <rect width="8" x=".5" y=".5" class="cls-4"/>
-        </g>
-        <g id="사각형_1278" class="cls-2" transform="translate(30 265)">
-            <rect width="9" height="1" class="cls-3" rx=".5"/>
-            <rect width="8" x=".5" y=".5" class="cls-4"/>
-        </g>
+        <rect id="사각형_1272" width="9" height="1" class="cls-3" rx=".5" transform="translate(30 252)"/>
+        <rect id="사각형_1277" width="9" height="1" class="cls-3" rx=".5" transform="translate(30 256)"/>
+        <rect id="사각형_1273" width="9" height="1" class="cls-3" rx=".5" transform="translate(30 261)"/>
+        <rect id="사각형_1278" width="9" height="1" class="cls-3" rx=".5" transform="translate(30 265)"/>
     </g>
 </svg>
