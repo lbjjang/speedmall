@@ -2,9 +2,133 @@
 
 /************** 임시 css파일 ******************/
 
+.ui-select{position:relative;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;padding:0 5.12vw;box-sizing:border-box;}
+.ui-select .ui-btn{position:relative;height:calc(12.3vw - 2px);line-height:calc(12.3vw - 2px);padding-right:3.8vw;}
+.ui-select .ui-btn > span{display:block;}
+.ui-select .ui-btn:before{content:'';position:absolute;width:3.07vw;height:2.05vw;right:0;top:50%;margin-top:-1.025vw;background-image:url('../images/ic_arrow_d.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
+.ui-select select{position:absolute;left:0;top:0;width:100%;height:12.3vw;opacity:0;}
+
+.inputBox .ui-select{margin-top:2.56vw;}
+
+.inputBox .uploadFile{margin-top:5.12vw;}
+.inputBox .uploadWrap{position:relative;padding:4.1vw 21.2vw 4.1vw 19.2vw;border-radius:6px;background-color: #f8f8f8;}
+.inputBox .uploadWrap .ui-input-text{display:none;}
+.inputBox .uploadWrap .word{position:absolute;top:4.1vw;left:3.84vw;font-size:3.3vw;}
+.inputBox .uploadWrap .fileName > li{display:block;color:#f41300;font-size:3.3vw;}
+.inputBox .uploadWrap .fileName > li > a{color:#f41300;font-size:3.3vw;}
+.inputBox .uploadWrap .fileName > li + li{margin-top:2.6vw;}
+.inputBox .uploadWrap label{position:absolute;top:2.6vw;right:2.6vw;padding:1.3vw 2.6vw;font-size:3.3vw;border-radius:3px;border:1px solid #ddd;background-color:#fff;}
+.inputBox .uploadFile .txt{margin-top:2.6vw;color:#898989;font-size:3.5vw;}
+
+.searchBox{position:relative;}
+.searchBox .btn.search{position:absolute;top:3.3vw;left:5.12vw;}
+.searchBox .ui-input-text{position:relative;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;padding:0 12.82vw;box-sizing:border-box;}
+.searchBox .ui-input-text.ui-focus{border-color:#111;}
+.searchBox input{height:100%;line-height:100%;padding:0;font-size:3.84vw;color:#111;border:none;width:100%;outline:none;vertical-align:top;}
+.searchBox .ui-input-has-clear a{position:absolute;top:50%;right:5.12vw;margin:0;margin-top:-2.56vw;width:5.12vw;height:5.12vw;text-indent:-99999px;}
+.searchBox .ui-input-has-clear a.ui-input-clear-hidden{display:none;}
+.searchBox .ui-input-has-clear a:after{content: "";position: absolute;top:0;right:0;display: block;width:5.12vw;height:5.12vw;background-position: center center;background-repeat: no-repeat;background-image:url('../images/ic_input_del.svg');background-size:cover;}
+.searchBox .srhResult{margin-top:7.69vw;font-size:3.58vw;}
+.searchBox .srhResult .count{color:#f41300;}
+
+.noData{padding:15.38vw 0;text-align:center;}
+.noData p{padding-top:11.53vw;background:url('../images/ic_fail.svg') no-repeat center top;background-size:7.69vw auto;}
+.noData p .word{color:#f41300;}
+
 /* 텍스트 */
 .listType.dash > li:before {content:'-';top: 0;left: 0;}
 .listType .listType{margin-top:2.6vw;}
+
+
+/* 탭 */
+.titleTab{}
+.titleTab > ul{display:flex;flex-wrap: wrap;flex-flow: row;position: relative;height: 12.3vw;line-height: 12.3vw;box-sizing: border-box;}
+.titleTab > ul > li{flex:auto;}
+.titleTab > ul > li a{text-align:center;border-bottom:1px solid #eee;}
+.titleTab > ul > li.active a{color:#f41300;border-bottom:1px solid #f41300;}
+
+.subTitleTab{}
+.subTitleTab > ul{overflow-y: hidden;display:-webkit-flex;-webkit-flex-wrap:no-wrap;display:flex;flex-wrap:no-wrap;flex-direction:row;}
+.subTitleTab > ul > li{display: inline-block;flex-shrink:0;}
+.subTitleTab > ul > li a{padding:3.84vw 2.6vw;text-align:center;}
+.subTitleTab > ul > li.active a{color:#f41300;}
+
+/* 고객센터 */
+.noticeList > li{padding:5.12vw 0;}
+.noticeList > li + li{border-top:1px solid #eee;}
+.noticeList > li .top{overflow:hidden;margin-bottom:2.6vw;}
+.noticeList > li .top .info{float:left;font-size:3.3vw;color:#f41300;}
+.noticeList > li .top .date{float:right;font-size:3.07vw;color:#898989;}
+.noticeList > li p{overflow:hidden;width:100%;text-overflow:ellipsis;white-space:nowrap;}
+
+.faqList{margin:0 -5.1vw;border-top:1px solid #eee;}
+.faqList .slideCon .top a{position:relative;padding-left:10.4vw;}
+.faqList .slideCon .top a:before{content:'Q';position:absolute;top:5.1vw;left:5.1vw;color:#f41300;font-weight:600;}
+.faqList .slideCon .bottom{position:relative;padding:5.12vw 5.12vw 5.12vw 10.4vw;background-color:#f8f8f8;}
+.faqList .slideCon .bottom:before{content:'A';position:absolute;top:5.1vw;left:5.1vw;color:#f41300;font-weight:600;}
+
+
+/* 고객센터 :: 메인 */
+.cusMain{padding-bottom:10.3vw;}
+.cusMain .wrap{padding-top:5.12vw;border-top:2.6vw solid #f4f4f4;}
+.cusMain .wrap:first-of-type{padding-top:0;border-top:0;}
+.cusMain .title{display:block;font-size:6.15vw;}
+ 
+.cusMain .topBanner{display:flex;padding:0;margin:3.58vw 0;}
+.cusMain .topBanner > div{width:50%;}
+.cusMain .topBanner > div + div{margin-left:4.1vw;}
+.cusMain .topBanner > div a{border-radius: 3.07vw;background: #fff6ef;padding:5.12vw;}
+.cusMain .topBanner > div a span{position:relative;display:block;padding:0 4.1vw 0 7.69vw;font-size:3.84vw;font-weight:500;}
+.cusMain .topBanner > div a span:before{content:'';position:absolute;width:5.12vw;height:5.12vw;left:0;top:0.5vw;background-size:5.12vw auto;background-repeat: no-repeat;background-position:0 0;}
+.cusMain .topBanner > div a span:after{content:'';position: absolute;width:3.07vw;height:2.05vw;right:0;top:1.5vw;background-image:url('../images/ic_arrow_d.svg');background-repeat: no-repeat;background-position: 0 0;background-size:100% auto;transform: rotate(-90deg);}
+.cusMain .topBanner > div.btnFaq a span:before{background-image: url('../images/ic_faq.png');}
+.cusMain .topBanner > div.btnCs a span:before{background-image: url('../images/ic_cs.svg');}
+
+.cusMain .csNumber a{padding:3.84vw 3.84vw 5.12vw;border-radius:12px;background-color:#eff9ff;text-align:center;}
+.cusMain .csNumber a strong{display:inline-block;padding-left:7.69vw;font-size:6.15vw;background-image: url('../images/ic_call.svg');background-size:5.12vw auto;background-repeat: no-repeat;background-position:left 1.5vw;}
+.cusMain .csNumber a p{margin-top:1.5vw;font-size:3.58vw;}
+
+.cusMain .csInner{position:relative;display:block;margin-top:7.69vw;}
+.cusMain .csInner .title{display:block;font-size:4.61vw;}
+.cusMain .csInner .btnMore{position:absolute;right:5.12vw;top:5.72vw;padding-right:5.12vw;}
+.cusMain .csInner .btnMore:after{content:'';position: absolute;width:3.07vw;height:2.05vw;right:0;top:1.9vw;background-image:url('../images/ic_arrow_d.svg');background-repeat: no-repeat;background-position:0 0;background-size:100% auto;transform: rotate(-90deg);}
+
+.cusMain .faqTab{overflow-y: hidden;display:-webkit-flex;-webkit-flex-wrap:no-wrap;display:flex;flex-wrap:no-wrap;flex-direction:row;margin:5.1vw -5.1vw 0;}
+.cusMain .faqTab > li{display: inline-block;flex:auto;flex-shrink:0;}
+.cusMain .faqTab > li + li{margin-left:-1px;}
+.cusMain .faqTab > li a{padding:3.3vw 4.8vw;border:1px solid #e8e8e8;background-color:#f8f8f8;}
+.cusMain .faqTab > li.active a{color: #f41300;border-top:1px solid #f41300;border-bottom:1px solid #fff;background-color:#fff;}
+.cusMain .faqTab > li:first-child a{border-left:0;}
+.cusMain .faqTab > li:last-child a{border-right:0;}
+
+.cusMain .faqList{margin:0;}
+.cusMain .faqList .slideCon:last-of-type .top{border-bottom:0;}
+.cusMain .faqList .slideCon .top a{padding-left:5.12vw;padding-right:0;}
+.cusMain .faqList .slideCon .top a:before{left:0;}
+
+/* 고객센터 :: FAQ */
+.categorySelect{margin-top:7.69vw;}
+.categorySelect .tit{display:block;}
+.categorySelect .ui-select{margin-top:2.56vw;}
+
+.faqPage .faqList{margin-top:5.12vw;}
+.faqList .noData{border-bottom:1px solid #eee;}
+
+.fastQna{margin-top:10.3vw;text-align:center;}
+.fastQna p{margin-bottom:5.12vw;}
+.fastQna a{display:inline-block;padding:2.6vw 3.84vw;border-radius:3px;border:1px solid #e8e8e8;font-weight:600;}
+
+
+/* 고객센터 :: 1:1문의 */
+.qnaPage{padding-bottom:10.3vw;}
+.qnaPage .qnaIpt{padding-top:7.69vw;border-top:2.6vw solid #f4f4f4;}
+.qnaPage .btnBox{margin-top:7.69vw;}
+
+.qnaPage .nonmember{margin-top:7.69vw;padding-top:3.83vw;border-top:1px solid #eee;}
+.qnaPage .nonmember span{position:relative;display:block;padding-right:5.1vw;}
+.qnaPage .nonmember label > em{color:#f41300;}
+.qnaPage .nonmember .termMore{position: absolute;width:3.07vw;height:2.05vw;right:0;top:50%;margin-top:-1.025vw;background-image: url('../images/ic_arrow_d.svg');background-repeat: no-repeat;background-position: 0 0;background-size: cover;transform: rotate(-90deg);}
+
 
 /* 회원가입 */
 .joinWel{padding-top:15.3vw;}
