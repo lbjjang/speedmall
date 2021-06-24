@@ -58,10 +58,11 @@ body.scLock{overflow:hidden;}
 .inputBox .receiveMarket .tit + p{margin-top:1.2vw;font-size: 3.33vw;color: #898989;}
 .inputBox .receiveMarket .clickType{margin-top:2.5vw;}
 
-.selectDrop{position:relative;box-shadow:none;height:5.12vw;line-height:5.12vw;box-sizing:border-box;}
-.selectDrop .ui-select{position:relative;height:100%;padding-right:3.84vw;}
-.selectDrop .ui-select:before{content:'';position:absolute;width:2.56vw;height:2.56vw;right:0;top:50%;margin-top:-1.28vw;background-image:url('../images/ic_drop.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
-.selectDrop select{position:absolute;right:0;top:0;opacity:0;height:5.12vw;}
+.selectDrop{position:relative;box-sizing:border-box;}
+.selectDrop .ui-select{position:relative;height:5.12vw;line-height:5.12vw;padding:0;border:0;}
+.selectDrop .ui-select .ui-btn{height:auto;line-height:5.12vw;}
+.selectDrop .ui-select .ui-btn:before{content:'';position:absolute;width:2.56vw;height:2.56vw;right:0;top:50%;margin-top:-1.28vw;background-image:url('../images/ic_drop.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
+.selectDrop select{position:absolute;left:0;top:0;opacity:0;height:5.12vw;}
 .selectDrop .ui-input-text{margin-top:0;border:none;height:5.12vw;line-height:5.12vw;}
 .selectDrop span{font-weight:700;}
 
