@@ -35,14 +35,22 @@
 .noData p{padding-top:11.53vw;background:url('../images/ic_fail.svg') no-repeat center top;background-size:7.69vw auto;}
 .noData p .word{color:#f41300;}
 
-.btnBox.centerType{display:block;text-align:center;}
-.btnBox .btn.btnMoreArrow{display:inline-block;}
+.btnBox .btn.btnMoreArrow{display:inline-block;width:auto;}
 .btnBox .btn.btnMoreArrow a{padding-right:5.1vw;background:url('../images/ic_arrow_d.svg') no-repeat right 50%;background-size: 3.07vw auto;}
 
 /* 텍스트 */
 .listType.dash > li:before {content:'-';top: 0;left: 0;}
 .listType .listType{margin-top:2.6vw;}
 
+
+/* 페이징 */
+.pagingNav{margin-top:10.2vw;text-align:center;}
+.pagingNav > *{display:inline-block;vertical-align:middle;}
+.pagingNav > * + *{margin-left:7.69vw;color:#898989;}
+.pagingNav a.active{color:#111;text-decoration:underline;font-weight:700;}
+.pagingNav .btnLoc{width:4.6vw;height:4.6vw;margin-top:1vw;background-size:4.6vw auto;background-repeat: no-repeat;background-position:0 0;}
+.pagingNav .btnLoc.prev{background-image: url('../images/ic_paging_prev.svg');}
+.pagingNav .btnLoc.next{background-image: url('../images/ic_paging_next.svg');}
 
 /* 탭 */
 .titleTab{}
@@ -148,8 +156,18 @@
 
 
 /* 고객센터 :: 공지사항 */
-.noticeWrap{margin:7.69vw -5.1vw;border-top:1px solid #eee;}
+.noticeWrap{margin:5.1vw -5.1vw;border-top:1px solid #eee;}
 .noticeWrap .noticeList{border-bottom:1px solid #eee;}
+
+.noticeView{}
+.noticeView .noticeTop{padding:0 5.1vw 5.1vw;border-bottom:1px solid #eee;}
+.noticeView .noticeTop .top{overflow:hidden;margin-bottom:2.6vw;}
+.noticeView .noticeTop .top .info{float:left;font-size:3.3vw;color:#f41300;}
+.noticeView .noticeTop .top .date{float:right;font-size:3.07vw;color:#898989;}
+.noticeView .noticeTop .title{display:block;font-size:5.1vw;}
+
+.noticeView .noticeCnt{padding:7.69vw 5.1vw;border-bottom:1px solid #eee;}
+.noticeView .btnBox{margin-top:7.69vw;}
 
 /* 회원가입 */
 .joinWel{padding-top:15.3vw;}
