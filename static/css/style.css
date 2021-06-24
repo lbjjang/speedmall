@@ -58,12 +58,13 @@ body.scLock{overflow:hidden;}
 .inputBox .receiveMarket .tit + p{margin-top:1.2vw;font-size: 3.33vw;color: #898989;}
 .inputBox .receiveMarket .clickType{margin-top:2.5vw;}
 
-.selectDrop{position:relative;box-sizing:border-box;}
-.selectDrop .ui-select{position:relative;height:5.12vw;line-height:5.12vw;padding:0;border:0;}
-.selectDrop .ui-select .ui-btn{height:auto;line-height:5.12vw;}
-.selectDrop .ui-select .ui-btn:before{content:'';position:absolute;width:2.56vw;height:2.56vw;right:0;top:50%;margin-top:-1.28vw;background-image:url('../images/ic_drop.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
-.selectDrop select{position:absolute;left:0;top:0;opacity:0;height:5.12vw;}
-.selectDrop .ui-input-text{margin-top:0;border:none;height:5.12vw;line-height:5.12vw;}
+.selectDrop{position:relative;box-shadow:none;height:5.12vw;line-height:5.12vw;box-sizing:border-box;}
+.selectDrop .ui-select{position:relative;height:100%;padding-right:3.84vw;border:0;}
+.selectDrop .ui-select:before{content:'';position:absolute;width:2.56vw;height:2.56vw;right:0;top:50%;margin-top:-1.28vw;background-image:url('../images/ic_drop.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
+.selectDrop .ui-select .ui-btn{height:auto;line-height:auto;padding-right: 0;}
+.selectDrop .ui-select .ui-btn:before{content:none;}
+.selectDrop .ui-select select{position:absolute;right:0;top:0;opacity:0;height:5.12vw;}
+.selectDrop .ui-select .ui-btn > span{margin-top:0;border:none;height:5.12vw;line-height:5.12vw;}
 .selectDrop span{font-weight:700;}
 
 
@@ -242,7 +243,7 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .category.list section.con.view:before{content:'';height:100%;background:rgba(0,0,0,0.5);z-index:10;}
 .category.list section.con .optionBar{height:12.82vw;position:absolute;top:0;left:0;}
 .category.list .menu{margin-top:2.56vw;}
-.category.list .menu .wrap{position:rzelative;}
+.category.list .menu .wrap{position:relative;}
 .category.list .menu .tit{font-size:6.15vw;font-weight:700;margin-bottom:5.12vw;}
 .category.list .menu .depth{display:flex;}
 .category.list .menu ul{overflow-y: hidden;display: flex;flex-direction: row;width: 100%;}
