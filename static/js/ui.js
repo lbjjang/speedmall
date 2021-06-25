@@ -115,6 +115,21 @@ $(document).ready(function () {
 		optionBarPT = $('.optionBar').offset().top;
 	}
 
+	
+
+	var dawinServiceSwiperSc06pc = new Swiper('.category.view .slideBox .swiper-container', {
+		observeParents:true,
+		observeSlideChildren:true,
+		observer:true,
+		loop:true,
+		speed: 700,
+		pagination: {
+			el: '.category.view .slideBox .swiper-pagination',
+			type: 'fraction',
+
+		},
+	});
+
 
 /*
 	//레이어 하단 팝업

@@ -58,6 +58,7 @@ body.scLock{overflow:hidden;}
 .inputBox .receiveMarket .tit + p{margin-top:1.2vw;font-size: 3.33vw;color: #898989;}
 .inputBox .receiveMarket .clickType{margin-top:2.5vw;}
 
+/* 카테고리 정렬 부분 셀렉트 박스 */
 .selectDrop{position:relative;box-shadow:none;height:5.12vw;line-height:5.12vw;box-sizing:border-box;}
 .selectDrop .ui-select{position:relative;height:100%;padding-right:3.84vw;border:0;}
 .selectDrop .ui-select:before{content:'';position:absolute;width:2.56vw;height:2.56vw;right:0;top:50%;margin-top:-1.28vw;background-image:url('../images/ic_drop.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
@@ -236,7 +237,6 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .category.catergoryPop .slideCon .bottom ul li a{font-size:3.58vw;height:12.82vw;line-height:12.82vw;padding-left:5.12vw;}
 .category.catergoryPop .slideCon .bottom ul li.on a{color:#f41300;text-decoration:underline;}
 
-
 /* 상품목록 */
 .category.list section.con{position:relative;padding-top:12.82vw;border-top:2.56vw solid #f4f4f4;margin-top:3.84vw;}
 .category.list section.con:before{content:'';position:absolute;top:0;left:0;width:100%;height:0;-webkit-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
@@ -277,25 +277,25 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .layerBtPop.popFilter > .con .slideCon .bottom > ul{display: flex;flex-wrap: wrap;}
 .layerBtPop.popFilter > .con .slideCon .bottom > ul li{width:50%;margin-top:7.69vw;}
 .layerBtPop.popFilter > .con .slideCon .bottom > ul li > div{display:flex;}
-/* .layerBtPop.popFilter > .con .slideCon .bottom ul li:nth-child(odd){padding-right:2.05vw;}
-.layerBtPop.popFilter > .con .slideCon .bottom ul li:nth-child(even){padding-left:2.05vw;} */
 .layerBtPop.popFilter .btn.fixed{position: fixed;bottom:-100%;left:0;width:100%;}
 .layerBtPop.popFilter.on .btn.fixed{bottom:0;-webkit-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;}
 
+/* 상품리스트 옵션바 */
+.category .optionBar{display: flex;width:100%;justify-content: space-between;padding:3.84vw 5.1vw;border-bottom:1px solid #eee;background: #fff;}
+.category .optionBar + .wrap{margin-top:3.84vw;}
+.category .optionBar.fixed{position:fixed !important;z-index: 10;}
+.category .optionBar .count{font-size:3.58vw;}
+.category .optionBar .count span{color:#f41300;}
+.category .optionBar .option{display:flex;flex-wrap: wrap;}
+.category .optionBar .option > div + div{margin-left:3.84vw;padding-left:3.84vw;position:relative;}
+.category .optionBar .option > div + div:before{content:'';position:absolute;width:1px;height:5.12vw;background:#eee;left:0;top:0;}
+.category .align{display: flex;flex-wrap: wrap;justify-content: space-between;margin-bottom:7.69vw;}
+.category .align .check{display: flex;flex-wrap: wrap;}
+.category .align .check > div + div{margin-left:2.56vw;}
 
-.optionBar{display: flex;width:100%;justify-content: space-between;padding:3.84vw 5.1vw;border-bottom:1px solid #eee;background: #fff;}
-.optionBar + .wrap{margin-top:3.84vw;}
-.optionBar.fixed{position:fixed !important;z-index: 10;}
-.optionBar .count{font-size:3.58vw;}
-.optionBar .count span{color:#f41300;}
-.optionBar .option{display:flex;flex-wrap: wrap;}
-.optionBar .option > div + div{margin-left:3.84vw;padding-left:3.84vw;position:relative;}
-.optionBar .option > div + div:before{content:'';position:absolute;width:1px;height:5.12vw;background:#eee;left:0;top:0;}
-
-.align{display: flex;flex-wrap: wrap;justify-content: space-between;margin-bottom:7.69vw;}
-.align .check{display: flex;flex-wrap: wrap;}
-.align .check > div + div{margin-left:2.56vw;}
-
+/* 상품 상세 페이지 */
+.category.view .swiper-pagination{bottom:5.12vw;right:5.12vw;left:auto;width: auto;height:5.12vw;line-height: 5.12vw;border-radius: 3.84vw;background:rgba(0,0,0,0.4);color:#fff;font-size:3.33vw;padding:0 2.56vw;}
+.category.view .swiper-pagination .swiper-pagination-current{font-weight: 700;}
 
 .labelTag{}
 .labelTag .label{display:inline-block;padding:0 1.2vw;font-size:3.07vw;line-height:5.1vw;border-radius:2px;}
