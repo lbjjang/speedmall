@@ -10,7 +10,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="">
 	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
 	<link rel="icon" href="" type="image/x-icon">
-    <title>스피드몰 - 고객센터</title>
+    <title>스피드몰 - 로그인</title>
 	<!-- 사용안하는 플러그인은 추후 삭제 -->
     <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
 <!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
@@ -28,45 +28,36 @@
 
 <!-- header 영역 -->
 <header>
+	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
+	<h1>비회원으로 주문</h1>
+	<ul class="off">
+		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
+		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
+		<li>
+			<div class="btn alarm">
+				<a href="#">
+					<span class="count">30</span>
+					<span class="hide">알림 바로가기</span>
+				</a>
+			</div>
+		</li>
+	</ul>
 </header>
 <!-- //header 영역 -->
 
 <!-- 컨텐츠 영역 -->
-<div class="customer qnaPage"> <!-- class="1depth + 상세" -->
+<div class="login loginPage"> <!-- class="1depth + 상세" -->
 	<section class="con">
-		<div class="titleTab">
-			<ul>
-				<li class="active"><a href="#">문의하기</a></li>
-				<li><a href="#">내 상담내역</a></li>
-			</ul>
-		</div>
-		<div class="subTitleTab">
-			<ul>
-				<li class="active"><a href="#">이용문의</a></li>
-				<li><a href="#">거래상담</a></li>
-				<li><a href="#">상품등록요청</a></li>
-			</ul>
-		</div>
-		<div class="wrap borderWrap">
+		<div class="wrap nomemberOrder">
 			<form>
-				<strong class="iptTitle">답변 받으실 분</strong>
+				<strong class="iptTitle">주문자 정보</strong>
 				<div class="inputBox">
-					<div class="tit">회사명 <span class="star">*</span></div>
-					<input type="text" data-clear-btn="true">
-				</div>
-				<div class="inputBox">
-					<div class="tit">고객명 <span class="star">*</span></div>
-					<input type="text" data-clear-btn="true">
-				</div>
-
-				<div class="inputBox">
-					<div class="tit">이메일 <span class="star">*</span></div>
-					<input type="text" data-clear-btn="true" placeholder="예) speedmall@speed.com">
+					<div class="tit">주문자 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="주문자 명을 입력해주세요">
 				</div>
 
 				<div class="inputBox">
 					<div class="tit">휴대전화번호 <span class="star">*</span></div>
-					<p class="txt">답변 등록 시 SMS로 안내해드립니다.</p>
 					<div class="selBox tel">
 						<select name="telBox">
 							<option value="010" selected>010</option>
@@ -78,37 +69,38 @@
 						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
 					</div>
 				</div>
-
-				<strong class="iptTitle">문의하기</strong>
-
 				<div class="inputBox">
-					<div class="tit">접수항목 <span class="star">*</span></div>
-					<select name="">
-						<option value="" selected>선택해주세요.</option>
-						<option value="">회원가입</option>
-						<option value="">취소/교환/반품/배송</option>
-						<option value="">상품문의</option>
-						<option value="">세금계산서/증빙서류</option>
-						<option value="">불편신고</option>
-						<option value="">기타</option>
-					</select>
+					<div class="tit">이메일 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="이메일을 입력해주세요">
 				</div>
-
 				<div class="inputBox">
-					<div class="tit">문의내용</div>
-					<input type="text" data-clear-btn="true" placeholder="제목을 입력해주세요.">
-					<textarea placeholder="placeholder" placeholder="상세 내용을 입력해주세요."></textarea>
+					<div class="tit">비밀번호 <span class="star">*</span></div>
+					<p class="txt">6~16자의 영문/숫자 포함 입력</p>
+					<p class="txt">비밀번호는 ‘주문확인’시 필수기재사항이므로 반드시 기억하셔야 합니다.</p>
+					<input type="text" data-clear-btn="true" placeholder="비밀번호를 입력해주세요">
 				</div>
-
-				<div class="btnBox btn2">
-					<div class="btn rd gray">
-						<a href="#"><span>취소</span></a>
-					</div>
-					<div class="btn rd gradation1">
-						<a href="#"><span>문의 접수하기</span></a>
+				<div class="inputBox">
+					<div class="tit">주소 <span class="star">*</span></div>
+					<div class="addressFind">
+						<div class="btnBox onlyType">
+							<div class="btn rd2 black">
+								<a href="#"><span>주소찾기</span></a>
+							</div>
+						</div>
+						<input type="text" disabled="disabled" />
+						<input type="text" disabled="disabled" />
 					</div>
 				</div>
 			</form>
+
+			<div class="btnBox btn2">
+				<div class="btn rd gray">
+					<a href="#"><span>취소</span></a>
+				</div>
+				<div class="btn rd gradation1">
+					<a href="#"><span>비회원으로 주문하기</span></a>
+				</div>
+			</div>
 		</div>
 	</section>
 </div>

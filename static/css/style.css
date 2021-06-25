@@ -405,6 +405,7 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .accreditOpt{margin:0 0 0 -4.1vw;}
 .accreditOpt:after{content:'';display:block;clear:both;}
 .accreditOpt > li{float:left;width:calc(50% - 4.1vw);margin-left:4.1vw;}
+.accreditOpt > li:only-child{width:calc(100% - 4.1vw);}
 .accreditOpt > li > a{padding:5.1vw;border-radius: 12px;border: solid 1px #e8e8e8;text-align:center;}
 .accreditOpt > li > a > span{display:block;padding-top:23.07vw;background-repeat:no-repeat;background-position:center top;background-size:20.5vw auto;}
 .accreditOpt > li.phone > a > span{background-image:url('../images/ic_accredit_phone.png');}

@@ -2,6 +2,8 @@
 
 /************** 임시 css파일 ******************/
 
+.borderWrap{padding-top:5.12vw;border-top:2.6vw solid #f4f4f4;}
+
 .ui-select{position:relative;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;padding:0 5.12vw;box-sizing:border-box;}
 .ui-select .ui-btn{position:relative;height:calc(12.3vw - 2px);line-height:calc(12.3vw - 2px);padding-right:3.8vw;}
 .ui-select .ui-btn > span{display:block;}
@@ -19,6 +21,8 @@
 .inputBox .uploadWrap .fileName > li + li{margin-top:2.6vw;}
 .inputBox .uploadWrap label{position:absolute;top:2.6vw;right:2.6vw;padding:1.3vw 2.6vw;font-size:3.3vw;border-radius:3px;border:1px solid #ddd;background-color:#fff;}
 .inputBox .uploadFile .txt{margin-top:2.6vw;color:#898989;font-size:3.5vw;}
+
+.inputBox .txt + .txt{margin-top:1.28vw;font-size:3.58vw;color:#f41300;}
 
 .searchBox{position:relative;}
 .searchBox .btn.search{position:absolute;top:3.3vw;left:5.12vw;}
@@ -38,10 +42,15 @@
 .btnBox .btn.btnMoreArrow{display:inline-block;width:auto;}
 .btnBox .btn.btnMoreArrow a{padding-right:5.1vw;background:url('../images/ic_arrow_d.svg') no-repeat right 50%;background-size: 3.07vw auto;}
 
+.btnBox .btn.btnMoreArrow2{display:inline-block;width:auto;}
+.btnBox .btn.btnMoreArrow2 a{position:relative;padding-right:5.1vw;}
+.btnBox .btn.btnMoreArrow2 a:after{content:'';position:absolute;width:3.07vw;height:2.05vw;right:0;top:1.8vw;background-image:url('../images/ic_arrow_d.svg');background-repeat: no-repeat;background-position: 0 0;background-size:100% auto;transform: rotate(-90deg);}
+
 /* 텍스트 */
 .listType.dash > li:before {content:'-';top: 0;left: 0;}
 .listType .listType{margin-top:2.6vw;}
 
+.noteBox{margin-top:7.69vw;padding:5.12vw;border-radius:6px;background-color:#f8f8f8;}
 
 /* 페이징 */
 .pagingNav{margin-top:10.2vw;text-align:center;}
@@ -62,6 +71,7 @@
 .subTitleTab{}
 .subTitleTab > ul{overflow-y: hidden;display:-webkit-flex;-webkit-flex-wrap:no-wrap;display:flex;flex-wrap:no-wrap;flex-direction:row;}
 .subTitleTab > ul > li{display: inline-block;flex-shrink:0;}
+.subTitleTab > ul > li:first-child{margin-left:2.6vw;}
 .subTitleTab > ul > li a{padding:3.84vw 2.6vw;text-align:center;}
 .subTitleTab > ul > li.active a{color:#f41300;}
 
@@ -82,7 +92,6 @@
 
 /* 고객센터 :: 메인 */
 .cusMain{padding-bottom:10.3vw;}
-.cusMain .wrap{padding-top:5.12vw;border-top:2.6vw solid #f4f4f4;}
 .cusMain .wrap:first-of-type{padding-top:0;border-top:0;}
 .cusMain .title{display:block;font-size:6.15vw;}
  
@@ -100,10 +109,10 @@
 .cusMain .csNumber a strong{display:inline-block;padding-left:7.69vw;font-size:6.15vw;background-image: url('../images/ic_call.svg');background-size:5.12vw auto;background-repeat: no-repeat;background-position:left 1.5vw;}
 .cusMain .csNumber a p{margin-top:1.5vw;font-size:3.58vw;}
 
-.cusMain .csInner{position:relative;display:block;margin-top:7.69vw;}
-.cusMain .csInner .title{display:block;font-size:4.61vw;}
-.cusMain .csInner .btnMore{position:absolute;right:5.12vw;top:5.72vw;padding-right:5.12vw;}
-.cusMain .csInner .btnMore:after{content:'';position: absolute;width:3.07vw;height:2.05vw;right:0;top:1.9vw;background-image:url('../images/ic_arrow_d.svg');background-repeat: no-repeat;background-position:0 0;background-size:100% auto;transform: rotate(-90deg);}
+.cusMain .borderWrap{position:relative;display:block;margin-top:7.69vw;}
+.cusMain .borderWrap .title{display:block;font-size:4.61vw;}
+.cusMain .borderWrap .btnMore{position:absolute;right:5.12vw;top:5.72vw;padding-right:5.12vw;}
+.cusMain .borderWrap .btnMore:after{content:'';position: absolute;width:3.07vw;height:2.05vw;right:0;top:1.9vw;background-image:url('../images/ic_arrow_d.svg');background-repeat: no-repeat;background-position:0 0;background-size:100% auto;transform: rotate(-90deg);}
 
 .cusMain .noticeList > li{padding-left:0;padding-right:0;}
 
@@ -135,7 +144,7 @@
 
 /* 고객센터 :: 1:1문의 */
 .qnaPage{padding-bottom:10.3vw;}
-.qnaPage .qnaIpt{padding-top:7.69vw;border-top:2.6vw solid #f4f4f4;}
+.qnaPage .borderWrap{padding-top:7.69vw;}
 .qnaPage .btnBox{margin-top:7.69vw;}
 
 .qnaPage .nonmember{margin-top:7.69vw;padding-top:3.83vw;border-top:1px solid #eee;}
@@ -193,3 +202,17 @@
 .termAgree table td.tit{text-align:center;}
 
 .termMent .btnBox{margin-top:12.8vw;}
+
+
+/* 로그인 */
+.loginPage .title{display:block;margin:2.6vw 0;padding-left:5.12vw;font-size:6.15vw;}
+.loginPage .loginForm .inputBox + .inputBox{margin-top:2.6vw;}
+.loginPage .loginForm .btnBox{margin-top:7.69vw;}
+.loginPage .loginForm .btnBox + .btnBox.btnCt{margin-top:7.69vw;}
+.loginPage .loginForm .btnBox + .btnBox{margin-top:5.12vw;}
+.loginPage .speedJoin{margin-top:7.69vw;padding-top:7.69vw;border-top:1px solid #eee;text-align:center;}
+.loginPage .speedJoin .btnBox{margin-top:5.12vw;}
+.loginPage .nomemberOrder{margin:7.69vw 0;}
+.loginPage .nomemberOrder > .btnBox{margin-top:7.69vw;}
+.loginPage .dormantState{margin:7.69vw 0 15.3vw;}
+.loginPage .dormantState p + p{margin-top:2.6vw;}
