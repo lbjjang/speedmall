@@ -28,7 +28,7 @@
 <body>
 
 <!-- header 영역 -->
-<header>
+<header class="prdViewPage">
 	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
 	<h1 class="off">타이틀</h1>
 	<ul>
@@ -49,19 +49,21 @@
 <!-- 컨텐츠 영역 -->
 <div class="category view"> <!-- class="1depth + 상세" -->
 	<section class="con">
-		<div class="slideBox">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
-					<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+		<div class="prdTopSlide">
+			<div class="slideBox">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+						<div class="swiper-slide"><img src="../static/images/@dummy_prd_img3.jpg"></div>
+					</div>
+					<div class="swiper-pagination"></div>
 				</div>
-				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 		<div class="prdInfo">
@@ -71,13 +73,17 @@
 				<div class="prdPrice">
 					<p class="sale">46,300원</p>
 					<div class="price">
-						<span class="salePer">10%</span>
-						<p class="won"><strong>44,000</strong>원</p>
+						<div>
+							<span class="salePer">10%</span>
+							<p class="won"><strong>44,000</strong>원</p>
+						</div>
 						<p class="vat">VAT 포함 <strong>48,400</strong>원</p>
 					</div>
 				</div>
+
+				<!-- 평점 -->
 				<div class="star">
-					<a href="#"></a>
+					<a href="#">
 						<div class="starBox">
 							<span class="color"></span>
 							<span class="color"></span>
@@ -85,193 +91,789 @@
 							<span></span>
 							<span></span>
 						</div>
-						<div><strong>11</strong>건의 상품평</div>
+						<p><strong>11</strong>건의 상품평</p>
 					</a>
 				</div>
+
+				<!-- 
+					품절일 경우 soldOut 클래스 추가
+				-->
+				<div class="prdDelivery"><p><strong>17시</strong>까지 주문 시 <strong>오늘 발송</strong> (주말/공휴일 제외)</p></div>
+				<!-- <div class="prdDelivery soldOut"><p><strong>일시 품절</strong> 2021-06-10 입고예정</p></div> -->
+
+				<!-- 배송비 -->
+				<div class="slideCon prdDeliveryPrice">
+					<div class="top">
+						<p>배송비</p>
+						<a href="#">
+							<p>5만원 이상(VAT포함) 주문 시 무료</p>
+						</a>
+					</div>
+					<div class="bottom">
+						<p>제주도 3,000원 / 제주도 外 도서산간지역 5,000원</p>
+						<div class="btnTxt"><a href="#">추가 운임비 자세히 보기</a></div>
+						<p class="caution">화물발송시 배송비 이외 추가운임이 발생할 수 있습니다.</p>
+					</div>
+				</div>
+
+				<!-- 상품정보 -->
+				<div class="prdInfoDetail">
+					<p class="tit">상품정보</p>
+					<div class="txtBox">
+						<dl>
+							<dt>용량</dt>
+							<dd>8GB~16GB</dd>
+						</dl>
+						<dl>
+							<dt>스피드 등급</dt>
+							<dd>Class10(30MB/s)</dd>
+						</dl>
+						<dl>
+							<dt>용도</dt>
+							<dd>디지털카메라,넷북,PDA,노트북,휴대폰</dd>
+						</dl>
+						<dl>
+							<dt>비고</dt>
+							<dd>어댑터포함</dd>
+						</dl>
+						<dl>
+							<dt>제조사</dt>
+							<dd>SANDISK</dd>
+						</dl>
+						<dl>
+							<dt>모델명</dt>
+							<dd>ULTRA UHS-1</dd>
+						</dl>
+						<dl>
+							<dt>최소주문수량</dt>
+							<dd>10개</dd>
+						</dl>
+					</div>
+					<div class="btnInfo"><a href="#"><span>상품정보 전체 보기</span></a></div>
+				</div>
+	
+				<!-- 상품정보 문의하기 -->
+				<div class="prdFaq">
+					<div>
+						<p>상품정보 관련<br>문의사항이 있으신가요?</p>
+						<div><a href="#">상품정보 문의하기</a></div>
+					</div>
+				</div>
+
+				<!-- 상품 탭 영역 -->
+				<div class="prdTabCon">
+					<div class="titleTab">
+						<ul>
+							<li class="active"><a href="#">상품설명</a></li>
+							<li><a href="#">구매안내</a></li>
+							<li><a href="#">상품평 (11)</a></li>
+						</ul>
+					</div>
+
+					<div class="prdImg">
+						<img src="../static/images/@dummy_prd_img4.jpg" alt="" />				
+					</div>
+				</div>
+
+				<div class="btn linkR"><a href="#"><span>상품정보고시</span></a></div>
+
+				<div class="btn linkR"><a href="#"><span>결제/배송/교환/반품</span></a></div>
+
+				<div class="prdComment">
+					<p class="tit">상품평 (11)</p>
+					<ul>
+						<li>
+							<div class="top">
+								<div class="starBox">
+									<span class="color"></span>
+									<span class="color"></span>
+									<span class="color"></span>
+									<span></span>
+									<span></span>
+								</div>
+								<p>rudddkkd</p>								
+							</div>
+							<p>착용감도 좋고 재질도 좋은거 같네요. 배송은 조금 아쉽지만 가격이 저렴해서 좋아요.</p>
+						</li>
+						<li>
+							<div class="top">
+								<div class="starBox">
+									<span class="color"></span>
+									<span class="color"></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<p>asdasdq</p>								
+							</div>
+							<p>품질,가격,배송 모두 만족합니다. 추천합니다.</p>
+						</li>
+						<li>
+							<div class="top">
+								<div class="starBox">
+									<span class="color"></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<p>dkakkq</p>								
+							</div>
+							<p>배송은 조금 아쉽지만 가격이 저렴해서 좋아요.</p>
+						</li>
+						<li class="my">
+							<div class="top">
+								<div class="starBox">
+									<span class="color"></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<p>djmmq</p>								
+							</div>
+							<p>착용감도 좋고 재질도 좋은거 같네요. 배송은 조금 아쉽지만 가격이 저렴해서 좋아요. 착용감도 좋고 재질도 좋은거 같네요. 배송은 조금 아쉽지만 가격이 저렴해서 좋아요.착용감도 좋고 재질도 좋은거 같네요. 배송은 조금 아쉽지만 가격이 저렴해서 좋아요.</p>
+						</li>
+						<li>
+							<div class="top">
+								<div class="starBox">
+									<span class="color"></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<p>gkqkqwkenc</p>								
+							</div>
+							<p>품질,가격,배송 모두 만족합니다. 추천합니다.</p>
+						</li>
+					</ul>
+					<div class="btnBox btnCt">
+						<div class="btn rd gray">
+							<a href="#"><span>상품평 모두 보기</span></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="prdOther">
+					<div class="slideBox">
+						<p class="tit">이 상품과 연관된 상품이에요.</p>
+						<div class="prdList swiper-container">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="prdOther">
+					<div class="slideBox">
+						<p class="tit">이 상품과 함께 많이 구매한 상품이에요.</p>
+						<div class="prdList swiper-container">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li class="swiper-slide">
+									<div class="thumb">
+										<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+									</div>
+									<div class="detail">
+										<a href="#">
+											<div class="labelTag">
+												<span class="label red">오늘발송</span>
+												<span class="label blue">면세</span>
+											</div>
+											<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+											<span class="prdCode">상품코드 QWER1</span>
+											<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+											<div class="baseDiscount">
+												<em class="percentage">10%</em>
+												<span class="basePrice">12,800원</span>
+												<span class="price"><strong>11,520</strong>원</span>
+											</div>
+										</a>
+										<div class="prdSet">
+											<span>
+												<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
+											</span>
+											<span>
+												<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+
 			</div>
 		</div>
-		<div class="wrap">
-			<div class="prdView">
 
-			</div>
 
-			<div class="prdList">
-				<ul class="">
-					<li>
-						<div class="thumb">
-							<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
-						</div>
-						<div class="detail">
-							<a href="#">
-								<div class="labelTag">
-									<span class="label red">오늘발송</span>
-									<span class="label blue">면세</span>
-								</div>
-								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
-								<span class="prdCode">상품코드 QWER1</span>
-								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-								<div class="baseDiscount">
-									<em class="percentage">10%</em>
-									<span class="basePrice">12,800원</span>
-									<span class="price"><strong>11,520</strong>원</span>
-								</div>
-							</a>
-							<div class="prdSet">
-								<span>
-									<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
-								</span>
-								<span>
-									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-								</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="thumb">
-							<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
-						</div>
-						<div class="detail">
-							<a href="#">
-								<div class="labelTag">
-									<span class="label red">오늘발송</span>
-									<span class="label blue">면세</span>
-								</div>
-								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
-								<span class="prdCode">상품코드 QWER1</span>
-								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-								<div class="baseDiscount">
-									<em class="percentage">10%</em>
-									<span class="basePrice">12,800원</span>
-									<span class="price"><strong>11,520</strong>원</span>
-								</div>
-							</a>
-							<div class="prdSet">
-								<span>
-									<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
-								</span>
-								<span>
-									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-								</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="thumb">
-							<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
-						</div>
-						<div class="detail">
-							<a href="#">
-								<div class="labelTag">
-									<span class="label red">오늘발송</span>
-									<span class="label blue">면세</span>
-								</div>
-								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
-								<span class="prdCode">상품코드 QWER1</span>
-								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-								<div class="baseDiscount">
-									<em class="percentage">10%</em>
-									<span class="basePrice">12,800원</span>
-									<span class="price"><strong>11,520</strong>원</span>
-								</div>
-							</a>
-							<div class="prdSet">
-								<span>
-									<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
-								</span>
-								<span>
-									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-								</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="thumb">
-							<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
-						</div>
-						<div class="detail">
-							<a href="#">
-								<div class="labelTag">
-									<span class="label red">오늘발송</span>
-									<span class="label blue">면세</span>
-								</div>
-								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
-								<span class="prdCode">상품코드 QWER1</span>
-								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-								<div class="baseDiscount">
-									<em class="percentage">10%</em>
-									<span class="basePrice">12,800원</span>
-									<span class="price"><strong>11,520</strong>원</span>
-								</div>
-							</a>
-							<div class="prdSet">
-								<span>
-									<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
-								</span>
-								<span>
-									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-								</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="thumb">
-							<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
-						</div>
-						<div class="detail">
-							<a href="#">
-								<div class="labelTag">
-									<span class="label red">오늘발송</span>
-									<span class="label blue">면세</span>
-								</div>
-								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
-								<span class="prdCode">상품코드 QWER1</span>
-								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-								<div class="baseDiscount">
-									<em class="percentage">10%</em>
-									<span class="basePrice">12,800원</span>
-									<span class="price"><strong>11,520</strong>원</span>
-								</div>
-							</a>
-							<div class="prdSet">
-								<span>
-									<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
-								</span>
-								<span>
-									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-								</span>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="thumb">
-							<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
-						</div>
-						<div class="detail">
-							<a href="#">
-								<div class="labelTag">
-									<span class="label red">오늘발송</span>
-									<span class="label blue">면세</span>
-								</div>
-								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
-								<span class="prdCode">상품코드 QWER1</span>
-								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-								<div class="baseDiscount">
-									<em class="percentage">10%</em>
-									<span class="basePrice">12,800원</span>
-									<span class="price"><strong>11,520</strong>원</span>
-								</div>
-							</a>
-							<div class="prdSet">
-								<span>
-									<div class="btn wish"><a href="#"><span class="hide">찜하기</span></a></div>
-								</span>
-								<span>
-									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-								</span>
-							</div>
-						</div>
-					</li>
-				</ul>
+
+		<div class="prdBottomBanner">
+			<div class="slideBox">
+				<div class="swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><img src="../static/images/@dummy_prd_img5.jpg" alt="" /></li>
+						<li class="swiper-slide"><img src="../static/images/@dummy_prd_img5.jpg" alt="" /></li>
+						<li class="swiper-slide"><img src="../static/images/@dummy_prd_img5.jpg" alt="" /></li>
+						<li class="swiper-slide"><img src="../static/images/@dummy_prd_img5.jpg" alt="" /></li>
+						<li class="swiper-slide"><img src="../static/images/@dummy_prd_img5.jpg" alt="" /></li>
+					</ul>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-scrollbar"></div>
+				</div>
 			</div>
 		</div>
 	</section>

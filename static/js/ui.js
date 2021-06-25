@@ -84,6 +84,18 @@ $(document).ready(function () {
 		}
 	});
 
+	
+	//카테고리 상품상세 - 상품정보 펼치기
+	$('.category.view .prdInfo .prdInfoDetail .btnInfo a').click(function(){
+		if($('.category.view .prdInfo .prdInfoDetail').hasClass('open')){
+			$('.category.view .prdInfo .prdInfoDetail').removeClass('open');
+		} else{
+			$('.category.view .prdInfo .prdInfoDetail').addClass('open');
+		}
+	});
+
+	
+
 
 	//하단 팝업
 	$('.btn.popBt').click(function(){
@@ -117,14 +129,44 @@ $(document).ready(function () {
 
 	
 
-	var dawinServiceSwiperSc06pc = new Swiper('.category.view .slideBox .swiper-container', {
+	var categoryViewSlide1 = new Swiper('.category.view .prdTopSlide .slideBox .swiper-container', {
 		observeParents:true,
 		observeSlideChildren:true,
 		observer:true,
 		loop:true,
 		speed: 700,
 		pagination: {
-			el: '.category.view .slideBox .swiper-pagination',
+			el: '.category.view .prdTopSlide .slideBox .swiper-pagination',
+			type: 'fraction',
+
+		},
+	});
+
+	var categoryViewSlide2 = new Swiper('.category.view .prdOther .slideBox .swiper-container', {
+		observeParents:true,
+		observeSlideChildren:true,
+		observer:true,
+		loop:true,
+		speed: 700,
+		pagination: {
+			el: '.category.view .prdOther .slideBox .swiper-pagination',
+			type: 'bullets',
+
+		},
+	});
+
+	var categoryViewSlide3 = new Swiper('.category.view .prdBottomBanner .slideBox .swiper-container', {
+		observeParents:true,
+		observeSlideChildren:true,
+		observer:true,
+		loop:true,
+		speed: 700,
+		scrollbar: {
+			el: '.swiper-scrollbar',
+			draggable: true,
+		},		
+		pagination: {
+			el: '.category.view .prdBottomBanner .slideBox .swiper-pagination',
 			type: 'fraction',
 
 		},

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-3,.cls-4,.cls-8{fill:none}.cls-3,.cls-4,.cls-6{stroke:#aaa}.cls-3,.cls-4{stroke-linecap:round}.cls-3{stroke-linejoin:round}.cls-6{fill:#f7f7f7}.cls-7{stroke:none}
+        </style>
+    </defs>
+    <g id="ico_delivery" transform="translate(-75 -796)">
+        <path id="guide" fill="none" d="M0 0H24V24H0z" opacity="0.456" transform="translate(75 796)"/>
+        <g id="line" transform="translate(76 801.5)">
+            <path id="wh" fill="#fff" d="M20 .262H8.058V2.05H4.114L2.07 6.113-.01 8.107l1.11 3.935H20z"/>
+            <path id="패스_2615" d="M6422 5487h-12v6h-6l-2 2 1 4h2.314" class="cls-3" transform="translate(-6402 -5487)"/>
+            <path id="패스_2622" d="M6422 5487h-12v6h-6l-2 2 1 4h2.314" class="cls-3" transform="translate(-6402 -5487)"/>
+            <path id="패스_2616" d="M6420 5488h-4l-2 4h5" class="cls-3" transform="translate(-6412 -5486)"/>
+            <path id="패스_2617" d="M6406 5490h-5" class="cls-4" transform="translate(-6385 -5487)"/>
+            <path id="패스_2618" d="M6406 5490h-5" class="cls-4" transform="translate(-6384 -5484)"/>
+            <path id="패스_2619" d="M6404 5490h-3" class="cls-4" transform="translate(-6383 -5481)"/>
+            <path id="패스_2620" fill="none" stroke="#aaa" d="M6406.5 5490h-5.5" transform="translate(-6393.498 -5478)"/>
+            <path id="패스_2621" d="M6404.5 5490h-3.5" class="cls-4" transform="translate(-6384.5 -5478)"/>
+            <g id="타원_183" class="cls-6" transform="translate(3 9.5)">
+                <circle cx="2.5" cy="2.5" r="2.5" class="cls-7"/>
+                <circle cx="2.5" cy="2.5" r="2" class="cls-8"/>
+            </g>
+            <g id="타원_184" class="cls-6" transform="translate(12 9.5)">
+                <circle cx="2.5" cy="2.5" r="2.5" class="cls-7"/>
+                <circle cx="2.5" cy="2.5" r="2" class="cls-8"/>
+            </g>
+        </g>
+    </g>
+</svg>
