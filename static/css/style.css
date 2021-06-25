@@ -60,7 +60,7 @@ body.scLock{overflow:hidden;}
 
 /* 카테고리 정렬 부분 셀렉트 박스 */
 .selectDrop{position:relative;box-shadow:none;height:5.12vw;line-height:5.12vw;box-sizing:border-box;}
-.selectDrop .ui-select{position:relative;height:100%;padding-right:3.84vw;border:0;}
+.selectDrop .ui-select{position:relative;height:100%;padding:0 3.84vw 0 0;border:0;}
 .selectDrop .ui-select:before{content:'';position:absolute;width:2.56vw;height:2.56vw;right:0;top:50%;margin-top:-1.28vw;background-image:url('../images/ic_drop.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
 .selectDrop .ui-select .ui-btn{height:auto;line-height:auto;padding-right: 0;}
 .selectDrop .ui-select .ui-btn:before{content:none;}
@@ -485,6 +485,7 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .accreditOpt{margin:0 0 0 -4.1vw;}
 .accreditOpt:after{content:'';display:block;clear:both;}
 .accreditOpt > li{float:left;width:calc(50% - 4.1vw);margin-left:4.1vw;}
+.accreditOpt > li:only-child{width:calc(100% - 4.1vw);}
 .accreditOpt > li > a{padding:5.1vw;border-radius: 12px;border: solid 1px #e8e8e8;text-align:center;}
 .accreditOpt > li > a > span{display:block;padding-top:23.07vw;background-repeat:no-repeat;background-position:center top;background-size:20.5vw auto;}
 .accreditOpt > li.phone > a > span{background-image:url('../images/ic_accredit_phone.png');}
