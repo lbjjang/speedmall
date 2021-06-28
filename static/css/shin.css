@@ -125,6 +125,7 @@
 .orderSheet > dl.total > dd{font-size:5.12vw;}
 
 .orderCash .cashType{padding:5.12vw;}
+.orderCash .cashType .inputBox .tit{font-weight:400;}
 .orderCash .cashType .inputBox textarea.ui-input-text{height: 28.2vw !important;}
 .orderCash .cashType .cashSelect{margin:-2.6vw 0 0 -2.6vw;}
 .orderCash .cashType .cashSelect:after{content:'';display:block;clear:both;}
