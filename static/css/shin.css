@@ -2,4 +2,142 @@
 
 /************** 임시 css파일 ******************/
 
+/* 텍스트 컬러 */
+.colorRed{color:#f41300;}
 
+.inputBox .iptSelectType{display:flex;flex-wrap:nowrap;}
+.inputBox .iptSelectType > *{display:inline-block;flex: auto;}
+.inputBox .iptSelectType .ui-select{width:45.9vw;margin-left:2.6vw;}
+
+.inputBox .uploadWrap.type2{padding:8.8vw 4.1vw 4.1vw;}
+.inputBox .uploadWrap.type2 .fileName{padding-top:3.84vw;}
+.inputBox .uploadWrap.type2 .fileName > li{position:relative;padding:2.6vw 9.4vw 2.6vw 2.6vw;border-radius:6px;background-color:#fff;color:#111;}
+.inputBox .uploadWrap.type2 .fileName > li .trash{position:absolute;top:2.1vw;right:2.6vw;}
+
+/* 버튼 */
+.btn.small{height:7.69vw;padding:0 2.6vw;border:1px solid #ddd;background-color:#f4f4f4;border-radius:0.76vw;text-align:center;font-size:3.3vw;line-height:7.69vw;}
+.btn.small.white{background:#fff;color:#111;}
+
+.btn.trash a{width:5.12vw;height:5.12vw;background-image:url('../images/ic_trash.svg');}
+.btn.tooltip{display:inline-block;vertical-align:middle;}
+.btn.tooltip a{width:3.84vw;height:3.84vw;background-image:url('../images/ic_tooltip.svg');}
+
+/* 탭 */
+.boxLineTab{display:-webkit-flex;-webkit-flex-wrap:no-wrap;display:flex;flex-wrap:no-wrap;flex-direction:row;}
+.boxLineTab.scroll{overflow-y: hidden;}
+.boxLineTab > li{display: inline-block;flex:auto;flex-shrink:0;}
+.boxLineTab > li + li{margin-left:-1px;}
+.boxLineTab > li a{padding:3.3vw 4.8vw;border:1px solid #e8e8e8;background-color:#f8f8f8;text-align:center;}
+.boxLineTab > li.active a{color: #f41300;border-top:1px solid #f41300;border-bottom:1px solid #fff;background-color:#fff;}
+.boxLineTab > li:first-child a{border-left:0;}
+.boxLineTab > li:last-child a{border-right:0;}
+
+
+/* 주문/결제 */
+.orderCash{margin-bottom:12.8vw;border-top:2.6vw solid #f4f4f4;}
+.orderCash .slideCon{border-bottom:2.6vw solid #f4f4f4;}
+.orderCash .slideCon .top {border-bottom:0;}
+.orderCash .slideCon .top a p{overflow:hidden;padding-right:6.15vw;font-weight:700;}
+.orderCash .slideCon .top a p .vat{display:none;margin-left:2.6vw;font-size:3.58vw;font-weight:400;vertical-align:middle;}
+.orderCash .slideCon .top a p > span{float:right;font-weight:400;}
+.orderCash .slideCon .top a p > span .count{color:#f41300;}
+.orderCash .slideCon.on .top a p > span{display:none;}
+.orderCash .slideCon.on .top a p .vat{display:inline-block;}
+
+.deliveryLoc{position:relative;padding:5.12vw;}
+.deliveryLoc .locName{display:block;}
+.deliveryLoc .locName .labelTag{display:inline-block;margin:-1.2vw 0 0 1.2vw;font-weight:400;vertical-align:middle;}
+.deliveryLoc .reciveInfo{margin:3.84vw 0 0;}
+.deliveryLoc .reciveInfo > *{position:relative;display:inline-block;vertical-align:middle;}
+.deliveryLoc .reciveInfo > * + *{padding-left:6.4vw;}
+.deliveryLoc .reciveInfo > * + *:before{content:'';position:absolute;top:0.7vw;left:3.2vw;width:1px;height:4.61vw;background-color:#e8e8e8;}
+.deliveryLoc .address{margin:1.8vw 0 0;color:#898989;font-size:3.58vw;}
+
+.orderCash .deliveryIpt{padding:7.69vw 5.12vw;}
+.orderCash .deliveryIpt .deliverySelect{padding:3.58vw;border-radius:3px;border:1px solid #ddd;text-align:center;}
+
+.orderCash .deliveryMethod{padding:0 5.12vw 5.12vw;}
+.orderCash .deliveryMethod .title{display:block;margin-bottom:2.6vw;}
+.orderCash .deliveryMethod .methodList{margin-top:5.12vw;}
+.orderCash .deliveryMethod .methodList label{display:block;padding:3.58vw 3.58vw 3.58vw 12.8vw;font-size:3.58vw;border-radius:6px;border:1px solid #ddd;}
+.orderCash .deliveryMethod .methodList label > p{margin-top:1.2vw;}
+.orderCash .deliveryMethod .methodList label ~ label{margin-top:2.6vw;}
+.orderCash .deliveryMethod .methodList input[type="radio"].radioTy1:checked + label{border-color:#f41300;}
+.orderCash .deliveryMethod .methodList input[type="radio"].radioTy1 + label:before{top:50%;left:3.58vw;margin-top:-2.6vw;}
+.orderCash .deliveryMethod .btnBox{margin-top:3.84vw;}
+
+.orderCash .deliveryMemo{padding:5.12vw;}
+.orderCash .deliveryMemo .inputBox .tit{font-weight:400;}
+.orderCash .deliveryMemo .warring{margin-top:2.6vw;color:#f41300;font-size:3.58vw;}
+.orderCash .deliveryMemo .inputBox textarea.ui-input-text{height: 28.2vw !important;}
+.orderCash .deliveryMemo .listType{font-size:3.58vw;color:#898989;}
+
+.orderCash .orderInfo{padding:5.12vw;}
+.orderCash .orderInfo dl + dl{margin-top:3.84vw;}
+.orderCash .orderInfo dl:after{content:'';display:block;clear:both;}
+.orderCash .orderInfo dl > *{float:left;}
+.orderCash .orderInfo dl dt{width:22.9vw;margin-right:2.6vw;color:#898989;}
+.orderCash .orderInfo dl dd{width:calc(100% - 26vw);}
+.orderCash .orderInfo dl dd .old{display:block;margin-top:2.6vw;color:#898989;}
+
+.orderCash .orderList{position:relative;padding:5.12vw;}
+.orderCash .orderList .allChk{}
+.orderCash .orderList .btnBox{position:absolute;top:5.12vw;right:5.12vw;z-index:10;}
+.orderCash .orderList .listArea{margin-top:6.4vw;}
+.orderCash .orderList .listArea > li{position:relative;padding-left:7.69vw;}
+.orderCash .orderList .listArea > li + li{margin-top:7.69vw;}
+.orderCash .orderList .listArea > li .chkBox{position:absolute;top:0;left:0;z-index:10;}
+.orderCash .orderList .listArea > li .sGoods{position:relative;padding-left:25.64vw;}
+.orderCash .orderList .listArea > li .thumb{overflow:hidden;position:absolute;top:0;left:0;width:20.5vw;height:20.5vw;border:1px solid #e8e8e8;border-radius:5px;}
+.orderCash .orderList .listArea > li .sGoods .detail > *{display:block;margin-top:1.3vw;}
+.orderCash .orderList .listArea > li .sGoods .prdCode{font-size:3.3vw;}
+.orderCash .orderList .listArea > li .sGoods .prdOption{font-size:3.3vw;color:#898989;}
+.orderCash .orderList .listArea > li .sGoods .baseDiscount{overflow:hidden;margin-top:2.6vw;}
+.orderCash .orderList .listArea > li .sGoods .baseDiscount .price{float:left;width:30.7vw;}
+.orderCash .orderList .listArea > li .sGoods .baseDiscount .count{position:relative;float:left;width:calc(100% - 38.7vw);margin-left:3.8vw;padding-left:3.8vw;font-size:3.58vw;}
+.orderCash .orderList .listArea > li .sGoods .baseDiscount .count:before{content:'';position:absolute;top:0.7vw;left:0;width:1px;height:4.1vw;background-color:#e8e8e8;}
+.orderCash .orderList .listArea .noteBox{margin-top:2.6vw;padding-top:3.84vw;padding-bottom:3.84vw;font-size:3.58vw;}
+.orderCash .orderList .listArea .noteBox .inputBox .clickType label ~ label{margin-left:4.1vw;}
+.orderCash .orderList .listArea .noteBox .inputBox .ui-input-text{background-color:#fff;}
+.orderCash .orderList .listArea .noteBox .txt{margin-top:2.6vw;color:#898989;font-size:3.5vw;}
+
+.orderCash .discountType{padding:5.12vw;}
+.orderCash .discountType .inputBox{position:relative;padding-left:25.6vw;}
+.orderCash .discountType .inputBox .tit{position:absolute;top:1.2vw;left:0;font-weight:400;}
+.orderCash .discountType .inputBox .label{text-align:right;}
+.orderCash .discountType .inputBox > *:not(.tit) ~ .label{margin-top:2.6vw;}
+.orderCash .discountType .inputBox .label .btnBox{display:inline-block;}
+.orderCash .discountType .inputBox .ui-select .ui-btn > span{font-size:3.58vw;}
+.orderCash .discountType .inputBox .pointType{position:relative;}
+.orderCash .discountType .inputBox .pointType .ui-input-text{padding-right:7.69vw;}
+.orderCash .discountType .inputBox .pointType .ui-input-text input{text-align:right;}
+.orderCash .discountType .inputBox .pointType .unit{position:absolute;top:3.3vw;right:3.83vw;}
+
+.orderCash .orderBills{padding:5.12vw;}
+.orderSheet{padding-top:3.84vw;border-top:1px solid #111;}
+.orderSheet > dl.total{padding-top:3.84vw;border-top:1px solid #111;}
+.orderSheet > dl.bt{padding-top:3.84vw;border-top:1px solid #e8e8e8;}
+.orderSheet > dl{display:flex;flex-wrap:nowrap;}
+.orderSheet > dl + dl{margin-top:3.84vw;}
+.orderSheet > dl > *{display:inline-block;flex: auto;}
+.orderSheet > dl > dt{margin-right:2.6vw;}
+.orderSheet > dl > dd{text-align:right;}
+.orderSheet > dl.total > dd{font-size:5.12vw;}
+
+.orderCash .cashType{padding:5.12vw;}
+.orderCash .cashType .inputBox textarea.ui-input-text{height: 28.2vw !important;}
+.orderCash .cashType .cashSelect{margin:-2.6vw 0 0 -2.6vw;}
+.orderCash .cashType .cashSelect:after{content:'';display:block;clear:both;}
+.orderCash .cashType .cashSelect > *{float:left;width:calc(50% - 2.6vw);margin:2.6vw 0 0 2.6vw;}
+
+.orderCash .taxType{padding:5.12vw;}
+.orderCash .taxType .taxSelect{}
+.orderCash .taxType .taxSelect + .taxSelect{margin-top:3.84vw;padding-top:3.84vw;border-top: 1px solid #e8e8e8;}
+.orderCash .taxType .taxSelect > *{display:block;}
+.orderCash .taxType .taxSelect > * + *{margin-top:3.84vw;}
+.orderCash .taxType .taxSelect input:disabled + label{color:#898989;}
+.orderCash .taxType .taxSelect label > i{color:#111 !important;}
+
+.orderCash .paymentChk{padding:5.12vw;}
+.orderCash .paymentChk > *{display:block;}
+.orderCash .paymentChk > * +*{margin-top:5.12vw;}
