@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+    <defs>
+        <style>
+            .cls-2{fill:#111}
+        </style>
+    </defs>
+    <g id="ico_plus" transform="translate(0 0.124)">
+        <path id="guide" fill="none" d="M0 0H15V15H0z" opacity="0.505" transform="translate(0 -0.124)"/>
+        <path id="사각형_3648" d="M0 0H13V1H0z" class="cls-2" transform="translate(1 6.876)"/>
+        <path id="사각형_3649" d="M0 0H1V13H0z" class="cls-2" transform="translate(7 0.876)"/>
+    </g>
+</svg>

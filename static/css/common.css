@@ -16,13 +16,16 @@
 .swiper-button-next span, .swiper-button-prev span{display:block;text-indent:-99999px;}
 
 /* header */
-header{height:14.35vw;display:flex;flex-wrap:wrap;width:100%;padding:0 5.1vw;justify-content: space-between;align-items: center;}
+header{height:14.35vw;display:flex;flex-wrap:wrap;width:100%;padding:0 5.1vw;justify-content: space-between;align-items: center;background:#fff;}
 header .off{display:none;}
 header > h1{flex:auto;text-align:center;font-size:4.1vw;font-weight:700;}
 header > ul{display:flex;}
 header > ul li + li{margin-left:5.1vw;}
 
-
+/* 상품상세페이지에서만 fixed */
+header.prdViewPage{position:fixed;left:0;top:0;width:100%;z-index: 8;transform: translateY(0px);-webkit-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;transition: all 0.3s ease-in-out;background:rgba(255,255,255,0.95);}
+header.prdViewPage.off{transform:translateY(-14.35vw);}
 
 
 /* footer */
+footer.inBtnFix{padding-bottom:20.51vw;}

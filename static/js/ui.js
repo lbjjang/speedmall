@@ -1,4 +1,7 @@
 var optionBarPT;
+var prdTabConPT;
+var prdTabConPTHeight;
+var prdTabConPTH;
 var windowScrollT;
 //input type number 최대값
 function maxLengthCheck(object){
@@ -83,7 +86,6 @@ $(document).ready(function () {
 			$(this).parent().parent().addClass('view');
 		}
 	});
-
 	
 	//카테고리 상품상세 - 상품정보 펼치기
 	$('.category.view .prdInfo .prdInfoDetail .btnInfo a').click(function(){
@@ -94,22 +96,27 @@ $(document).ready(function () {
 		}
 	});
 
-	
-
-
 	//하단 팝업
 	$('.btn.popBt').click(function(){
-		var popname = $(this).children().attr('data-pop-name');
-		$('.layerBtPop' + '.' + popname).addClass('on');
-		$('.dimmed').fadeIn();
-		$('body').addClass('scLock');
+		if($(this).hasClass('on')){
+			$('.dimmed').fadeOut();
+			$('.btn.popBt').removeClass('on');
+			$('.layerBtPop').removeClass('on');
+			$('body').removeClass('scLock');	
+		} else{
+			var popname = $(this).children().attr('data-pop-name');
+			$('.layerBtPop' + '.' + popname).addClass('on');
+			$(this).addClass('on');
+			$('.dimmed').fadeIn();
+			$('body').addClass('scLock');
+		}
 	});
 	$('.layerBtPop .btn.popClose').click(function(){
 		$('.dimmed').fadeOut();
+		$('.btn.popBt').removeClass('on');
 		$('.layerBtPop').removeClass('on');
 		$('body').removeClass('scLock');
 	});
-
 
 	//풀팝업
 	$('.btn.popFull').click(function(){
@@ -127,7 +134,24 @@ $(document).ready(function () {
 		optionBarPT = $('.optionBar').offset().top;
 	}
 
-	
+	// 상품상세페이지 상품탭영역
+	if($('.titleTab').length > 0){
+		prdTabConPT = $('.titleTab').offset().top;
+		prdTabConPTHeight = $('.titleTab').offset().top + $('.titleTab').innerHeight();
+		prdTabConPTH = prdTabConPT - $('header').innerHeight();
+	}
+
+	// 상품상세페이지 상품 전체 옵션
+	$('.category.view .prdInfo .prdAllopt .filterBox .filter2').click(function(){
+		if ($(this).hasClass('on')){
+			$(this).removeClass('on');
+			$(this).parent().next().slideUp();
+		} else{
+			$(this).addClass('on');
+			$(this).parent().next().slideDown();
+		}
+	});
+
 
 	var categoryViewSlide1 = new Swiper('.category.view .prdTopSlide .slideBox .swiper-container', {
 		observeParents:true,
@@ -142,25 +166,46 @@ $(document).ready(function () {
 		},
 	});
 
-	var categoryViewSlide2 = new Swiper('.category.view .prdOther .slideBox .swiper-container', {
+	var categoryViewSlide2 = new Swiper('.category.view .prdOther.related .slideBox .swiper-container', {
 		observeParents:true,
 		observeSlideChildren:true,
 		observer:true,
 		loop:true,
+		slidesPerView: 2,
+		spaceBetween: 16,
 		speed: 700,
 		pagination: {
-			el: '.category.view .prdOther .slideBox .swiper-pagination',
+			el: '.category.view .prdOther.related .slideBox .swiper-pagination',
 			type: 'bullets',
 
 		},
 	});
 
-	var categoryViewSlide3 = new Swiper('.category.view .prdBottomBanner .slideBox .swiper-container', {
+	var categoryViewSlide3 = new Swiper('.category.view .prdOther.together .slideBox .swiper-container', {
 		observeParents:true,
 		observeSlideChildren:true,
 		observer:true,
 		loop:true,
+		slidesPerView: 2,
+		spaceBetween: 16,
 		speed: 700,
+		pagination: {
+			el: '.category.view .prdOther.together .slideBox .swiper-pagination',
+			type: 'bullets',
+
+		},
+	});
+
+
+	var categoryViewSlide4 = new Swiper('.category.view .prdBottomBanner .slideBox .swiper-container', {
+		observeParents:true,
+		observeSlideChildren:true,
+		observer:true,
+		speed: 700,
+		autoplay: {
+			disableOnInteraction:false,
+			delay: 2500,
+		},		
 		scrollbar: {
 			el: '.swiper-scrollbar',
 			draggable: true,
@@ -277,8 +322,35 @@ $(document).scroll(function() {
 		} 
 		if(windowScrollT < optionBarPT){
 			$('.optionBar').removeClass('fixed');
-		}
+		}		
 	}
+
+	if($('.titleTab').length > 0){
+		var windowScrollT = $(window).scrollTop();
+		var prdTabConP = $('.titleTab').offset().top;
+		var headerH = $('header').innerHeight();
+		prdTabConP = prdTabConP - headerH;
+
+		console.log("windowScrollT ::: " + windowScrollT);
+		console.log("prdTabConPTHeight ::: " + prdTabConPT);
+		if(windowScrollT >= prdTabConP){
+			$('.prdTabCon').addClass('fixed');
+//			$('header.prdViewPage').addClass('off');
+		}
+		if(windowScrollT > prdTabConPT){
+			$('header.prdViewPage').addClass('off');
+			$('.prdTabCon').addClass('transform');
+		} else{
+			$('.prdTabCon').removeClass('transform');
+			$('header.prdViewPage').removeClass('off');
+
+		}
+		if(windowScrollT < prdTabConPTH){
+			$('.prdTabCon').removeClass('fixed');
+		}		
+
+	}
+
 
 
 });

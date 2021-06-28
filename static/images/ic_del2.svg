@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .cls-2{fill:none;stroke:#111}
+        </style>
+    </defs>
+    <g id="ico_del" transform="translate(-349 -222)">
+        <path id="guide" fill="none" d="M0 0H16V16H0z" opacity="0.5" transform="translate(349 222)"/>
+        <path id="패스_17335" d="M9402 4912l-12 12" class="cls-2" transform="translate(-9039 -4688)"/>
+        <path id="패스_17336" d="M9390 4912l12 12" class="cls-2" transform="translate(-9039 -4688)"/>
+    </g>
+</svg>
