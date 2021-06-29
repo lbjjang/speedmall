@@ -52,42 +52,89 @@
 			<div class="slideCon">
 				<div class="top">
 					<a href="#">
-						<p>배송정보<span>인천직영점</span></p>
+						<p>주문자 정보</p>
 					</a>
 				</div>
 				<div class="bottom">
-					<div class="deliveryLoc">
-						<strong class="locName">
-							인천직영점
-							<div class="labelTag"><span class="label red">기본배송지</span></div>
-						</strong>
-						<div class="reciveInfo">
-							<span>김행복</span>
-							<span>010-9999-6789</span>
-						</div>
-						<p class="address">(060-40) 서울 강남구 도산대로24길 7 (논현동 효진빌딩) 3층</p>
-					</div>
-
-					<ul class="boxLineTab">
-						<li class="active"><a href="#">기본배송지</a></li>
-						<li><a href="#">신규배송지</a></li>
-						<li><a href="#">센터방문수령</a></li>
-					</ul>
-
 					<div class="deliveryIpt">
 						<form>
-							<a href="#" class="deliverySelect">배송지 목록에서 선택</a>
+							<div class="inputBox">
+								<div class="tit">보내는분 <span class="star">*</span></div>
+								<input type="text" placeholder="이름을 입력해주세요." data-clear-btn="true">
+							</div>
+
+							<div class="inputBox">
+								<div class="tit">이메일 <span class="star">*</span></div>
+								<input type="text" placeholder="이름을 입력해주세요." data-clear-btn="true">
+							</div>
+
+							<div class="inputBox">
+								<div class="tit">휴대전화번호 <span class="star">*</span></div>
+								<div class="selBox tel">
+									<select name="telBox">
+										<option value="010" selected>010</option>
+										<option value="02">02</option>
+										<option value="033">033</option>
+										<option value="063">063</option>
+									</select>
+									<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+									<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+								</div>
+							</div>
+
+							<div class="inputBox">
+								<div class="tit">기타연락처</div>
+								<div class="selBox tel">
+									<select name="telBox">
+										<option value="010" selected>010</option>
+										<option value="02">02</option>
+										<option value="033">033</option>
+										<option value="063">063</option>
+									</select>
+									<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+									<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+								</div>
+							</div>
+
+							<div class="inputBox">
+								<div class="tit">주소 <span class="star">*</span></div>
+								<div class="addressFind">
+									<div class="btnBox onlyType">
+										<div class="btn rd2 black">
+											<a href="#"><span>주소찾기</span></a>
+										</div>
+									</div>
+									<input type="text" disabled="disabled" />
+									<input type="text" disabled="disabled" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="slideCon">
+				<div class="top">
+					<a href="#">
+						<p>배송지</p>
+					</a>
+				</div>
+				<div class="bottom">
+					<div class="deliveryIpt">
+						<form>
 							<div class="inputBox">
 								<div class="clickType">
-									<input id="checkbox1-1" name="checkbox" type="checkbox" checked="" class="checkTy1">
-									<label for="checkbox1-1">기본 배송지로 설정</label>
 									<input id="checkbox1-2" name="checkbox" type="checkbox" class="checkTy1">
 									<label for="checkbox1-2">주문자 정보와 동일</label>
 								</div>
 							</div>
 							<div class="inputBox">
-								<div class="tit">받는분 <span class="star">*</span></div>
-								<input type="text" placeholder="최대 10자" data-clear-btn="true">
+								<div class="tit">보내는분 <span class="star">*</span></div>
+								<input type="text" placeholder="이름을 입력해주세요." data-clear-btn="true">
+							</div>
+
+							<div class="inputBox">
+								<div class="tit">이메일 <span class="star">*</span></div>
+								<input type="text" placeholder="이름을 입력해주세요." data-clear-btn="true">
 							</div>
 
 							<div class="inputBox">
@@ -138,102 +185,15 @@
 			<div class="slideCon">
 				<div class="top">
 					<a href="#">
-						<p>배송방법<span>취합발송</span></p>
-					</a>
-				</div>
-				<div class="bottom">
-					<div class="deliveryMethod">
-						<strong class="title">선물세트 배송안내</strong>
-						<ul class="listType dot">
-							<li>예약발송상품으로 배송일정은 고객센터 <a href="tel:1644-5644">1644-5644</a>에 문의해주세요.</li>
-							<li>‘스피드몰’ 이름으로 발송되오니, 배송메모란에 보내는 분의 성함을 표기해 주세요.</li>
-						</ul>
-
-						<div class="methodList">
-							<input id="radio1-1" name="radio" type="radio" class="radioTy1" checked>
-							<label for="radio1-1">
-								<strong>취합발송</strong>
-								<p>2021-06-17 이내 취합 발송</p>
-							</label>
-
-							<input id="radio1-2" name="radio" type="radio" class="radioTy1">
-							<label for="radio1-2">
-								<strong>분할발송(기업회원전용)</strong>
-								<p>1차 발송일 :  2021-06-17</p>
-								<p>2차 발송일 :  2021-06-30 이내 취합발송</p>
-							</label>
-						</div>
-
-						<div class="btnBox">
-							<div class="btn small">
-								<a href="#"><span>분할/취합발송 안내</span></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="slideCon">
-				<div class="top">
-					<a href="#">
 						<p>배송메모</p>
 					</a>
 				</div>
 				<div class="bottom">
 					<div class="deliveryMemo">
 						<div class="inputBox">
-							<div class="tit">배송일시</div>
-							<div class="iptSelectType">
-								<input type="text" placeholder="" data-clear-btn="true">
-								<select name="">
-									<option value="" selected>16-18시 사이</option>
-									<option value="">16-18시 사이</option>
-									<option value="">16-18시 사이</option>
-									<option value="">16-18시 사이</option>
-								</select>
-							</div>
-							<p class="warring">행사 또는 예식의 경우, 행사/예식 시간을 입력해주세요.</p>
-						</div>
-						<div class="inputBox">
 							<div class="tit">배송메모</div>
 							<textarea placeholder="배송메세지를 적어주세요."></textarea>
-							<ul class="listType dash">
-								<li>결혼식 화환일 경우 : 신랑 OOO, 신부 OOO, 혼주 OOO</li>
-								<li>장례식 근조일 경우 : 상주 OOO, 고인 OOO</li>
-							</ul>
 						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="slideCon">
-				<div class="top">
-					<a href="#">
-						<p>주문자정보 <span>김행복</span></p>
-					</a>
-				</div>
-				<div class="bottom">
-					<div class="orderInfo">
-						<dl>
-							<dt>보내는 분</dt>
-							<dd>김행복</dd>
-						</dl>
-						<dl>
-							<dt>이메일</dt>
-							<dd>speed@mail.com</dd>
-						</dl>
-						<dl>
-							<dt>휴대전화번호</dt>
-							<dd>010-9999-6789</dd>
-						</dl>
-						<dl>
-							<dt>기타연락처</dt>
-							<dd>-</dd>
-						</dl>
-						<dl>
-							<dt>주소</dt>
-							<dd>도로명 : 서울특별시 중구 서소문로 89-31 (순화동, N빌딩) 5층 <span class="old">지번 : 서울 특별시 중구 순화동 2-6 5층</span></dd>
-						</dl>
 					</div>
 				</div>
 			</div>
@@ -392,64 +352,6 @@
 			<div class="slideCon">
 				<div class="top">
 					<a href="#">
-						<p>쿠폰/포인트 <span>-5,000P</span></p>
-					</a>
-				</div>
-				<div class="bottom">
-					<div class="discountType">
-						<div class="inputBox">
-							<div class="tit">
-								쿠폰할인
-								<div class="btn tooltip">
-									<a href="#"><span class="hide">툴팁</span></a>
-									<div class="tooltipBox">
-										<ul class="listType dot">
-											<li>쿠폰은 주문 시 포인트와 중복하여 사용하실 수 없습니다. <br>단, 무료배송 쿠폰은 포인트와 중복하여 사용 가능합니다.</li>
-											<li>주문/결제완료 후 반품/취소된 경우 사용된 쿠폰은 재 발행되지 않습니다.</li>
-											<li>카테고리 할인 쿠폰의 경우, 카테고리 내 일부 상품이 제외될 수 있습니다.</li>
-										</ul>
-										<div class="tooltipClose"><a href="#">닫기</a></div>
-									</div>
-								</div>
-							</div>
-							<div class="label">
-								사용 가능 쿠폰 <span class="colorRed">99</span>
-								<div class="btnBox">
-									<div class="btn small">
-										<a href="#"><span>쿠폰선택</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="inputBox">
-							<div class="tit">무료배송할인</div>
-							<select name="">
-								<option value="" selected>적용할 수 있는 쿠폰이 없습니다.</option>
-								<option value="">063</option>
-							</select>
-						</div>
-						<div class="inputBox">
-							<div class="tit">포인트</div>
-							<div class="pointType">
-								<input type="text">
-								<span class="unit">P</span>
-							</div>
-							<div class="label">
-								사용 가능 포인트 <span class="colorRed">18,000P</span>
-								<div class="btnBox">
-									<div class="btn small">
-										<a href="#"><span>모두사용</span></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="slideCon">
-				<div class="top">
-					<a href="#">
 						<p>최종결제금액 <em class="vat">VAT포함</em><span><em class="count">123,123,000</em>원</span></p>
 					</a>
 				</div>
@@ -498,31 +400,71 @@
 				<div class="bottom">
 					<div class="cashType">
 						<div class="inputBox">
-							<div class="tit">후불결제 
-								<div class="btn tooltip">
-									<a href="#"><span class="hide">툴팁</span></a>
-									<div class="tooltipBox">
-										<ul class="listType dot">
-											<li>후불제 결제는 일괄 정산으로 계약된 회사에 한해서만 사용이 가능합니다.</li>
-											<li>후불제 사용 법인고객은 선결제(카드, 무통장입금 등)가 불가능합니다.</li>
-											<li>주문된 내역은 [주문내역] - [진행중인 주문내역]에서 확인/취소 하실 수 있습니다.</li>
-										</ul>
-										<div class="tooltipClose"><a href="#">닫기</a></div>
-									</div>
-								</div>
-								
+							<div class="cashSelect">
+								<span>
+									<input id="radio4-1" name="radio4" type="radio" class="radioTy1" checked="">
+									<label for="radio4-1">신용카드 결제</label>
+									<div class="btn tooltip"><a href="#"><span class="hide">툴팁</span></a></div>
+								</span>
+								<span>
+									<input id="radio4-2" name="radio4" type="radio" class="radioTy1" checked="">
+									<label for="radio4-2">실시간 계좌이체</label>
+								</span>
+								<span>
+									<input id="radio4-3" name="radio4" type="radio" class="radioTy1" checked="">
+									<label for="radio4-3">무통장 입금</label>
+								</span>
 							</div>
+						</div>
+						<div class="inputBox">
+							<div class="tit">후불결제 <div class="btn tooltip"><a href="#"><span class="hide">툴팁</span></a></div></div>
 							<textarea placeholder="결재메모를 입력해주세요."></textarea>
 						</div>
 					</div>
 				</div>
 			</div>
 
+			<div class="slideCon">
+				<div class="top">
+					<a href="#">
+						<p>증빙양식 발금신청 <span>필요없음</span></p>
+					</a>
+				</div>
+				<div class="bottom">
+					<div class="taxType">
+						<div class="taxSelect">
+							<span>
+								<input id="radio5-1" name="radio5" type="radio" class="radioTy1" disabled>
+								<label for="radio5-1">세금계산서 <i>(선택불가)</i></label>
+								<div class="btn small white">
+									<a href="#"><span>정보변경</span></a>
+								</div>
+							</span>
+							<span>
+								<input id="radio5-2" name="radio5" type="radio" class="radioTy1" disabled>
+								<label for="radio5-2">현금영수증 <i>(선택불가)</i></label>
+							</span>
+							<span>
+								<input id="radio5-3" name="radio5" type="radio" class="radioTy1" checked="">
+								<label for="radio5-3">필요없음 <i>(선택가능)</i></label>
+							</span>
+						</div>
+
+						<div class="taxSelect">
+							<span>
+								<input id="radio6-1" name="radio6" type="radio" class="radioTy1">
+								<label for="radio6-1">거래명세서 동봉</label>
+							</span>
+							<span>
+								<input id="radio6-2" name="radio6" type="radio" class="radioTy1">
+								<label for="radio6-2">구매용품확인서<em>(공급자 정보없이 품명/수량만 표기)</em></label>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="paymentChk">
-				<span>
-					<input id="checkbox2" name="checkbox" type="checkbox" class="checkTy1">
-					<label for="checkbox2">지금 설정을 다음 주문에도 사용</label>
-				</span>
 				<span>
 					<input id="checkbox5" name="checkbox" type="checkbox" class="checkTy1">
 					<label for="checkbox5">위 주문 내용을 확인 하였으며, 결제에 동의합니다.</label>
@@ -540,19 +482,6 @@
 <footer>
 
 </footer>
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		//툴팁 모션
-		$('.btn.tooltip a').click(function(){
-			$(this).next('.tooltipBox').fadeIn();
-		});
-
-		$('.tooltipBox .tooltipClose').click(function(){
-			$(this).parent().fadeOut();
-		});
-	});
-</script>
 
 </body>
 </html>

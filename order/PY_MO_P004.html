@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" sizes="192x192" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
+	<link rel="icon" href="" type="image/x-icon">
+    <title>스피드몰 - 주문/결제</title>
+	<!-- 사용안하는 플러그인은 추후 삭제 -->
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
+<!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="../static/css/mobiscroll.jquery.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../static/css/swiper.min.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/mobiscroll.jquery.min.js"></script>
+    <script src="../static/js/ui.js"></script>
+<body>
+
+<div style="position:relative;height:100vh;">
+	<div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width:50%;">
+
+		<div class="btn popFull rd gradation1"><a href="#" data-pop-name="selectDelivery4">세금계산서 정보 수정</a></div>
+
+	</div>
+</div>
+
+
+<!-- 컨텐츠 영역 -->
+<div class="taxCalPop selectDelivery4 layerFullPop"> <!-- class="1depth + 상세" -->
+	<div class="top">
+		<p class="tit">세금계산서 정보 수정</p>
+		<div class="btn popClose"><a href="#"><span class="hide">닫기</span></a></div>
+	</div>
+	<div class="con">
+		<div class="wrap">
+			<div class="borderWrap">
+				<strong class="title">세금계산서 담당자 정보</strong>
+				<p class="warring">마이페이지에서 변경 가능합니다.</p>
+				<div class="orderInfo">
+					<dl>
+						<dt>보내는 분</dt>
+						<dd>김행복</dd>
+					</dl>
+					<dl>
+						<dt>부서</dt>
+						<dd>구매부</dd>
+					</dl>
+					<dl>
+						<dt>휴대전화번호</dt>
+						<dd>010-9999-6789</dd>
+					</dl>
+					<dl>
+						<dt>세금계산서<br>이메일주소</dt>
+						<dd>speed@mail.com</dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="borderWrap">
+				<strong class="title">품목 정보 변경</strong>
+				<div class="inputBox lineType">
+					<div class="tit">품목</div>
+					<input type="text" data-clear-btn="true" value="직관형 램프">
+				</div>
+			</div>
+
+			<div class="borderWrap">
+				<strong class="title">사업자 정보 변경</strong>
+				<p class="warring">마이페이지에서 변경 가능합니다.</p>
+				<div class="orderInfo">
+					<dl>
+						<dt>대표자명</dt>
+						<dd>김행복</dd>
+					</dl>
+					<dl>
+						<dt>사업자<br>등록번호</dt>
+						<dd>211-87-71799</dd>
+					</dl>
+					<dl>
+						<dt>법인명</dt>
+						<dd>행복나래 주식회사</dd>
+					</dl>
+					<dl>
+						<dt>업태</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>종목</dt>
+						<dd>-</dd>
+					</dl>
+					<dl>
+						<dt>주소</dt>
+						<dd>도로명 : 서울특별시 중구 서소문로 89-31 (순화동, N빌딩) 5층 <span class="old">지번 : 서울 특별시 중구 순화동 2-6 5층</span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="btnBox btn2">
+				<div class="btn rd gray">
+					<a href="#"><span>취소</span></a>
+				</div>
+				<div class="btn rd gradation1">
+					<a href="#"><span>변경완료</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- footer 영역 -->
+<footer>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" sizes="192x192" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
+	<link rel="icon" href="" type="image/x-icon">
+    <title>스피드몰 - 주문/결제</title>
+	<!-- 사용안하는 플러그인은 추후 삭제 -->
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
+<!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="../static/css/mobiscroll.jquery.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../static/css/swiper.min.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/mobiscroll.jquery.min.js"></script>
+    <script src="../static/js/ui.js"></script>
+<body>
+
+<!-- header 영역 -->
+
+<!-- //header 영역 -->
+
+<!-- 컨텐츠 영역 -->
+<div class="order orderComplete"> <!-- class="1depth + 상세" -->
+	<section class="con">
+		<div class="completeScreen">
+			<div class="wrap">
+				<strong class="title">주문처리에 실패하여 <br>주문을 완료하지 못했습니다.</strong>
+				<div class="completeSheet">
+					<dl>
+						<dt>결제방법</dt>
+						<dd>
+							신용카드
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>결제결과</dt>
+						<dd>
+							DB ERR
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>에러내용</dt>
+						<dd>
+							<span class="colorRed">시스템처리에러</span><br>
+							결제가 정상적으로 이루어지지 않았습니다. DB오류
+						</dd>
+					</dl>
+				</div>
+				
+				<div class="failReason">
+					<ul class="listType dot">
+						<li>결제후 시스템 이상으로 정상적으로 주문이 되지 않았습니다. 이 경우 <span class="colorRed">자동적으로 결제가 취소</span> 됩니다.</li>
+						<li>장바구니로 이동하여 다시 주문처리하시기 바랍니다.</li>
+						<li>만약 계속해서 정상적으로 주문이 되지 않을 경우 고객센터로 문의 하시기 바랍니다.</li>
+						<li>고객센터 전화번호 <a href="tel:1644-5644">1644-5644</a></li>
+					</ul>
+				</div>
+
+				<div class="btnBox btn2">
+					<div class="btn rd gray">
+						<a href="#"><span>쇼핑홈 가기</span></a>
+					</div>
+					<div class="btn rd gradation1">
+						<a href="#"><span>다시주문하기</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<!-- footer 영역 -->
+<footer>
+
+</footer>
+
+</body>
+</html>

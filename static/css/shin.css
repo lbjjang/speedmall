@@ -5,6 +5,9 @@
 /* 텍스트 컬러 */
 .colorRed{color:#f41300;}
 
+.inputBox.lineType{position:relative;padding-left: 25.6vw;}
+.inputBox.lineType .tit{position: absolute;top: 1.2vw;left: 0;font-weight: 400;}
+
 .inputBox .iptSelectType{display:flex;flex-wrap:nowrap;}
 .inputBox .iptSelectType > *{display:inline-block;flex: auto;}
 .inputBox .iptSelectType .ui-select{width:45.9vw;margin-left:2.6vw;}
@@ -21,6 +24,13 @@
 .btn.trash a{width:5.12vw;height:5.12vw;background-image:url('../images/ic_trash.svg');}
 .btn.tooltip{display:inline-block;vertical-align:middle;}
 .btn.tooltip a{width:3.84vw;height:3.84vw;background-image:url('../images/ic_tooltip.svg');}
+.btn.tooltip.ver2 a{background-image:url('../images/ic_tooltip2.svg');}
+
+/* 툴팁 */
+.tooltipBox{display:none;position:fixed;top:50%;left:50%;width:80%;padding:7.69vw;background-color:#fff;box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);border-radius:6px;transform:translate(-50%,-50%);z-index:15;}
+.tooltipBox > *{font-size:3.58vw;}
+.tooltipBox .tooltipClose{margin-top:2.6vw;text-align:right;}
+.tooltipBox .tooltipClose a{display:inline-block;width:auto;height:auto;background-image:none !important;color:#f41300;}
 
 /* 탭 */
 .boxLineTab{display:-webkit-flex;-webkit-flex-wrap:no-wrap;display:flex;flex-wrap:no-wrap;flex-direction:row;}
@@ -43,6 +53,7 @@
 .orderCash .slideCon .top a p > span .count{color:#f41300;}
 .orderCash .slideCon.on .top a p > span{display:none;}
 .orderCash .slideCon.on .top a p .vat{display:inline-block;}
+.orderCash .slideCon .bottom{border-bottom:0;}
 
 .deliveryLoc{position:relative;padding:5.12vw;}
 .deliveryLoc .locName{display:block;}
@@ -52,9 +63,17 @@
 .deliveryLoc .reciveInfo > * + *{padding-left:6.4vw;}
 .deliveryLoc .reciveInfo > * + *:before{content:'';position:absolute;top:0.7vw;left:3.2vw;width:1px;height:4.61vw;background-color:#e8e8e8;}
 .deliveryLoc .address{margin:1.8vw 0 0;color:#898989;font-size:3.58vw;}
+.deliveryLoc .btn{position:absolute;top:4.1vw;right:5.12vw;z-index:10;}
+
+.deliveryCenter{position:relative;padding:5.12vw;}
+.deliveryCenter .locName{display:block;}
+.deliveryCenter .locName .colorRed{display:inline-block;margin:-1.2vw 0 0 1.2vw;font-weight:400;vertical-align:middle;}
+.deliveryCenter .address{margin:5.12vw 0 0;font-size:3.58vw;}
+.deliveryCenter .btn{position:absolute;top:5.12vw;right:5.12vw;z-index:10;}
 
 .orderCash .deliveryIpt{padding:7.69vw 5.12vw;}
 .orderCash .deliveryIpt .deliverySelect{padding:3.58vw;border-radius:3px;border:1px solid #ddd;text-align:center;}
+.orderCash .deliveryIpt .deliveryCenter{padding-left:0;padding-right:0;}
 
 .orderCash .deliveryMethod{padding:0 5.12vw 5.12vw;}
 .orderCash .deliveryMethod .title{display:block;margin-bottom:2.6vw;}
@@ -134,11 +153,77 @@
 .orderCash .taxType{padding:5.12vw;}
 .orderCash .taxType .taxSelect{}
 .orderCash .taxType .taxSelect + .taxSelect{margin-top:3.84vw;padding-top:3.84vw;border-top: 1px solid #e8e8e8;}
-.orderCash .taxType .taxSelect > *{display:block;}
+.orderCash .taxType .taxSelect > *{position:relative;display:block;}
 .orderCash .taxType .taxSelect > * + *{margin-top:3.84vw;}
 .orderCash .taxType .taxSelect input:disabled + label{color:#898989;}
+.orderCash .taxType .taxSelect label{display:block;}
 .orderCash .taxType .taxSelect label > i{color:#111 !important;}
+.orderCash .taxType .taxSelect label > em{display:block;font-size:3.58vw;color:#898989 !important;}
+.orderCash .taxType .taxSelect > * .btn.small{position:absolute;top:-1.2vw;right:0;}
 
 .orderCash .paymentChk{padding:5.12vw;}
 .orderCash .paymentChk > *{display:block;}
 .orderCash .paymentChk > * +*{margin-top:5.12vw;}
+
+.deliveryPop .placeInfo{padding:5.12vw;border-radius:8px;border:1px solid rgba(0, 0, 0, 0.05);background-color:#fff6f4;}
+.deliveryPop .placeInfo li{padding-left:7.69vw;background-repeat:no-repeat;background-position:left 50%;background-size:5.12vw auto;}
+.deliveryPop .placeInfo li + li{margin-top:2.6vw;}
+.deliveryPop .placeInfo li.time{background-image:url('../images/ic_time.svg');}
+.deliveryPop .placeInfo li.call{background-image:url('../images/ic_call.svg');}
+.deliveryPop .placeInfo li em, .deliveryPop .placeInfo li a{display:inline-block;margin-left:1.3vw;font-weight:500;}
+
+.addressPop .con{padding:7.69vw 0;}
+.addressPop .btnBox{margin:10.3vw 0 0;}
+
+.layerFullPop.couponPop .con{height:calc(100% - 79.35vw);padding:7.69vw 0 0;}
+.couponPop .inputBox .tit + .txt{color:#111;font-size:3.84vw;}
+.couponPop .couponTotal{position:absolute;bottom:0;left:0;padding:5.12vw;}
+.couponPop .couponTotal .total{}
+.couponPop .couponTotal .total:after{content:'';display:block;clear:both;}
+.couponPop .couponTotal .total > * {float:left;}
+.couponPop .couponTotal .total > *:last-child {float:right;font-size:5.12vw;}
+.couponPop .couponTotal .total + p{margin-top:5.12vw;}
+.couponPop .couponTotal .btnBox{margin:10.3vw 0 0;}
+
+.chnSubjectPop .con{padding:5.12vw 0;}
+.chnSubjectState{padding:3.84vw;border-radius:8px;border:1px solid rgba(0, 0, 0, 0.05);background-color:#fff6f4;}
+.chnSubjectState:after{content:'';display:block;clear:both;}
+.chnSubjectState > *{float:left;width:50%;text-align:center;}
+.chnSubjectState > * + *{border-left:1px solid #e8e8e8;}
+
+.chnSubject{position:relative;}
+.chnSubject .title{display:block;padding-right:12.8vw;}
+.chnSubject .moneyList{margin-top:5.12vw;}
+.chnSubject .moneyList > dl{position:relative;padding-left:16.8vw;}
+.chnSubject .moneyList > dl + dl{margin-top:2.6vw;}
+.chnSubject .moneyList > dl > dt{position:absolute;top:0;left:0;}
+.chnSubject .btn{position:absolute;top:0;right:0;z-index:10;}
+
+.chnSubjectPop .chnSubjectState + .searchBox{margin-top:2.6vw;}
+.chnSubjectPop .chnSubject{margin-top:7.69vw;}
+.chnSubjectPop .btnBox.btnCt{margin-top:7.69vw;}
+
+.completeScreen {padding:15.1vw 0;}
+.completeScreen .title{display:block;margin:0 0 7.69vw;font-size:6.1vw;}
+.completeScreen .completeSheet{padding:5.12vw 0;border-top:1px solid #111;border-bottom:1px solid #111;}
+.completeScreen .completeSheet > dl{position:relative;padding-left:25.6vw;font-size:3.58vw;line-height:1.5;}
+.completeScreen .completeSheet > dl.bt{margin-top:10.3vw;}
+.completeScreen .completeSheet > dl.bt:before{content:'';position:absolute;top:-5.12vw;left:0;width:100%;height:1px;background:#e8e8e8;}
+.completeScreen .completeSheet > dl + dl{margin-top:2.6vw;}
+.completeScreen .completeSheet > dl > dt{position:absolute;top:0;left:0;}
+.completeScreen .completeSheet .btn.small{display:inline-block;}
+.completeScreen .failReason{margin-top:5.12vw;}
+.completeScreen .btnBox.btnCt, .completeScreen .btnBox.btn2{margin-top:7.69vw;}
+
+.taxCalPop{}
+.taxCalPop .wrap{padding-top:5.12vw;padding-bottom:5.12vw;}
+.taxCalPop .borderWrap{margin:0 -5.12vw;padding:5.12vw;}
+.taxCalPop .borderWrap .title{display:block;margin-bottom:7.69vw;}
+.taxCalPop .borderWrap .title + .warring{margin:-5.12vw 0 7.69vw;color:#f41300;}
+.taxCalPop .orderInfo dl + dl{margin-top:3.84vw;}
+.taxCalPop .orderInfo dl:after{content:'';display:block;clear:both;}
+.taxCalPop .orderInfo dl > *{float:left;}
+.taxCalPop .orderInfo dl dt{width:22.9vw;margin-right:2.6vw;color:#898989;}
+.taxCalPop .orderInfo dl dd{width:calc(100% - 26vw);}
+.taxCalPop .orderInfo dl dd .old{display:block;margin-top:2.6vw;color:#898989;}
+.taxCalPop .btnBox{margin-top:7.69vw;}
