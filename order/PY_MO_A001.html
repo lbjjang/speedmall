@@ -408,7 +408,7 @@
 											<li>주문/결제완료 후 반품/취소된 경우 사용된 쿠폰은 재 발행되지 않습니다.</li>
 											<li>카테고리 할인 쿠폰의 경우, 카테고리 내 일부 상품이 제외될 수 있습니다.</li>
 										</ul>
-										<div class="btn popClose"><a href="#"><span class="hide">닫기</span></a></div>
+										<div class="tooltipClose"><a href="#">닫기</a></div>
 									</div>
 								</div>
 							</div>
@@ -507,7 +507,7 @@
 											<li>후불제 사용 법인고객은 선결제(카드, 무통장입금 등)가 불가능합니다.</li>
 											<li>주문된 내역은 [주문내역] - [진행중인 주문내역]에서 확인/취소 하실 수 있습니다.</li>
 										</ul>
-										<div class="btn popClose"><a href="#"><span class="hide">닫기</span></a></div>
+										<div class="tooltipClose"><a href="#">닫기</a></div>
 									</div>
 								</div>
 								
@@ -548,7 +548,7 @@
 			$(this).next('.tooltipBox').fadeIn();
 		});
 
-		$('.tooltipBox .btn.popClose').click(function(){
+		$('.tooltipBox .tooltipClose').click(function(){
 			$(this).parent().fadeOut();
 		});
 	});

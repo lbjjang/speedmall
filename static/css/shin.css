@@ -22,13 +22,15 @@
 .btn.small.white{background:#fff;color:#111;}
 
 .btn.trash a{width:5.12vw;height:5.12vw;background-image:url('../images/ic_trash.svg');}
-.btn.tooltip{position:relative;display:inline-block;vertical-align:middle;}
+.btn.tooltip{display:inline-block;vertical-align:middle;}
 .btn.tooltip a{width:3.84vw;height:3.84vw;background-image:url('../images/ic_tooltip.svg');}
+.btn.tooltip.ver2 a{background-image:url('../images/ic_tooltip2.svg');}
 
 /* 툴팁 */
-.tooltipBox{display:none;position:absolute;top:5.12vw;left:0;width:70vw;padding:10.12vw 3.84vw 3.84vw;background-color:#fff;box-shadow:0px 5px 15px 0 rgba(0,0,0,.3);border-radius:12px;z-index:15;}
-.tooltipBox > *{font-size:3.3vw;}
-.tooltipBox .btn.popClose{position:absolute;top:2.12vw;right:2.12vw;}
+.tooltipBox{display:none;position:fixed;top:50%;left:50%;width:80%;padding:7.69vw;background-color:#fff;box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);border-radius:6px;transform:translate(-50%,-50%);z-index:15;}
+.tooltipBox > *{font-size:3.58vw;}
+.tooltipBox .tooltipClose{margin-top:2.6vw;text-align:right;}
+.tooltipBox .tooltipClose a{display:inline-block;width:auto;height:auto;background-image:none !important;color:#f41300;}
 
 /* 탭 */
 .boxLineTab{display:-webkit-flex;-webkit-flex-wrap:no-wrap;display:flex;flex-wrap:no-wrap;flex-direction:row;}
