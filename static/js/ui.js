@@ -48,6 +48,7 @@ $(document).ready(function () {
 	});
 
 	//찜하기 버튼
+	/*
 	$('.btn.wish a').click(function(){
 		if ($(this).parent().hasClass('on')){
 			$(this).parent().removeClass('on');
@@ -55,6 +56,7 @@ $(document).ready(function () {
 			$(this).parent().addClass('on');		
 		}
 	});
+	*/
 
 	//리스트타입 버튼
 	$('.btn.listTy a').click(function(){
@@ -99,8 +101,8 @@ $(document).ready(function () {
 	//하단 팝업
 	$('.btn.popBt').click(function(){
 		if($(this).hasClass('on')){
+			$('.btn.popBt').removeClass('on');				
 			$('.dimmed').fadeOut();
-			$('.btn.popBt').removeClass('on');
 			$('.layerBtPop').removeClass('on');
 			$('body').removeClass('scLock');	
 		} else{
@@ -113,10 +115,58 @@ $(document).ready(function () {
 	});
 	$('.layerBtPop .btn.popClose').click(function(){
 		$('.dimmed').fadeOut();
-		$('.btn.popBt').removeClass('on');
+
+		if($(this).parents('.layerBtPop.popCatalogAdd').length < 1){ // 임시 팝업 (찜하기에서 폴더에 상품이 있는지 없는지에 따라 on 클래스 추가 삭제되는부분)
+			$('.btn.popBt').removeClass('on');				
+		}
 		$('.layerBtPop').removeClass('on');
 		$('body').removeClass('scLock');
 	});
+
+	//가운데 팝업
+	$('.btn.popCt').click(function(){
+		/* 
+			MY 카탈로그 팝업, 폴더관리에서 새폴더 눌렀을 때,
+			팝업에 prevPop 클래스 추가 (만들기 버튼 눌렀을 때, 구분)
+		*/
+		if($('.layerBtPop.folderPop').hasClass('on')){ 
+			$('.btn.popBt').removeClass('on');				
+			$('.layerBtPop').removeClass('on');
+			$('.layerBtPop.folderPop').addClass('prevPop');
+		}
+		var popname = $(this).children().attr('data-pop-name');
+		$('.layerCtPop' + '.' + popname).fadeIn();
+		$('.layerCtPop' + '.' + popname).css({
+			"top": (($(window).height()-$(".layerCtPop").outerHeight())/2+$(window).scrollTop())+"px",
+			"left": (($(window).width()-$(".layerCtPop").outerWidth())/2+$(window).scrollLeft())+"px"		 
+		}); 
+
+		$('.dimmed').fadeIn();
+		$('body').addClass('scLock');
+	});
+	$('.layerCtPop .btn.popCtClose').click(function(){
+		$('.dimmed').fadeOut();
+		$('.layerCtPop').fadeOut();
+		$('body').removeClass('scLock');
+	});
+
+	/* 
+		새폴더 만들기에서 만들기 버튼 눌렀을때, 
+		1. if  -> MY카탈로그 추가 팝업, 폴더관리에서 새폴더 눌렀을때, 혹
+		2. else -> 페이지 내에 새폴더 눌렀을때,
+	*/
+	$('.layerCtPop.newFolderPop .btnAddFolder').click(function(){
+		if($('.layerBtPop.folderPop').hasClass('prevPop')){
+			$('.layerBtPop.folderPop').addClass('on');
+			$('.layerBtPop.folderPop').removeClass('prevPop');
+			$('.layerCtPop.newFolderPop').fadeOut();
+		} else{
+			$('.dimmed').fadeOut();
+			$('.layerCtPop').fadeOut();
+			$('body').removeClass('scLock');	
+		}
+	});
+
 
 	//풀팝업
 	$('.btn.popFull').click(function(){

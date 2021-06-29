@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+    <defs>
+        <style>
+            .cls-6{fill:none}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="_btn_setting" transform="translate(-336 -652)">
+        <g id="사각형_662" fill="#fff" stroke="#ddd" transform="translate(336 652)">
+            <rect width="35" height="35" class="cls-5" rx="17.5"/>
+            <rect width="34" height="34" x=".5" y=".5" class="cls-6" rx="17"/>
+        </g>
+        <g id="그룹_2025" transform="translate(-365.774 450.237) rotate(-45)">
+            <path id="합치기_30" fill="#111" d="M7840.472 4522h-3.766l-4.705-3 4.705-3H7848v6z" transform="translate(-7489 -3855)"/>
+            <g id="사각형_3805" fill="none" stroke="#111">
+                <path d="M0 0h2a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H0V0z" class="cls-5" transform="translate(358 661)"/>
+                <path d="M1 .5h1A1.5 1.5 0 0 1 3.5 2v2A1.5 1.5 0 0 1 2 5.5H1A.5.5 0 0 1 .5 5V1A.5.5 0 0 1 1 .5z" class="cls-6" transform="translate(358 661)"/>
+            </g>
+            <path id="사각형_3806" fill="#fff" d="M0 0H1V4H0z" transform="translate(348 662)"/>
+        </g>
+    </g>
+</svg>

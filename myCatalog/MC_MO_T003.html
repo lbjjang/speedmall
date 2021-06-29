@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" sizes="192x192" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
+	<link rel="icon" href="" type="image/x-icon">
+    <title>스피드몰 - 카테고리</title>
+	<!-- 사용안하는 플러그인은 추후 삭제 -->
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
+<!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="../static/css/mobiscroll.jquery.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../static/css/swiper.min.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/mobiscroll.jquery.min.js"></script>
+    <script src="../static/js/ui.js"></script>
+<body>
+
+<!-- header 영역 -->
+<header>
+	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
+	<h1 class="off">타이틀</h1>
+	<ul>
+		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
+		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
+		<li>
+			<div class="btn alarm">
+				<a href="#">
+					<span class="count">30</span>
+					<span class="hide">알림 바로가기</span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</header>
+<!-- //header 영역 -->
+
+<!-- 컨텐츠 영역 -->
+<div class="catalog list"> <!-- class="1depth + 상세" -->
+	<div class="slideMenu">
+		<div class="wrap">
+			<p class="tit">MY카탈로그</p>
+			<div class="depth">
+				<ul>
+					<li><a href="#"><span>MY폴더</span></a></li>
+					<li><a href="#"><span>최근 본</span></a></li>
+					<li class="on"><a href="#"><span>자주구매</span></a></li>
+					<li><a href="#"><span>과거구매</span></a></li>
+					<li><a href="#"><span>상품코드 주문</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div> 	
+	
+	<section class="con borderWrap">
+		<div class="wrap">
+			<form>
+				<div class="searchBox">
+					<input type="text" placeholder="포함할 단어 입력" data-clear-btn="true">
+					<div class="btn search"><a href="#"><span class="hide">검색</span></a></div>
+				</div>
+			</form>
+			<div class="prdList">
+				<ul class="lineTwo">
+					<li>
+						<div class="thumb">
+							<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+						</div>
+						<div class="detail">
+							<div class="prdSet">
+								<span>
+									<div class="btn wish popBt"><a href="#" data-pop-name="popCatalogAdd"><span class="hide">찜하기</span></a></div>
+								</span>
+								<span>
+									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+								</span>
+							</div>
+							<a href="#">
+								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+								<span class="prdCode">상품코드 QWER1</span>
+								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+								<div class="baseDiscount">
+									<em class="percentage">10%</em>
+									<span class="basePrice">12,800원</span>
+									<span class="price"><strong>11,520</strong>원</span>
+								</div>
+								<div class="labelTag">
+									<span class="label red">오늘발송</span>
+									<span class="label blue">면세</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+						</div>
+						<div class="detail">
+							<div class="prdSet">
+								<span>
+									<div class="btn wish popBt"><a href="#" data-pop-name="popCatalogAdd"><span class="hide">찜하기</span></a></div>
+								</span>
+								<span>
+									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+								</span>
+							</div>
+							<a href="#">
+								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+								<span class="prdCode">상품코드 QWER1</span>
+								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+								<div class="baseDiscount">
+									<span class="price"><strong>11,520</strong>원</span>
+								</div>
+								<div class="labelTag">
+									<span class="label red">오늘발송</span>
+									<span class="label blue">면세</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+						</div>
+						<div class="detail">
+							<div class="prdSet">
+								<span>
+									<div class="btn wish popBt"><a href="#" data-pop-name="popCatalogAdd"><span class="hide">찜하기</span></a></div>
+								</span>
+								<span>
+									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+								</span>
+							</div>
+							<a href="#">
+								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+								<span class="prdCode">상품코드 QWER1</span>
+								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+								<div class="baseDiscount">
+									<em class="percentage">10%</em>
+									<span class="basePrice">12,800원</span>
+									<span class="price"><strong>11,520</strong>원</span>
+								</div>
+								<div class="labelTag">
+									<span class="label red">오늘발송</span>
+									<span class="label blue">면세</span>
+								</div>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="thumb">
+							<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+						</div>
+						<div class="detail">
+							<div class="prdSet">
+								<span>
+									<div class="btn wish popBt"><a href="#" data-pop-name="popCatalogAdd"><span class="hide">찜하기</span></a></div>
+								</span>
+								<span>
+									<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
+								</span>
+							</div>
+							<a href="#">
+								<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+								<span class="prdCode">상품코드 QWER1</span>
+								<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+								<div class="baseDiscount">
+									<em class="percentage">10%</em>
+									<span class="basePrice">12,800원</span>
+									<span class="price"><strong>11,520</strong>원</span>
+								</div>
+								<div class="labelTag">
+									<span class="label red">오늘발송</span>
+									<span class="label blue">면세</span>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</div>
+<!-- 팝업-->
+<div class="dimmed"></div>
+<div class="layerCtPop newFolderPop">
+	<div class="con">
+		<div class="wrap">
+			<p class="tit">새 폴더 만들기</p>
+			<p class="txt">카테고리 폴더를 추가하여 내맘대로 관리해보세요.</p>
+			<div class="inputBox">
+				<input type="text" data-clear-btn="true" placeholder="새폴더명을 입력해주세요.">
+			</div>
+			<div class="btnBox btn2">
+				<div class="btn rd gray popCtClose">
+					<a href="#"><span>취소</span></a>
+				</div>
+				<div class="btn rd gradation1 btnAddFolder">
+					<a href="#"><span>만들기</span></a>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</div>
+<div class="layerBtPop popCatalogAdd folderPop">
+	<div class="wrap">
+		<div class="top">
+			<p class="tit">MY카탈로그에 추가</p>
+			<div>
+				<div class="btn newFolder popCt"><a href="#" data-pop-name="newFolderPop"><span>새폴더</span></a></div>
+				<div class="btn popClose"><a href="#"><span class="hide">닫기</span></a></div>
+			</div>
+		</div>
+		<div class="con">
+			<ul>
+				<li>
+					<div>
+						<input id="checkFolder1" name="checkFolder" type="checkbox" checked="" class="checkTy1">
+						<label for="checkFolder1">기본그룹</label>
+					</div>
+				</li>
+				<li>
+					<div>
+						<input id="checkFolder2" name="checkFolder" type="checkbox" class="checkTy1">
+						<label for="checkFolder2">그룹명1</label>
+					</div>
+				</li>
+				<li>
+					<div>
+						<input id="checkFolder3" name="checkFolder" type="checkbox" checked="" class="checkTy1">
+						<label for="checkFolder3">그룹명2</label>
+					</div>
+				</li>
+				<li>
+					<div>
+						<input id="checkFolder4" name="checkFolder" type="checkbox" class="checkTy1">
+						<label for="checkFolder4">그룹명3</label>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="btn gradation1 fixed"><a href="#"><span>선택한 폴더에 추가</span></a></div>
+</div>
+
+<!-- footer 영역 -->
+<footer>
+
+</footer>
+
+</body>
+</html>
