@@ -123,6 +123,8 @@
 .deliveryLoc .reciveInfo > *{position:relative;display:inline-block;vertical-align:middle;}
 .deliveryLoc .reciveInfo > * + *{padding-left:6.4vw;}
 .deliveryLoc .reciveInfo > * + *:before{content:'';position:absolute;top:0.7vw;left:3.2vw;width:1px;height:4.61vw;background-color:#e8e8e8;}
+.deliveryLoc .reciveInfo > .labelTag{padding-left:2.6vw;}
+.deliveryLoc .reciveInfo > .labelTag:before{display:none;}
 .deliveryLoc .address{margin:1.8vw 0 0;color:#898989;font-size:3.58vw;}
 .deliveryLoc .btn{position:absolute;top:4.1vw;right:5.12vw;z-index:10;}
 
