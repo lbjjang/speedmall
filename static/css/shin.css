@@ -103,6 +103,36 @@
 .boxLineTab > li:first-child a{border-left:0;}
 .boxLineTab > li:last-child a{border-right:0;}
 
+/* toast msg */
+#toast {
+  position: fixed;
+  min-width: 150px;
+  bottom: 50px;
+  right: 10px;
+  text-align: right;
+}
+
+#toast .toastWrap {
+  margin: 6px 0 0;
+  padding: 18px 0 15px;
+  display: none;
+}
+
+.toast {
+  border: 1px solid #F1D031;
+  color: #444;
+  background: #FFFFA3;
+  box-shadow: 0 2px 3px #999;
+  padding: 18px 20px 15px 8px;
+  text-align: left;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  font-family: arial;
+  font-size: 13px;
+  white-space: pre;
+  position: relative;
+}
 
 /* 주문/결제 */
 .orderCash{margin-bottom:12.8vw;border-top:2.6vw solid #f4f4f4;}

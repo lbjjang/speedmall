@@ -285,6 +285,48 @@
 								<div class="tit">textArea</div>
 								<textarea placeholder="placeholder"></textarea>
 							</div>
+							<div class="inputBox">
+								<div class="clickType">
+									<input id="checkbox1-1" name="checkbox" type="checkbox" checked="" class="checkTy1">
+									<label for="checkbox1-1">기본 배송지로 설정</label>
+									<input id="checkbox1-2" name="checkbox" type="checkbox" class="checkTy1">
+									<label for="checkbox1-2">주문자 정보와 동일</label>
+								</div>
+							</div>
+							<div class="inputBox">
+								<div class="tit">주소 <span class="star">*</span></div>
+								<div class="addressFind">
+									<div class="btnBox onlyType">
+										<div class="btn rd2 black">
+											<a href="#"><span>주소찾기</span></a>
+										</div>
+									</div>
+									<input type="text" disabled="disabled" />
+									<input type="text" disabled="disabled" />
+								</div>
+							</div>
+							<div class="inputBox">
+								<div class="tit">사업자등록번호 <span class="star">*</span></div>
+								<div class="businessNum">
+									<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="211">
+									<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="87">
+									<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="71799">
+								</div>
+							</div>
+							<div class="inputBox">
+								<div class="tit">생년월일</div>
+								<div class="clickType">
+									<input id="radio1" name="radio" type="radio" class="radioTy1" checked="">
+									<label for="radio1">양력</label>
+									<input id="radio1" name="radio" type="radio" class="radioTy1" checked="">
+									<label for="radio1">음력</label>
+								</div>
+								<div class="dayBox">
+									<input type="number" maxlength="4" oninput="maxLengthCheck(this)" placeholder="YYYY">
+									<input type="number" maxlength="2" oninput="maxLengthCheck(this)" placeholder="MM">
+									<input type="number" maxlength="2" oninput="maxLengthCheck(this)" placeholder="DD">
+								</div>
+							</div>
 						</form>
 					</div>
 				</li>
@@ -296,6 +338,43 @@
 			<div class="btn search pop"><a href="#"><span class="hide">검색</span></a></div>
 			<div class="btn popBt"><a href="#" data-pop-name="popupBt1">하단 팝업</a></div>
 			<div class="btn popFull"><a href="#" data-pop-name="popupFull1">풀팝업</a></div>
+			<a href="#" onclick="toast('테스트테스트테스트테스트테스트!!')">토스트 메시지</a>
+
+			<script type="text/javascript">
+				$('body').append('<div id="toast"></div>')
+				function fillWidth(elem, timer, limit) {
+					if (!timer) { timer = 3000; }	
+					if (!limit) { limit = 100; }
+					var width = 1;
+					var id = setInterval(frame, timer / 100);
+						function frame() {
+						if (width >= limit) {
+							clearInterval(id);
+						} else {
+							width++;
+							elem.style.width = width + '%';
+						}
+					}
+				};
+
+				function toast(msg, timer) {
+					if (!timer) { timer = 3000; }
+					var $elem = $("<div class='toastWrap'><span class='toast'>" + msg + "</span></div>");
+					$("#toast").append($elem); //top = prepend, bottom = append
+					$elem.slideToggle(100, function() {
+						$('.timerWrap', this).first().outerWidth($elem.find('.toast').first().outerWidth() - 10);
+						if (!isNaN(timer)) {
+							fillWidth($elem.find('.timer').first()[0], timer);
+							setTimeout(function() {
+								$elem.fadeOut(function() {
+									$(this).remove();
+								});
+							}, timer);			
+						}
+					});
+				}
+			</script>
+			
 		</div>
 	
 	</section>
