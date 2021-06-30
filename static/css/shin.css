@@ -106,7 +106,7 @@
 /* toast msg */
 #toast {position:fixed;bottom:5.12vw;left:0;width:100%;z-index:15;}
 #toast .toastWrap{display:none;margin:2.6vw 0 0;padding:0 5.12vw;}
-.toast{display:block;background:#fff;border:1px solid #ddd;padding:3.84vw;box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);border-radius:6px;}
+.toast{display:block;padding:3.84vw;background:#fff;border:1px solid #ddd;border-radius:6px;box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);text-align:center;}
 
 /* 주문/결제 */
 .orderCash{margin-bottom:12.8vw;border-top:2.6vw solid #f4f4f4;}
