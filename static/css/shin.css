@@ -104,35 +104,9 @@
 .boxLineTab > li:last-child a{border-right:0;}
 
 /* toast msg */
-#toast {
-  position: fixed;
-  min-width: 150px;
-  bottom: 50px;
-  right: 10px;
-  text-align: right;
-}
-
-#toast .toastWrap {
-  margin: 6px 0 0;
-  padding: 18px 0 15px;
-  display: none;
-}
-
-.toast {
-  border: 1px solid #F1D031;
-  color: #444;
-  background: #FFFFA3;
-  box-shadow: 0 2px 3px #999;
-  padding: 18px 20px 15px 8px;
-  text-align: left;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  font-family: arial;
-  font-size: 13px;
-  white-space: pre;
-  position: relative;
-}
+#toast {position:fixed;bottom:5.12vw;left:0;width:100%;z-index:15;}
+#toast .toastWrap{display:none;margin:2.6vw 0 0;padding:0 5.12vw;}
+.toast{display:block;background:#fff;border:1px solid #ddd;padding:3.84vw;box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);border-radius:6px;}
 
 /* 주문/결제 */
 .orderCash{margin-bottom:12.8vw;border-top:2.6vw solid #f4f4f4;}
