@@ -46,7 +46,7 @@
 <!-- //header 영역 -->
 
 <!-- 컨텐츠 영역 -->
-<div class="catalog list past"> <!-- class="1depth + 상세" -->
+<div class="catalog list prdCode"> <!-- class="1depth + 상세" -->
 	<div class="slideMenu">
 		<div class="wrap">
 			<p class="tit">MY카탈로그</p>
@@ -55,8 +55,8 @@
 					<li><a href="#"><span>MY폴더</span></a></li>
 					<li><a href="#"><span>최근 본</span></a></li>
 					<li><a href="#"><span>자주구매</span></a></li>
-					<li class="on"><a href="#"><span>과거구매</span></a></li>
-					<li><a href="#"><span>상품코드 주문</span></a></li>
+					<li><a href="#"><span>과거구매</span></a></li>
+					<li class="on"><a href="#"><span>상품코드 주문</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -65,14 +65,58 @@
 	<section class="con borderWrap">
 		<div class="wrap">
 			<form>
-				<div class="searchBox">
-					<input type="text" placeholder="포함할 단어 입력" data-clear-btn="true">
-					<div class="btn search"><a href="#"><span class="hide">검색</span></a></div>
+				<div class="inputBox code">
+					<div class="tit">상품코드</div>
+					<input type="text" placeholder="상품코드 입력">
 				</div>
+				<div class="inputBox code">
+					<div class="tit">수량입력</div>
+					<input type="number" placeholder="1">
+				</div>
+				<div class="btn gradation1 codeSearch"><a href="#"><span>조회</span></a></div>
 			</form>
-			<div class="prdList">
-				<ul class="">
+			<div class="prdListSelect">
+				<div class="top">
+					<div>
+						<input id="prdCheck" name="prdCheckAll" type="checkbox" checked="" class="checkTy1">
+						<label for="prdCheck">전체 (<span>2<span>/2)</label>
+					</div>
+				</div>
+				<ul>
 					<li>
+						<div>
+							<div>
+								<input id="prdCheck" name="prdCheckAll" type="checkbox" checked="" class="checkTy1">
+								<label for="prdCheck">전체 (<span>2<span>/2)</label>
+							</div>
+							<div>
+								<div class="thumb">
+									<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+								</div>
+								<div class="detail">
+									<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
+									<span class="prdCode">상품코드 QWER1</span>
+									<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
+									<div>
+										<div class="countIpBox">
+											<div class="inputSpinner">
+												<button class="incCount btn-countDown" onclick="changeChange(0, 1,'DOWN');"><span class="hide">수량 감소</span></button>
+												<input class="input-t01 w_s" tabindex="2" size="7" value="1" name="quantity" id="quantity">
+												<button class="incCount btn-countUp" onclick="changeChange(0, 1,'UP');"><span class="hide">수량 추가</span></button>
+											</div>
+										</div>						
+										<div class="baseDiscount">
+											<span class="basePrice">12,800원</span>
+											<span class="price"><strong>11,520</strong>원</span>
+										</div>
+									</div>
+								</div>
+								<div class="prdDelivery"><p>4일 이내 발송</p><p>면세상품</p></div>
+							</div>
+			
+
+						</div>
+						
 						<p class="date"><strong>02.23</strong> 구매</p>
 						<div>
 							<div class="thumb">
@@ -89,14 +133,6 @@
 										<span class="price"><strong>11,520</strong>원</span>
 									</div>
 								</a>
-								<div class="prdSet">
-									<span>
-										<div class="btn wish popBt"><a href="#" data-pop-name="popCatalogAdd"><span class="hide">찜하기</span></a></div>
-									</span>
-									<span>
-										<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-									</span>
-								</div>
 							</div>
 						</div>
 					</li>
@@ -205,7 +241,45 @@
 	</div>
 	<div class="btn gradation1 fixed"><a href="#"><span>선택한 폴더에 추가</span></a></div>
 </div>
+<script>
+	function changeChange(i, num,flag){
+		var v_num =num; // 수량적용에 사용할 변수
 
+		if(checkFormat(i, num)){
+
+		if(flag=="DOWN"){ v_num= v_num*-1; } // 다운버튼일 경우 - 계산을 한다.
+
+		var upTemp = document.getElementsByName("quantity")[i].value * 1 + v_num;
+		//if (upTemp=="0"){
+		//	alert("수량에는 0 을 넣을 수 없습니다..");
+		if(upTemp < num){
+			alert(" 주문수량은 최소주문수량보다 커야 합니다. ");
+			return;
+		}
+		document.getElementsByName("quantity")[i].value = upTemp;
+		// 옵션 수량도 같이 수정.
+		jQuery(".tpOptionGoodsQty-"+i).val(upTemp);
+		}else{
+			return;
+		}
+	}
+
+	function checkFormat(i, num){
+		if(num == 1)
+			var pattern = /^[0-9]/;
+		else
+			var pattern = /^[1-9]/;
+
+		var quantity = document.getElementsByName("quantity")[i].value;
+		if(!pattern.test(quantity)){
+			alert("수량을 적어주세요.");
+			document.getElementsByName("quantity")[i].focus();
+			return false;
+		}else{
+			return true;
+		}
+	}
+</script>
 <!-- footer 영역 -->
 <footer>
 

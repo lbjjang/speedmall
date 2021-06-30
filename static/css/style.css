@@ -324,6 +324,14 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .folderBar .wrap .setting::before{content:'';position: absolute;left:-8.97vw;top:0;width: 8.97vw;background:linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff 76%);height: 100%;}
 .folderBar .wrap .setting > div + div{margin-left:1.53vw;}
 
+/* 카운트 박스 (상품코드 주문하기, 주문하기 등) */
+.countIpBox{}
+.countIpBox div{display: flex;}
+.countIpBox div .incCount{border:1px solid #ddd;width:11vw;height:10.25vw;background-color:#fff;border-radius: 0;}
+.countIpBox div .incCount.btn-countUp{background-image:url('../images/ic_plus.svg');background-repeat: no-repeat;background-position: center;background-size:3.84vw auto;}
+.countIpBox div .incCount.btn-countDown{background-image:url('../images/ic_minus.svg');background-repeat: no-repeat;background-position: center;background-size:3.84vw auto;}
+.countIpBox div input{border:1px solid #ddd;border-width: 1px 0;border-radius: 0;text-align: center;width:17.94vw;font-size:4.1vw;}
+
 
 /* 테이블 */
 
@@ -607,13 +615,13 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .layerBtPop.popTotal .con ul li:first-child .btn.close{top:0;}
 .layerBtPop.popTotal .con ul li .prdCode{font-size:3.33vw;color:#898989;margin-bottom:1.28vw;}
 .layerBtPop.popTotal .con ul li .prdOption{font-size:3.58vw;margin-bottom: 3.84vw;}
-.layerBtPop.popTotal .con ul li .countBox{display: flex;padding:2.56vw 3.84vw;background:#f8f8f8;border-radius: 1.53vw;justify-content: space-between;}
-.layerBtPop.popTotal .con ul li .countBox div{display: flex;}
-.layerBtPop.popTotal .con ul li .countBox div .incCount{border:1px solid #ddd;width:11vw;height:10.25vw;background-color:#fff;border-radius: 0;}
-.layerBtPop.popTotal .con ul li .countBox div .incCount.btn-countUp{background-image:url('../images/ic_plus.svg');background-repeat: no-repeat;background-position: center;background-size:3.84vw auto;}
-.layerBtPop.popTotal .con ul li .countBox div .incCount.btn-countDown{background-image:url('../images/ic_minus.svg');background-repeat: no-repeat;background-position: center;background-size:3.84vw auto;}
-.layerBtPop.popTotal .con ul li .countBox div input{border:1px solid #ddd;border-width: 1px 0;border-radius: 0;text-align: center;width:17.94vw;font-size:4.1vw;}
-.layerBtPop.popTotal .con ul li .countBox p{font-size:4.1vw;}
+.layerBtPop.popTotal .con ul li .countIpBox{display: flex;padding:2.56vw 3.84vw;background:#f8f8f8;border-radius: 1.53vw;justify-content: space-between;}
+.layerBtPop.popTotal .con ul li .countIpBox p{font-size:4.1vw;}
+
+
+
+
+
 
 /* 상품문의하기 팝업 */
 .category.prdInfoPop .con{padding:7.69vw 0;}
@@ -659,9 +667,13 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .layerBtPop.folderPop.editFolderPop .con ul li > div .txtdel a{font-size:3.33vw;line-height:7.69vw;height:7.69vw;border:1px solid #ddd;padding:0 4.61vw;border-radius: 0.76vw;}
 
 /* My카탈로그 :: 과거구매 */
+.catalog.past .prdList{position: relative;padding-top:7.69vw;}
+.catalog.past .prdList::before{content:'';position: absolute;top:0;left:-5.12vw;width:calc(100% + 10.24vw);height: 1px;background: #f4f4f4;}
 .catalog.past .prdList .thumb{width:22.05vw;height:22.05vw;}
-.catalog.past .prdList ul > li{padding:0 0 0 27.17vw;}
-.catalog.past .prdList ul > li + li{margin-top:7.69vw;padding-top:7.69vw;}
+.catalog.past .prdList ul > li + li{margin-top:7.69vw;padding-top:10.29vw;position: relative;}
+.catalog.past .prdList ul > li + li::before{content:'';position:absolute;top:0;left:-5.12vw;width:calc(100% + 10.24vw);border-top:2.6vw solid #f4f4f4;}
+.catalog.past .prdList ul > li > div{padding:0 0 0 27.17vw;}
+.catalog.past .prdList ul > li .date{font-size:3.58vw;margin-bottom: 3.84vw;}
 
 
 /****************** 고객센터 ******************/
