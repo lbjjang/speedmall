@@ -29,7 +29,7 @@
 <!-- header 영역 -->
 <header>
 	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
-	<h1>고객정보 수정</h1>
+	<h1>세금계산서 정보 수정</h1>
 	<ul class="off">
 		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
 		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
@@ -50,45 +50,20 @@
 	<section class="con">
 		<div class="wrap myIptChange">
 			<form>
+				<strong class="iptTitle">세금계산서 담당자 정보</strong>
 				<div class="inputBox">
-					<div class="tit">이름 <span class="star">*</span></div>
-					<input type="text" value="김행복" disabled/>
-					<div class="btnBox btn2 mt10">
-						<div class="btn rd2 black">
-							<a href="#"><span>휴대폰 인증</span></a>
-						</div>
-						<div class="btn rd2 black">
-							<a href="#"><span>아이핀 인증</span></a>
-						</div>
-					</div>
+					<div class="tit">담당자명 <span class="star">*</span></div>
+					<input type="text" value="김행복"/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">부서 <span class="star">*</span></div>
+					<input type="text" value="경영지원실"/>
 				</div>
 
 				<div class="inputBox">
 					<div class="tit">휴대전화번호 <span class="star">*</span></div>
-					<div class="selBox tel">
-						<select name="" disabled>
-							<option value="010" selected>010</option>
-							<option value="02">02</option>
-							<option value="033">033</option>
-							<option value="063">063</option>
-						</select>
-						<input type="number" maxlength="4" oninput="maxLengthCheck(this)" disabled>
-						<input type="number" maxlength="4" oninput="maxLengthCheck(this)" disabled>
-					</div>
-					<div class="receiveMarket">
-						<span class="tit">SMS 마케팅 수신동의</span>
-						<p>고객혜택, 이벤트, 경품당첨, 할인전 등 유용한 정보를 문자로 보내드립니다.</p>
-						<div class="clickType">
-							<input id="radio2-1" name="radio2" type="radio" class="radioTy1" checked="">
-							<label for="radio2-1">예</label>
-							<input id="radio2-2" name="radio2" type="radio" class="radioTy1" checked="">
-							<label for="radio2-2">아니오</label>
-						</div>
-					</div>
-				</div>
-
-				<div class="inputBox">
-					<div class="tit">전화번호</div>
+					<p class="txt">SMS를 수신할 휴대전화번호를 입력해주세요.</p>
 					<div class="selBox tel">
 						<select name="">
 							<option value="010" selected>010</option>
@@ -102,18 +77,40 @@
 				</div>
 
 				<div class="inputBox">
-					<div class="tit">이메일 <span class="star">*</span></div>
+					<div class="tit">세금계산서 이메일 주소 <span class="star">*</span></div>
 					<input type="text" data-clear-btn="true" placeholder="예) speedmall@speed.com">
-					<div class="receiveMarket">
-						<span class="tit">이메일 마케팅 수신동의</span>
-						<p>고객혜택, 이벤트, 경품당첨, 할인전 등 유용한 정보를 메일로 보내드립니다.</p>
-						<div class="clickType">
-							<input id="radio2-1" name="radio2" type="radio" class="radioTy1" checked="">
-							<label for="radio2-1">예</label>
-							<input id="radio2-2" name="radio2" type="radio" class="radioTy1" checked="">
-							<label for="radio2-2">아니오</label>
-						</div>
+				</div>
+
+				<strong class="iptTitle">사업자 정보</strong>
+				<p class="titSub">사업자번호를 변경하실 경우에는 고객센터(1644-5644)로 연락주시기 바랍니다.</p>
+
+				<div class="inputBox">
+					<div class="tit">대표자명 <span class="star">*</span></div>
+					<input type="text" value="김행복" disabled />
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">사업자등록번호 <span class="star">*</span></div>
+					<div class="businessNum">
+						<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="123">
+						<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="45">
+						<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="67899">
 					</div>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">법인명 <span class="star">*</span></div>
+					<input type="text" value="행복나래 주식회사" disabled />
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">업태 <span class="star">*</span></div>
+					<input type="text" value="" />
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">종목 <span class="star">*</span></div>
+					<input type="text" value="" />
 				</div>
 
 				<div class="inputBox">
@@ -130,37 +127,26 @@
 				</div>
 
 				<div class="inputBox">
-					<div class="tit">직위</div>
-					<input type="text" data-clear-btn="true" />
-				</div>
-
-				<div class="inputBox">
-					<div class="tit">부서</div>
-					<input type="text" data-clear-btn="true" />
-				</div>
-
-				<div class="inputBox">
-					<div class="tit">생년월일</div>
+					<div class="tit">구매규모</div>
 					<div class="clickType">
 						<input id="radio1" name="radio" type="radio" class="radioTy1" checked="">
-						<label for="radio1">양력</label>
+						<label for="radio1">회사전체구매</label>
 						<input id="radio1" name="radio" type="radio" class="radioTy1" checked="">
-						<label for="radio1">음력</label>
+						<label for="radio1">부서/현장별구매</label>
 					</div>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">직원수</div>
+					<input type="text" value="" />
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">창립기념일</div>
 					<div class="dayBox">
 						<input type="number" maxlength="4" oninput="maxLengthCheck(this)" placeholder="YYYY">
 						<input type="number" maxlength="2" oninput="maxLengthCheck(this)" placeholder="MM">
 						<input type="number" maxlength="2" oninput="maxLengthCheck(this)" placeholder="DD">
-					</div>
-				</div>
-
-				<div class="inputBox">
-					<div class="tit">거래명세서 등봉종류</div>
-					<div class="taxSelect">
-						<input id="radio1" name="radio" type="radio" class="radioTy1" checked="">
-						<label for="radio1">거래명세서</label>
-						<input id="radio1" name="radio" type="radio" class="radioTy1" checked="">
-						<label for="radio1">구매품목확인서<em>공급자 정보 없이 품명/수량만 표시</em></label>
 					</div>
 				</div>
 			</form>

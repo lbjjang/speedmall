@@ -29,8 +29,8 @@
 <!-- header 영역 -->
 <header>
 	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
-	<h1>비밀번호 변경</h1>
-	<ul class="off">
+	<h1 class="off">타이틀</h1>
+	<ul>
 		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
 		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
 		<li>
@@ -48,42 +48,31 @@
 <!-- 컨텐츠 영역 -->
 <div class="myPage modifyPage"> <!-- class="1depth + 상세" -->
 	<section class="con">
-		<div class="wrap myIptChange">
-			<form>
-				<div class="inputBox">
-					<div class="tit">현재 비밀번호 <span class="star">*</span></div>
-					<input type="password" data-clear-btn="true" placeholder="현재 비밀번호를 입력해주세요.">
-				</div>
-				<div class="inputBox">
-					<div class="tit">새 비밀번호</div>
-					<input type="password" data-clear-btn="true" placeholder="현재 비밀번호를 입력해주세요.">
-				</div>
-				<div class="inputBox">
-					<div class="tit">새 비밀번호 확인</div>
-					<input type="password" data-clear-btn="true" placeholder="현재 비밀번호를 입력해주세요.">
-				</div>
-			</form>
-
-			<div class="noteBox">
-				<ul class="listType dot">
-					<li>연속되거나 3자 이상 중복되지 않는 8~15자</li>
-					<li>영문 대,소문자, 숫자, 특수문자 중 3가지 조합</li>
-					<li>사용 가능한 특수문자 : ! @ # $ % ^ & * ( )</li>
+		<strong class="title">회원정보</strong>
+		<div class="subTitleTab">
+			<ul>
+				<li><a href="#">회원정보 수정</a></li>
+				<li class="active"><a href="#">후불한도 조회</a></li>
+			</ul>
+		</div>
+		<div class="wrap">
+			<div class="afterLimit">
+				<ul>
+					<li>
+						<span>후불한도</span>
+						<strong>5,000,000원</strong>
+					</li>
+					<li>
+						<span>잔여금액</span>
+						<strong>126,100원</strong>
+					</li>
 				</ul>
 			</div>
-
-			<div class="btnBox btn2 mt40">
-				<div class="btn rd gray">
-					<a href="#"><span>취소</span></a>
-				</div>
-				<div class="btn rd gradation1">
-					<a href="#"><span>변경완료</span></a>
-				</div>
-			</div>
+			<p class="mt20">기타 문의사항은 <a href="tel:02-2104-4927" class="telLink">02-2104-4927</a>로 문의 부탁드립니다.</p>
 		</div>
+
 	</section>
 </div>
-
 
 <!-- footer 영역 -->
 <footer>

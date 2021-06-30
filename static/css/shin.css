@@ -2,8 +2,50 @@
 
 /************** 임시 css파일 ******************/
 
+/* 간격 */
+.mt0{margin-top:0 !important;}
+.mt5{margin-top:1.2vw !important;}
+.mt10{margin-top:2.6vw !important;}
+.mt15{margin-top:3.85vw !important;}
+.mt20{margin-top:5.12vw !important;}
+.mt25{margin-top:6.4vw !important;}
+.mt30{margin-top:7.69vw !important;}
+.mt40{margin-top:10.2vw !important;}
+.mt60{margin-top:15.3vw !important;}
+
+.mb0{margin-bottom:0 !important;}
+.mb5{margin-bottom:1.2vw !important;}
+.mb10{margin-bottom:2.6vw !important;}
+.mb15{margin-bottom:3.85vw !important;}
+.mb20{margin-bottom:5.12vw !important;}
+.mb25{margin-bottom:6.4vw !important;}
+.mb30{margin-bottom:7.69vw !important;}
+.mb40{margin-bottom:10.2vw !important;}
+.mb60{margin-bottom:15.3vw !important;}
+
+.pt0{padding-top:0 !important;}
+.pt5{padding-top:1.2vw !important;}
+.pt10{padding-top:2.6vw !important;}
+.pt15{padding-top:3.85vw !important;}
+.pt20{padding-top:5.12vw !important;}
+.pt25{padding-top:6.4vw !important;}
+.pt30{padding-top:7.69vw !important;}
+.pt40{padding-top:10.2vw !important;}
+.pt60{padding-top:15.3vw !important;}
+
+.pb0{padding-bottom:0 !important;}
+.pb5{padding-bottom:1.2vw !important;}
+.pb10{padding-bottom:2.6vw !important;}
+.pb15{padding-bottom:3.85vw !important;}
+.pb20{padding-bottom:5.12vw !important;}
+.pb25{padding-bottom:6.4vw !important;}
+.pb30{padding-bottom:7.69vw !important;}
+.pb40{padding-bottom:10.2vw !important;}
+.pb60{padding-bottom:15.3vw !important;}
+
 /* 텍스트 컬러 */
 .colorRed{color:#f41300;}
+.telLink{display:inline;font-weight:700;}
 
 .inputBox.lineType{position:relative;padding-left: 25.6vw;}
 .inputBox.lineType .tit{position: absolute;top: 1.2vw;left: 0;font-weight: 400;}
@@ -19,12 +61,16 @@
 
 .inputBox .ui-input-text + .txt{margin-top:5.12vw;font-size:3.58vw;}
 
+.inputBox .dayBox{display: flex;flex-wrap: wrap;flex-flow: row;margin-top:3.83vw;position: relative;box-shadow: none;border-radius: 0.76vw;border: 1px solid #ddd;height: 12.3vw;line-height: 12.3vw;box-sizing: border-box;}
+.inputBox .dayBox .ui-input-text{margin-top:0;border:none;height:calc(12.3vw - 2px);line-height: calc(12.3vw - 2px);padding-left:0;}
+.inputBox .dayBox .ui-input-text:after{content:'/';position:absolute;top:0;right:0;color:#ddd;}
+.inputBox .dayBox .ui-input-text:last-child:after{display:none;}
+.inputBox .dayBox .ui-input-text input{text-align:center;}
+
 .listChkBox{}
 .listChkBox li + li{margin-top:5.12vw;}
 
-
 .borderWrap.line1{border-width:1px;}
-
 
 /* 버튼 */
 .btnBox.btFixed{position:fixed;bottom:0;left:0;width:100%;}
@@ -168,13 +214,13 @@
 .orderCash .taxType{padding:5.12vw;}
 .orderCash .taxType .taxSelect{}
 .orderCash .taxType .taxSelect + .taxSelect{margin-top:3.84vw;padding-top:3.84vw;border-top: 1px solid #e8e8e8;}
-.orderCash .taxType .taxSelect > *{position:relative;display:block;}
-.orderCash .taxType .taxSelect > * + *{margin-top:3.84vw;}
-.orderCash .taxType .taxSelect input:disabled + label{color:#898989;}
-.orderCash .taxType .taxSelect label{display:block;}
-.orderCash .taxType .taxSelect label > i{color:#111 !important;}
-.orderCash .taxType .taxSelect label > em{display:block;font-size:3.58vw;color:#898989 !important;}
-.orderCash .taxType .taxSelect > * .btn.small{position:absolute;top:-1.2vw;right:0;}
+.taxSelect > *{position:relative;display:block;}
+.taxSelect > * + *{margin-top:3.84vw;}
+.taxSelect input:disabled + label{color:#898989;}
+.taxSelect label{display:block;}
+.taxSelect label > i{color:#111 !important;}
+.taxSelect label > em{display:block;font-size:3.58vw;color:#898989 !important;}
+.taxSelect > * .btn.small{position:absolute;top:-1.2vw;right:0;}
 
 .orderCash .paymentChk{padding:5.12vw;}
 .orderCash .paymentChk > *{display:block;}
@@ -244,7 +290,6 @@
 .taxCalPop .btnBox{margin-top:7.69vw;}
 
 
-
 /* MY페이지 ::: 회원정보 */
 .modifyPage .con{padding-bottom:5.12vw;}
 .modifyPage .title{display:block;padding:0 5.12vw;font-size: 6.15vw;margin-top:5.12vw;}
@@ -257,4 +302,22 @@
 .modifyPage .borderWrap .btnBox.btn2{margin-top:10.3vw;}
 
 .modifyPage .myIptChange {padding-top:7.69vw;}
-.modifyPage .myIptChange .btnBox.btn2{margin-top:10.3vw;}
+.modifyPage .memberOut .slideCon .top{border-bottom:0;}
+.modifyPage .memberOut .slideCon .bottom{padding:0 5.12vw 5.12vw;border-bottom:0;}
+.modifyPage .memberOut .slideCon .bottom p{font-weight:500;}
+
+.modifyPage .memberOut .title{display:block;margin:0 0 7.69vw;padding:0;font-size:3.85vw;}
+
+.joinOut{padding-top:15.3vw;}
+.joinOut .title{display:block;font-size:6.15vw;}
+.joinOut .title + p{margin-top:2.6vw;font-size:6.15vw;font-weight:200;}
+.joinOut .btnBox{margin-top:15.3vw;}
+
+.afterLimit{margin-top:5.12vw;padding:0 6.4vw;border:1px solid #ffedce;background-color:#fffbf4;}
+.afterLimit li{padding:6.4vw 0;}
+.afterLimit li + li{border-top:1px solid #e8e8e8;}
+.afterLimit li > span{float:left;margin-top:1.2vw;}
+.afterLimit li > strong{float:right;font-size:5.6vw;}
+.afterLimit li:after{content:'';display:block;clear:both;}
+.afterLimit li:last-child > span{margin-top:0.4vw;padding-left:5.12vw;background:url('../images/ic_txt_arrow.svg') no-repeat left 50%;background-size:4.1vw auto;}
+.afterLimit li:last-child > strong{float:right;font-size:4.6vw;}

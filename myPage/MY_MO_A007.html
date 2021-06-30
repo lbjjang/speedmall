@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height, viewport-fit=cover, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" sizes="192x192" href="">
+	<link rel="apple-touch-icon" sizes="180x180" href="">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="">
+	<link rel="icon" href="" type="image/x-icon">
+    <title>스피드몰 - 마이페이지</title>
+	<!-- 사용안하는 플러그인은 추후 삭제 -->
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css" media="all" />
+<!--     <link rel="stylesheet" href="../static/css/jquery.mobile-1.4.5.css" type="text/css" media="all" /> -->
+	<link rel="stylesheet" href="../static/css/mobiscroll.jquery.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../static/css/swiper.min.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <script src="../static/js/jquery-2.2.4.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.mobile-1.4.5.js"></script>
+    <script src="../static/js/swiper.min.js"></script>
+    <script src="../static/js/gsap.min.js"></script>
+    <script src="../static/js/mobiscroll.jquery.min.js"></script>
+    <script src="../static/js/ui.js"></script>
+<body>
+
+<!-- header 영역 -->
+<header>
+	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
+	<h1>기업회원 전환신청</h1>
+	<ul class="off">
+		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
+		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
+		<li>
+			<div class="btn alarm">
+				<a href="#">
+					<span class="count">30</span>
+					<span class="hide">알림 바로가기</span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</header>
+<!-- //header 영역 -->
+
+<!-- 컨텐츠 영역 -->
+<div class="myPage modifyPage"> <!-- class="1depth + 상세" -->
+	<section class="con">
+		<div class="wrap myIptChange">
+			<form>
+				<strong class="iptTitle">로그인 정보</strong>
+				<div class="inputBox">
+					<div class="tit">신규 아이디 <span class="star">*</span></div>
+					<p class="txt">6~16자의 영문/숫자 입력( ~ 특수문자 제외)</p>
+					<input type="text" data-clear-btn="true" placeholder="아이디를 입력해주세요."/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">비밀번호 <span class="star">*</span></div>
+					<p class="txt">연속되거나 3자이상 중복되지 않는 8~15자 <br>영문 대, 소문자, 숫자, 특수문자 중 3가지 조합</p>
+					<input type="password" data-clear-btn="true" placeholder="비밀번호를 입력해주세요."/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">비밀번호 확인<span class="star">*</span></div>
+					<input type="password" data-clear-btn="true" placeholder="비밀번호를 입력해주세요."/>
+				</div>
+
+				<strong class="iptTitle">사업자 정보</strong>
+				<p class="titSub">세금계산서 발행시 사용할 회사정보를 입력해주세요.</p>
+
+				<div class="inputBox">
+					<div class="tit">대표자명 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="대표자명을 입력해주세요."/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">사업자등록번호 <span class="star">*</span></div>
+					<div class="businessNum">
+						<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="211">
+						<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="87">
+						<input type="number" disabled="" maxlength="6" oninput="maxLengthCheck(this)" value="71799">
+					</div>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">법인명 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="법인명을 입력해주세요."/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">업태 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="업태를 입력해주세요."/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">종목 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="업태를 입력해주세요."/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">주소 <span class="star">*</span></div>
+					<div class="addressFind">
+						<div class="btnBox onlyType">
+							<div class="btn rd2 black">
+								<a href="#"><span>주소찾기</span></a>
+							</div>
+						</div>
+						<input type="text" disabled="disabled" />
+						<input type="text" disabled="disabled" />
+					</div>
+				</div>
+
+				<strong class="iptTitle">세금계산서 담당자 정보</strong>
+				<p class="titSub">세금계산서 신청시 전자세금계산서가 전송될 정보를 입력해주세요.</p>
+
+				<input id="checkbox1" name="checkbox" type="checkbox" class="checkTy1">
+				<label for="checkbox1">고객 정보와 동일</label>
+				
+				<div class="inputBox mt30">
+					<div class="tit">담당자명 <span class="star">*</span></div>
+					<input type="text" value="" data-clear-btn="true"/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">부서 <span class="star">*</span></div>
+					<input type="text" value="" data-clear-btn="true"/>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">휴대전화번호 <span class="star">*</span></div>
+					<p class="txt">SMS를 수신할 휴대전화번호를 입력해주세요.</p>
+					<div class="selBox tel">
+						<select name="">
+							<option value="010" selected>010</option>
+							<option value="02">02</option>
+							<option value="033">033</option>
+							<option value="063">063</option>
+						</select>
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="4" oninput="maxLengthCheck(this)">
+					</div>
+				</div>
+
+				<div class="inputBox">
+					<div class="tit">세금계산서 이메일 주소 <span class="star">*</span></div>
+					<input type="text" data-clear-btn="true" placeholder="예) speedmall@speed.com">
+				</div>
+			</form>
+
+			<div class="btnBox btn2 mt40">
+				<div class="btn rd gray">
+					<a href="#"><span>취소</span></a>
+				</div>
+				<div class="btn rd gradation1">
+					<a href="#"><span>변경완료</span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+<!-- footer 영역 -->
+<footer>
+
+</footer>
+
+</body>
+</html>

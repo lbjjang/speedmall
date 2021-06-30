@@ -29,8 +29,8 @@
 <!-- header 영역 -->
 <header>
 	<div class="btn prev"><a href="#"><span class="hide">이전으로</span></a></div>
-	<h1>비밀번호 변경</h1>
-	<ul class="off">
+	<h1 class="off">타이틀</h1>
+	<ul>
 		<li><div class="btn home"><a href="#"><span class="hide">메인으로 가기</span></a></div></li>
 		<li><div class="btn search"><a href="#"><span class="hide">검색</span></a></div></li>
 		<li>
@@ -47,43 +47,84 @@
 
 <!-- 컨텐츠 영역 -->
 <div class="myPage modifyPage"> <!-- class="1depth + 상세" -->
-	<section class="con">
-		<div class="wrap myIptChange">
+	<section class="con pb0">
+		<strong class="title">회원정보</strong>
+		<div class="subTitleTab">
+			<ul>
+				<li><a href="#">회원정보 수정</a></li>
+				<li class="active"><a href="#">기업회원 전환</a></li>
+			</ul>
+		</div>
+		<div class="newMemEvt">
+			<strong class="title mt0">신규 기업회원님께 드리는 혜택</strong>
+			<ul>
+				<li>
+					<div class="box">
+						<div class="boxCell">
+							<em class="tit">포인트 적립</em>
+							<span class="benefit">10% Payback 최대 3만원 <br>+ 결제금액의 최대 1.5% 적립</span>
+							<span class="period">가입당월 구매금액의 10% 익월 초 적립</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<div class="boxCell">
+							<em class="tit">할인쿠폰 제공</em>
+							<span class="benefit">무료배송 + 9종 할인</span>
+							<span class="period">쿠폰 유효기간 : 익월말</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<div class="boxCell">
+							<em class="tit">맞춤견적 서비스 및 <br>대량구매 추가할인</em>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="box">
+						<div class="boxCell">
+							<em class="tit">후불결제 서비스</em>
+							<span class="benefit">빠른 구매 지원<br>+ 구매승인<br>+ 추가할인</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="wrap mt40">
 			<form>
+				<strong class="iptTitle">법인정보 입력</strong>
 				<div class="inputBox">
-					<div class="tit">현재 비밀번호 <span class="star">*</span></div>
-					<input type="password" data-clear-btn="true" placeholder="현재 비밀번호를 입력해주세요.">
+					<div class="tit">법인명 <span class="star">*</span></div>
+					<input type="text" placeholder="법인명을 입력해주세요." data-clear-btn="true" />
 				</div>
+
 				<div class="inputBox">
-					<div class="tit">새 비밀번호</div>
-					<input type="password" data-clear-btn="true" placeholder="현재 비밀번호를 입력해주세요.">
+					<div class="tit">사업자등록번호 <span class="star">*</span></div>
+					<div class="businessNum">
+						<input type="number" maxlength="6" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="6" oninput="maxLengthCheck(this)">
+						<input type="number" maxlength="6" oninput="maxLengthCheck(this)">
+					</div>
 				</div>
-				<div class="inputBox">
-					<div class="tit">새 비밀번호 확인</div>
-					<input type="password" data-clear-btn="true" placeholder="현재 비밀번호를 입력해주세요.">
+
+				<div class="noteBox">
+					<ul class="listType dot">
+						<li>기업회원 전환 시 별도의 ID계정이 생성 됩니다.</li>
+						<li>기존 주문정보는 현 개인회원 ID로 로그인 후 확인해주세요.</li>
+					</ul>
 				</div>
 			</form>
-
-			<div class="noteBox">
-				<ul class="listType dot">
-					<li>연속되거나 3자 이상 중복되지 않는 8~15자</li>
-					<li>영문 대,소문자, 숫자, 특수문자 중 3가지 조합</li>
-					<li>사용 가능한 특수문자 : ! @ # $ % ^ & * ( )</li>
-				</ul>
-			</div>
-
-			<div class="btnBox btn2 mt40">
-				<div class="btn rd gray">
-					<a href="#"><span>취소</span></a>
-				</div>
-				<div class="btn rd gradation1">
-					<a href="#"><span>변경완료</span></a>
-				</div>
-			</div>
 		</div>
+
+		<div class="btn gradation1 fixed mt40">
+			<a href="#"><span>다음</span></a>
+		</div>
+
 	</section>
 </div>
-
 
 <!-- footer 영역 -->
 <footer>
