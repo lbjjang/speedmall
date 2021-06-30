@@ -156,6 +156,7 @@ body.scLock{overflow:hidden;}
 .btn.edit a{width:8.97vw;height:8.97vw;background-image:url('../images/btn_setting.svg');} /* 폴더 편집 */
 .btn.newFolder a{padding-left:7.17vw;font-size:3.58vw;line-height:1.5;} /* 새폴더만들기 아이콘만 */
 .btn.newFolder a:before{content:'';position:absolute;left:0;top:50%;width:5.12vw;height:5.12vw;margin-top:-2.56vw;background-image:url('../images/ic_newFolder.svg');}
+.btn.del2 a{width:4.1vw;height:4.1vw;background-image:url('../images/ic_del2.svg');} /* 삭제 버튼 */
 
 .btnBox .btn.btnMoreArrow{display:inline-block;width:auto;}
 .btnBox .btn.btnMoreArrow a{padding-right:5.1vw;background:url('../images/ic_arrow_d.svg') no-repeat right 50%;background-size: 3.07vw auto;}
@@ -611,17 +612,12 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .layerBtPop.popTotal .con ul{padding-bottom:5.12vw;}
 .layerBtPop.popTotal .con ul li{padding:0 5.12vw;position:relative;}
 .layerBtPop.popTotal .con ul li + li{border-top:1px solid #eee;margin-top:5.12vw;padding-top:5.12vw;}
-.layerBtPop.popTotal .con ul li .btn.close{width:4.1vw;height:4.1vw;position: absolute;right:5.12vw;top:5.12vw;background-image:url('../images/ic_del2.svg');background-repeat: no-repeat;background-position: 0 0;background-size:100% auto;}
-.layerBtPop.popTotal .con ul li:first-child .btn.close{top:0;}
+.layerBtPop.popTotal .con ul li .btn.del2{width:4.1vw;height:4.1vw;position: absolute;right:5.12vw;top:5.12vw;}
+.layerBtPop.popTotal .con ul li:first-child .btn.del2{top:0;}
 .layerBtPop.popTotal .con ul li .prdCode{font-size:3.33vw;color:#898989;margin-bottom:1.28vw;}
 .layerBtPop.popTotal .con ul li .prdOption{font-size:3.58vw;margin-bottom: 3.84vw;}
 .layerBtPop.popTotal .con ul li .countIpBox{display: flex;padding:2.56vw 3.84vw;background:#f8f8f8;border-radius: 1.53vw;justify-content: space-between;}
 .layerBtPop.popTotal .con ul li .countIpBox p{font-size:4.1vw;}
-
-
-
-
-
 
 /* 상품문의하기 팝업 */
 .category.prdInfoPop .con{padding:7.69vw 0;}
@@ -674,6 +670,20 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .catalog.past .prdList ul > li + li::before{content:'';position:absolute;top:0;left:-5.12vw;width:calc(100% + 10.24vw);border-top:2.6vw solid #f4f4f4;}
 .catalog.past .prdList ul > li > div{padding:0 0 0 27.17vw;}
 .catalog.past .prdList ul > li .date{font-size:3.58vw;margin-bottom: 3.84vw;}
+
+/* 상품코드로 주문하기 */
+
+.catalog.prdCode .codeSearchBox .inputBox.code{display: flex;flex-direction: row;align-items: center;}
+.catalog.prdCode .codeSearchBox .inputBox.code .tit{flex:none;}
+.catalog.prdCode .codeSearchBox .inputBox.code .ui-input-text{margin-top:0;width: 100%;margin-left:4.1vw;}
+.catalog.prdCode .codeSearchBox .inputBox.code + .inputBox.code{margin-top:2.56vw;}
+.catalog.prdCode .codeSearchBox .btn.codeSearch{width:27.69vw;height:10.25vw;margin:0 auto;border-radius: 12.8vw;line-height: 10.25vw;margin-top:5.12vw;}
+
+.catalog.prdCode .flexBox{display: flex;}
+.catalog.prdCode .flexBox > div{width:50%;position:relative;text-align: center;font-size:4.61vw;color:#fff;}
+.catalog.prdCode .flexBox > div a{height:20.51vw;padding-top: 4.1vw;font-weight: 500;}
+.catalog.prdCode .flexBox > div + div:before{content:'';position:absolute;left:0;top:4.1vw;height:6.15vw;width:1px;background:rgba(255,255,255,0.4);}
+
 
 
 /****************** 고객센터 ******************/

@@ -64,7 +64,7 @@
 	
 	<section class="con borderWrap">
 		<div class="wrap">
-			<form>
+			<form class="codeSearchBox">
 				<div class="inputBox code">
 					<div class="tit">상품코드</div>
 					<input type="text" placeholder="상품코드 입력">
@@ -85,9 +85,10 @@
 				<ul>
 					<li>
 						<div>
+							<div class="btn del2"><a href="#"><span class="hide">삭제</span></a></div>
 							<div>
-								<input id="prdCheck" name="prdCheckAll" type="checkbox" checked="" class="checkTy1">
-								<label for="prdCheck">전체 (<span>2<span>/2)</label>
+								<input id="prdCheck1" name="prdCheckAll" type="checkbox" checked="" class="checkTy1">
+								<label for="prdCheck1"></label>
 							</div>
 							<div>
 								<div class="thumb">
@@ -113,69 +114,54 @@
 								</div>
 								<div class="prdDelivery"><p>4일 이내 발송</p><p>면세상품</p></div>
 							</div>
-			
-
-						</div>
-						
-						<p class="date"><strong>02.23</strong> 구매</p>
-						<div>
-							<div class="thumb">
-								<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
-							</div>
-							<div class="detail">
-								<a href="#">
-									<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
-									<span class="prdCode">상품코드 QWER1</span>
-									<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-									<!-- 기획서 버전 -->
-									<div class="baseDiscount">
-										<span class="basePrice">12,800원</span>
-										<span class="price"><strong>11,520</strong>원</span>
-									</div>
-								</a>
-							</div>
 						</div>
 					</li>
 					<li>
-						<p class="date"><strong>2019.02.23</strong> 구매</p>
 						<div>
-							<div class="thumb">
-								<a href="#"><img src="../static/images/@dummy_prd_img2.jpg" alt="" /></a>
+							<div class="btn del2"><a href="#"><span class="hide">삭제</span></a></div>
+							<div>
+								<input id="prdCheck2" name="prdCheckAll" type="checkbox" checked="" class="checkTy1">
+								<label for="prdCheck2"></label>
 							</div>
-							<div class="detail">
-								<a href="#">
+							<div>
+								<div class="thumb">
+									<a href="#"><img src="../static/images/@dummy_prd_img1.jpg" alt="" /></a>
+								</div>
+								<div class="detail">
 									<strong class="title">SANDISK MICRO SD카드MICRO SD카드</strong>
 									<span class="prdCode">상품코드 QWER1</span>
 									<span class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB)</span>
-									<!-- 디자인 버전 -->
-									<div class="baseDiscount">										
-										<em class="percentage">10%</em>
-										<span class="basePrice">12,800원</span>
-										<span class="price"><strong>11,520</strong>원</span>
+									<div>
+										<div class="countIpBox">
+											<div class="inputSpinner">
+												<button class="incCount btn-countDown" onclick="changeChange(0, 1,'DOWN');"><span class="hide">수량 감소</span></button>
+												<input class="input-t01 w_s" tabindex="2" size="7" value="1" name="quantity" id="quantity">
+												<button class="incCount btn-countUp" onclick="changeChange(0, 1,'UP');"><span class="hide">수량 추가</span></button>
+											</div>
+										</div>						
+										<div class="baseDiscount">
+											<span class="basePrice">12,800원</span>
+											<span class="price"><strong>11,520</strong>원</span>
+										</div>
 									</div>
-								</a>
-								<div class="prdSet">
-									<span>
-										<div class="btn wish popBt"><a href="#" data-pop-name="popCatalogAdd"><span class="hide">찜하기</span></a></div>
-									</span>
-									<span>
-										<div class="btn cart"><a href="#"><span class="hide">장바구니 담기</span></a></div>
-									</span>
 								</div>
+								<div class="prdDelivery"><p>4일 이내 발송</p><p>면세상품</p></div>
 							</div>
-						</div>							
+						</div>
 					</li>
+
 				</ul>
 			</div>
-			<div class="pagingNav">
-				<a href="#" class="btnLoc prev"><span class="hide">이전</span></a>
-				<a href="#" class="active">1</a>
-				<a href="#" class="">2</a>
-				<a href="#" class="">3</a>
-				<a href="#" class="">4</a>
-				<a href="#" class="">5</a>
-				<a href="#" class="btnLoc next"><span class="hide">다음</span></a>
-			</div>					
+		</div>
+		<div class="prdTotal">
+			<p class="tit">총 상품금액</p>
+			<p><strong>93,000</strong>원</p>
+		</div>
+		<div class="gradation1">
+			<div class="flexBox">
+				<div><a href="#"><span>선택상품주문</span></a></div>
+				<div><a href="#"><span>장바구니 담기</span></a></div>
+			</div>
 		</div>
 	</section>
 </div>
@@ -196,8 +182,7 @@
 				<div class="btn rd gradation1 btnAddFolder">
 					<a href="#"><span>만들기</span></a>
 				</div>
-			</div>
-		
+			</div>		
 		</div>
 	</div>
 </div>

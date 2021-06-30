@@ -787,7 +787,7 @@
 	<div class="con">
 		<ul>
 			<li>
-				<div class="btn close"><a href="#"><span class="hide">삭제</span></a></div>
+				<div class="btn del2"><a href="#"><span class="hide">삭제</span></a></div>
 				<p class="prdCode">상품코드 ASDF1</p>
 				<p class="prdOption">옵션출력 SANDISK MICRO SD카드 QUAR (64GB) 옵션출력 SANDISK MICRO SD카드</p>
 				<div class="countIpBox">
@@ -806,7 +806,7 @@
 <!-- 임시 스크립트 -->
 <script>
 	// 상품상세 추가목록 삭제버튼 
-	$('.layerBtPop.popTotal li .close').click(function(){
+	$('.layerBtPop.popTotal li .del2').click(function(){
 		if($('.layerBtPop.popTotal li').length == 1){
 			$(this).parent().remove();
 			$('.dimmed').fadeOut();
