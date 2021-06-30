@@ -17,14 +17,29 @@
 .inputBox .uploadWrap.type2 .fileName > li{position:relative;padding:2.6vw 9.4vw 2.6vw 2.6vw;border-radius:6px;background-color:#fff;color:#111;}
 .inputBox .uploadWrap.type2 .fileName > li .trash{position:absolute;top:2.1vw;right:2.6vw;}
 
+.inputBox .ui-input-text + .txt{margin-top:5.12vw;font-size:3.58vw;}
+
+.listChkBox{}
+.listChkBox li + li{margin-top:5.12vw;}
+
+
+.borderWrap.line1{border-width:1px;}
+
+
 /* 버튼 */
-.btn.small{height:7.69vw;padding:0 2.6vw;border:1px solid #ddd;background-color:#f4f4f4;border-radius:0.76vw;text-align:center;font-size:3.3vw;line-height:7.69vw;}
+.btnBox.btFixed{position:fixed;bottom:0;left:0;width:100%;}
+.btnBox.btFixed > *{flex:auto;}
+
+.btn.small{display:inline-block;height:7.69vw;padding:0 2.6vw;border:1px solid #ddd;background-color:#f4f4f4;border-radius:0.76vw;text-align:center;font-size:3.3vw;line-height:7.69vw;}
 .btn.small.white{background:#fff;color:#111;}
 
 .btn.trash a{width:5.12vw;height:5.12vw;background-image:url('../images/ic_trash.svg');}
 .btn.tooltip{display:inline-block;vertical-align:middle;}
 .btn.tooltip a{width:3.84vw;height:3.84vw;background-image:url('../images/ic_tooltip.svg');}
 .btn.tooltip.ver2 a{background-image:url('../images/ic_tooltip2.svg');}
+
+.btn.linkR a{background: url('../images/ic_arrow_r.svg') no-repeat center right;background-size:2.05vw auto;}
+.btn.linkR a + a{margin-top:5.12vw;}
 
 /* 툴팁 */
 .tooltipBox{display:none;position:fixed;top:50%;left:50%;width:80%;padding:7.69vw;background-color:#fff;box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.16);border-radius:6px;transform:translate(-50%,-50%);z-index:15;}
@@ -227,3 +242,19 @@
 .taxCalPop .orderInfo dl dd{width:calc(100% - 26vw);}
 .taxCalPop .orderInfo dl dd .old{display:block;margin-top:2.6vw;color:#898989;}
 .taxCalPop .btnBox{margin-top:7.69vw;}
+
+
+
+/* MY페이지 ::: 회원정보 */
+.modifyPage .con{padding-bottom:5.12vw;}
+.modifyPage .title{display:block;padding:0 5.12vw;font-size: 6.15vw;margin-top:5.12vw;}
+.modifyPage .borderWrap + .borderWrap{margin-top:5.12vw;}
+
+.modifyPage .businessType{margin:-5.12vw -5.12vw 0;}
+.modifyPage .businessType .slideCon .top{border-bottom:0;}
+.modifyPage .businessType .slideCon .bottom{border-bottom:0;}
+.modifyPage .businessType .listChkBox{padding:0 5.12vw;}
+.modifyPage .borderWrap .btnBox.btn2{margin-top:10.3vw;}
+
+.modifyPage .myIptChange {padding-top:7.69vw;}
+.modifyPage .myIptChange .btnBox.btn2{margin-top:10.3vw;}

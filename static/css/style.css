@@ -30,10 +30,10 @@ body.scLock{overflow:hidden;}
 .noteBox{margin-top:7.69vw;padding:5.12vw;border-radius:6px;background-color:#f8f8f8;}
 
 /* 셀렉트박스 */
-.ui-select{position:relative;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;padding:0 5.12vw;box-sizing:border-box;}
-.ui-select .ui-btn{position:relative;height:calc(12.3vw - 2px);line-height:calc(12.3vw - 2px);padding-right:3.8vw;}
+.ui-select{position:relative;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;box-sizing:border-box;}
+.ui-select .ui-btn{position:relative;height:calc(12.3vw - 2px);line-height:calc(12.3vw - 2px);padding-left:5.12vw;padding-right:10.3vw;}
 .ui-select .ui-btn > span{display:block;}
-.ui-select .ui-btn:before{content:'';position:absolute;width:3.07vw;height:2.05vw;right:0;top:50%;margin-top:-1.025vw;background-image:url('../images/ic_arrow_d.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
+.ui-select .ui-btn:before{content:'';position:absolute;width:3.07vw;height:2.05vw;right:5.12vw;top:50%;margin-top:-1.025vw;background-image:url('../images/ic_arrow_d.svg');background-repeat:no-repeat;background-position:0 0;background-size:cover;}
 .ui-select select{position:absolute;left:0;top:0;width:100%;height:12.3vw;opacity:0;}
 
 
@@ -63,11 +63,12 @@ body.scLock{overflow:hidden;}
 .inputBox .ui-input-has-clear a:after{content: "";position: absolute;top:0;right:0;display: block;width:5.12vw;height:5.12vw;background-position: center center;background-repeat: no-repeat;background-image:url('../images/ic_input_del.svg');background-size:100% auto;}
 .inputBox .ui-state-disabled{opacity:1;background:#f4f4f4;}
 .inputBox .ui-state-disabled input{color:#898989;}
-.inputBox .selBox{display:flex;flex-wrap:wrap;flex-flow:row;margin-top:2.56vw;position:relative;box-shadow:none;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;padding-left:5.12vw;box-sizing:border-box;}
-.inputBox .selBox .ui-select{min-width:17.94vw;height:calc(12.3vw - 2px);margin-top:0;line-height:calc(12.3vw - 2px);padding-left:0;padding-right:3.8vw;border:0;}
+.inputBox .selBox{display:flex;flex-wrap:wrap;flex-flow:row;margin-top:2.56vw;position:relative;box-shadow:none;border-radius:0.76vw;border:1px solid #ddd;height:12.3vw;line-height:12.3vw;box-sizing:border-box;}
+.inputBox .selBox .ui-select{min-width:17.94vw;height:calc(12.3vw - 2px);margin-top:0;line-height:calc(12.3vw - 2px);padding:0;border:0;}
 .inputBox .selBox .ui-input-text{margin-top:0;border:none;height:calc(12.3vw - 2px);line-height:calc(12.3vw - 2px);}
 .inputBox .selBox.tel .ui-input-text{padding-left:0;text-align:center;}
 .inputBox .selBox.tel .ui-input-text input{text-align:center;}
+.inputBox .selBox .ui-select .ui-btn:before{right:0;}
 .inputBox textarea{width:100%;height:71.79vw !important;line-height:1.4 !important;padding:5.12vw;}
 .inputBox .clickType{margin-top:5.12vw;}
 .inputBox .clickType label ~ label{margin-left:10.2vw;}
