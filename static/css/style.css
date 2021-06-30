@@ -336,7 +336,9 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .labelTag .label.blue{border:1px solid #623dc7;color:#623dc7;}
 
 .prdList ul:after{content:'';display:block;clear:both;}
-.prdList ul > li{position:relative;display:block;padding:0 0 0 46vw;}
+.prdList ul > li{position:relative;display:block;}
+.prdList ul > li > div{position:relative;display:block;padding:0 0 0 46vw;}
+.prdList ul > li > div.btnBox{padding:0;display:flex;}
 .prdList ul > li + li{margin-top:12.8vw;}
 .prdList .thumb{overflow:hidden;position:absolute;top:0;left:0;width:42.3vw;height:42.3vw;border:1px solid #e8e8e8;border-radius:5px;}
 .prdList .thumb a{display:block;}
@@ -355,7 +357,8 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .prdList .detail .prdSet > * + *:before{content:'';position:absolute;top:0;left:0;width:1px;height:5.1vw;background:#e8e8e8;}
 
 .prdList .lineTwo{display: flex;flex-flow: wrap;}
-.prdList ul.lineTwo > li{padding-left:0;width:calc((100% - 4.1vw)/2);margin-top:12.8vw;}
+.prdList ul.lineTwo > li{width:calc((100% - 4.1vw)/2);margin-top:12.8vw;}
+.prdList ul.lineTwo > li > div{padding-left:0;}
 .prdList ul.lineTwo > li:nth-child(even){margin-left:4.1vw;}
 .prdList ul.lineTwo > li:nth-child(-n+2){margin-top:0;}
 .prdList .lineTwo .thumb{position:relative;margin:0 auto;}
@@ -629,11 +632,14 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 
 
 /****************** My카탈로그 ******************/
-/* My카탈로그 :: 메인 ******************/
+/* My카탈로그 :: 메인 */
 .catalog.list .borderWrap{}
-.catalog.list .slideMenu ul{padding-bottom:5.12vw;}
+.catalog .slideMenu ul{padding-bottom:5.12vw;}
 .catalog.list .folderBar{border-bottom:1px solid #eee;padding-bottom:3.07vw;margin-bottom:5.12vw;margin-top:-2.56vw;}
 .catalog.list .prdList{margin-top:5.12vw;}
+.catalog.list .prdList .title{overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.catalog.list .prdList .detail .prdOption{overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.catalog.list .prdList .detail .prdBuyCount{color:#f41300;margin-bottom:1.28vw;}
 .layerCtPop.newFolderPop .wrap{padding:7.69vw;}
 .layerCtPop.newFolderPop .tit{font-size:4.1vw;font-weight: 700;text-align: center;margin-bottom:7.69vw;}
 .layerCtPop.newFolderPop .txt{margin-bottom:5.12vw;}
@@ -651,8 +657,10 @@ input[type="checkbox"].checkTy2:checked + label:before {background-image:url('..
 .layerBtPop.folderPop.editFolderPop .con ul li > div{display: flex;justify-content: space-between;align-items: center;}
 .layerBtPop.folderPop.editFolderPop .con ul li > div .txtdel a{font-size:3.33vw;line-height:7.69vw;height:7.69vw;border:1px solid #ddd;padding:0 4.61vw;border-radius: 0.76vw;}
 
-
-
+/* My카탈로그 :: 과거구매 */
+.catalog.past .prdList .thumb{width:22.05vw;height:22.05vw;}
+.catalog.past .prdList ul > li{padding:0 0 0 27.17vw;}
+.catalog.past .prdList ul > li + li{margin-top:7.69vw;padding-top:7.69vw;}
 
 
 /****************** 고객센터 ******************/
