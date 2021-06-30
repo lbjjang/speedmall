@@ -69,7 +69,7 @@ body.scLock{overflow:hidden;}
 .inputBox .selBox.tel .ui-input-text{padding-left:0;text-align:center;}
 .inputBox .selBox.tel .ui-input-text input{text-align:center;}
 .inputBox .selBox .ui-select .ui-btn:before{right:0;}
-.inputBox textarea{width:100%;height:71.79vw !important;line-height:1.4 !important;padding:5.12vw;}
+.inputBox textarea{width:100%;min-height:71.79vw;line-height:1.4 !important;padding:5.12vw;}
 .inputBox .clickType{margin-top:5.12vw;}
 .inputBox .clickType label ~ label{margin-left:10.2vw;}
 .inputBox .termCon{margin-top:2.56vw;}
@@ -81,6 +81,7 @@ body.scLock{overflow:hidden;}
 .inputBox .addressFind{overflow:hidden;margin:0 0 0 -2.5vw;}
 .inputBox .addressFind > *{float:left;width:calc(50% - 2.5vw);margin:2.5vw 0 0 2.5vw;}
 .inputBox .addressFind > *:last-child{width:calc(100% - 2.5vw);}
+.inputBox .addressFind textarea{min-height:auto;}
 
 .inputBox .receiveMarket{margin-top:5.1vw;}
 .inputBox .receiveMarket .tit{display:block;font-size:3.58vw;font-weight:400;}
