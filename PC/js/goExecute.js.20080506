@@ -1,0 +1,29 @@
+/**
+* 2008-03-13 dhkim 
+* 검색결과에서 바로 주문,장바구니,관심상품 넣는 기능
+*/
+
+function goExecute(checkId, gourl, cd, num,min_cnt){
+	if(checkId=="true"){
+		goExecuteDo(gourl, cd, num,min_cnt);
+	}else{
+		alert("해당 기능은 로그인을 하신후 사용하실 수 있습니다.");
+		//this.location.href = "/mall/login/login.jsp";
+	}
+}
+
+function goExecuteDo(gourl, cd, num,min_cnt){
+	var frm=document.form1;
+	frm.quantity.value=min_cnt;
+		if(gourl == "BARO"){
+			frm.action = "/mall/cart/addproduct_baro_jumun.jsp"
+		}else if(gourl == "CART"){
+			frm.action = "/mall/cart/addproduct_cart.jsp"
+		}else if(gourl == "ZZIM"){
+			frm.action  = "/mall/cart/addproduct_zzim.jsp";
+		}
+		frm.prd_cd.value = cd; // 상품입력
+		frm.target = "tmpFrame";
+		frm.submit();
+}
+

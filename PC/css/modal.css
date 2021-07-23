@@ -1,0 +1,562 @@
+/* 공통 GNB popup */
+.modal-tabs {border-bottom: 0;}
+.modal-tabs li {display: inline-block; margin-bottom: 0; float: none; border: 0; margin-left: -8px;}
+.modal-tabs li:first-child {margin-left: 0;}
+.modal-tabs li a {display: block; border: 1px solid #ddd; border-radius: 0; background: #f2f2f2; margin: 0; padding: 7px 20px;  font-size: 15px;}
+.modal-tabs li.active a,
+.modal-tabs li.active a:hover,
+.modal-tabs li.active a:focus {background: #f43038; border: 1px solid #f43038; color: #fff; font-weight: bold;}
+.modal-dialog {height: 100%; margin: 0 auto; padding: 30px 0;}
+.modal-content {padding: 30px; background: #fff; position: relative; box-shadow: 0 7px 7px rgba(0, 0, 0, .175); border: 0; border-radius: 0; height: 100%;}
+.modal .form-control {border: 1px solid #e5e5e5; padding: 0 8px; display: inline-block; vertical-align: middle;}
+.modal select,
+.modal input,
+.modal button {display: inline-block; vertical-align: middle;}
+.modal-close {position: absolute; left: 50%; bottom: 0; margin-left: -30px; background: #bbb;color:#fff;border: 1px solid #ddd; height: auto !important; padding: 5px 0; width: 60px; text-align: center; z-index: 10;}
+.modal-close.ty2 {width: 35px; height: 60px !important; margin-left: 0; left: 0; bottom: initial; top: 45%; padding: 10px 0;}
+.modal-close.ty3 {width: 60px; margin-left: 0; left: initial; right: 0; bottom: initial; top: 0; padding: 5px 0;}
+.modal-close.ty2 span {display: block; padding-bottom: 5px;}
+.modal-close-top {position: absolute; top: 0; right: 0;  background: #fff; display: block; line-height: 1; padding: 10px 15px 15px; border: 1px solid #ddd; border-right: 0; border-top: 0;font-size:18px;}
+.modal-close-top:before {content: "\e014"; font-family: 'Glyphicons Halflings'; vertical-align: middle;}
+.modal-close-top:hover{background:#ff6000;color:#fff;}
+.btn_wrap {text-align: center; padding: 10px 0 5px;}
+.btn_wrap button {font-size: 15px; margin: 0 5px; padding: 8px 22px; height: auto;}
+.btn_wrap.s_list_btnW button,
+.btn_wrap.s_list_btnW button{padding:20px 50px !important;font-weight:bold;font-size:16px;}
+.modal-tit {border-bottom: 1px solid #c2c2c2; padding-bottom: 10px; position: relative; font-size: 20px;}
+.modal-tit span.pull-right{float:right;}
+.modal-tit.ty2 {padding: 10px 0; border-bottom: 0; font-size: 12px;}
+.modal-tit.ty3 {border-bottom: 0;}
+.modal-tit.ty3 span {padding-left:10px; font-size:12px; font-weight: normal;}
+
+/* 공통 */
+.modal.left .modal-dialog {left: 0; -webkit-transition: opacity .1s linear, left .1s ease; -moz-transition: opacity .1s linear, left .1s ease; transition: opacity .1s linear, left .1s ease;}
+.modal.left.in .modal-dialog {left: -95px; width: 915px;}
+.modal.right .modal-dialog {right: -2000px; -webkit-transition: opacity .1s linear, right .1s ease; -moz-transition: opacity .1s linear, right .1s ease; transition: opacity .1s linear, right .1s ease;}
+.modal.right.in .modal-dialog {right: -95px;top:0; width: 915px;}
+.modal.right.in .modal-content {padding: 30px 30px 30px 40px;}
+
+
+/* 오른쪽 퀵 테이블 */
+.modal-table {width: 100%; border-collapse: collapse;}
+.modal-table th,
+.modal-table td {margin: 0; padding: 5px 10px; border-spacing: 0; border-top: 1px solid #e7e7e7;}
+.modal-table th {background: #f2f2f2;}
+.modal-table td {background: #fafafa;}
+.modal-table tr:first-child th,
+.modal-table tr:first-child td {border-top: 1px solid #ddd;}
+.modal-table tr:last-child th,
+.modal-table tr:last-child td {border-bottom: 1px solid #ddd;}
+.modal-table .form-control {background-color: #fff !important; display: inline-block; width: auto; height: 30px;}
+.modal-table select.form-control {padding-right: 30px !important;}
+.modal-table input {height: 30px; padding: 0; display: inline-block; vertical-align: middle; border: 1px solid #e5e5e5; padding-left: 10px;}
+.modal-table .btn_normal {height: 30px; padding: 6px 15px; vertical-align: middle;}
+.modal-table textarea {border: 1px solid #e5e5e5; width: 100%;}
+.modal-table td label {line-height: 1.4; overflow: auto; width: auto; height: auto; font-size: 12px; cursor: pointer;}
+
+
+/* 첨부파일 목록 
+.file_list {}
+.file_list ul {border: 1px solid #d5d5d5; width: 100%; display: table; margin-top: -1px;}
+.file_list li {padding: 7px 10px; display: table-cell; text-align: center; background: #fff;}
+.file_list li:nth-child(1) {width: 10%;}
+.file_list li:nth-child(2) {width: 50%;}
+.file_list li:nth-child(3) {width: 20%;}
+.file_list li:nth-child(4) {width: 20%;}
+.file_head {margin-top: 0;}
+.file_head li {background: #f9f9f9;}
+.file_list .btn_normal {padding: 5px 7px; height: auto; line-height: 1;}
+*/
+.file_con {}
+.file_con h3 {background: #5a647f; color: #fff; padding: 10px 15px; font-size: 15px;}
+.file_con h3 span {float: right; font-size: 13px; font-weight: normal;}
+.file_con .file_add {background: #f3f3f3; margin: 10px; padding: 10px; text-align: center;}
+.file_table {}
+.file_table th {border-top: 2px solid #ddd; border-bottom: 1px solid #ddd; font-weight: normal; padding: 5px; font-size: 12px;}
+.file_table td {border-bottom: 1px solid #ddd; padding: 5px; text-align: center;}
+
+
+/* 상품내역 */
+.buy_list {border-bottom: 1px solid #ddd; width: 100%; display: table; padding: 10px 0;}
+.buy_list.none {border-bottom: 0;}
+.buy_list li {display: table-cell;}
+.buy_list li:first-child {text-align: left;}
+.buy_list li:last-child {text-align: right;}
+.buy_list .form-control {height: 35px; max-width: 140px; border-radius: 4px; border: 1px solid #e5e5e5;}
+/*.buy_list .btn_normal {padding: 0 15px;}*/
+.buy_date {width: 100%; display: table; padding: 20px 0 10px;}
+.buy_date li {display: table-cell;}
+.buy_date .form-control {width: 110px; height: 35px; display: inline-block; vertical-align: middle; border: 1px solid #e5e5e5 !important; border-radius: 0; box-shadow: none;}
+.buy_date .date {display: inline-block; vertical-align: middle; position: relative;}
+.buy_date .picker-btn {position: absolute; top: 9px; right: 2px; z-index: 4;}
+.buy_date .btn_gray {height: 35px; display: inline-block; vertical-align: middle; padding: 5px 15px 0;}
+.buy_date .btn_gray.ty2 {}
+.buy_date.ty2 .form-control {height: 30px; width: auto;}
+.buy_goods_tit {height: 35px; border-top: 1px solid #ddd; padding: 0 25px 0 10px; position: relative;}
+.buy_goods_tit .btn_print {position: absolute; right: 0; top: -50px;}
+.buy_goods_con {padding: 0 10px; border: 1px solid #e5e5e5;}
+.buy_goods_con .tbl-t01 {border-top: 0;}
+.buy_goods_con .tbl-t01 tr:last-child td {border-bottom: 0;}
+.buy_goods_con .tbl-t01 tbody td {padding: 10px 0; line-height: 1.5;}
+.buy_goods_con .tbl-t01 .inputSpinner .input-t01 {width: 40px;}
+.buy_goods_con .tbl-t01 .areaCount .inputSpinner {margin-bottom: 0; width: 55px;}
+.buy_goods_con .tbl-t01 .tdAreaProd02 {padding-left: 0;}
+.buy_goods_con .tbl-t01 .areaProd {padding-lefT: 65px; }
+.buy_goods_con .tbl-t01 .btn-t01.t_s {min-width: auto;  padding: 2px 3px; height: 25px; background: transparent; border: 1px solid #ddd; color: #666;}
+.buy_goods_con .tbl-t01 .areaBtn button {margin: 3px 0;}
+.buy_goods_con .btn_normal {height: auto; padding: 2px 8px; font-size: 11px; margin-top: 5px; display: block;}
+.buy_goods_con .btn_normal_line,
+.buy_goods_con .btn_red_line,
+.buy_goods_list .btn_normal_line,
+.buy_goods_list .btn_red_line {height: auto; padding: 4px 5px; margin: 2px 0;}
+.buy_goods_list {width: 100%; border-collapse: collapse; border-spacing: 0;}
+.buy_goods_list thead th {height: 35px; border-top: 2px solid #ddd; border-bottom: 1px solid #ddd; position: relative;}
+.buy_goods_list th {text-align: center; line-height: 1; height: 35px; vertical-align: middle;}
+.buy_goods_list th input {height: auto; padding: 0;}
+.buy_goods_list td {border-bottom: 1px solid #e5e5e5; vertical-align: middle; padding: 10px 0; text-align: center;}
+.buy_goods_list dl {text-align: left;}
+.buy_goods_list dt,
+.buy_goods_list dd {display: inline-block; vertical-align: middle;}
+.buy_goods_list dt img {width: 50px; height: 50px;}
+.buy_pay {background: #f7f7f7; padding: 4px 10px 6px; width: 100%; display: table;}
+.buy_pay li {display: table-cell; width: 50%; vertical-align: middle;}
+.buy_pay li:last-child {text-align: right; font-size: 15px; font-weight: bold;}
+.buy_pay.ty2 {padding: 0;}
+.buy_pay.ty2 li {display: block; border-bottom: 1px solid #dfdfdf; width: 100%; text-align: right; padding: 8px 10px;}
+.buy_pay.ty2 li:last-child {border-bottom: 0;}
+.buy_pay.ty3 {background: transparent; padding: 10px 0 0; display: block; width: 100%;}
+.buy_pay.ty3 li {width: 50%; position: relative; display: inline-block;}
+.buy_pay.ty3 li:last-child {margin-left: -6px;}
+
+
+/* 상품코드로 주문  */
+.code_wr {padding: 10px 15px; width: 670px; background: #f2f2f2; margin: 10px 0; display: table; position: relative;}
+.code_wr dl {width: 88%; display: table; padding-bottom: 5px;}
+.code_wr dt,
+.code_wr dd {display: table-cell;}
+.code_wr dt {font-weight: bold; vertical-align: middle; white-space: nowrap; padding-right: 10px;}
+.code_wr dt:nth-child(3) {padding-left: 10px;}
+.code_wr dd input {height: 30px; border-radius: 0; box-shadow: none; border: 1px solid #e5e5e5;}
+.code_wr .btn_gray_dark {position: absolute; top: 10px; right: 15px; width: 60px; height: 28px; line-height: 1;}
+.code_wr .btn_normal {position: absolute; top: 0; right: -150px;}
+.code_wr p {font-size: 11px; text-align: left;}
+
+
+/* 장바구니 */
+.cart.area-tbl-prodSelect {padding: 10px 0; border-bottom: 0;}
+.cart .colSelect {padding: 0 !important; width: 30% !important;}
+.cart .colInfo {padding: 0 !important;}
+
+
+/* 스피드구매  */
+#myModal {padding-left: 180px;}
+#myModal .modal-dialog {width: 900px; padding: 150px 0 40px;}
+#myModal .modal-content {max-height: 580px; padding: 30px 30px 40px;}
+#myModal .btntitle {background: #fff; position: absolute; top: 110px; left: 50%; height: 40px; width: 170px; text-align: center; font-weight: bold; font-size: 15px; border: 0; margin-left: -360px;}
+#myModal .btntitle .glyphicon {font-size: 12px; color: #f43038;}
+#myModal.ty2 {padding-left: 170px;}
+#myModal.ty2 .btntitle {top: 15px; left: auto; right: 50%; margin-right: -370px;}
+#myModal.ty2 .modal-dialog {padding: 55px 0 40px;}
+#myModal .dismiss-modal{padding:50px 0;margin-top:-100px;}
+
+
+/* 관심상품 보관함 */
+#attention {padding-left: 180px;}
+#attention .modal-dialog {width: 900px; padding: 150px 0 40px;}
+#attention .modal-content {max-height: 580px; padding: 30px 30px 40px;}
+#attention .btntitle {background: #fff; position: absolute; top: 110px; left: 50%; height: 40px; width: 170px; text-align: center; font-weight: bold; font-size: 15px; border: 0; margin-left: -190px;}
+#attention .btntitle .glyphicon {font-size: 12px; color: #f43038;}
+#attention.ty2 {padding-left: 170px;}
+#attention.ty2 .btntitle {top: 15px; left: auto; right: 50%; margin-right: -535px;}
+#attention.ty2 .modal-dialog {padding: 55px 0 40px;}
+.attention .buy_list {padding: 10px 0;}
+.attention .buy_list .form-control {width: 70%;}
+.attention .buy_goods_con {height: 240px;}
+.attention .pagination {margin: 0; display: inline-block; text-align: right;}
+.attention .pagination li {width: auto;}
+.attention .form-control {border-radius: 0; box-shadow: none; border: 1px solid #e5e5e5; font-size: 12px;}
+
+
+/* 주문배송조회 */
+#order_inquiry .modal-content {max-height: 650px;}
+#order_inquiry .closebtn {position: absolute; top: 250px; right: 50%; margin-right: -650px; border: 0; background: #fff; width: 100px; height: 70px;}
+#order_inquiry .q_icon1 {background-position: -25px 0;}
+#order_inquiry.ty2 {padding: 0;}
+#order_inquiry.ty2 .closebtn {top: 175px;}
+.order_inquiry .buy_list {padding: 13px 0 18px;}
+.order_inquiry .buy_list li {display: block; text-align: left;}
+
+
+/* 상품등록요청 */
+#products .modal-content {max-height: 720px;}
+#products .closebtn {position: absolute; top: 315px; right: 50%; margin-right: -650px; border: 0; background: #fff; width: 100px; height: 70px;}
+#products .q_icon2 {background-position: -25px -25px;}
+#products.ty2 .closebtn {top: 245px;}
+
+
+/* 기업구매컨설팅 */
+#corporate .modal-content {max-height: 750px;}
+#corporate .closebtn {position: absolute; top: 385px; right: 50%; margin-right: -650px; border: 0; background: #fff; width: 100px; height: 70px;}
+#corporate .q_icon3 {background-position: -25px -50px;}
+#corporate.ty2 {padding: 0;}
+#corporate.ty2 .closebtn {top: 315px;}
+.corporate .table_tit {font-size: 16px;}
+.corporate .agree_box {margin-top: 20px; border: 1px solid #ddd; height: 120px; overflow-x: hidden; overflow-y: auto; padding: 15px;}
+.corporate .custom_agree_chk {text-align: center; padding-top: 10px;}
+.corporate .custom_agree_txt {padding-left :150px; padding-bottom: 10px;}
+
+/* 증명서 발급 */
+#certificate .modal-content {max-height: 700px;}
+#certificate .closebtn {position: absolute; top: 455px; right: 50%; margin-right: -650px; border: 0; background: #fff; width: 100px; height: 70px;}
+#certificate .q_icon4 {background-position: -25px -75px;}
+#certificate.ty2 {padding: 0;}
+#certificate.ty2 .closebtn {top: 385px;}
+
+
+/* quick left */
+.quick_left {position: fixed; width: 100px; z-index: 1; top: 150px; left: 50%; margin-left: -650px;}
+.quick_left.fix {top: 80px;}
+.quick_left > div {margin-top: 5px;}
+.quick_left .carousel {margin-top: 0;  height: 110px; overflow: hidden; background: #fff;}
+.quick_left .carousel-control {color: #aaa; font-size: 15px; display: inline-block; top: 40%; z-index: 20;}
+.quick_left .carousel-control.left {margin-left: 5px; left: 0;}
+.quick_left .carousel-control.right {margin-right: 5px; right: 0;}
+.quick_left .item,
+.quick_left .item.active {border: 0; width: 100%; height: 120px; padding: 0; overflow: hidden;}
+.quick_left .item a,
+.quick_left .item a:hover {border: 0 !important;}
+.quick_left .item img {width: 100%; border: 0; height: auto; min-height: 110px;}
+.ql_event {overflow: hidden; height: 130px;}
+.ql_event img {width: 100%; border: 0; height: auto; min-height: 130px;}
+.ql_custom {border: 1px solid #eee; height: 118px; background: #fff; text-align: center;}
+.ql_custom p:first-child {background: #eee; font-weight: bold; font-size: 11px; line-height: 22px; height: 25px;}
+.ql_custom a {height: 91px; display: block; line-height: 87px;}
+.img_custom{overflow:hidden;}
+
+
+/* quick right */
+.quick_right {position: fixed; width: 100px; z-index: 1; top: 150px; right: 50%; margin-right: -650px;}
+.quick_right.fix {top: 80px;}
+.quick_right p {color: #fff; text-align: center; height: 25px; font-weight: bold; line-height: 22px; font-size: 11px; letter-spacing: 0;}
+.quick_right .btn_top {height: 25px; text-align: center; display: block; background: #eee; line-height: 23px; margin-top: 10px; font-weight: bold;}
+.qr_menu {background: #5a647f;}
+.qr_menu li {height: 70px; border-top: 1px solid #4a5269; color: #fff; text-align: center;}
+.qr_menu li:first-child {padding-top: 5px; font-size: 11px;}
+.qr_menu li:first-child strong {font-weight: bold; display: block;}
+.qr_menu li:first-child a {height: auto; color: #41485c; padding: 3px 0; width: 70px; margin: 5px auto 0; border-radius: 2px; font-size: 11px; line-height: 1;}
+.qr_menu li:first-child a:first-child {background: #fff;}
+.qr_menu li:first-child a:last-child {background: #b1bbc9;}
+.qr_menu li a {height: 70px; color: #fff; display: block; text-align: center; padding-top: 10px; font-size: 12px;}
+.qr_menu li a:hover {background: #fff; color: #4a5269;}
+.qr_menu li a:hover .q_icon1 {background-position: -25px 0;}
+.qr_menu li a:hover .q_icon2 {background-position: -25px -25px;}
+.qr_menu li a:hover .q_icon3 {background-position: -25px -50px;}
+.qr_menu li a:hover .q_icon4 {background-position: -25px -75px;}
+.qr_today {width: 100%;  border: 1px solid #c0cef6; margin: 5px 0 0; background: #eee; color: #333;}
+.qr_today p {color: #666;}
+.qr_today .carousel {background: #fff; overflow: hidden;}
+.qr_today .carousel ol li {text-align: center; padding: 10px 0 5px; font-size: 12px;}
+.qr_today .carousel-indicators {position: relative; bottom: initial; left: initial; margin: 0 auto; width: 100%; padding: 10px 0 0; height: 30px; overflow: hidden;}
+.qr_today .carousel-indicators li {width: 100%; height: auto; background: transparent; border: 0; text-indent: 0; float: left; display: none;}
+.qr_today .carousel-indicators li.active {display: block;}
+.qr_today .item,
+.qr_today .item.active {border: 0; width: 100%; min-height: 60px; padding: 0 20px 5px;}
+.qr_today .item a,
+.qr_today .item a:hover {border: 0 !important;}
+.qr_today .item img {width: auto; max-width: 100%; border: 0; height: 70px;}
+.qr_today .carousel-control {color: #41485c; font-size: 15px; margin-top: 10px; z-index: 20;}
+.qr_today .carousel-control.left {margin-left: 15px; left: 0;}
+.qr_today .carousel-control.right {margin-right: 15px; right: 0;}
+.qr_today .item img{width:100% !important;height:58px !important;}
+
+/* quick icon */
+.q_icon {background-image: url('/small/images/right_qbg.png'); background-repeat: no-repeat; display: block; width: 25px; height: 25px; margin: 0 auto 3px;}
+.q_icon1 {background-position: 0 0;}
+.q_icon2 {background-position: 0 -25px;}
+.q_icon3 {background-position: 0 -50px;}
+.q_icon4 {background-position: 0 -75px;}
+
+
+/* 상품목록 */
+#goods_wish .modal-dialog,
+#goods_cart .modal-dialog {width: 400px;}
+#goods_wish .modal-content,
+#goods_cart .modal-content {border: 3px solid #333;}
+.goods_guide {width: 100%; margin: 0 auto 15px; padding-left: 10%;}
+.goods_guide dt,
+.goods_guide dd {display: inline-block; vertical-align: middle; line-height: 2;}
+.goods_guide dt {padding-right: 20px;}
+
+
+/* 신규상품등록 */
+#goods_products .modal-dialog {height: 100%; margin: 0 auto; padding: 40px 0; width: 900px;}
+#goods_products .modal-content {height: 100%;}
+#goods_products .modal-close-top {top: 10px; right: 10px;}
+
+
+/* 페이백 가입안내 */
+#modal_joinPayback .modal-dialog {width: 440px;}
+#modal_joinPayback .modal-content {padding: 0; background: #eee;}
+.modal_joinPayback {width: 100%; height: 290px; background: #eee url('/small/images/img_pop_payback.png') no-repeat 0 0;}
+.modal_joinPayback .wrap-btnConfirm01 {padding-top: 230px;}
+.modal_joinPayback .wrap-btnConfirm01 button {padding: 10px 20px;}
+
+
+/* 첨부파일 추가 */
+#modal_addFile .btn_wrap {padding: 0;}
+.addFile_list {display: block; overflow-x: hidden; overflow-y: scroll; height: 155px;}
+
+
+
+/* s 로그인 */
+#login_popup { width: 500px; height: 410px; left: 50%; top: 20%;  margin-left: -250px; background-color:#fff;}
+#login_popup .modal-dialog {margin: 0 auto; width: 100%; overflow: hidden; padding: 0;}
+#login_popup .modal-content {padding: 0;}
+#login_popup .modal-close {position: absolute; top: 10px; right: 25px; left: inherit; width: auto; background-color: transparent; border: 0;}
+.login_popup {width: 100%; height: 100%;}
+.login_popup label {position: static; display: inline-block;  width:auto; height: auto; line-height: 2; color: #666666; font-size: 12px; vertical-align: middle; }
+.login_popup .login_title {position: relative; padding: 12px 0; width: 100%; background-color:#f43038; font-size: 18px; color: #fff; font-weight: bold; text-align: center; }
+.login_popup .login_form {position: relative; display: table;  padding: 30px 25px 10px; width: 100%;}
+.login_popup .login_form > div:nth-child(1) { display: table-cell; width:325px;}
+.login_popup .login_form > a.popup_login_btn { display: table-cell; width:auto; background-color: #ef1720; vertical-align: middle;color: #fff; font-size: 16px; font-weight: bold; text-align: center;}
+.login_popup .login_form label { position: static; display: inline-block; padding-top: 7px; width:100px; height: 40px; line-height: 2; color: #666666; font-weight: bold; vertical-align: middle; }
+.login_popup .login_form input { width: 220px; height: 40px; border: 1px solid #bcbcbc; padding: 10px;}
+.login_popup .login_form p:nth-child(1) {margin-bottom: 5px; }
+.login_popup .login_form p:nth-child(1) label:before {content: ""; margin-right:10px; display: inline-block; width: 27px; height: 27px; background: url('/small/images/login_icon_1.png') 0 0 no-repeat; vertical-align: middle;}
+.login_popup .login_form p:nth-child(2) label:before {content: ""; margin-right:10px; display: inline-block; width: 28px; height: 28px; background: url('/small/images/login_icon_2.png') 0 0 no-repeat; vertical-align: middle;}
+.login_popup .login_util {padding-left: 125px;}
+.login_popup .login_util #save_id { margin-right: 10px;}
+.login_popup .login_util p:nth-child(2) a {font-weight: bold;}
+.login_popup .login_util p span.split { display: inline-block; padding: 0 20px; color: #a6a6a6; }
+.login_popup .login_btn_wrap { margin-top: 25px; width: 100%; background-color: #f0f0f0; padding: 25px;}
+.login_popup .login_btn_wrap div:after { clear: both; content: "";}
+.login_popup .login_btn_wrap div a { display: inline-block; width: 215px; padding: 12px 0; border: 1px solid #cbcbcb; background-color:#fff; font-size: 15px; font-weight: bold; text-align: center;  }
+.login_popup .login_btn_wrap div a:nth-child(1) {float: left;}
+.login_popup .login_btn_wrap div a:nth-child(2) {float: right;}
+.login_popup .login_btn_wrap div + p a { display: inline-block; margin-top: 15px;  width: 100%; padding: 15px 0; color: #fff; background-color: #aaaaaa; font-size: 16px; font-weight: bold; text-align: center;}
+
+
+/* 주소찾기 */
+.address_title {position: relative; padding: 0 20px; height: 45px; line-height: 43px; background:#5a647f; font-size: 18px; color: #fff;}
+.address_title .close_popup {position: absolute; top: 12px; right: 20px; height: auto; background: transparent; border: 0; color: #fff; line-height: 1;}
+.address_title.ty2 {height: 35px; line-height: 30px; font-size: 16px; padding: 0 10px;}
+.address_title.ty2 .close_popup {top: 10px; right: 10px;}
+.address_con {position: relative; padding: 50px 15px 15px;}
+.adre_tab {position: absolute; top: 15px; width: 47%; height: 30px;}
+.adre_tab.ty1 {left: 15px;}
+.adre_tab.ty2 {right: 15px;}
+.adre_tab button {background: transparent; border: 0; width: 100%; height: 100%; display: block; border: 1px solid #ddd;}
+.adre_tab button.on {font-weight: bold; border: 2px solid #414141; border-bottom: 0;}
+.adre_txt {font-size: 11px; padding: 5px 0;}
+.adre_box {background: #f3f3f3; text-align: left; margin: 10px 0; padding: 15px 10px;}
+.adre_box ul {display: table; width: 100%;}
+.adre_box li {display: table-cell; vertical-align: middle; font-size: 12px;}
+.adre_box .form-control {background-color: #fff !important; height: 30px; vertical-align: middle; font-size: 12px;}
+.adre_box .btn_gray {height: 30px; font-size: 12px; width: 100%; vertical-align: middle;}
+
+.adre_con {height: 280px; border: 1px solid #ddd;}
+.adre_con.ty2 {height: 330px;}
+.adre_table {width: 100%;}
+.adre_table th {border-top: 1px solid #aaa; border-bottom: 1px solid #ddd; text-align: center; padding: 10px; background: #fafaf;}
+.adre_table td {border-bottom: 1px solid #ddd; padding: 10px; width:100px;}
+.adre_table td.no_result { padding: 30px 0; text-align: center;}
+
+
+/* 주문상세내역 */
+#my_returnorderDetail .modal-dialog,
+#my_orderDetail .modal-dialog,
+#my_returnendorderDetail .modal-dialog,
+#my_endorderDetail .modal-dialog,
+#my_orderCancelDetail .modal-dialog {width: 900px; height: 100%; margin: 0 auto; padding: 30px 0;}
+#my_orderDetail .modal-content {height: 100%;}
+.my_orderDetail .box-headSpot {padding: 0;}
+.my_orderDetail .lay-cart-div03{margin-top: 50px;}
+.my_orderDetail .lay-cart-div03 .textarea{width: 100%; height: 100px;}
+.my_orderDetail .btn_wrap button {padding: 10px 30px;}
+
+
+/* 거래명세서 출력*/
+.my_trans {padding: 30px;}
+
+
+/* 주문상세내역 - 교환 환불 */
+#modal_shoppingList .modal-dialog {width: 900px;}
+.my_orderExchange,
+.my_orderRefund {padding: 30px;}
+.my_orderExchange .textarea,
+.my_orderRefund .textarea {width: 100%; height: 70px; border: 1px solid #ddd;}
+
+
+/* 주문취소내역 */
+#my_orderCancel .modal-dialog{width: 1127px;}
+#my_orderCancel .box-headSpot{padding: 0;}
+#my_orderCancel .contents-bucket{margin: 0 0 50px 0;}
+#my_orderCancel .modal-content{height: 800px;}
+
+
+/* 상품평 등록 */
+.my_review .box-headSpot {padding: 0 0 15px;}
+.my_review .box-headSpot .txt {margin-bottom: 0;}
+.my_review .textarea{width: 100%; height: 100px; border: 1px solid #e8e8e8;}
+.my_review .star{color:#e33a3a; font-size:15px; line-height:12px; float: left; width: 50%;}
+.my_review .star span{color:#c5c5c5;}
+.my_review .h-t05 {padding: 0;}
+.my_review .btn_wrap {padding-top: 10px;}
+.my_review .btn_wrap .button {font-size: 15px; margin: 0 5px;}
+
+
+/* 사용가능쿠폰 */
+#my_coupon_pre .modal-dialog {width: 800px;}
+#my_coupon_pre .modal-content {max-height: 750px;}
+#my_coupon_pre iframe {max-height: 650px;}
+
+
+/* 담당자 정보 수정 */
+#modal_managerInfoChange .modal-dialog {width: 600px;}
+#modal_managerInfoChange .modal-content {max-height: 620px;}
+
+
+/* 승인 반려 textarea */
+.my_approve .textarea{width: 100%; height: 100px;}
+.my_return .textarea{width: 100%; height: 100px;}
+
+
+/* 배송지 목록 */
+.modal_shoppingList .h-t07 {border-bottom: 0; margin-bottom: 0;}
+.modal_shoppingList .sect-t03 {max-height: 310px; overflow-x: hidden; overflow-y: auto; margin-bottom: 0;}
+
+
+/* 마이페이지 관심상품 그룹 관리 */
+#my_interestGroup .modal-dialog {width: 500px;}
+#my_interestGroup .modal-content {max-height: 450px;}
+.group_wrap {height: 200px; border: 1px solid #ddd;}
+
+/* MY카탈로그에 추가*/
+#my_interestGroup_add .modal-dialog {width: 500px;}
+#my_interestGroup_add .modal-content {max-height: 450px;}
+
+/* 마이페이지 관심상품 새그룹 */
+#my_interestGroup_insert .modal-dialog {width: 500px;}
+#my_interestGroup_insert .modal-content {max-height: 450px;}
+
+/* 마이페이지 관심상품 그룹 이동 */
+#my_interestGroup_copy .modal-dialog {width: 500px;}
+#my_interestGroup_copy .modal-content {max-height: 450px;}
+
+/* 마이페이지 관심상품 그룹 복사 */
+#my_interestGroup_move .modal-dialog {width: 500px;}
+#my_interestGroup_move .modal-content {max-height: 450px;}
+
+/* 마이페이지 관심상품 분류 숨기기 */
+#my_interestGroupCate .modal-dialog {width: 800px;}
+#my_interestGroupCate .modal-content {max-height: 450px; margin-left: 150px; margin-top: 170px;}
+
+
+
+/* 마이페이지 관심상품 이용안내 */
+#my_interestGuide .modal-dialog {width: 600px;}
+#my_interestGuide .modal-content {max-height: 580px;}
+.wish_guide {border-top: 2px solid #555;}
+.wish_guide li {border-bottom: 1px solid #ddd; padding: 10px 0;}
+.wish_guide h4 {font-size: 15px; padding-bottom: 5px;}
+.wish_guide .btn_normal {padding: 5px; font-size: 12px;}
+
+
+/* 마이페이지 승인 반려 */
+#my_approve .modal-dialog {width: 400px;}
+#my_approve .modal-content {max-height: 250px;}
+#my_return .modal-dialog {width: 400px;}
+#my_return .modal-content {max-height: 250px;}
+
+/* MY카탈로그>상품코드로 주문> 비노출상품 상품상세 모달 */
+#goodsDetail .modal-dialog {width: 1150px;}
+#goodsDetail .modal-content {max-height: 750px;}
+
+/* 사업장 변환 관련 팝업 */
+#cust_chg_se {position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 300; background: rgba(0,0,0,.5);}
+#cust_chg_vu {position: fixed; width: 400px; top: 10%; left: 50%; margin-left: -200px; z-index: 400; background: #fff;}
+.cust_chg {padding-bottom: 10px;}
+.cust_tit {background: #5a647f; color: #fff; text-align: center; padding: 8px;}
+.cust_table {padding: 15px 15px 0;}
+.cust_table th,
+.cust_table td {border: 1px solid #ddd; text-align: center; padding: 5px;}
+.cust_table th {border-top: 2px solid #ddd; background: #fafafa;}
+#cus_chg_sdv {}
+#cus_chg {text-align: center; line-height: 1.2; padding: 8px;}
+
+
+/* 쿠폰조회, 적용*/
+#modal_couponCheckApply .modal-dialog,
+#modal_couponfreeShipping .modal-dialog,
+#modal_couponSelected .modal-dialog,
+#modal_shoppingList .modal-dialog {width: 900px;}
+#modal_couponCheckApply .modal-content,
+#modal_couponfreeShipping .modal-content,
+#modal_couponSelected .modal-content {max-height: 750px;}
+
+
+/* 배송지 목록 */
+#modal_shippingList .modal-dialog {width: 600px;}
+#modal_shippingList .modal-content {max-height: 500px;}
+
+
+/* 쇼핑게속하기 */
+#toSCart {position: fixed; top: 50% !important; left: 50% !important; background: #fff url(/small/images/toSCart.jpg) no-repeat center; border: 2px solid #555; z-index: 100; width: 400px; height: 200px; margin-left: -200px; margin-top: -100px;}
+#stiShop {position: absolute; bottom: 38px; left: 65px; height: 30px; width: 130px; border: 0; background: transparent;}
+#gotCart {position: absolute; bottom: 38px; right: 64px; height: 30px; width: 130px; border: 0; background: transparent;}
+
+
+/* 아이디 중복확인 */
+#join_id {}
+#join_id .modal-dialog {width: 450px;}
+#join_id .modal-content {max-height: 260px;}
+.join_id_keyword {text-align: center; background: #f9f9f9; padding: 15px 0;}
+.join_id_box {border: 1px solid #ddd; text-align: center; min-height: 75px; margin-top: 15px; padding-top: 25px;}
+
+
+/* 이용약관 */
+#modal_agreement .modal-dialog {width: 800px;}
+#modal_agreement .modal-content {max-height: 750px;}
+.modal_agreement_box {height: 100%; overflow-y: auto; max-height: 570px; padding-top: 20px;}
+
+/* 개인정보 보호방침 */
+#modal_personal .modal-dialog {width: 800px;}
+#modal_personal .modal-content {max-height: 750px;}
+
+/* 개인정보 수집 및 이용 */
+#modal_personal_guide .modal-dialog {width: 800px;}
+#modal_personal_guide .modal-content {max-height: 750px;}
+
+
+/* 세금계산서 안내 */
+#payment_account_howto .modal-dialog {width: 800px;}
+#payment_account_howto .modal-content {max-height: 800px;}
+#payment_account_howto .payment_con {height: 95%; max-height: 700px; overflow-y: auto; padding-right: 20px;}
+#payment_account_howto .tax_list {width: 98%;}
+#payment_account_howto .tax_vs_box li:first-child {width: 35%;}
+#payment_account_howto .tax_vs_box li:last-child {width: 55%;}
+#payment_account_howto .tax_tit {margin: 20px 0 5px;}
+
+
+/* 제휴입점안내 */
+.cooper_con {padding: 15px 20px;}
+.cooper_con li {display: inline-block; width: 49%;}
+.cooper_table {padding: 0 20px 15px;}
+.cooper_table table {border-top: 2px solid #ddd;}
+.cooper_table th,
+.cooper_table td {border-bottom: 1px solid #ddd; padding: 10px;}
+.cooper_table th {background: #f9f9f9;}
+.cooper_box {margin: 0 20px; border: 1px solid #ddd; padding: 10px; height: 100px; overflow-y: auto;}
+
+
+/* 이메일주소 수집거부 */
+.email_pop_txt {padding: 15px 20px; font-size: 16px;}
+.email_pop_box {margin: 0 20px; border: 1px solid #ddd; padding: 20px 25px;}
+
+/* 입고알림신청 팝업 */
+.soldin_pop {padding: 10px; text-align: center;}
+.soldin_pop .btn_red {font-size: 12px; padding: 3px 10px 7px;}
+.soldin_box {background: #f3f3f3; padding: 5px 5px 7px; margin: 5px 0;}
+
+.memb-outM{max-width:500px;max-height:250px;}
+

@@ -1,0 +1,81 @@
+@charset "euc-kr";
+
+
+/* location */
+.location {position: absolute; top: 0; right: 0;}
+.location li {display: inline-block; font-size: 12px;}
+.location li:before {content: "\e258"; font-family: 'Glyphicons Halflings'; font-size: 10px; margin-right: 4px; color: #ccc;}
+.location li:first-child:before,
+.location li:nth-child(2):before {display: none;}
+.location li:first-child {padding-right: 5px;}
+.location .glyphicon {color: #ccc; font-size: 11px;}
+
+
+/* 인사말 */
+.greeting {padding: 40px 0;}
+.greeting .img {float: left;}
+.greeting .logo {position: absolute; top: -15px; right: 0;}
+.greeting .txt1 {position: relative; font-size: 24px;}
+.greeting .txt2 {padding-top: 30px; font-size: 15px;}
+.sign_box {width: 100%; display: table;}
+.sign_box li {width: 50%; display: table-cell;}
+.sign_box li:last-child {text-align: right;}
+
+
+/* 회사현황 */
+.overeview {border-top: 2px solid #ddd; border-bottom: 2px solid #ddd;}
+.overeview th {background: #f0f0f0; border-bottom: 1px solid #fff; padding: 15px 20px;}
+.overeview td {padding: 15px 20px;}
+.overeview tr:last-child th {border-bottom: 0;}
+
+
+/* 회사연혁 */
+.history_box {margin-top: 20px;}
+.history_box th,
+.history_box td {vertical-align: top; padding: 15px;}
+.history_box th {background: url(/small/images/company/hbg_line.jpg) repeat-y center; text-align: center;}
+.history_box td:nth-child(2) {font-size: 22px; line-height: 1;}
+.history_box td:last-child {}
+.history_box tr:first-child th,
+.history_box tr:first-child td {padding-top: 0;}
+.history_box tr:last-child th,
+.history_box tr:last-child td {padding-bottom: 0;}
+.history_box span {display: inline-block; width: 40px;}
+.history_box p {padding-bottom: 5px;}
+
+
+/* 재고운영 */
+.stock_list {margin-top: 15px;}
+.stock_list li {display: inline-block; vertical-align: top; margin-left: 1.5%; width: 23.5%;}
+.stock_list li:first-child {margin-left: 0;}
+.stock_list dl {border: 1px solid #ddd; text-align: center; min-height: 260px;}
+.stock_list dt {background: #ddd; font-size: 16px; font-weight: bold; padding: 10px 0;}
+.stock_list dd {padding: 20px 30px;}
+
+
+/* MRO자재의 특성 */
+.chara_box {border: 1px solid #ddd; text-align: center; padding: 20px;}
+.chara_guide {position: relative; padding-left: 15px; margin-top: 20px;}
+.chara_guide:before {content: ""; display: inline-block; vertical-align: middle; width: 2px; height: 100%; background: #ddd; position: absolute; top: 2px; left: 0;}
+
+
+/* 고객가치제안 */
+.cpro_list {border-bottom: 1px solid #ddd; display: table; width: 100%; padding: 15px 0;}
+.cpro_list:last-child {border-bottom: 0;}
+.cpro_list dt,
+.cpro_list dd {display: table-cell; vertical-align: middle;}
+.cpro_list dt {width: 20%; text-align: center;}
+.cpro_list dd {width: 80%; padding-left: 20px;}
+
+
+/* 찾아오시는 길 */
+.map_tit {background: #e6e6e6; font-size: 16px; font-weight: bold; padding: 8px 20px; width: 200px; text-align: center;}
+.map_box {border: 1px solid #ddd; padding: 30px; text-align: center; margin-top: 10px;}
+.map_list {padding: 20px;}
+.map_list p {font-size: 16px;}
+.map_list strong {display: inline-block; width: 90px;}
+.map_road {background: #f7f7f7; padding: 20px 25px; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.map_road p {font-size: 16px;}
+.map_road strong {display: inline-block; width: 80px;}
+
+

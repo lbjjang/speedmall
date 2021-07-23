@@ -1,0 +1,149 @@
+@charset "euc-kr";
+
+
+/* 공통 타이틀 */
+.mem_title {height: 90px; border-bottom: 2px solid #d0d0d0; display: table; width: 100%;}
+.mem_title dt,
+.mem_title dd {display: table-cell; width: 50%; vertical-align: middle;}
+.mem_title dt { font-size: 26px; color:#333;}
+.mem_title dd {text-align: right;}
+.mem_title li {display: inline-block; vertical-align: middle; font-size: 18px; margin-left: 20px;}
+.mem_title li.on {color: #f43038; font-weight: bold;}
+.mem_title li.on:before {content: ""; display: block; width: 100%; height: 2px; background: #f43038;}
+
+
+/* 회원선택 */
+.mem_cho {text-align: center; padding:40px 40px 0 40px;}
+.mem_cho h3 { font-size: 23px; padding-bottom: 30px; font-weight: bold;}
+.mem_cho h3 span.color{ color:#f43038;}
+.mem_cho .mem_img{text-align:center;}
+.mcho_type {width: 100%; margin: 30px auto 10px;overflow:hidden;}
+.mcho_type li {width: 49%; height: 260px; color: #fff; vertical-align: middle;padding:50px 0;}
+.mcho_type li:first-child {background: #3a63cd;float:left;}
+.mcho_type li:last-child {background: #5eb7bb;float:right;}
+.mcho_type p {color: #fff;}
+.mcho_type .btn_normal {border: 0; font-weight: bold; font-size: 15px; padding: 8px 45px 12px; margin-top: 20px;color:#333;}
+.mcho_stit {text-align: left; margin-top: 30px; font-size: 18px; padding-bottom: 10px; padding-left:10px;border-bottom: 2px solid #555;}
+.mcho_stit.ty2 {border-bottom: 1px solid #ddd; margin: 20px 0;}
+.mcho_stit.ty3 {border-bottom: 0;}
+.mcho_con {background: #f0f0f0;}
+.mcho_con.con1 {background: #fff;position:relative;}
+.mcho_con.con2 {background: #f7f7f7;}
+.mcho_con.con1 a{position:absolute;bottom:0;right:375px;width:270px;height:270px;}
+.mcho_con.con1 a:last-child{position:absolute;bottom:0;right:105px;width:270px;height:270px;}
+.mc_icon {display: block; background: url('/small/images/icon_join.png') no-repeat; margin: 0 auto 10px;}
+.mc_icon1 {background-position: 0 0; width: 92px; height: 40px;}
+.mc_icon2 {background-position: -92px 0; width: 33px; height: 40px;}
+
+
+/* 약관동의 */
+.register_wrap{padding:0 40px;}
+.mem_agree_tit {font-size: 14px; margin-bottom: 5px;}
+.mem_agree_con {width :100%; height: 280px; border:1px solid #dedede; resize: none; padding: 5px 10px;}
+.mem_agree_chk {text-align: center; padding-top: 10px;}
+.mem_agree_chk.ty2 {margin-top:20px; background: #b1b1b1; padding: 15px 0;}
+.mem_agree_chk.ty2 label {color: #fff;}
+
+.mem_agree_box{width:320px;float:left;}
+.mem_agree_box.ty2{width:100% !important;clear:both;overflow:hidden;margin-bottom:40px;}
+.mem_agree_box:nth-child(3){margin-left:15px;margin-right:15px;}
+
+
+/* 회원인증 */
+.auth_wrap {background: #f7f7f7; padding: 30px; border: 1px solid #ddd;}
+.auth_wrap.auth_pt{position:relative;}
+.auth_wrap ul {text-align: center;}
+.auth_wrap li {display: inline-block; vertical-align: middle; text-align: left; margin: 0 30px; position: relative;}
+.auth_wrap li:first-child {padding-left: 70px;}
+.auth_wrap li:last-child {padding-left: 110px;}
+.auth_wrap .img {position: absolute; top: 0; left: 0;}
+.auth_form {overflow:hidden;background: #f7f7f7; padding: 20px 30px; border: 1px solid #ddd; margin: 0 auto; width: 50%;}
+.auth_form dl {margin: 5px 0;}
+.auth_form dt,
+.auth_form dd {display: inline-block; vertical-align: middle;}
+.auth_form dt {width: 25%;}
+.auth_form dd {width: 70%;}
+
+
+/* 휴대폰,아이핀 인증 툴팁 */
+.auth_tooltip{min-width:470px;min-height:150px;padding:15px;position:absolute;top:120px;background:#fff;box-shadow: 0px 2px 10px 3px #888888;z-index:2;display:none;}
+.auth_c1 .auth_tooltip{left:-10px;}
+.auth_c2 .auth_tooltip{left:110px;}
+.auth_c1:hover > .auth_tooltip{display:block}
+.auth_c2:hover > .auth_tooltip{display:block}
+.auth_tooltip_header{padding-bottom:10px;border-bottom:1px solid #ddd;overflow:hidden;}
+.auth_tooltip_header h5{font-size:12px;font-weight:bold;color:#666;}
+.auth_tooltip_header h5 a.close_popup{float:right;}
+.auth_tooltip_body{overflow:hidden;padding-top:15px;}
+.auth_tooltip_body ul{width:100%;display:block;text-align:center;}
+.auth_tooltip_body ul li{font-size:12px;color:#666;padding:0;list-style:disc;display:block;margin:0 0 8px 0;}
+.auth_tooltip_body ul li:first-child{padding:0;}
+.auth_tooltip_body ul li:last-child{padding:0;}
+
+
+/* 정보입력 */
+.mem_input_tit {font-size: 18px; font-weight: normal; color: #333; padding: 40px 0 10px;}
+.minput_table {border-top: 1px solid #ddd;}
+.minput_table th,
+.minput_table td {border-bottom: 1px solid #ddd; padding: 10px 15px;}
+.minput_table th {background: #f5f5f5; font-size: 12px;}
+.minput_table input,
+.minput_table button,
+.minput_table select {height: 30px; padding: 0 8px;}
+.minput_table span.minput_tcolor{color:#3492ce;display:inline-block;}
+.minput_tb1{border-bottom:1px solid #ddd;padding:10px 15px 30px 15px}
+
+
+/*회원가입 완료*/
+.mem_com dl {text-align: center; padding: 30px 0 80px;}
+.mem_com dt,
+.mem_com dd {display: inline-block; vertical-align: middle;}
+.mem_com dd {text-align: left; font-size: 20px; line-height: 1.8; font-weight: bold; padding-left: 40px;}
+.mem_com dd button {font-size: 16px; padding: 15px 60px;}
+.mem_vote_guide {margin-bottom: 20px; padding: 20px;text-align:center;font-size:14px;font-weight:bold; border-top:1px solid #ddd;border-bottom:1px solid #ddd;}
+
+
+/* 휴면계정 안내 */
+.mem_unuse {width: 80%; margin: 50px auto;}
+.mem_unuse dt,
+.mem_unuse dd {display: inline-block; vertical-align: middle;}
+.mem_unuse dt {width: 20%;}
+.mem_unuse dd {width: 80%; padding-left: 70px; margin-left: -4px;}
+.mem_unuse h3 {font-size: 18px;}
+.mem_unuse p {font-size: 14px; padding-top: 20px;}
+.mem_cer {background: #fafafa; border: 1px solid #ddd; padding: 50px; text-align: center;}
+.mem_cer dl {display: table; width: 400px; margin: 20px auto 0;}
+.mem_cer dt,
+.mem_cer dd {display: table-cell; width: 50%; vertical-align: middle;}
+.mem_cer dt {background: #828282; color: #fff; font-size: 24px;}
+.mem_cer dd {text-align: left; padding-left: 10px;}
+
+
+/* 아이디 비밀번호 찾기 */
+.mem_find_box {width: 63%; margin: 10px auto 0; padding: 15px; border: 1px solid #e1e1e1;}
+.mem_find_con {margin-top: 40px; overflow: hidden;}
+.mem_find_con dl {width: 48%;}
+.mem_find_con dl:first-child {float: left;}
+.mem_find_con dl:last-child {float: right;}
+.mem_find_con dt {background: #5a647f; color: #fff; height: 40px; line-height: 40px; padding-left: 30px; font-size: 16px;}
+.mem_find_con dd {border: 1px solid #5a647f; border-top: 0; background: #f9f9f9; padding: 15px 30px 0; min-height: 250px;}
+.mem_find_con table {width: 100%;}
+.mem_find_con th,
+.mem_find_con td {padding: 5px 0;}
+.mem_find_con th {width: 30%;}
+.mem_find_con td {width: 70%;}
+.mem_find_con input,
+.mem_find_con label {vertical-align: middle; display: inline-block;}
+
+
+/* 설문조사 */
+.vote_table {margin-top: 30px; border-top: 1px solid #ddd;}
+.vote_table th,
+.vote_table td {vertical-align: top; padding: 15px; border-bottom: 1px solid #ddd;}
+.vote_table th {background: #f6f6f6;}
+.vote_table li {display: inline-block; width: 48%; vertical-align: top;}
+.vote_list dt {font-weight: bold; padding: 20px 0 3px;}
+.vote_list dd {}
+.vote_list input,
+.vote_list label {display: inline-block; vertical-align: middle;}
+.vote_list p {padding: 3px 0;}

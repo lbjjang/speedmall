@@ -1,0 +1,186 @@
+ /*
+ /* 2007.12.04 - ValidCheck2에서 
+ /* ( addr3 --> send_addr3)로 변경 - jklee
+ /* 2007.12.06 fm->form1으로 변경..
+  */ 
+
+
+// 수정해야됨
+function gogogo(num){
+	if(event.keyCode == '13'){ 
+   		if(num == 1){
+   			changePwd();
+   		}
+   		else{
+   			Save2();
+   		}
+    } 
+}
+
+function changePwd(){
+	if(upPwdFrm.old_pwd.value == false){
+		alert("기존 비밀번호를 입력하세요!");
+		upPwdFrm.old_pwd.focus();
+		return;
+	}
+	
+	if(upPwdFrm.new_pwd.value == false){
+		alert("새로운 비밀번호를 입력하세요!");
+		upPwdFrm.new_pwd.focus();
+		return;
+	}
+	
+	if(upPwdFrm.new_pwd.value.length < 6 ){
+		alert("비밀번호는 6자 이상 입력하셔야 합니다.");
+		upPwdFrm.new_pwd.value = "";
+		upPwdFrm.new_pwd2.value = "";
+		upPwdFrm.new_pwd.focus();
+		return;
+ 	} 
+
+	if( english_su(upPwdFrm.new_pwd.value)==false ){
+		alert("비밀번호는 특수문자 없이 숫자와 문자의 조합으로 6자리 이상 입력하여 주십시오.");
+		upPwdFrm.new_pwd.value = "";
+		upPwdFrm.new_pwd2.value = "";
+		upPwdFrm.new_pwd.focus();
+		return;
+	}
+
+	if(upPwdFrm.new_pwd.value != upPwdFrm.new_pwd2.value){
+		alert("비밀번호와 비밀번호(확인)가 다릅니다.");
+		upPwdFrm.new_pwd2.focus();
+		return;
+	}
+/*
+	if (upPwdFrm.cust_id.value==upPwdFrm.new_pwd.value ){
+		alert("아이디와 비밀번호가 동일하시면 안됩니다.");
+		upPwdFrm.new_pwd.value = "";
+		upPwdFrm.new_pwd2.value = "";
+		upPwdFrm.new_pwd.focus();
+   		return;
+	}
+*/
+	
+	if(confirm("비밀번호를 수정 하시겠습니까?")){
+		upPwdFrm.myUpFlag.value = "1";
+		upPwdFrm.action = "/mall/mypage/mypage_pinfo_modify_persist.jsp";
+		//upPwdFrm.target = "tmpFrame";
+		upPwdFrm.submit();
+	}
+}
+
+// 주소찾기
+function addr_sear(){
+	var acc = document.fm;
+	var win2 = window.open("/speedmall/pop_post.jsp?flag=1",'addr_checkFrm','width =420 height=320 top=200 left=200,scrollbars=yes');
+	win2.focus();
+}	
+
+
+// 비밀번호를 변경 합니다.
+function Save2(){
+  if(ValidCheck2()==false){
+    return;
+  }
+  if(!confirm("담당자정보를 수정 하시겠습니까?")){
+	  return;
+  }
+  form1.myUpFlag.value = "2";
+  form1.action="/mall/mypage/mypage_pinfo_modify_persist.jsp";
+  //form1.target="tmpFrame";
+  form1.submit();
+}
+
+
+function check_mail(val){
+  if(val == "self"){
+    document.fm.email3.style.display = '';
+    document.fm.email3.focus();
+  }else{
+    document.fm.email3.style.display = 'none';
+  }
+}
+
+
+function ValidCheck2(){  
+	var obj = document.form1;
+
+	//if((obj.send_addr3.value == "") || obj.etc_sno.value == ""){
+	if(obj.send_addr3.value == ""){
+		alert("주소를 입력하세요.");
+		obj.send_addr3.focus();
+		//obj.etc_sno.focus();
+		return false;
+ 	} 
+
+	if ( obj.tel_num1.value.length == 0 ){
+		alert("전화번호 첫번째를 입력하셔야 합니다.");
+		obj.tel_num1.focus();
+		return false;
+	}	
+ 
+	if ( obj.tel_num2.value.length < 3 ){
+		alert("전화번호 두번째는 3자리이상 입력하셔야 합니다.");
+		obj.tel_num2.focus();
+		return false;
+	}	
+ 
+	if ( obj.tel_num3.value.length < 4 ){
+		alert("전화번호 세번째는 4자리 이상  입력하셔야 합니다.");
+		obj.tel_num3.focus();
+		return false;
+	}	
+
+	if ( obj.mcom_num1.value.length == 0 ){
+		alert("휴대폰번호 첫번째를 입력하셔야 합니다.");
+		obj.mcom_num1.focus();
+		return false;
+	}	
+ 
+	if ( obj.mcom_num2.value.length < 3 ){
+		alert("휴대폰번호 두번째는 3자리이상 입력하셔야 합니다.");
+		obj.mcom_num2.focus();
+		return false;
+	}	
+ 
+	if ( obj.mcom_num3.value.length < 4 ){
+		alert("휴대폰번호 세번째는 4자리 이상  입력하셔야 합니다.");
+		obj.mcom_num3.focus();
+		return false;
+	}	
+	
+	if (obj.email3.value == ""){
+		alert("E-Mail 주소를 입력하세요.");
+		obj.email3.focus();
+		return false;
+	}
+
+	if (obj.checkpasswd.value == ""){
+		alert("정보수정을 위해서 비밀번호를 입력하세요.");
+		obj.checkpasswd.focus();
+		return false;
+	}
+	
+	return true;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
