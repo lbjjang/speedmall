@@ -1094,624 +1094,89 @@
 		</div>
 	</div>
 
-	<div class="category_result wide">
-		<!--카테고리타이틀-->
-		<ul class="cate_title">
-			<li class="home"><a href="/small/index.jsp"><span class="blind">홈으로 가기</span></a></li>
-			<li>
-				<select id="sel01" class="form-control" title="대분류">
-					<option onclick="cate01();" value="M000520">사무비품</option>
-					<option onclick="cate01();" value="M000526" selected="">사무용품</option>
-					<option onclick="cate01();" value="M000656">식음료</option>
-					<option onclick="cate01();" value="M001574">판촉/인쇄/선물세트</option>
-					<option onclick="cate01();" value="M000883">청소용품</option>
-					<option onclick="cate01();" value="M000695">잉크/토너</option>
-					<option onclick="cate01();" value="M000740">컴퓨터/전산용품</option>
-					<option onclick="cate01();" value="M000822">위생/생활용품</option>
-				</select>
-			</li>
-			<li>
-				<select id="sel02" class="form-control" title="중분류">
-					<option onclick="cate02();" value="M000527" selected="">복사용지</option>
-					<option onclick="cate02();" value="M000639">화일/바인더</option>
-					<option onclick="cate02();" value="M000554">수정용품</option>
-					<option onclick="cate02();" value="M000558">스탬프/인주/잉크</option>
-					<option onclick="cate02();" value="M000561">스테플러/침/리무버</option>
-					<option onclick="cate02();" value="M000565">일반사무용품</option>
-					<option onclick="cate02();" value="M000584">제본/코팅소모품</option>
-					<option onclick="cate02();" value="M000591">지류일반</option>
-					<option onclick="cate02();" value="M000606">침/지협/크립/크립통</option>
-					<option onclick="cate02();" value="M000610">커터/커터날/가위</option>
-					<option onclick="cate02();" value="M000614">테이프/풀</option>
-					<option onclick="cate02();" value="M000618">표지판/쇼케이스/POP</option>
-					<option onclick="cate02();" value="M000621">프로젝터소모품</option>
-					<option onclick="cate02();" value="M000623">필기류</option>
-					<option onclick="cate02();" value="M000634">화이트보드/게시판/스텐드</option>
-					<option onclick="cate02();" value="M000534">사무기기</option>
-				</select>
-			</li>
-		</ul>
-		<!--//카테고리타이틀-->
-
-		<form id="frmGoodsListFilter" method="post" name="frmGoodsListFilter" action="" onsubmit="return false">
-			<!--카테고리/브랜드-->
-			<div class="cate_detail">
-				<div class="cate_box">
-					<dl>
-						<dt>사무용품 &gt; 복사용지 카테고리</dt>
-						<dd>
-							<ul>
-								<li><a href="javascript:selectCategory('사무/식음료/생활|GROUP1:사무용품|M000526:복사용지|M000527:A4복사용지|M000529')">A4복사용지<span>(26)</span></a></li>
-
-								<li><a href="javascript:selectCategory('사무/식음료/생활|GROUP1:사무용품|M000526:복사용지|M000527:기타규격용지|M000532')">기타규격용지<span>(11)</span></a></li>
-
-								<li><a href="javascript:selectCategory('사무/식음료/생활|GROUP1:사무용품|M000526:복사용지|M000527:A3복사용지|M000528')">A3복사용지<span>(6)</span></a></li>
-
-								<li><a href="javascript:selectCategory('사무/식음료/생활|GROUP1:사무용품|M000526:복사용지|M000527:B5복사용지|M000531')">B5복사용지<span>(2)</span></a></li>
-
-								<li><a href="javascript:selectCategory('사무/식음료/생활|GROUP1:사무용품|M000526:복사용지|M000527:재생복사용지|M000533')">재생복사용지<span>(2)</span></a></li>
-
-								<li><a href="javascript:selectCategory('사무/식음료/생활|GROUP1:사무용품|M000526:복사용지|M000527:B4복사용지|M000530')">B4복사용지<span>(1)</span></a></li>
-
-							</ul>
-						</dd>
-					</dl>
-					<dl>
-						<dt>브랜드</dt>
-						<dd>
-							<ul>
-								<li>
-									<input type="checkbox" class="chkBrand renew_cus" id="0" onclick="selectBrand()" value="밀크|밀크">
-									<label for="0">밀크<span>(13)</span></label>
-								</li>
-							
-								<li>
-									<input type="checkbox" class="chkBrand renew_cus" id="1" onclick="selectBrand()" value="더블에이|더블에이">
-									<label for="1">더블에이<span>(7)</span></label>
-								</li>
-							
-								<li>
-									<input type="checkbox" class="chkBrand renew_cus" id="2" onclick="selectBrand()" value="오피스디포|오피스디포">
-									<label for="2">오피스디포<span>(4)</span></label>
-								</li>
-							
-								<li>
-									<input type="checkbox" class="chkBrand renew_cus" id="3" onclick="selectBrand()" value="HANSOL|HANSOL">
-									<label for="3">HANSOL<span>(3)</span></label>
-								</li>
-							</ul>
-						</dd>
-					</dl>
-				</div>
-				<div class="cate_search">
-					<ul>
-						<li>가격</li>
-						<li><input type="text" name="minPrice" value="" class="form-control" placeholder="최소금액"></li>
-						<li>~</li>
-						<li><input type="text" name="maxPrice" value="" class="form-control" placeholder="최대금액"></li>
-						<li class="pl30">결과 내 재검색</li>
-						<li>
-							<select name="smethod" class="form-control">
-								<option value="" selected="">포함단어</option>
-								<option value="exception">제외단어</option>
-							</select>
-						</li>
-						<li><input type="text" name="requery_src" value="" class="form-control" placeholder="결과내재검색" onkeypress="if(event.keyCode==13) {callGoodsList(); return false}"></li>
-						<li><a class="btn_search" href="javascript:searchResult();">검색</a></li>
-						<li><a class="btn_reset" href="javascript:searchReset();">검색초기화</a></li>
-					</ul>
-				</div>
+	<div class="wide">
+		<div class="lnb_wrap">	
+			<!-- 등급안내 -->
+			<dl class="lnb_level">
+				<dt>
+					<!-- 타이틀 -->
+					<h2 class="lnb_tit my_p"><a href="/small/mypage/mypage_home.jsp">마이페이지</a></h2>
+					<!--// 타이틀 -->
+					<strong class="user">김형준님</strong>
+					<span class="id">qnc2</strong>
+				</dt>
+				<dd class="pl05 pr05">
+					<p class="level">
+						 
+						
+					</p>
+					<p>
+					
+						30만원 이상 주문 시<br>익월초 무료배송쿠폰<br>2매 발급
+					
+					</p>
+				</dd>
+			</dl>
+			<!--// 등급안내 -->
+			
+			<!-- 메뉴영역 -->
+			<div class="lnb_nav">
+				<dl id="dl1" class="">
+					<dt>주문 관련</dt>
+					<!-- 
+					<dd><a href="/small/mypage/mypage_order.jsp" class="" >주문배송조회</a></dd>
+					<dd><a href="/small/mypage/mypage_wish.jsp" class="" >관심상품 보관함</a></dd>
+					<dd><a href="/small/mypage/mypage_search_avg.jsp" class="" >과거구매내역</a></dd>
+					<dd><a href="/small/mypage/code_order.jsp" class="" >상품코드로 주문하기</a></dd>
+					 -->
+					<dd><a href="/small/mypage/mypage_order.jsp" class="">진행중인 주문내역</a></dd>
+					<dd><a href="/small/mypage/mypage_endorder.jsp" class="">배송완료 내역</a></dd>
+					<dd><a href="/small/mypage/mypage_returnorder.jsp" class="">진행중인 반품/교환</a></dd>
+					<dd><a href="/small/mypage/mypage_returnendorder.jsp" class="">반품/교환 완료내역</a></dd>
+					<dd><a href="/small/mypage/mypage_ordercancel.jsp" class="">취소내역</a></dd>
+				</dl>
+				<dl id="dl2" class="">
+					<dt>나의 통장
+					</dt><dd><a href="/small/mypage/mypage_point.jsp" class="">포인트 조회/적립권 등록</a></dd>
+					<dd><a href="/small/mypage/mypage_coupon_search.jsp" class="">쿠폰/경품 조회</a></dd>
+				</dl>
+				<dl id="dl3" class="">
+					<dt>증빙 서류 조회</dt>
+					<dd><a href="javascript:new_open_bill_2018()" id="dl3_dd5" class="">SmartBill 세금계산서</a></dd><!--<br> - 2018년</a></dd>			
+					<dd><a href="javascript:new_open_bill()" id="dl3_dd2" class="" >eBill 세금계산서<br/> - 2017년 이전</a></dd>
+					<dd><a href="javascript:open_bill('null')" id="dl3_dd1" class="" >CSBill 세금계산서</a></dd>-->
+					
+				
+				
+				<dd><a href="/small/mypage/mypage_search_etc.jsp" class="">영수증/거래명세서 조회</a></dd>
+								
+				</dl>
+				
+				
+				<dl id="dl5" class="">
+					<dt>회원 정보</dt>
+					<dd><a href="/small/mypage/mypage_info_verify.jsp?gubun=member_modify" class="">회원정보 수정</a></dd> 
+					
+				
+					
+				
+					<dd><a href="/small/mypage/mypage_limit_search.jsp" class="">후불한도 조회</a></dd>
+					
+					
+				
+					<!--  <dd><a href="javascript:alert('개인회원만 사용가능한 메뉴입니다.')">기업회원전환</a></dd>-->
+				
+				</dl>
 			</div>
-			<!--//카테고리/브랜드-->
-		</form>
-
-		<form id="frmGoodsList" name="form1">
-			<div id="div_inc_goods_list">
-				<div class="best_item">
-					<div id="best_goods" class="carousel slide" data-ride="carousel">
-						<ul class="best_item_tit">
-							<li>BEST ITEM <span>스피드몰에서 자신있게 추천합니다.</span></li>
-							<li></li>
-						</ul>
-						<div class="carousel-inner" role="listbox">
-							<ul class="item active">
-								<li>
-									<a href="/small/search/goods_detail.jsp?prd_cd=AJN00" class="sgoods">
-										<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/AJN00-1.jpg" alt="A3복사용지" class="ct_img"></p>
-										<p class="tit">A3복사용지 ADVANCE AGRO</p>
-										<p class="txt">297*420mm, A3, 80g/m², 25..</p>
-										<p class="code">상품코드 : AJN00</p>
-										<p class="price">
-											<span class="salse_price"><strong class="cblack">49,900</strong>원</span>
-										</p>
-									</a>
-									<div class="goods_order blind"><!-- 고객 요청으로 숨김처리 blind 삭제시 확인 가능 -->
-										<input type="hidden" name="enpri_prd_cnt" value="null">
-										<a href="javascript:if(jumunYnChk('0')){goExecute1('false','BARO','AJN00',-1,1,'quantity1_thum')}" class="pick"><span class="sg_icon sg_icon4"></span></a>
-										<a href="javascript:if(jumunYnChk('0')){SCartShow(1,'C3','false','AJN00',-1,'quantity1_thum')}" class="cart"><span class="sg_icon sg_icon1"></span></a>
-										<a href="javascript:if(jumunYnChk('0')){goExecute('false','ZZIM','AJN00',-1,1)}" class="like"><span class="sg_icon sg_icon5"></span></a>
-									</div>
-								</li>
-								<li>
-									<a href="/small/search/goods_detail.jsp?prd_cd=B8WU2" class="sgoods">
-										<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/B8WU2-1.jpg" alt="A4복사용지" class="ct_img"></p>
-										<p class="tit">A4복사용지 한국제지</p>
-										<p class="txt">A4 85g/m² 2500매(500매x..</p>
-										<p class="code">상품코드 : B8WU2</p>
-										<p class="price">
-											<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-										</p>
-									</a>
-									<div class="goods_order blind"><!-- 고객 요청으로 숨김처리 blind 삭제시 확인 가능 -->
-										<input type="hidden" name="enpri_prd_cnt" value="null">
-										<a href="javascript:onDetail('B8WU2');" class="btn_gray">규격별 상세보기</a>
-										<a href="javascript:if(jumunYnChk('1')){goExecute('false','ZZIM','B8WU2',0,1)}" class="like"><span class="sg_icon sg_icon5"></span></a>
-									</div>
-								</li>
-								<li>
-									<a href="/small/search/goods_detail.jsp?prd_cd=B8WU2" class="sgoods">
-										<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/B8WU2-1.jpg" alt="A4복사용지" class="ct_img"></p>
-										<p class="tit">A4복사용지 한국제지</p>
-										<p class="txt">A4 85g/m² 2500매(500매x..</p>
-										<p class="code">상품코드 : B8WU2</p>
-										<p class="price">
-											<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-										</p>
-									</a>
-									<div class="goods_order blind"><!-- 고객 요청으로 숨김처리 blind 삭제시 확인 가능 -->
-										<input type="hidden" name="enpri_prd_cnt" value="null">
-										<a href="javascript:onDetail('B8WU2');" class="btn_gray">규격별 상세보기</a>
-										<a href="javascript:if(jumunYnChk('1')){goExecute('false','ZZIM','B8WU2',0,1)}" class="like"><span class="sg_icon sg_icon5"></span></a>
-									</div>
-								</li>
-								<li>
-									<a href="/small/search/goods_detail.jsp?prd_cd=B8WU2" class="sgoods">
-										<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/B8WU2-1.jpg" alt="A4복사용지" class="ct_img"></p>
-										<p class="tit">A4복사용지 한국제지</p>
-										<p class="txt">A4 85g/m² 2500매(500매x..</p>
-										<p class="code">상품코드 : B8WU2</p>
-										<p class="price">
-											<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-										</p>
-									</a>
-									<div class="goods_order blind"><!-- 고객 요청으로 숨김처리 blind 삭제시 확인 가능 -->
-										<input type="hidden" name="enpri_prd_cnt" value="null">
-										<a href="javascript:onDetail('B8WU2');" class="btn_gray">규격별 상세보기</a>
-										<a href="javascript:if(jumunYnChk('1')){goExecute('false','ZZIM','B8WU2',0,1)}" class="like"><span class="sg_icon sg_icon5"></span></a>
-									</div>
-								</li>
-								<li>
-									<a href="/small/search/goods_detail.jsp?prd_cd=B8WU2" class="sgoods">
-										<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/B8WU2-1.jpg" alt="A4복사용지" class="ct_img"></p>
-										<p class="tit">A4복사용지 한국제지</p>
-										<p class="txt">A4 85g/m² 2500매(500매x..</p>
-										<p class="code">상품코드 : B8WU2</p>
-										<p class="price">
-											<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-										</p>
-									</a>
-									<div class="goods_order blind"><!-- 고객 요청으로 숨김처리 blind 삭제시 확인 가능 -->
-										<input type="hidden" name="enpri_prd_cnt" value="null">
-										<a href="javascript:onDetail('B8WU2');" class="btn_gray">규격별 상세보기</a>
-										<a href="javascript:if(jumunYnChk('1')){goExecute('false','ZZIM','B8WU2',0,1)}" class="like"><span class="sg_icon sg_icon5"></span></a>
-									</div>
-								</li>
-								<li>
-									<a href="/small/search/goods_detail.jsp?prd_cd=B8WU2" class="sgoods">
-										<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/B8WU2-1.jpg" alt="A4복사용지" class="ct_img"></p>
-										<p class="tit">A4복사용지 한국제지</p>
-										<p class="txt">A4 85g/m² 2500매(500매x..</p>
-										<p class="code">상품코드 : B8WU2</p>
-										<p class="price">
-											<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-										</p>
-									</a>
-									<div class="goods_order blind"><!-- 고객 요청으로 숨김처리 blind 삭제시 확인 가능 -->
-										<input type="hidden" name="enpri_prd_cnt" value="null">
-										<a href="javascript:onDetail('B8WU2');" class="btn_gray">규격별 상세보기</a>
-										<a href="javascript:if(jumunYnChk('1')){goExecute('false','ZZIM','B8WU2',0,1)}" class="like"><span class="sg_icon sg_icon5"></span></a>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<!--목록형 선택-->
-				<ul class="lineup">
-					<li>
-						<a href="javascript:if(jumunYnChks()){modalMyCataAdds()};" class="btn_normal">MY카탈로그에 추가</a>
-					</li>
-					<li>
-						<a href="javascript:sortList('7','RANK');" class="">정확도순</a>
-						<a href="javascript:sortList('5','SELL_CNT');" class="active">인기순</a>
-						<a href="javascript:sortList('2','SELL_PRI_NORMAL_SORT/ASC');" class="">낮은가격순</a>
-						<a href="javascript:sortList('3','SELL_PRI_NORMAL_SORT/DESC');" class="">높은가격순</a>
-						<a href="javascript:sortList('1','HAN_NM_SORT');" class="">상품이름순</a>
-						<a href="javascript:sortList('4','MAKE_CO_NM_SORT');" class="">제조사순</a>
-						<a href="javascript:sortList('6','CULHA_DATE');" class="">빠른배송</a>
-						<a href="javascript:toggleList('thum');" class="btn_thum active"><span class="sg_icon sg_icon3"></span></a>
-						<a href="javascript:toggleList('list');" class="btn_list "><span class="sg_icon sg_icon6"></span></a>
-					</li>
-				</ul>
-				<!--//목록형 선택-->
-
-				<!--썸네일형-->
-				<ul id="tpGoodsListThum" class="list_thum" style="">
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p> 
-								<p class="bblue f12">
-
-								</p>-->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-							<div class="sgoods_tag">
-								<span class="label_tag tag1">내일발송</span>
-								<span class="label_tag tag2">면세</span>
-								<span class="label_tag tag3">품절</span>
-							</div>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<a href="javascript:onDetail('BS2WQ');" class="btn_gray2 w70 tac">규격별 상세보기</a>
-							<a href="javascript:if(jumunYnChk('1')){modalMyCataAdd('BS2WQ')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-							<div class="sgoods_tag">
-								<span class="label_tag tag4">업체발송</span>
-								<span class="label_tag tag5">문자발송</span>
-							</div>
-						</div>
-						<div class="goods_order w90">
-							<a href="javascript:sold_msg('')" class="btn_white w47 p0 tac">품절사유</a>
-							<a href="javascript:sold_go('')" class="btn_white w47 p0 tac">입고알림신청</a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-							<div class="sgoods_tag">
-								<span class="label_tag tag6">판매중지</span>
-								<span class="label_tag tag7">1인 5 구매가능</span>
-							</div>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<a href="javascript:onDetail('BS2WQ');" class="btn_gray2 w70 tac">규격별 상세보기</a>
-							<a href="javascript:if(jumunYnChk('1')){modalMyCataAdd('BS2WQ')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-							<div class="sgoods_tag">
-								<span class="label_tag tag8">한정판매수량(18)</span>
-								<span class="label_tag tag9">1%추가적립</span>
-							</div>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<a href="javascript:onDetail('BS2WQ');" class="btn_gray2 w70 tac">규격별 상세보기</a>
-							<a href="javascript:if(jumunYnChk('1')){modalMyCataAdd('BS2WQ')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-							<div class="sgoods_tag">
-								<span class="label_tag tag10">무료배송</span>
-							</div>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<div class="inputSpinner">
-								<input type="text" class="input-t01 w_s" tabindex="1" size="2" value="1" name="quantity4_thum" id="quantity4_thum" title="A4복사용지(210*297mm, A4, 75g/m², 2500매/5권/1박스) 수량">
-								<a class="btn-countUp" href="javascript:changeChange(1,'UP','quantity4_thum');"><span class="blind">수량 추가</span></a>
-								<a class="btn-countDown" href="javascript:changeChange(1,'DOWN','quantity4_thum');"><span class="blind">수량 감소</span></a>
-							</div>
-							<a href="javascript:if(jumunYnChk('3')){goExecute1('true','BARO','L3S9C',1,1,'quantity4_thum')}" class="pick"><span class="sg_icon sg_icon4"></span></a>
-							<a href="javascript:if(jumunYnChk('3')){SCartShow(1,'C3','true','L3S9C',1,'quantity4_thum')}" class="cart"><span class="sg_icon sg_icon1"></span></a>
-							<a href="javascript:if(jumunYnChk('3')){modalMyCataAdd('L3S9C')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<a href="javascript:onDetail('BS2WQ');" class="btn_gray2 w70 tac">규격별 상세보기</a>
-							<a href="javascript:if(jumunYnChk('1')){modalMyCataAdd('BS2WQ')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<a href="javascript:onDetail('BS2WQ');" class="btn_gray2 w70 tac">규격별 상세보기</a>
-							<a href="javascript:if(jumunYnChk('1')){modalMyCataAdd('BS2WQ')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<a href="javascript:onDetail('BS2WQ');" class="btn_gray2 w70 tac">규격별 상세보기</a>
-							<a href="javascript:if(jumunYnChk('1')){modalMyCataAdd('BS2WQ')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<a href="javascript:onDetail('BS2WQ');" class="btn_gray2 w70 tac">규격별 상세보기</a>
-							<a href="javascript:if(jumunYnChk('1')){modalMyCataAdd('BS2WQ')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-					<li>
-						<div class="sgoods">
-							<a href="/small/search/goods_detail.jsp?prd_cd=BS2WQ">
-								<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WQ-1.jpg" alt="A4복사용지" class="ct_img"></p>
-								<p class="tit">A4복사용지</p>
-								<p class="tit pt0">한국제지(주) Paiz</p>
-								<p class="txt">사이즈 A4, 평량 80g/m², 비고 흰색</p>
-								<!-- <p class="code">
-									<span class="cred f12 mal">내일발송</span>				
-									<span class="bblue f12"> </span>
-								</p>
-								<p class="bblue f12">
-
-								</p> -->
-							</a>
-							<p class="price">
-								<strong class="cred">5%↓</strong><s><span>17,900</span>원</s>
-								<span class="salse_price"><strong class="cblack">49,900</strong>원~</span>
-							</p>
-						</div>
-						<div class="goods_order w90">
-							<input type="checkbox" id="BS2WQ" name="goods_check" class="renew_cus" value="BS2WQ" title="A4복사용지(사이즈 A4, 평량 80g/m², 비고 흰색) 선택하기">
-							<label for="BS2WQ"><span class="blind">선택</span></label>
-							<input type="hidden" name="enpri_prd_cnt" value="0">
-							<input type="hidden" name="mobile_prd_cnt" value="0">
-							<input type="hidden" name="sk_prd_cnt" value="1">
-							<input type="hidden" name="valex_prd_cnt" value="1">
-							<div class="inputSpinner">
-								<input type="text" class="input-t01 w_s" tabindex="1" size="2" value="1" name="quantity4_thum" id="quantity4_thum" title="A4복사용지(210*297mm, A4, 75g/m², 2500매/5권/1박스) 수량">
-								<a class="btn-countUp" href="javascript:changeChange(1,'UP','quantity4_thum');"><span class="blind">수량 추가</span></a>
-								<a class="btn-countDown" href="javascript:changeChange(1,'DOWN','quantity4_thum');"><span class="blind">수량 감소</span></a>
-							</div>
-							<a href="javascript:if(jumunYnChk('3')){goExecute1('true','BARO','L3S9C',1,1,'quantity4_thum')}" class="pick"><span class="sg_icon sg_icon4"></span></a>
-							<a href="javascript:if(jumunYnChk('3')){SCartShow(1,'C3','true','L3S9C',1,'quantity4_thum')}" class="cart"><span class="sg_icon sg_icon1"></span></a>
-							<a href="javascript:if(jumunYnChk('3')){modalMyCataAdd('L3S9C')}" class="like"><span class="sg_icon sg_icon5"></span></a>
-						</div>
-					</li>
-				</ul>
-				<!--//썸네일형-->
-
-				<!--목록형-->
-				<table id="tpGoodsList" class="list_normal" style="display:none;">
-					<colgroup><col width="30px"><col width="160px"><col width="*"><col width="8%"><col width="8%"><col width="10%"><col width="13%"><col width="9%"></colgroup>
-					<thead>
-						<tr>
-							<th></th>
-							<th colspan="2">상품명</th>
-							<th>모델명</th>
-							<th>제조사</th>
-							<th>수량</th>
-							<th>가격(VAT별도)</th>
-							<th>구매</th>
-						</tr>
-					</thead>
-					<tbody>
-
-					</tbody>
-				</table>
-				<!--//목록형-->
-
-				<div class="pt10">
-					<a href="javascript:if(jumunYnChks()){modalMyCataAdds()};" class="btn_normal">MY카탈로그에 추가</a>
-				</div>
-
-				<!--paging-->
-				<ul class="pagination">
-					<li><a href="#pn0"><span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span></a></li>
-					<li><a href="#pn1"><b>1</b></a></li>
-					<li><a href="javascript:pageList_Div('2','div_inc_goods_list','/small/search/div/cate_list_step2_best_ajax.jsp?pstrSelectCateCd=M000527','','')">2</a></li>
-					<li><a href="#pn3"><span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span></a></li>
-				</ul>
+			<!--// 메뉴영역 -->
+			
+			<!-- 배너영역 -->	
+			<div class="lnb_ban">
+				<a href="/small/customer_center/pop_sendemail2.jsp"><img src="/small/images/question.png" alt="고객센터 문의하기"></a>
 			</div>
-		</form>
+			<!--// 배너영역 -->	
+		</div>
 	</div>
-
 
 	<div id="footer" class="footer">
 		<div class="footer_top wide">

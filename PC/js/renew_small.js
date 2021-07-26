@@ -21,7 +21,8 @@ $(function(){
 		$(this).removeClass('on');
 	});
 
-	$('#header .all_meun_close').on('click', function(){
+	$('#header .all_meun_close').on('click', function(e){
+		e.preventDefault();
 		$('.menu_group').hide();
 		$('#header .all_menu').removeClass('on');
 	});
