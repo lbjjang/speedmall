@@ -1094,184 +1094,415 @@
 		</div>
 	</div>
 
-	<div class="wide">
-		<!-- 마이페이지 -->
-		<div class="lnb_wrap">	
-			<!-- 등급안내 -->
-			<dl class="lnb_level">
-				<dt>
-					<!-- 타이틀 -->
-					<h2 class="lnb_tit"><a href="/small/mypage/mypage_home.jsp">마이페이지</a></h2>
-					<!--// 타이틀 -->
-					<div class="user_info">
-						<p class="level">
-							 
-						</p>
-						<strong class="user">김형준님</strong>
-						<span class="id">qnc2</span>
-					</div>
-				</dt>
-				<dd class="pl05 pr05">
-					<p class="ico_coupon">30만원 이상 주문 시<br>익월초 무료배송쿠폰<br>2매 발급</p>
-					<p class="ico_point">기업회원으로 전환 시 <br>3,000 포인트 즉시 적립</p>
-				</dd>
-			</dl>
-			<!--// 등급안내 -->
+	<div class="bucket wide">
+		<div class="header-bucket">
+			<h3 class="h-t01">장바구니</h3>
+			<ol class="flow-bucket">
+				<li class="on"><span class="tit">장바구니</span></li>
+				<li><span class="tit">주문서 작성/결제하기</span></li>
+				<li><span class="tit">주문 완료</span></li>
+			</ol>
+		</div>
+
+		<form method="post" name="form1" onsubmit="return false;">
 			
-			<!-- 메뉴영역 -->
-			<div class="lnb_nav">
-				<dl id="dl1" class="">
-					<dt>주문 관련</dt>
-					<!-- 
-					<dd><a href="/small/mypage/mypage_order.jsp" class="" >주문배송조회</a></dd>
-					<dd><a href="/small/mypage/mypage_wish.jsp" class="" >관심상품 보관함</a></dd>
-					<dd><a href="/small/mypage/mypage_search_avg.jsp" class="" >과거구매내역</a></dd>
-					<dd><a href="/small/mypage/code_order.jsp" class="" >상품코드로 주문하기</a></dd>
-					 -->
-					<dd><a href="/small/mypage/mypage_order.jsp" class="">진행중인 주문내역</a></dd>
-					<dd><a href="/small/mypage/mypage_endorder.jsp" class="">배송완료 내역</a></dd>
-					<dd><a href="/small/mypage/mypage_returnorder.jsp" class="">진행중인 반품/교환</a></dd>
-					<dd><a href="/small/mypage/mypage_returnendorder.jsp" class="">반품/교환 완료내역</a></dd>
-					<dd><a href="/small/mypage/mypage_ordercancel.jsp" class="">취소내역</a></dd>
-				</dl>
-				<dl id="dl2" class="">
-					<dt>나의 통장
-					</dt><dd><a href="/small/mypage/mypage_point.jsp" class="">포인트 조회/적립권 등록</a></dd>
-					<dd><a href="/small/mypage/mypage_coupon_search.jsp" class="">쿠폰/경품 조회</a></dd>
-				</dl>
-				<dl id="dl3" class="">
-					<dt>증빙 서류 조회</dt>
-					<dd><a href="javascript:new_open_bill_2018()" id="dl3_dd5" class="">SmartBill 세금계산서</a></dd><!--<br> - 2018년</a></dd>			
-					<dd><a href="javascript:new_open_bill()" id="dl3_dd2" class="" >eBill 세금계산서<br/> - 2017년 이전</a></dd>
-					<dd><a href="javascript:open_bill('null')" id="dl3_dd1" class="" >CSBill 세금계산서</a></dd>-->
-					
+			<div class="area-tbl-prodSelect bb0">
+				<div class="colSelect"><!-- checked -->
+					<input type="checkbox" id="check01" name="checkAll" onclick="check_Box_All2('goods_check',this,'');prd_value()" class="renew_cus">
+					<label for="check01" class="verm">선택상품(<span id="label-t01">0</span>)</label>
+					<a href="javascript: void(0);" class="btn_bl_txt verm" onclick="fCartDel('MULTI','0');">선택삭제</a>
+				</div>
 				
-				
-				<dd><a href="/small/mypage/mypage_search_etc.jsp" class="">영수증/거래명세서 조회</a></dd>
+				<div class="colSelect tar">
+					<button class="btn_normal verm" onclick="print_Report();">견적서 출력</button>
+					<a href="javascript: void(0);" class="btn_normal verm" onclick="fCartSold();">품절상품 삭제하기</a>
+				</div>
+			</div>
+
+			<table class="tbl-t01">
+				<colgroup>
+					<col width="3%">
+					<col width="*">
+					<col width="15%">
+					<col width="13%">
+					<col width="10%">
+					<col width="12%">
+					<col width="12%">
+				</colgroup>
+				<thead>
+					<tr><!-- checked  -->
+						<!-- <th><input type="checkbox" name="checkAll" onclick="check_Box_All2('goods_check',this,'');prd_value()"></th> -->
+						<th colspan="2">상품 정보</th>
+						<th>단가</th>
+						<th>수량</th>
+						<th>배송</th>
+						<th>가격(VAT별도)</th>
+						<th>주문</th>
+					</tr>
+				</thead>
+				<tbody>
+			
+					<tr>
+						<td>
+							<!-- checked -->
+							<input type="checkbox" id="cart1" name="goods_check" value="0" onclick="prd_value()" class="renew_cus"><label for="cart1"><span class="blind">선택</span></label>
+							<input type="hidden" name="prdcd" value="BA257">
+							<input type="hidden" id="make_kn" name="make_kn" value="001">
+							<input type="hidden" name="enpri_prd_cnt" value="0">
+							<input type="hidden" name="mobile_prd_cnt" value="0">
+							<input type="hidden" name="sk_prd_cnt" value="1">
+							<input type="hidden" name="valex_prd_cnt" value="1">
+							<input type="hidden" name="dtax" value="A">
+							<input type="hidden" name="prd_cd" value="BA257">
+							<input type="hidden" name="list_num" value="18">
+							<input type="hidden" name="add_value" value="">
+							<input type="hidden" name="prd_cd_value" value="1558.0">
+						</td>
+						<td>
+							<div class="sgoods ty4">
+								<p class="img">
+									<img src="https://img.happynarae.com/imgs/prd_img/201205/BA257-1.jpg">
+								</p>
+								<a href="javascript:onDetail('BA257','1')">
+									<p class="tit">보호견출지 (주)레이테크코리아 20-P101R</p>
+									<p class="txt hauto">22.5*28mm, 300PCS, RED, 15SH/1PK, 보호코팅</p>
+									<div class="sgoods_tag">
+										<span class="label_tag tag1">새상품</span>
+										<span class="label_tag tag1">오늘발송</span>
+										<span class="label_tag tag2">면세</span>
+										<span class="label_tag tag3">품절</span>
+										<span class="label_tag tag4">업체발송</span>
+										<span class="label_tag tag5">문자발송</span>
+										<span class="label_tag tag6">판매중지</span>
+										<span class="label_tag tag7">1인 5 구매가능</span>
+										<span class="label_tag tag8">한정판매수량(18)</span>
+										<span class="label_tag tag9">1%추가적립</span>
+										<span class="label_tag tag10">무료배송</span>
+									</div>
+								</a>
+								<div id="divAttach"></div>
 								
-				</dl>
-				
-				
-				<dl id="dl5" class="">
-					<dt>회원 정보</dt>
-					<dd><a href="/small/mypage/mypage_info_verify.jsp?gubun=member_modify" class="">회원정보 수정</a></dd> 
-					
-				
-					
-				
-					<dd><a href="/small/mypage/mypage_limit_search.jsp" class="">후불한도 조회</a></dd>
-					
-					
-				
-					<!--  <dd><a href="javascript:alert('개인회원만 사용가능한 메뉴입니다.')">기업회원전환</a></dd>-->
-				
-				</dl>
-			</div>
-			<!--// 메뉴영역 -->
-			
-			<!-- 배너영역 -->	
-			<div class="lnb_ban">
-				<a href="/small/customer_center/pop_sendemail2.jsp" class="cus_question"><span>고객센터 문의하기</span></a>
-			</div>
-			<!--// 배너영역 -->	
-		</div>
+								<div class="tal pt10">
+									<input type="text" class="form-control w65 dib" name="cust_chg_memo" value="" title="보호견출지의 메모">
+									<input class="btn_normal" type="button" onclick="cust_chg_memoch(0)" value="메모 변경" title="보호견출지의 메모 변경">
+								</div>
+							</div>
+						</td>
+						<td>
+							<span class="dio cgray f15"><strike>1,590원</strike></span>
+							<span class="dio cblack f15"><strong>1,558</strong>원</span>
+						</td>
+						<td>
+							<div class="inputSpinner">
+								<input name="update_number" type="text" class="input-t01 w_s" tabindex="2" size="3" value="1">
+								<button class="btn-countUp" onclick="changeChange(0,1,'UP');">
+									<span class="blind">수량 추가</span>
+								</button>
+								<button class="btn-countDown" onclick="changeChange(0,1,'DOWN');">
+									<span class="blind">수량 감소</span>
+								</button>
+							</div>
+							<button class="btn_normal verm w40" onclick="upCnt(0,1, '18','shoppinglist.jsp',1);">변경</button>
+							<p class="mt05 tac f13">단위 : PK</p>
+							<div class="tac f13">최소주문수량: 1<input type="hidden" name="MinCnt" value="1"><input type="hidden" name="HanNm" value="보호견출지"></div>
+						</td>
+						<td><p class="">오늘발송</p></td>
+						<td>
+							<p><strong class="f15">1,558</strong>원</p>
+						</td>
+						<td>
+							<button class="btn_red f13 w100" onclick="javascript:if(jumunYnChk('0')){onlyone('0');fCartjumun('true')}">주문하기</button>
+							<button class="btn_white mt05 f13 w100" onclick="fCartDel('ONE','18');">삭제하기</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--//선택상품 삭제 -->
 
-		<!-- 카탈로그 -->
-		<div class="lnb_wrap">	
-			<!-- 등급안내 -->
-			<dl class="lnb_level">
-				<dt>
-					<!-- 타이틀 -->
-					<h2 class="lnb_tit"><a href="/small/mypage/mypage_wish.jsp">MY카탈로그</a></h2>
-					<!--// 타이틀 -->
-				</dt>
-			</dl>
-			<dl class="lnb_nav mycata_folder">
-				<dd>
-					<div class="folder_tp">
-						<p>그룹을 직접 생성/수정 <br>하실 수 있습니다.</p>
-						<button class="btn_mycata new_group" onclick="grpInsertModal();"><span>새폴더</span></button>
-						<button class="btn_mycata set_group" data-toggle="modal" data-target="#my_interestGroup"><span>그룹관리</span></button>
+			<div class="cart_pay_list">
+				<div>
+					<div class="pay_add">
+						<span class="unit">장바구니 상품 총 금액(VAT별도)</span>
+						<span class="num"><strong>1,059,381</strong>원</span>
 					</div>
-					<div class="folder_list">
-						<strong class="title">MY</strong>
-						<table>
-							<tbody>
-								<tr>
-									<td align="left" valign="top">
-										<table>
-											<tbody>
-												<tr>
-													<td>
-														<a class="" onclick="selectGroup('ALL','전체')"><font color="red"><b>전체</b></font></a>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<a class="" onclick="selectGroup('0','기본그룹')">기본그룹</a>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<a class="" onclick="selectGroup('join','지정상품')">지정상품</a>
-													</td>
-												</tr>			
-												<input type="hidden" id="grpCnt" name="grpCnt" value="0"> 
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+					<div class="pay_add">
+						<span class="unit">과세상품 합계</span>
+						<span class="num"><strong>1,059,381</strong>원</span>
 					</div>
-					
-				</dd>
-			</dl>
-			<!-- <input type="button" style="width:176px;height:34px;margin: 5px 0 0 0;cursor:pointer;border:0;background-image:url('/small/images/mypage/btn_MYcata_manual.png');background-repeat:no-repeat" title="MY카탈로그 이용가이드" onclick="showMenual()"> -->
-		</div>
-
-		<!-- 고객센터 -->
-		<div class="lnb_wrap">
-			<dl class="lnb_level">
-				<dt>
-					<!-- 타이틀 -->
-					<h2 class="lnb_tit"><a href="/small/customer_center/customer_home.jsp">고객센터</a></h2>
-					<!--// 타이틀 -->
-				</dt>
-				<dd>
-					<p class="cs_tel">1644-5644</p>
-					평일 09:00 ~ 18:00<br>
-					주말, 공휴일 휴무
-				</dd>
-			</dl>
-			
-			<!-- 메뉴영역 -->
-			<div class="lnb_nav">
-				<dl class="">
-					<dt><a href="/small/customer_center/customer_faq.jsp">FAQ</a></dt>
-				</dl>
-				<dl class="">
-					<dt class="mt01">상담/문의</dt>
-					<dd><a href="/small/customer_center/pop_sendemail2.jsp" class="">이용문의</a></dd>
-					<dd><a href="/small/customer_center/pop_sendemail_for_enpri1.jsp" class="">거래상담</a></dd>
-					
-						<dd><a href="#" onclick="main_login();" class="">상품등록요청</a></dd>
-									
-					<dd><a href="/small/customer_center/communication_show.jsp" class="">상담/문의 내역</a></dd>
-				</dl>				
-				<dl class="">
-					<dt><a href="/small/customer_center/customer_notice.jsp">공지사항</a></dt>
-				</dl>
-				<dl class="mt01 ">
-					<dt><a href="/small/customer_center/customer_sms.jsp">이메일/SMS서비스 신청</a></dt>
-				</dl>
-				<dl class="mt01 ">
-					<dt><a href="/small/customer_center/customer_notice_bought_comment.jsp">스피드몰 이용후기</a></dt>
-				</dl>
+					<div class="pay_add">
+						<span class="unit">면세상품 합계</span>
+						<span class="num"><strong>1,059,381</strong>원</span>
+					</div>
+					<p class="info_txt mt10">과세상품과 면세상품을 함께 주문하실 경우, 계산서는 전자세금계산서(과세상품)와 전자계산서(면세상품)가 별도로 발행됩니다.</p>
+				</div>
+				<div>
+					<div class="pay_add">
+						<span class="unit">선택상품 총 금액(VAT별도)</span>
+						<span class="num total_num"><strong id="tex_notex_total" class="em-weightier">0</strong>원</span><!--//상품 총 금액 -->
+					</div>
+				</div>
 			</div>
-			<!--// 메뉴영역 -->
-		</div>
+
+			<div class="cart_memo_wrap mt20">
+				<div id="cust_chg_sbs">
+					<input type="hidden" id="cus_sh_view" value="사업장/부서명 변환하기">
+					<input type="checkbox" id="cust_sh_ck" class="renew_cus"><label for="cust_sh_ck">사업장/부서명을 설정하세요</label>
+				</div>
+				<input type="hidden" id="cust_chg_memo_ch" name="cust_chg_memo_ch">
+				<input type="hidden" id="cust_chg_memo_all" name="cust_chg_memo_all" value="일괄 메모변경" onclick="cust_chg_memoch_allin(1)">
+				<div id="cust_chg_memo_all_div">
+					<span class="dib verm mr10">일괄 변경할 메모를 입력하세요.</span>
+					<input name="what" id="cust_chg_memo_all_txt" class="form-control h30 w40 dib verm">
+					<button onclick="cust_chg_memoch_allin(2)" class="btn_normal verm h30">적용하기</button>
+					<button onblur="cust_chg_memoch_allin(3)" onclick="cust_chg_memoch_allin(3);" class="btn_normal verm h30">닫기</button>
+				</div>
+			</div>
+
+			<div class="btn_wrap s_list_btnW">
+				<button class="btn_red btn48" data-toggle="modal" data-target="#modal_joinPayback" onclick="fCartjumun('true')">선택상품 주문</button>
+				<button class="btn_white btn48" onclick="fCartjumun_all('true')">전체상품 주문</button>
+				
+			</div>
+			<!--//장바구니 -->
+
+			<div class="info_box mt60">
+				<ul class="list-t01">
+					<li class="f15">장바구니에 담긴 상품은 장기간 보관됩니다. 상품 불필요시 삭제하실 수 있습니다.</li>
+					<li class="f15"><span class="em-weightier">품절 및 판매중지된 상품은 장바구니 목록에서 자동으로 삭제</span>됩니다.</li>
+					<li class="f15">5만원 이상 구매 시 배송비는 무료입니다. ·</li>
+				</ul>
+			</div>
+
+			<div class="sect-t02 mt60">
+				<h4 class="detail_stit">알아두기</h4>
+				<ul class="list-t01 mt20">
+					<li class="f15"><strong>배송비</strong> : 총 결제 금액이 5만원 미만은 배송비 2,500원이 부과됩니다.</li>
+					<li class="f15"><strong>견적서 출력</strong> : 장바구니 상품 중 견적서 출력을 원하시는 상품만 선택하신 후 [견적서출력]버튼을 눌러주세요.(로그인 후 이용하실 수 있습니다.)</li>
+					<li class="f15"><strong>상품삭제</strong> : 삭제할 상품을 선택하신 후, 상품목록 왼쪽 상단의 [선택상품 삭제] 을 눌러 주세요.</li>
+					<li class="f15"><strong>쇼핑 계속하기</strong> : 이전 화면으로 돌아가서 계속 쇼핑하실 수 있습니다.</li>
+					<li class="f15"><strong>주문하기</strong> : 구매하실 상품과 수량이 결정되셨으면, [주문하기]를 눌러 다음으로 이동합니다.</li>
+					<li class="f15"><strong>계산서발행</strong> : 계산서 요청시 전자세금계산서(과세상품)와 전자계산서(면세상품)가 별도로 발행됩니다.</li>
+				</ul>
+			</div>
+			<!--//알아두기 -->
+
+			<div class="sect-t01 mt60">
+				<h4 class="detail_stit">발송 방법 선택(주문 결제 페이지에서 선택 가능)</h4>
+				<ul class="list-t01 mt20">
+					<li class="f15"><strong>일괄발송</strong> : 구매상품 중 발송일이 가장 늦은 날짜에 취합하여 발송됩니다.(업체배송 상품은 별도로 배송됩니다.)</li>
+					<li class="f15"><strong>분할발송</strong> : 당일발송 상품 먼저 1차로 보내 드리며, 나머지 상품은 발송일이 가장 늦은 날짜에 2차 취합하여 발송됩니다. (단, 본 서비스는 기업회원만 이용이 가능합니다.)</li>
+				</ul>
+			</div>
+			<!--//발송 방법 선택 -->
+		</form>
+
+		<form id="frmToday" name="frmToday">
+			<div id="div_inc_goods_list">
+				<div class="sect-t01 pt50">
+					<h4 class="h-t01">오늘 본 상품</h4>
+					<!--목록형-->
+					<table id="tpGoodsList" class="list_normal">
+						<colgroup>
+							<col width="3%">
+							<col width="140px">
+							<col width="*">
+							<col width="12%">
+							<col width="10%">
+							<col width="10%">
+							<col width="13%">
+							<col width="11%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th></th>
+								<th colspan="2">상품명</th>
+								<th>모델명</th>
+								<th>제조사</th>
+								<th>수량</th>
+								<th>가격(VAT별도)</th>
+								<th>구매</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" name="td_goods_check" onclick="td_prd_value()" value="0" title="차동식감지기(DC24V, 2종, 보통,재용형,비방수형, 화재감지용, W109*D41mm, 20~50mA, WHITE) 선택하기">
+									<input type="hidden" name="td_prd_cd" value="AL3V4">
+									<input type="hidden" name="td_quantity" value="1">
+									<input type="hidden" name="td_enpri_prd_cnt" value="0">
+									<input type="hidden" name="td_mobile_prd_cnt" value="0">
+									<input type="hidden" name="td_sk_prd_cnt" value="1">
+									<input type="hidden" name="td_valex_prd_cnt" value="1">
+								</td>
+								<td>
+									<span onmouseover="javascript:show_balloon_layer('<img src=http://121.78.55.13/imgs/prd_img/201008/AL3V4-1.jpg width=250 height=250>',250,250,50,-50)" onmouseout="javascript:hidden_balloon_layer()">
+										<a href="/small/search/goods_detail.jsp?prd_cd=AL3V4" class="sgoods ty2">
+											<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201008/AL3V4-1.jpg" alt="차동식감지기" class="ct_img"></p>
+											<!-- <span class="icon icon_hot"></span> -->
+										</a>
+									</span>
+								</td>
+								<td class="tal pl10">
+									<a href="/small/search/goods_detail.jsp?prd_cd=AL3V4" class="sgoods ty2">
+										<p class="tit">차동식감지기</p>
+										<p class="txt">DC24V, 2종, 보통,재용형,비방수형, 화재감지용, W109*D41mm, 20~50mA, WHITE</p>
+										<p class="code">상품코드: <strong>AL3V4</strong></p>
+									</a>
+									<div class="sgoods_tag mt10">
+										<span class="label_tag tag1">새상품</span>
+										<span class="label_tag tag1">오늘발송</span>
+										<span class="label_tag tag2">면세</span>
+										<span class="label_tag tag3">품절</span>
+										<span class="label_tag tag4">업체발송</span>
+										<span class="label_tag tag5">문자발송</span>
+										<span class="label_tag tag6">판매중지</span>
+										<span class="label_tag tag7">1인 5 구매가능</span>
+										<span class="label_tag tag8">한정판매수량(18)</span>
+										<span class="label_tag tag9">1%추가적립</span>
+										<span class="label_tag tag10">무료배송</span>
+									</div>
+								</td>
+								<td class="color_num89 f13">P101-15000</td>
+								<td class="color_num89 f13">
+									동방전자산업(주)
+									<br>(동방전자산업)
+								</td>
+								<td>
+									<div class="inputSpinner">
+										<input type="text" class="input-t01 w_s" tabindex="1" size="2" value="1" name="td_quantity1" id="td_quantity1" title="차동식감지기(DC24V, 2종, 보통,재용형,비방수형, 화재감지용, W109*D41mm, 20~50mA, WHITE) 수량">
+										<input type="hidden" name="td_quantity" value="1">
+										<a class="btn-countUp" href="javascript:td_changeChange(1,'UP','td_quantity1');"><span class="blind">수량 추가</span></a>
+										<a class="btn-countDown" href="javascript:td_changeChange(1,'DOWN','td_quantity1');"><span class="blind">수량 감소</span></a>
+									</div>
+									<p class="mt10 f13">단위 : EA</p>
+								</td>
+
+								<td>
+									<div class="sgoods ty2">
+										<dl class="price">
+											<dd class="cblack f18">4,290원</dd>
+										</dl>
+									</div>
+								</td>
+								<td>
+									<a class="btn_red ver2 w100" href="javascript:if(td_jumunYnChk('0')){goExecute1('false','TD_BARO','AL3V4',0,1,'td_quantity1')}">즉시구매</a>
+									<a class="btn_white w100 mt05" href="javascript:if(td_jumunYnChk('0')){SCartShow(1,'CT','false','AL3V4',0,'td_quantity1')}">장바구니</a>
+									<a class="btn_white w100 mt05" href="javascript:if(td_jumunYnChk('0')){modalMyCataAdd('AL3V4')}">MY카탈로그에 추가</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" name="td_goods_check" onclick="td_prd_value()" value="1" title="A4복사용지(사이즈 A4, 평량 75g/m², 규격 210*297mm, 포장단위 2500매/5권/1박스, 색상 백) 선택하기">
+									<input type="hidden" name="td_prd_cd" value="BS2WG">
+									<input type="hidden" name="td_quantity" value="1">
+									<input type="hidden" name="td_enpri_prd_cnt" value="0">
+									<input type="hidden" name="td_mobile_prd_cnt" value="0">
+									<input type="hidden" name="td_sk_prd_cnt" value="1">
+									<input type="hidden" name="td_valex_prd_cnt" value="1">
+								</td>
+								<td>
+									<span onmouseover="javascript:show_balloon_layer('<img src=http://121.78.55.13/imgs/prd_img/201905/BS2WG-1.jpg width=250 height=250>',250,250,50,-50)" onmouseout="javascript:hidden_balloon_layer()">
+										<a href="/small/search/goods_detail.jsp?prd_cd=BS2WG" class="sgoods ty2">
+											<p class="img"><img src="https://img.happynarae.com/imgs/prd_img/201905/BS2WG-1.jpg" alt="A4복사용지" class="ct_img"></p>
+											<!-- <span class="icon icon_hot"></span> -->
+										</a>
+									</span>
+								</td>
+								<td class="tal pl10">
+									<a href="/small/search/goods_detail.jsp?prd_cd=BS2WG" class="sgoods ty2">
+										<p class="tit">A4복사용지</p>
+										<p class="txt">사이즈 A4, 평량 75g/m², 규격 210*297mm, 포장단위 2500매/5권/1박스, 색상 백</p>
+										<p class="code">상품코드: <strong>BS2WG</strong></p>
+									</a>
+									<div class="sgoods_tag mt10">
+										<span class="label_tag tag1">새상품</span>
+										<span class="label_tag tag1">오늘발송</span>
+										<span class="label_tag tag2">면세</span>
+										<span class="label_tag tag3">품절</span>
+										<span class="label_tag tag4">업체발송</span>
+										<span class="label_tag tag5">문자발송</span>
+										<span class="label_tag tag6">판매중지</span>
+										<span class="label_tag tag7">1인 5 구매가능</span>
+										<span class="label_tag tag8">한정판매수량(18)</span>
+										<span class="label_tag tag9">1%추가적립</span>
+										<span class="label_tag tag10">무료배송</span>
+									</div>
+								</td>
+								<td class="color_num89 f13">Paiz</td>
+								<td class="color_num89 f13">
+									한국제지(주)
+									<br>(페이지)
+								</td>
+								<td>
+									<div class="inputSpinner">
+										<input type="text" class="input-t01 w_s" tabindex="1" size="2" value="1" name="td_quantity2" id="td_quantity2" title="A4복사용지(사이즈 A4, 평량 75g/m², 규격 210*297mm, 포장단위 2500매/5권/1박스, 색상 백) 수량">
+										<input type="hidden" name="td_quantity" value="1">
+										<a class="btn-countUp" href="javascript:td_changeChange(1,'UP','td_quantity2');"><span class="blind">수량 추가</span></a>
+										<a class="btn-countDown" href="javascript:td_changeChange(1,'DOWN','td_quantity2');"><span class="blind">수량 감소</span></a>
+									</div>
+									<p class="mt10 f13">단위 : BOX</p>
+								</td>
+								<td>
+									<div class="sgoods ty2">
+										<dl class="price">
+											<dt><strong class="cred">5%</strong><s>16,900원</s></dt>
+											<dd class="cblack f18">15,900원 ~ </dd>
+										</dl>
+									</div>
+								</td>
+								<td>
+									<a class="btn_gray2 w100" href="javascript:onDetail('BS2WG','1')">옵션 전체보기</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!--//목록형-->
+
+					<div class="area-tbl-prodSelect t_2">
+						<div class="colSelect">
+							<!-- <input type="checkbox" id="check02" onclick="check_Box_All2('td_goods_check',this,'');td_prd_value()" class="renew_cus" value="">
+							<label for="check02" class="label-t01">선택상품 (<span id="td_selected_chk">0</span>)</label> -->
+							<a href="javascript:modalMyCataAdds();" class="btn_white">MY카탈로그에 추가</a>
+						</div>
+						<div class="colPager">
+							<!-- 
+							<button class="btn-pagePrev">
+								<span class="blind">이전 상품 목록</span>
+							</button>
+							<button class="btn-pageNext">
+								<span class="blind">다음 상품 목록</span>
+							</button>
+							
+							
+							<a href="javascript:modalMyCataAdds();" class="btn_red">MY카탈로그에 추가+</a>
+							-->
+						</div>
+					</div>
+					<!--//선택상품 -->
+
+					<!--paging-->
+					<ul class="pagination">
+					<li><a href="#pn0"><span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span></a></li><li><a href="#pn1"><b>1</b></a></li><li><a href="#pn2"><span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span></a></li>
+					</ul>
+					<!--//paging-->
+					
+					<input type="hidden" name="quantity" value="1">
+					<input type="hidden" name="prd_cd" value="">
+				</div>
+				<!--//오늘 본 상품 -->
+				
+			</div><!-- 주문리스트 뿌리는곳 -->
+			<script type="text/javascript" language="javascript">
+				<!--
+					function callGoodsList(){
+						call_ajax("div_inc_goods_list","/small/cart/div/inc_today_goods_list.jsp?t=1","");
+					}
+					callGoodsList();
+				//-->
+			</script>
+		</form>
 	</div>
+
 
 	<div id="footer" class="footer">
 		<div class="footer_top wide">

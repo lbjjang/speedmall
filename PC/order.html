@@ -1094,184 +1094,577 @@
 		</div>
 	</div>
 
-	<div class="wide">
-		<!-- 마이페이지 -->
-		<div class="lnb_wrap">	
-			<!-- 등급안내 -->
-			<dl class="lnb_level">
-				<dt>
-					<!-- 타이틀 -->
-					<h2 class="lnb_tit"><a href="/small/mypage/mypage_home.jsp">마이페이지</a></h2>
-					<!--// 타이틀 -->
-					<div class="user_info">
-						<p class="level">
-							 
-						</p>
-						<strong class="user">김형준님</strong>
-						<span class="id">qnc2</span>
-					</div>
-				</dt>
-				<dd class="pl05 pr05">
-					<p class="ico_coupon">30만원 이상 주문 시<br>익월초 무료배송쿠폰<br>2매 발급</p>
-					<p class="ico_point">기업회원으로 전환 시 <br>3,000 포인트 즉시 적립</p>
-				</dd>
-			</dl>
-			<!--// 등급안내 -->
+	<div class="bucket wide">
+		<div class="header-bucket">
+			<h3 class="h-t01">주문서 작성/결제하기</h3>
+			<ol class="flow-bucket">
+				<li><span class="tit">장바구니</span></li>
+				<li class="on"><span class="tit">주문서 작성/결제하기</span></li>
+				<li><span class="tit">주문 완료</span></li>
+			</ol>
+		</div>
+
+		<div id="div_jumun_list">
 			
-			<!-- 메뉴영역 -->
-			<div class="lnb_nav">
-				<dl id="dl1" class="">
-					<dt>주문 관련</dt>
-					<!-- 
-					<dd><a href="/small/mypage/mypage_order.jsp" class="" >주문배송조회</a></dd>
-					<dd><a href="/small/mypage/mypage_wish.jsp" class="" >관심상품 보관함</a></dd>
-					<dd><a href="/small/mypage/mypage_search_avg.jsp" class="" >과거구매내역</a></dd>
-					<dd><a href="/small/mypage/code_order.jsp" class="" >상품코드로 주문하기</a></dd>
-					 -->
-					<dd><a href="/small/mypage/mypage_order.jsp" class="">진행중인 주문내역</a></dd>
-					<dd><a href="/small/mypage/mypage_endorder.jsp" class="">배송완료 내역</a></dd>
-					<dd><a href="/small/mypage/mypage_returnorder.jsp" class="">진행중인 반품/교환</a></dd>
-					<dd><a href="/small/mypage/mypage_returnendorder.jsp" class="">반품/교환 완료내역</a></dd>
-					<dd><a href="/small/mypage/mypage_ordercancel.jsp" class="">취소내역</a></dd>
-				</dl>
-				<dl id="dl2" class="">
-					<dt>나의 통장
-					</dt><dd><a href="/small/mypage/mypage_point.jsp" class="">포인트 조회/적립권 등록</a></dd>
-					<dd><a href="/small/mypage/mypage_coupon_search.jsp" class="">쿠폰/경품 조회</a></dd>
-				</dl>
-				<dl id="dl3" class="">
-					<dt>증빙 서류 조회</dt>
-					<dd><a href="javascript:new_open_bill_2018()" id="dl3_dd5" class="">SmartBill 세금계산서</a></dd><!--<br> - 2018년</a></dd>			
-					<dd><a href="javascript:new_open_bill()" id="dl3_dd2" class="" >eBill 세금계산서<br/> - 2017년 이전</a></dd>
-					<dd><a href="javascript:open_bill('null')" id="dl3_dd1" class="" >CSBill 세금계산서</a></dd>-->
-					
-				
-				
-				<dd><a href="/small/mypage/mypage_search_etc.jsp" class="">영수증/거래명세서 조회</a></dd>
+			<!--  계정과목 일 경우 -->
+			<div class="area-tbl-prodSelect bb0">
+				<div class="colSelect">
+					<input type="button" class="btn_normal" onclick="BUD_BRAN_SPEED_chk()" value="전체선택">
+				</div>
+				<div class="colSelect tar">
+					<input type="button" class="btn_normal" onclick="BUD_BRAN_SPEED_chn()" value="계정과목 변경">
+				</div>
+			</div>
+			
+			<table class="tbl-t01">
+				<colgroup>
+					<col width="*">
+					<col width="15%">
+					<col width="13%">
+					<col width="10%">
+					<col width="12%">
+				</colgroup>
+				<thead>
+					<tr><!-- checked  -->
+						<!-- <th><input type="checkbox" name="checkAll" onclick="check_Box_All2('goods_check',this,'');prd_value()"></th> -->
+						<th>상품 정보</th>
+						<th>단가</th>
+						<th>수량</th>
+						<th>배송</th>
+						<th>가격(VAT별도)</th>
+					</tr>
+				</thead>
+				<tbody>
+			
+					<tr>
+						<td>
+							<div class="sgoods ty4">
+								<p class="img">
+									<img src="https://img.happynarae.com/imgs/prd_img/201205/BA257-1.jpg">
+								</p>
+								<a href="javascript:onDetail('BA257','1')">
+									<p class="tit">보호견출지 (주)레이테크코리아 20-P101R</p>
+									<p class="txt hauto">22.5*28mm, 300PCS, RED, 15SH/1PK, 보호코팅</p>
+								</a>
+								<div class="sgoods_tag">
+									<span class="label_tag tag1">새상품</span>
+									<span class="label_tag tag1">오늘발송</span>
+									<span class="label_tag tag2">면세</span>
+									<span class="label_tag tag3">품절</span>
+									<span class="label_tag tag4">업체발송</span>
+									<span class="label_tag tag5">문자발송</span>
+									<span class="label_tag tag6">판매중지</span>
+									<span class="label_tag tag7">1인 5 구매가능</span>
+									<span class="label_tag tag8">한정판매수량(18)</span>
+									<span class="label_tag tag9">1%추가적립</span>
+									<span class="label_tag tag10">무료배송</span>
+								</div>
+								 <p class="mt10"><input type="checkbox" id="AX5HC" name="BUD_BRAN_SPEED_pr" value="AX5HC-NO-2020" class="renew_cus"><label for="AX5HC">계정과목: -----</label></p><!-- 계정과목 일 경우 -->
+								<div id="divAttach"></div>
 								
-				</dl>
-				
-				
-				<dl id="dl5" class="">
-					<dt>회원 정보</dt>
-					<dd><a href="/small/mypage/mypage_info_verify.jsp?gubun=member_modify" class="">회원정보 수정</a></dd> 
-					
-				
-					
-				
-					<dd><a href="/small/mypage/mypage_limit_search.jsp" class="">후불한도 조회</a></dd>
-					
-					
-				
-					<!--  <dd><a href="javascript:alert('개인회원만 사용가능한 메뉴입니다.')">기업회원전환</a></dd>-->
-				
-				</dl>
+								<div class="tal pt10">
+									<input type="text" class="form-control w65 dib" name="cust_chg_memo" value="" title="보호견출지의 메모">
+									<input class="btn_normal" type="button" onclick="cust_chg_memoch(0)" value="메모 변경" title="보호견출지의 메모 변경">
+								</div>
+							</div>
+						</td>
+						<td>
+							<span class="dio cgray f15"><strike>1,590원</strike></span>
+							<span class="dio cblack f15"><strong>1,558</strong>원</span>
+						</td>
+						<td>
+							<div class="inputSpinner">
+								<input name="update_number" type="text" class="input-t01 w_s" tabindex="2" size="3" value="1">
+								<button class="btn-countUp" onclick="changeChange(0,1,'UP');">
+									<span class="blind">수량 추가</span>
+								</button>
+								<button class="btn-countDown" onclick="changeChange(0,1,'DOWN');">
+									<span class="blind">수량 감소</span>
+								</button>
+							</div>
+							<button class="btn_normal verm w40" onclick="upCnt(0,1, '18','shoppinglist.jsp',1);">변경</button>
+							<p class="mt05 tac f13">단위 : PK</p>
+							<div class="tac f13">최소주문수량: 1<input type="hidden" name="MinCnt" value="1"><input type="hidden" name="HanNm" value="보호견출지"></div>
+						</td>
+						<td><p class="">오늘발송</p></td>
+						<td>
+							<p><strong class="f15">1,558</strong>원</p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--//선택상품 삭제 -->
+
+			<div class="cart_pay_list ver2">
+				<div>
+					<div class="pay_add">
+						<span class="unit">임직원 구매한도</span>
+						<span class="num"><strong>1,059,381</strong>원</span>
+					</div>
+				</div>
+				<div>
+					<div class="pay_add">
+						<span class="unit">당월 구매금액(현재 구매예정금액 포함)</span>
+						<span class="num"><strong id="tex_notex_total" class="em-weightier">0</strong>원</span><!--//상품 총 금액 -->
+					</div>
+				</div>
 			</div>
-			<!--// 메뉴영역 -->
-			
-			<!-- 배너영역 -->	
-			<div class="lnb_ban">
-				<a href="/small/customer_center/pop_sendemail2.jsp" class="cus_question"><span>고객센터 문의하기</span></a>
+
+			<div class="area-cart-prodTotal02">
+				<span class="txtCartTotal">
+					<span class="txt">총 주문금액(VAT)</span>
+					<strong class="num"><span class="">2,020원 <span style="font-size:15px;font-weight:normal;">(202 원)</span></span></strong>
+				</span>
+				
+				<span class="txtCalc plus_type"></span>
+				<span class="txtShipping">
+					<span class="txt">
+						배송비
+						<div class="box-toggleGuide">
+							<button class="btn-notice btn-t01"></button>
+							<div class="contToggleGuide t_4">
+								<h5 class="h-t02">배송안내사항</h5>
+								<ul class="list-t01">
+									<li>※ 주문하신 상품은 CJ대한통운를 통하여 발송됩니다.</li>
+									<li>배송기사가 참고할 내용을 입력해 주세요.<br>(예: 부재시 경비실에 맡기시고, 연락주세요.)</li>
+									<li>배송과 관련되지 않은 내용은 스피드몰 고객센터(1644-5644)로<br>전화 또는 고객의 소리에 남겨주세요</li>
+								</ul>
+							</div>
+						</div>
+					</span>
+					<strong class="num"><span id="tpDeliveryAmt" class="">0</span>원</strong>
+				</span>
+				
+				<span class="txtCalc minus_type"></span>
+				<span class="txtCoupon"><span class="txt">할인 금액</span><strong class="num"><span id="tpSalesPrice" class="">0</span>원</strong></span>
+				
+				<span class="txtCalc equal_type"></span>
+				<span class="txtTotal">
+					<span class="txt">결제예정금액 (VAT포함)</span>
+					<strong class="num"><span id="tpTotalPrice" class="">2,222</span>원</strong>
+				</span>
 			</div>
-			<!--// 배너영역 -->	
+			<!--//장바구니 -->
 		</div>
 
-		<!-- 카탈로그 -->
-		<div class="lnb_wrap">	
-			<!-- 등급안내 -->
-			<dl class="lnb_level">
-				<dt>
-					<!-- 타이틀 -->
-					<h2 class="lnb_tit"><a href="/small/mypage/mypage_wish.jsp">MY카탈로그</a></h2>
-					<!--// 타이틀 -->
-				</dt>
-			</dl>
-			<dl class="lnb_nav mycata_folder">
-				<dd>
-					<div class="folder_tp">
-						<p>그룹을 직접 생성/수정 <br>하실 수 있습니다.</p>
-						<button class="btn_mycata new_group" onclick="grpInsertModal();"><span>새폴더</span></button>
-						<button class="btn_mycata set_group" data-toggle="modal" data-target="#my_interestGroup"><span>그룹관리</span></button>
+		<div id="div_point_coupon_923">
+			<input type="hidden" name="input_call_div_final_pri" id="input_call_div_final_pri" value="OK" alt="화면의 존재여부체크">
+			<input type="hidden" name="input_coupon_use" id="input_coupon_use" value="NO" alt="쿠폰사용여부체크">
+			<input type="hidden" name="input_int_use_psb_cnt" id="input_int_use_psb_cnt" value="0" alt="사용가능품목쿠폰 ">
+			<input type="hidden" name="input_int_temp_dlvr_use_cnt" id="input_int_temp_dlvr_use_cnt" value="0" alt="사용가능 무료배송 쿠폰 ">
+
+			<ul class="list-cartCalc">
+				<li>
+					<span class="label-t01 tit">
+						쿠폰할인
+						<div class="box-toggleGuide">
+							<button class="btn-notice btn-t01"></button>
+							<div class="contToggleGuide t_2">
+								<h5 class="h-t02">쿠폰 사용시 유의점</h5>
+								<ul class="list-t01">
+									<li>쿠폰은 주문 시 <span class="em-weightier">포인트와 중복하여 사용하실 수 없습니다.</span><br> 단 무료배송 쿠폰은 포인트와 중복하여 사용 가능합니다.
+									</li>
+									<li>쿠폰은 주문/결제완료 후 반품/취소된 경우 사용된 쿠폰은 <span class="em-weightier">재 발행되지 않습니다.</span></li>
+									<li>카테고리 할인 쿠폰의 경우, 카테고리 내 일부 상품이 제외될 수 있습니다.</li>
+								</ul>
+							</div>
+						</div>
+					</span>
+					<div class="cart_pri">
+						<input type="text" class="input-t01 cart_filnal" title="쿠폰할인금액" name="int_cupn_pri" value="0" readonly="">
+						<span class="txtWon">원</span>
 					</div>
-					<div class="folder_list">
-						<strong class="title">MY</strong>
-						<table>
-							<tbody>
-								<tr>
-									<td align="left" valign="top">
-										<table>
-											<tbody>
-												<tr>
-													<td>
-														<a class="" onclick="selectGroup('ALL','전체')"><font color="red"><b>전체</b></font></a>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<a class="" onclick="selectGroup('0','기본그룹')">기본그룹</a>
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<a class="" onclick="selectGroup('join','지정상품')">지정상품</a>
-													</td>
-												</tr>			
-												<input type="hidden" id="grpCnt" name="grpCnt" value="0"> 
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+					<a class="btn_gray2 btn48 w120p verm" title="쿠폰할인 적용" data-toggle="modal" data-target="#modal_couponCheckApply">쿠폰적용</a>
+					<div class="txt">
+						<ul class="line_list">
+							<li>보유쿠폰 <span class="bold">0</span>장</li>
+							<li>사용가능쿠폰 <span class="cred bold">0</span>장</li>
+							<li>사용쿠폰 <span class="bold">0</span>장</li>
+						</ul>
 					</div>
-					
-				</dd>
-			</dl>
-			<!-- <input type="button" style="width:176px;height:34px;margin: 5px 0 0 0;cursor:pointer;border:0;background-image:url('/small/images/mypage/btn_MYcata_manual.png');background-repeat:no-repeat" title="MY카탈로그 이용가이드" onclick="showMenual()"> -->
+				</li>
+				<li>
+					<span class="label-t01 tit">무료배송할인</span>
+					<div class="cart_pri">
+						<input type="text" class="input-t01 cart_filnal" title="무료배송할인금액" name="intDeliCpn" value="0" readonly="">
+						<span class="txtWon">원</span>
+					</div>
+					<a class="btn_gray2 btn48 w120p verm" title="무료배송할인 쿠폰적용" data-toggle="modal" data-target="#modal_couponfreeShipping">쿠폰적용</a>
+					<p class="txt">무료배송 쿠폰 <span class="cred bold">0</span>장</p>
+				</li>
+				<li>
+					<span class="label-t01 tit">포인트할인</span>
+					<div class="cart_pri">
+						<input type="text" name="inputSpeedMoney" id="inputSpeedMoney" value="0" class="input-t01 cart_filnal" title="포인트할인금액" maxlength="7">
+						<span class="txtWon">원</span>
+					</div>
+					<a class="btn_gray2 btn48 w120p verm" title="포인트적용" onclick="onSpeedMoney_confirm();">포인트적용</a>
+					<p class="txt">사용가능한 포인트 <span class="cred bold">5,000</span>점</p>
+				</li>
+			</ul>
+
+			<input type="hidden" name="hidden_pointshop_prd_cd" id="hidden_pointshop_prd_cd" value="NO" title="포인트샵상품여부">
+			<input type="hidden" name="hidden_cust_company" id="hidden_cust_company" value="COMPANY" title="기업/개인 구분 ">
+			<input type="hidden" name="hidden_Oid" id="hidden_Oid" value="SM940325" alt="이니시스에 사용할 번호">
+			<input type="hidden" name="hiddenSpeedMoney" id="hiddenSpeedMoney" value="5000" alt="현재사용가능한 스피드머니">
+			<input type="hidden" name="inputSpeedMoneyHidden" id="inputSpeedMoneyHidden" value="0" alt="고객입력한스피드머니, 기저장후 입력한 값이 있을경우 비교함">
+			
+			<input type="hidden" name="inputSpeedMoneyYtHidden" id="inputSpeedMoneyYtHidden" value="0" alt="고객입력한스피드머니 중 과세용">
+			<input type="hidden" name="inputSpeedMoneyNtHidden" id="inputSpeedMoneyNtHidden" value="0" alt="고객입력한스피드머니 중 비과세용">
+			
+			<input type="hidden" name="totalPri" id="totalPri" value="2222" alt="최종결재금액(스피드머니,쿠폰제외)">
+			<input type="hidden" name="input_totalInDeli" id="input_totalInDeli" value="2222" alt="최종결재금액 (고객지급금액)">
+			<input type="hidden" name="ipTaxPri" id="ipTaxPri" value="202" alt="부가세">
+			<input type="hidden" name="ipCutPri" id="ipCutPri" value="0" alt="절사금액">
+			
+			<input type="hidden" name="ipCutPriYt" id="ipCutPriYt" value="0" alt="절사금액(과세)">
+			<input type="hidden" name="ipCutPriNt" id="ipCutPriNt" value="0" alt="절사금액(비과세)">
+			<input type="hidden" name="iptax_yn" id="iptax_yn" value="N" alt="과세 비과세 동시 있는 경우">
+			<input type="hidden" name="iptax_ynt" id="iptax_ynt" value="N" alt="사용한 스피드포인트가 과세금액 이상인경우">
+			
+			<input type="hidden" name="intDeli" id="intDeli" value="0" alt="배송비">
+			
+			<ul class="list-t01 mt20">
+				<li>쿠폰과 포인트는 중복해서 사용하실 수 없으며 사용포인트는 과세상품에 우선 적용됩니다.(무료배송 쿠폰 제외)</li>
+				<li>포인트는 배송완료 후 적립됩니다.</li>
+			</ul>
 		</div>
 
-		<!-- 고객센터 -->
-		<div class="lnb_wrap">
-			<dl class="lnb_level">
-				<dt>
-					<!-- 타이틀 -->
-					<h2 class="lnb_tit"><a href="/small/customer_center/customer_home.jsp">고객센터</a></h2>
-					<!--// 타이틀 -->
-				</dt>
-				<dd>
-					<p class="cs_tel">1644-5644</p>
-					평일 09:00 ~ 18:00<br>
-					주말, 공휴일 휴무
-				</dd>
-			</dl>
-			
-			<!-- 메뉴영역 -->
-			<div class="lnb_nav">
-				<dl class="">
-					<dt><a href="/small/customer_center/customer_faq.jsp">FAQ</a></dt>
-				</dl>
-				<dl class="">
-					<dt class="mt01">상담/문의</dt>
-					<dd><a href="/small/customer_center/pop_sendemail2.jsp" class="">이용문의</a></dd>
-					<dd><a href="/small/customer_center/pop_sendemail_for_enpri1.jsp" class="">거래상담</a></dd>
-					
-						<dd><a href="#" onclick="main_login();" class="">상품등록요청</a></dd>
-									
-					<dd><a href="/small/customer_center/communication_show.jsp" class="">상담/문의 내역</a></dd>
-				</dl>				
-				<dl class="">
-					<dt><a href="/small/customer_center/customer_notice.jsp">공지사항</a></dt>
-				</dl>
-				<dl class="mt01 ">
-					<dt><a href="/small/customer_center/customer_sms.jsp">이메일/SMS서비스 신청</a></dt>
-				</dl>
-				<dl class="mt01 ">
-					<dt><a href="/small/customer_center/customer_notice_bought_comment.jsp">스피드몰 이용후기</a></dt>
-				</dl>
+		<section class="sect-t01">
+			<div class="box-shippingForm">
+				<div class="areaShipping">
+					<h4 class="detail_stit pt0">주문/배송정보</h4>
+					<dl class="dl-t01">
+						<dt class="titDl">배송정보</dt>
+						<dd class="dataDl">
+							<input type="radio" name="input_all_deli" value="A" class="radio-t01" id="radio0301" checked="">
+							<label for="radio0301" class="label-t01 box-lb01">
+								<strong class="tit">취합발송</strong>
+								<span class="txt">2021/07/28 이내 취합 발송</span>
+							</label>
+							<input type="radio" name="input_all_deli" value="C" id="radio0302" class="radio-t01" onclick="alert('분할발송 주문조건이 아닙니다.');return false;">
+							<label for="radio0302" class="label-t01 box-lb01">
+								<strong class="tit">분할발송(기업회원전용)</strong>
+								<span class="txt">1차 발송일 : 2021/07/28
+								
+								</span>
+							</label>
+							<p class="txt-notice03 t_2">
+								* 취합 발송 예정일은 17시 이전 결제완료 기준으로 영업일(공휴일 제외)로 산출됩니다.<br>
+								* 취합 발송 예정일은 취합 발송 대상 상품들 중 발송 예정일이 가장 늦은 상품을 기준으로 합니다.<br>
+								&nbsp;&nbsp;&nbsp;ex) 3일이내, 5일이내 발송 상품을 취합 발송하는 경우 주문일로 5일(영업일) 이내 발송 표시됨 <br>
+								* <span class="bblue">업체발송, 예약발송, 배송별도문의</span> 표시 상품은 취합 발송에서 제외됩니다.<br>
+								- <b>업체발송</b> 표시 상품은 각 상품에 표시된 배송가능일로 개별 배송 됩니다.<br>
+								- <b>예약발송</b> 표시 상품은 예약발송일정 안내를 참고해 주시기 바랍니다.<br>
+								- <b>배송별도문의</b> 상품의 배송일정은 고객센터 혹은 담당자에게 문의해 주시기 바랍니다.<br>
+								* 일부 수입 및 주문제작 상품의 경우 배송일정이 다소 지연될 수 있으니 양해 부탁 드립니다.
+							</p>
+						</dd>
+					</dl>
+
+					<dl class="dl-t01">
+						<dt class="titDl">배송지</dt>
+						<dd class="dataDl">
+							<table class="tbl-t02">
+								<caption>배송지</caption>
+								<colgroup>
+									<col style="width: 110px;">
+									<col style="width: *;">
+								</colgroup>
+								<tbody>
+									<tr>
+										<td colspan="2">
+											<input type="radio" name="sameDeli" value="OK" onclick="CopyInfo(this)" id="radio01" class="radio-t01">
+											<label for="radio01" class="label-t01 t_3">주문자 정보와 동일</label>
+											<input type="radio" name="sameDeli" value="NO" onclick="CopyInfo(this)" id="radio02" class="radio-t01">
+											<label for="radio02" class="label-t01 t_3">신규입력</label>
+											<!--장선제 꽃 화환-->
+											<input type="hidden" name="idien" id="idien" value="tax">
+							
+											<!-- 김진성... 센터방문수령 막아놓음 -->
+											
+											<span style="display:none;">
+											
+											<input type="radio" name="sameDeli" value="CENTER" id="radio03" class="radio-t01" onclick="f_show_SpeedCenterVisit('SpeedCenterVisit_store_select','CenterVisit','',150,0)">
+											<label for="radio03" class="label-t01 t_3">센터방문수령</label>
+											</span>
+
+											<!--장선제 꽃 화환-->
+
+											<a class="btn-t01 t_m2 c_slight" data-toggle="modal" data-target="#modal_shippingList">배송지 목록</a>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">수취인이름</th>
+										<td>
+											<input name="d_cust_nm" type="text" class="input-t01 t_m w_m" title="수취인이름" tabindex="1" value="" maxlength="20" readonly="">
+											<span class="txtGuide02">(최대 10자 이내 입력)</span>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">배송지주소</th>
+										<td>
+											<div class="wrap-input">
+												<input name="d_zip1" value="" type="text" maxlength="3" tabindex="1" class="input-t01 t_m w_m" title="배송지 우편번호 앞자리" readonly="" onclick="f_addr_adds('M0807773','cart_order_ver2_test.jsp','cart_order','')">
+												-
+												<input name="d_zip2" value="" type="text" maxlength="3" tabindex="1" class="input-t01 t_m w_m" title="배송지 우편번호 뒷자리" readonly="" onclick="f_addr_adds('M0807773','cart_order_ver2_test.jsp','cart_order','')">
+												<a href="javascript:f_addr_adds('M0807773','cart_order_ver2_test.jsp','cart_order','');" class="btn-t01 t_s c_weightier" data-toggle="mo-dal" data-target="#address_popup">우편번호 찾기</a>
+											</div>
+											<div class="wrap-input">
+												<input name="d_juso" value="" type="text" tabindex="1" class="input-t01 t_m w_l" title="배송지 상세 주소" maxlength="50" readonly="" onclick="f_addr_adds('M0807773','cart_order_ver2_test.jsp','cart_order','')">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">전화번호</th>
+										<td>
+											<div class="wrap-input">
+												<input type="text" name="d_tnum1" value="" class="input-t01 t_m w_s" title="전화번호 앞자리" maxlength="3" tabindex="1" readonly="">
+												<span class="txt-dash">-</span>
+												<input type="text" name="d_tnum2" value="" class="input-t01 t_m w_s" title="전화번호 중간자리" maxlength="4" tabindex="1" readonly="">
+												<span class="txt-dash">-</span>
+												<input type="text" name="d_tnum3" value="" class="input-t01 t_m w_s" title="전화번호 뒷자리" maxlength="4" tabindex="1" readonly="">
+											</div>
+											<div class="wrap-input">
+												&nbsp;
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">핸드폰번호</th>
+										<td class="td-vt">
+											<div class="wrap-input">
+												<input type="text" name="d_mnum1" value="" class="input-t01 t_m w_s" title="휴대전화 앞자리" maxlength="3" tabindex="1" readonly="">
+												<span class="txt-dash">-</span>
+												<input type="text" name="d_mnum2" value="" class="input-t01 t_m w_s" title="휴대전화 중간자리" maxlength="4" tabindex="1" readonly="">
+												<span class="txt-dash">-</span>
+												<input type="text" name="d_mnum3" value="" class="input-t01 t_m w_s" title="휴대전화 뒷자리" maxlength="4" tabindex="1" readonly="">
+											</div>
+											<p class="txtGuide">배송기사가 연락할 수 있는 번호를 넣어주세요.</p>
+											<input type="hidden" name="d_email" value="kkk@ttt.kr" style="vertical-align:middle" readonly="">
+											<input type="hidden" name="radonSameDeli" id="radonSameDeli" value="" title="이전배송지유형정보">
+											<input type="hidden" name="store_num" value="">
+											<input type="hidden" name="d_addr_seq" value="" title="배송지주소순차" readonly="">
+											<input type="hidden" name="d_juso2" value="" title="도로명주소">
+											<script language="javascript">
+												CopyInfoDefault();
+											</script>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+
+					<dl class="dl-t01">
+						<dt class="titDl">배송메모</dt>
+						<dd class="dataDl">
+							<input type="text" id="d_memo" name="d_memo" maxlength="30" class="input-t01 t_m w_l" title="배송메모" value="">
+							<p class="txtGuide">배송기사가 참고할 내용을 30자 이내로 입력해주세요</p>
+						</dd>
+					</dl>
+
+					<dl class="dl-t01">
+						<dt class="titDl">배송메모</dt>
+						<dd class="dataDl">
+							<table class="tbl-t02">
+								<caption>배송지</caption>
+								<colgroup>
+									<col style="width: 110px;">
+									<col style="width: *;">
+								</colgroup>
+								<tbody>
+									<!-- 센터방문수령 가능상품 주문 -->
+									<tr>
+										<th scope="row">방문수령정보</th>
+										<td>
+											<input type="text" name="d_memo_date1" id="d_memo_date1" value="1" style="width:35px;text-align:right;padding-right:5px" maxlength="2" /> 월
+											<input type="text" name="d_memo_date2" id="d_memo_date2" value="2" style="width:35px;text-align:right;padding-right:5px" maxlength="2" /> 일
+											<input type="text" name="d_memo_date3" id="d_memo_date3" value="11" style="width:35px;text-align:right;padding-right:5px" maxlength="2" /> 시에 방문하겠습니다.
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">배송메모</th>
+										<td>
+											<input type="text" id="d_memo" name="d_memo" maxlength="30" class="input-t01 t_m w_l" title="배송메모" value="">
+											<p class="txtGuide">배송기사가 참고할 내용을 30자 이내로 입력해주세요</p>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">방문센터</th>
+										<td>
+											죽전물류센터
+											<a href="javascript:goCenterMap('');">센터 약도보기</a>
+											<input type="hidden" id="d_memo" name="d_memo" />
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+
+					<dl class="dl-t01">
+						<dt class="titDl">배송메모</dt>
+						<dd class="dataDl">
+							<table class="tbl-t02">
+								<caption>배송지</caption>
+								<colgroup>
+									<col style="width: 110px;">
+									<col style="width: *;">
+								</colgroup>
+								<tbody>
+									<!-- 꽃화한 상품 주문 -->
+									<tr>
+										<th scope="row">배송일시</th>
+										<td>
+											<select id="yy" name="yy" onchange="chacker()" class="form-control w15 dib verm h30">
+												<option value="9~11">2011</option>
+												<option value="9~11">2011</option>
+												<option value="9~11">2011</option>
+												<option value="9~11">2011</option>
+												<option value="9~11" selected>2011</option>
+												<option value="9~11">2011</option>
+											</select>
+											<select id="mm" name="mm" onchange="chacker()" class="form-control w15 dib verm h30">
+												<option value="9~11">1</option>
+												<option value="9~11">2</option>
+												<option value="9~11">3</option>
+												<option value="9~11">4</option>
+												<option value="9~11" selected>5</option>
+												<option value="9~11">6</option>
+											</select>
+											<select id="dd" name="dd" class="form-control w15 dib verm h30">
+												<option value="9~11">1</option>
+												<option value="9~11">2</option>
+												<option value="9~11">3</option>
+												<option value="9~11">4</option>
+												<option value="9~11" selected>5</option>
+												<option value="9~11">6</option>
+											</select> 
+											<select id="tt" name="tt" class="form-control w15 dib verm h30">
+												<option value="9~11">9~11시 사이</option>
+												<option value="10~12">10~12시 사이</option>
+												<option value="11~13">11~13시 사이</option>
+												<option value="12~14">12~14시 사이</option>
+												<option value="13~15">13~15시 사이</option>
+												<option value="14~16">14~16시 사이</option>
+												<option value="15~17">15~17시 사이</option>
+												<option value="16~18" selected>16~18시 사이</option>
+												<option value="17~19">17~19시 사이</option>
+												<option value="18~20">18~20시 사이</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">요청사항</th>
+										<td>
+											<textarea rows="5" id="d_req" name="d_req" cols="120" class="textarea w90 h100"></textarea>
+											<div class="pt05">
+												<span class="cred">※ 행사 또는 예식의 경우는 행사 시각 또는 예식 시간을 기입하여 주세요.</span><br>
+												☞ 결혼식 화환일 경우 : 신랑 ○○○ , 신부 ○○○ , 혼주 ○○○ </br>
+												☞ 장례식 근조일 경우 : 상주 ○○○ , 고인 ○○○
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</dd>
+					</dl>
+
+					<dl class="dl-t01">
+						<dt class="titDl">
+							<input type="hidden" id="so_fl" />보내는 메시지
+						</dt>
+						<dd class="dataDl">
+							<table class="tbl-t02">
+								<caption>배송지</caption>
+								<colgroup>
+									<col style="width: 110px;">
+									<col style="width: *;">
+								</colgroup>
+								<tbody>
+									<!-- 비누꽃 상품 주문 -->
+									<tr>
+										<th scope="row">서비스</th>
+										<td>
+											<input type="radio" id="sve" name="sve" value="C" style="border:none;background-color:white;" onfocus="this.blur()">카드&nbsp;<img src="/small/images/sub/btn_ribbon.gif" style="vertical-align:middle;cursor:pointer;"  title="카드메시지" onclick="go(0)" style="cursor:hand"/>
+											<input type="radio" id="sve" name="sve" value="L" style="border:none;background-color:white;" onfocus="this.blur()">리본&nbsp;<img src="/small/images/sub/btn_card.gif" style="vertical-align:middle;cursor:pointer;" title="리본메시지" onclick="go(1)" style="cursor:hand"/>
+											<script>
+												function go(i){
+													if(document.form1.sve[i].checked){
+														window.open('./div/select_message_test.jsp?mtype='+document.form1.sve[i].value,'name','width=430 height=500 resizable=no');return false;
+													}else{
+														alert("서비스를 선택하여 주십시요");
+													}
+												}
+											</script>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">메시지</th>
+										<td>
+											<b>보내는 분</b>&nbsp;&nbsp;&nbsp;<input type="text" id="sender" name="sender"/>
+											<b>받으실 분</b>&nbsp;&nbsp;&nbsp;<input type="text" id="reciver" name="reciver"/>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2"><textarea rows="5" id="d_msg" name="d_msg" cols="" value="" ></textarea></td>
+									</tr>
+								</tbody>
+							</table>
+							<input type="hidden" id="d_memo" name="d_memo"/>
+						</dd>
+					</dl>
+
+					<dl class="dl-t01">
+						<dt class="titDl">결재메모</dt>
+						<dd class="dataDl">
+							<input class="input-t01 t_m w_l" type="text" id="sacc_memo" name="sacc_memo" maxlength="100" title="결재메모">
+						</dd>
+					</dl>
+				</div>
+				<!--//배송지 입력 폼 -->
+
+				<div class="areaBuyer">
+					<h4 class="detail_stit pt0">주문자 정보</h4>
+					<ul class="list-info01">
+						<li>
+							<strong class="tit">이름</strong>
+							<span class="data">
+								정명영 <a class="btn-t01 t_s c_normal" data-toggle="modal" data-target="#modal_managerInfoChange">정보수정</a>
+								<input name="cust_nm" type="hidden" style="width:170px;" value="정명영">
+								<input name="rcp_cust_nm" type="hidden" value="에스케이트리켐" title="영수증담당자명">
+							</span>
+						</li>
+						<li><strong class="tit">주소지</strong> <span class="data">076-30  서울 강서구 마곡중앙로 11</span></li>
+						<li><strong class="tit">전화번호</strong> <span class="data">
+							02 - 1111 - 2222
+							<input type="hidden" name="tnum1" style="width:35px;" maxlength="3" value="02">
+							<input type="hidden" name="tnum2" style="width:35px;" maxlength="4" value="1111">
+							<input type="hidden" name="tnum3" style="width:35px;" maxlength="4" value="2222">
+						</span></li>
+						<li><strong class="tit">핸드폰번호</strong> <span class="data">
+							011 - 3333 - 4444
+							<input type="hidden" name="mnum1" style="width:35px;" maxlength="3" value="011">
+							<input type="hidden" name="mnum2" style="width:35px;" maxlength="4" value="3333">
+							<input type="hidden" name="mnum3" style="width:35px;" maxlength="4" value="4444">
+						</span></li>
+						<li><strong class="tit">이메일</strong> <span class="data">
+							kkk@ttt.kr
+							<input name="email" value="kkk@ttt.kr" type="hidden" style="width:170px;">
+						</span></li>
+					</ul>
+					<input type="hidden" name="addr_seq" value="58">
+					<input type="hidden" name="acep_id" value="M0807773">
+					<input type="hidden" name="cust_id" value="M0807773">
+					<input type="hidden" name="zip1" value="076">
+					<input type="hidden" name="zip2" value="30">
+					<input type="hidden" name="juso" value="서울 강서구 마곡중앙로 11">
+				</div>
 			</div>
-			<!--// 메뉴영역 -->
-		</div>
+		</section>
 	</div>
+
 
 	<div id="footer" class="footer">
 		<div class="footer_top wide">

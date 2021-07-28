@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="static/css/jquery-ui.min.css" type="text/css" media="all" />
+    <script src="static/js/jquery-2.2.4.min.js"></script>
+    <script src="static/js/jquery-ui.min.js"></script>
+<meta charset="eur-kr">
+<title>스피드몰 퍼블 리스트</title>
+<style>
+/* reset */
+*{margin:0; padding:0; border:0; font-size:inherit; font-weight:inherit; line-height:inherit; color:inherit; font-style:inherit; vertical-align:baseline;}
+html{overflow-y:scroll;width:100%; height:100%; font-size:12px; font-family:"맑은 고딕", Malgun Gothic, "나눔 고딕", NanumGothic, "돋움", Dotum; color:#767676; line-height:1;}
+body{min-width:960px; padding:20px; background:#fff;}
+strong{font-weight:bold;} em{color:#A00327 !important;} ol, ul{list-style:none;}
+table{border-collapse:collapse; border-spacing:0;}
+a, a:hover{text-decoration:none;}
+/* 본문스타일 */
+h1{text-align:center;}
+h1 span{display:inline-block; padding:10px 50px; -webkit-border-radius:5px; border-radius:5px; font-size:20px; color:#fff; background:#929292;}
+.menuWrap{position:relative;padding-top:30px;padding-bottom:50px;}
+.menu, .menu table{width:100%;}
+.menu>dt{position:absolute; top:0;}
+.menu>dt a{display:block; margin-top:2px; padding:8px 20px 7px; border:1px solid #CCC; border-bottom:0; border-left:0; text-align:center; cursor:pointer;}
+.menu>dt:nth-child(2) a{border-left:1px solid #ccc;}
+.menu>dt.selected a{margin-top:0; padding:9px 20px; background:#000; color:#fff; border-color:#000;}
+.menu>dt.viewAll{right:0;}
+.menu>dt.viewAll.selected{border-color:#000;}
+.menu>dt.viewAll a{border-left:1px solid #CCC;}
+.menu>dd{display:none; padding:20px 0; border-top:1px solid #ccc;}
+.menu>dd>p:first-child{padding-bottom:5px;font-size:20px;color:#000;}
+table{border-bottom:1px solid #ccc;} 
+th{padding:5px 0; color:#fff; background:#929292; border-top:1px solid #ccc;border-left:1px solid #ccc; vertical-align:middle;}
+td{padding:7px 10px; border-top:1px solid #ccc;border-left:1px solid #ccc; vertical-align:middle;}
+th:first-child, td:first-child{border-left:0;}
+th a{color:#fff;}
+td.tab, td.pop, td.type, td.psd, td.sb, td.w3c, td.cb, td.wa{text-align:center;}
+td.memo strong{color:red;}
+td.d1{font-weight:700;}
+.hold td, .hold{background:#DDC8DA}
+.del td, .del{background:#ccc; text-decoration:line-through;}
+.ing td, .ing{background:#FC6;}
+.link td, .link {background:#b7cedf;}
+.noHtml td, .noHtml{background:#bad8ba;}
+.sIcon{display:inline-block; width:20px; height:13px;vertical-align:middle;}
+.hisWrap{position:relative; zoom:1; }
+.hisList li{display:none; padding:1px 0;}
+.hisList li:first-child{display:block;}
+.hisList .on{display:block;}
+.notice{display:table; width:100%;}
+.notice dl{width:49%; float:left;}
+.notice dt, .notice dd{width:100%; padding:5px 0;}
+.notice li{width:90%; position:relative; padding:0 0 3px 8px; font-size:11px; line-height:14px; color:#767676;}
+.notice .bul{position:absolute; top:5px; left:0; width:2px; height:2px; background:#626262;}
+.notice dd strong{color:#0000ee;}
+.dNotice{display:none; position:absolute; top:50%; left:50%; z-index:2; padding:20px; width:680px; margin:-300px 0 0 -361px; border:1px solid #929292; background:#F9F9F9;}
+.dNotice li{width:100%; padding-bottom:10px;}
+.siteInfo{display:table; width:100%;}
+.siteInfo dt{display:table-cell; width:10%; min-width:120px;  padding:5px; border:1px solid #929292; background:#929292; color:#fff; font-weight:bold; letter-spacing:-1px;box-sizing:border-box; text-align:center; vertical-align:middle;}
+.siteInfo dd{display:table-cell;  padding:5px 10px; border:1px solid #ccc; border-right:0; border-left:0;}
+.socInfo{display:table; width:100%;margin-top:30px;}
+.socInfo dt{display:table-cell; width:10%; min-width:120px;  padding:40px; border:1px solid #929292; background:#929292; color:#fff; font-weight:bold; letter-spacing:-1px; text-align:center; vertical-align:middle;box-sizing:border-box;}
+.socInfo dd{vertical-align:middle;display:table-cell;  padding:5px 10px; border:1px solid #ccc; border-right:0; border-left:0;}
+.btn{position: relative; display:inline-block; min-width:25px; height:15px; padding:0 5px; margin-left:3px; font-size:10px; line-height:13px; border-radius:3px; letter-spacing:-0.5px; color:#fff; background:#4374D9; vertical-align:middle; text-transform:uppercase; text-align:center; text-shadow:1px 1px 1px #333;}
+.btn:after{content: " "; position:absolute; right:100%; top:3px; height: 0;width: 0; border:4px solid transparent; border-right-color:#4374D9;}
+.btn.up{background:#dc5548;} .btn.up:after{border-right-color:#dc5548;}
+.btn.off{background:#b8b8b8;} .btn.off:after{border-right-color:#b8b8b8;}
+.btn.new{background:#00ad5b;} .btn.new:after{border-right-color:#00ad5b;}
+.btn span{text-shadow:none;}
+.btn.plan{margin-left:0; margin-right:7px; background:#E5D85C;} .btn.plan:after{left:100%; right:auto; border-left-color:#E5D85C; border-right-color:transparent;}
+.btn.design{margin-left:0; margin-right:7px; background:#F29661;} .btn.design:after{left:100%; right:auto; border-left-color:#F29661; border-right-color:transparent;}
+.btnHis{position:absolute; top:1px; right:0px; cursor:pointer;}
+.btnHis:after{right:40%; top:100%; border-top-color:#b8b8b8; border-right-color:transparent !important;}
+.tag{position: relative; display:inline-block; min-width:25px; height:13px; padding:0 5px; margin-left:3px; font-size:10px; line-height:12px; background:#eaeaea; border: 1px solid #88b7d5; vertical-align:middle; border-radius:3px;  text-transform:uppercase; text-align:center;}
+.tag:after, .tag:before {position: absolute; right: 100%; top: 50%;	border:solid transparent; content: " "; height: 0;	width: 0; pointer-events: none;}
+.tag:after{border-right-color:#eaeaea; border-width:4px; margin-top:-4px;}
+.tag:before {border-right-color: #88b7d5; border-width:5px;margin-top:-5px;}
+.tag.pop{border-color:#F361DC; color:#F361DC;} .tag.pop:after{} .tag.pop:before{border-right-color: #F361DC;}
+.tag.tab{border-color:#8041D9; color:#8041D9;} .tag.tab:after{} .tag.tab:before{border-right-color: #8041D9;}
+.tag.lyr{border-color:#47C83E; color:#47C83E;} .tag.lyr:after{} .tag.lyr:before{border-right-color: #47C83E;}
+.type .ty{position: relative; display:inline-block; min-width:25px; height:13px; padding:0 5px; margin-left:3px; font-size:10px; line-height:12px; background:#eaeaea; border: 1px solid #88b7d5; vertical-align:middle; border-radius:3px;  text-transform:uppercase; text-align:center;}
+.type .ty{border-color:#88b7d5; color:#88b7d5;} .type .ty:after{} .type .ty:before{border-right-color: #88b7d5;}
+.tip{position:relative; display:inline-block; cursor:pointer;}
+ul li a span, .tip span{display:none; position:absolute; z-index:1; top:20px; left:50%; min-width:120px; margin-left:-60px; padding:3px; font-weight:normal; font-size:11px; background:#FF0; -webkit-border-radius:3px; border-radius:3px; border:1px solid #F90; color:#000; line-height:17px;}
+ul li a span:before, .tip span:before{content: " "; position:absolute; left:50%; top:-8px; height: 0;width: 0; border:4px solid transparent; border-bottom-color:#F90;}
+tbody .tip span{width:200px; margin-left:-80px;}
+#toTop{display:none; position:fixed; left:0; bottom:0; width:100%;}
+#toTop a{display:block; padding:9px 10px; background:#000; color:#FFF; text-align:center;}
+footer{padding-bottom:20px;}
+.progress{width:100%;height:30px;border-radius:20px;border:1px solid #ddd;background:#eee;position:relative;overflow:hidden;margin-top:10px;}
+.progress .progress-bar-success{background-color:#5cb85c;}
+.progress-bar {float: left;width: 0%;height: 100%;background-color:#5cb85c;.box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));.transition(width .6s ease);}
+.progress-bar > span {position:absolute;color:#fff;left:60px; text-shadow:1px 1px 0 #000;padding-top:5px;font-size:14px;font-weight:bold;}
+tr.bdt > td{border-top:1px solid #666;}
+.url{text-decoration: line-through;color:red;}
+.url.on{text-decoration:none;color:inherit;}
+</style>
+
+</head>
+
+<body>
+<div class="wrapper">
+	<header>
+		<h1><span>스피드몰_PC버전</span></h1>
+		<br />
+		<p style="text-align:center; color:#ccc;">※</p>
+	</header>
+	<br />
+	<br />
+	<section>
+<!--		<dl class="siteInfo">
+			<dt>Infomation</dt>
+			<dd><a href="#" target="_blank">화면명세서</a> l <a href="#" target="_blank">화면설계서(pc)</a> l <a href="#" target="_blank">화면설계서(mobile)</a></dd>
+		</dl> -->
+		<dl class="socInfo">
+			<dt>진행상황</dt>
+			<dd>			
+			전체페이지 <span class="btn off"></span> 작업완료 <span class="btn up"></span> 진행율  <span class="btn"></span>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success" role="progressbar">
+					<span>
+						<span class="success"></span> / <span class="total-page"></span> (<span class="successP"></span>)
+					</span>
+				</div>
+			</div>
+			
+			
+			</dd>
+		</dl>
+		<br />
+		<!--
+		<div class="notice">			
+			<dl>
+				<dt><strong>코딩맵 작성 요령</strong></dt>
+				<dd>
+					<ul>
+						<li>페이지 완료시 <strong>퍼블리싱 체크후 담당자 이름과 완료일을 기재</strong></li>
+						<li>
+							<span class="sIcon hold"></span> : 보류, 
+							<span class="sIcon del"></span> : 삭제, 
+							<span class="sIcon ing"></span> : 미완, 
+							<span class="sIcon link"></span> : 링크, 
+							<span class="sIcon noHtml"></span> : html 아님
+						</li>
+						<li>진행상황 페이지 카운트 : td 안에 ul 갯수, 완료 카운트 : ul 의 class="hisList" 갯수(삭제, 링크, html 아님 제외)</li>
+						<li>버튼, 상태, 기타 <span class="tag pop">popup</span> <span class="tag tab">tab</span> <span class="tag lyr">layer</span> , <a href="" class="btn">default</a> <a href="" class="btn up">update</a> <a href="" class="btn off">off</a>, <a href="" class="btn new">new</a> , <span class="btn plan">plan</span> <span class="btn design">design</span></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		-->
+	</section>
+	<br />
+	<section class="menuWrap">
+		<dl class="menu">
+			<dt class="viewAll"><a>전체보기</a></dt>
+			<dt class="selected"><a>페이지</a></dt>
+			<dd>
+				<p><strong>Front</strong></p>
+				<table>
+					<colgroup>
+						<col width="10%" />
+						<col width="10%" />
+						<col width="10%" />
+						<col width="10%" />
+						<col width="10%" />
+						<col width="5%" />
+						<col width="15%" />
+						<col width="15%" />
+						<col width="15%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="5">Depth</th>
+							<th scope="col" rowspan="2">TYPE</th>
+							<th scope="col" rowspan="2">URL</th>
+							<th scope="col" rowspan="2">담당자/완료일/수정이력</th>
+							<th scope="col" rowspan="2">메모</th>
+						</tr>
+						<tr>
+							<th scope="col">Depth1</th>
+							<th scope="col">Depth2</th>
+							<th scope="col">Depth3</th>
+							<th scope="col">Depth4</th>
+							<th scope="col">Depth5</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="d1">Main</td>
+							<td class="d2"></td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="d5"></td>
+							<td class="type"><span class="ty">page</span></td>
+							<td class="url on"><a href="main.html" target="_blank">main.html</a></td>
+							<td class="date">
+								<ul class="hisList">
+									<li></li>
+								</ul>
+							</td>
+							<td class="memo">-</td>
+						</tr>
+						<tr class="bdt">
+							<td class="d1">LNB</td>
+							<td class="d2"></td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="d5"></td>
+							<td class="type"><span class="ty">page</span></td>
+							<td class="url on"><a href="lnb.html" target="_blank">lnb.html</a></td>
+							<td class="date">
+								<ul class="hisList">
+									<li></li>
+								</ul>
+							</td>
+							<td class="memo">-</td>
+						</tr>
+						<tr class="bdt">
+							<td class="d1">상품</td>
+							<td class="d2">리스트</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="d5"></td>
+							<td class="type"><span class="ty">page</span></td>
+							<td class="url on"><a href="prd_list.html" target="_blank">prd_list.html</a></td>
+							<td class="date">
+								<ul class="hisList">
+									<li></li>
+								</ul>
+							</td>
+							<td class="memo">-</td>
+						</tr>
+						<tr>
+							<td class="d1"></td>
+							<td class="d2">단일 상품</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="d5"></td>
+							<td class="type"><span class="ty">page</span></td>
+							<td class="url on"><a href="prd_view.html" target="_blank">prd_view.html</a></td>
+							<td class="date">
+								<ul class="hisList">
+									<li></li>
+								</ul>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr>
+							<td class="d1"></td>
+							<td class="d2">다중 상품</td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="d5"></td>
+							<td class="type"><span class="ty">page</span></td>
+							<td class="url on"><a href="prd_view2.html" target="_blank">prd_view2.html</a></td>
+							<td class="date">
+								<ul class="hisList">
+									<li></li>
+								</ul>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr>
+							<td class="d1">장바구니</td>
+							<td class="d2"></td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="d5"></td>
+							<td class="type"><span class="ty">page</span></td>
+							<td class="url on"><a href="cart.html" target="_blank">cart.html</a></td>
+							<td class="date">
+								<ul class="hisList">
+									<li></li>
+								</ul>
+							</td>
+							<td class="memo"></td>
+						</tr>
+						<tr>
+							<td class="d1">주문/결재</td>
+							<td class="d2"></td>
+							<td class="d3"></td>
+							<td class="d4"></td>
+							<td class="d5"></td>
+							<td class="type"><span class="ty">page</span></td>
+							<td class="url on"><a href="order.html" target="_blank">order.html</a></td>
+							<td class="date">
+								<ul class="hisList">
+									<li></li>
+								</ul>
+							</td>
+							<td class="memo">계정과목 현재 as-is와 같이 디자인 변경 요청<br>결제애정금액과 할인목록 분리 되어 있는 형태의 디자인요청</td>
+						</tr>
+					</tbody>
+				</table>
+			</dd>
+
+		</dl>
+	</section>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+$(function(){
+	$('a').click(function(){
+		if($(this).attr('href') == '#none'){
+			return false;
+		}
+	})
+	var dw = $(document).width();
+	var dh = $(document).height();
+	$('.overlay').css({'height':dh}, {'width':dw});
+
+	//--total
+	//var total=$('tbody tr:not(.del, .link, .noHtml) td ul').length;
+	var total=$('tbody tr:not(.type) td span').not('dd.guide tbody tr:not(.type) td span').length;
+
+	var complete=$('tbody tr:not(.del, .link, .noHtml) td .hisList').length;
+	var per = (complete/total*100).toFixed(1);
+
+	$('.socInfo dd span').eq(0).text(total + 'p');
+	$('.socInfo dd span').eq(1).text(complete + 'p');
+	$('.socInfo dd span').eq(2).text(per + '%');
+
+	$('.progress .success').text(complete + 'p');
+	$('.progress .total-page').text(total + 'p');
+	$('.progress .successP').text(per + '%');
+
+
+	$('.progress-bar-success').css('width', per + '%');
+	//--total end
+	
+	// history
+	var $hislist = $('.hisList');
+	var $btnDate = $hislist.find('a');
+	var now = new Date();
+	var month = (now.getMonth()+1)>9 ? '' + (now.getMonth()+1): '0'+ (now.getMonth()+1);
+	var day = now.getDate() >9 ? '' + now.getDate() : '0' + now.getDate();
+	var today = month + '-' + day;
+	
+	$('.url').click(function(){
+		if (!$(this).hasClass('on')){
+			return false;
+		}
+	});
+
+
+	$hislist.each(function(){
+		$(this).wrap('<div class="hisWrap" />');
+		var nodes=$(this).children();
+		if(nodes.length>1){
+			$('<a class="btn off btnHis" />').prependTo($(this).parent('div')).text('history');
+			var upday = $(this).find('li:first-child').find('.btn').text().slice(0,5)
+			if(upday == today){
+				$(this).find('li:first-child').find('.btn').addClass('new').append(' today up')
+			}else{
+				$(this).find('li:first-child').find('.btn').addClass('up').append(' updated')
+			}
+		}
+	});
+	$btnDate.hover(function(){
+		$(this).children('span').toggle();
+	});
+	$('.btnHis').click(function(){
+		$(this).toggleClass('off');
+		$(this).next($hislist).children('li:not(li:first-child)').toggle();
+	});
+
+	// tab menu
+	var tm = $('.menu>dt');
+	var tc = $('.menu>dd');
+	var btnAll = $('.viewAll');
+	var menu = tm.not(btnAll);
+	
+	$('.menu>dt.selected').next('dd').show();
+	btnAll.click(function(){
+		tm.not($(this).addClass('selected')).removeClass('selected');
+		tc.show();
+	});
+	menu.click(function(){
+		tm.not($(this).addClass('selected')).removeClass('selected');
+		$(this).next('dd').show().siblings('dd').hide();
+	});
+	menu.not(menu.eq(0)).each(function(){
+		var tmw = $(this).prevAll('dt').width();
+		var tml = $(this).prevAll('dt').position().left;
+		var tmp = tml+tmw;
+		$(this).css('left', tmp);
+	});
+	
+	//etc
+	$('.tip').hover(function(){
+		$(this).find('span').toggle();
+	});
+	$('.notice li').append('<span class="bul"></span>');
+
+	//상태
+	$('.hold').attr('title','보류');
+	$('.del').attr('title','삭제');
+	$('.ing').attr('title','미완');
+	$('.link').attr('title','링크');
+	$('.noHtml').attr('title','html페이지 아님');
+
+	// to top
+	var scrollDiv = document.createElement('div');
+	$(scrollDiv).attr('id', 'toTop').html('<a href="#none">↑ 처음으로 이동</a>').appendTo('body');    
+	$(window).scroll(function(){
+		if ($(this).scrollTop() != 0) {
+			$('#toTop').fadeIn();
+		} else {
+			$('#toTop').fadeOut();
+		}
+	});
+	$('#toTop').click(function(){
+		$('body,html').animate({scrollTop: 0},	600);
+	});
+	// overlay
+	$('.overlay').click(function(){
+		$('.dNotice').hide(200); $('.overlay').fadeOut();
+	})
+});
+
+</script>
+</body>
+</html>
