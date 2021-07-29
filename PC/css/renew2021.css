@@ -96,6 +96,7 @@ a{color: #111;}
 .renew_2021 #wrap{padding-top:180px;}
 
 .w120p{width:120px !important;}
+.w225p{width:225px !important;}
 
 .bt0{border-top:0 !important;}
 .bl0{border-left:0 !important;}
@@ -106,13 +107,22 @@ a{color: #111;}
 
 /* input */
 .renew_2021 .form-control{border-color:#ddd;border-radius:3px;}
-.renew_2021 input[type="checkbox"].renew_cus,.renew_2021 input[type="radio"].renew_cus {overflow:hidden;position:absolute;width:1px !important;height:1px !important;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);}
-.renew_2021 input[type="checkbox"].renew_cus + label, .renew_2021 input[type="radio"].renew_cus + label {display:inline-block;position:relative;height:20px;padding-left:28px;vertical-align:middle;}
+.renew_2021 input[type="checkbox"].renew_cus, .renew_2021 input[type="radio"].renew_cus {overflow:hidden;position:absolute;width:1px !important;height:1px !important;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);}
+.renew_2021 input[type="checkbox"].renew_cus + label, .renew_2021 input[type="radio"].renew_cus + label {display:inline-block;position:relative;height:20px;padding-left:28px;font-size:15px;vertical-align:middle;}
+
 .renew_2021 input[type="checkbox"].renew_cus + label:before{content:'';position:absolute;top:0;left:0;width:20px;height:20px;text-align:center;background-image:url('../images/ico_renew_checkbox.png');background-repeat:no-repeat;background-position:0 0;}
 .renew_2021 input[type="checkbox"].renew_cus:checked + label:before{background-image: url('../images/ico_renew_checkbox_on.png');}
 
+.renew_2021 input[type="radio"].renew_cus + label:before{content:'';position:absolute;top:0;left:0;width:20px;height:20px;text-align:center;background-image:url('../images/ico_renew_radio.png');background-repeat:no-repeat;background-position:0 0;}
+.renew_2021 input[type="radio"].renew_cus:disabled + label{color:#898989;}
+.renew_2021 input[type="radio"].renew_cus:disabled + label:before{background-image:url('../images/ico_renew_radio_dis.png');}
+.renew_2021 input[type="radio"].renew_cus:checked + label:before{background-image: url('../images/ico_renew_radio_on.png');}
+
 /* select */
-select.form-control{font-size:13px;color:#111;background:#fff url('../images/ico_sel_arrow.png') no-repeat right 50% !important;}
+.renew_2021 select.form-control{padding-left:20px;font-size:13px;color:#111;background:#fff url('../images/ico_sel_arrow.png') no-repeat right 50% !important;}
+
+/* textarea */
+.textarea{resize:none;border-radius:3px;}
 
 /* btn */
 .renew_2021 .btn_normal{height:30px;padding:0 10px;font-size:13px;line-height:30px;box-shadow:none;}
@@ -131,8 +141,11 @@ select.form-control{font-size:13px;color:#111;background:#fff url('../images/ico
 .renew_2021 .info_box{padding:20px;background-color:#f8f8f8;}
 .renew_2021 .info_txt{padding-left:20px;font-size:13px;color:#111;background:url('../images/ico_renew_info.png') no-repeat 0 3px;}
 
-.renew_2021 .list-t01 li{position:relative;padding-left:13px;line-height:1.4;color:#111;}
-.renew_2021 .list-t01 li + li{margin-top:10px;}
+.renew_2021 .list-t01 > li{position:relative;padding-left:13px;line-height:1.4;color:#111;}
+.renew_2021 .list-t01 > li + li{margin-top:10px;}
+
+.renew_2021 .list-t03 > li{position:relative;padding-left:13px;line-height:1.4;color:#111;}
+.renew_2021 .list-t03 > li:after{content:'-';position:absolute;top:0;left:0;}
 
 /* pagination */
 .renew_2021 .pagination{margin:30px auto;}
@@ -635,9 +648,68 @@ select.form-control{font-size:13px;color:#111;background:#fff url('../images/ico
 .renew_2021 .box-shippingForm{margin-top:60px;border-top:0;border-bottom: 1px solid #ccc;}
 .renew_2021 .box-shippingForm .areaShipping{float:left;width:750px;padding:0;border-right:0;}
 .renew_2021 .box-shippingForm .dl-t01{padding:30px 0;}
+.renew_2021 .box-shippingForm .dl-t01.top_line{}
 .renew_2021 .box-shippingForm .dl-t01 .titDl{width:160px;padding-top:0;font-size:15px;font-weight:600;}
 .renew_2021 .box-shippingForm .dl-t01 .dataDl{padding:0;}
-.renew_2021 .box-shippingForm .tbl-t02 tbody th{padding:30px 0;font-size:15px;font-weight:600;}
-.renew_2021 .box-shippingForm .tbl-t02 tbody td{padding:30px 0;vertical-align:top;}
+.renew_2021 .box-shippingForm .dl-t01 .tbl-t02 tbody tr:first-child th{padding-top:15px;}
+.renew_2021 .box-shippingForm .dl-t01 .tbl-t02 tbody tr:first-child td{padding-top:0;}
+.renew_2021 .box-shippingForm .tbl-t02{table-layout: fixed;}
+.renew_2021 .box-shippingForm .tbl-t02 tbody th{height:auto;padding:25px 0 15px;font-size:15px;font-weight:400;}
+.renew_2021 .box-shippingForm .tbl-t02 tbody th sup{top:0;margin-left:3px;color:#f43038;font-size:15px;}
+.renew_2021 .box-shippingForm .tbl-t02 tbody td{height:auto;padding:15px 0;font-size:15px;vertical-align:top;}
+
+.renew_2021 .box-shippingForm .input-t01{height:48px;padding:0 20px;line-height:48px;border:1px solid #ddd;border-radius:3px;}
+.renew_2021 .input-t01.w_l4, .renew_2021 .select-t01.w_l4{width:350px;}
+.renew_2021 .input-t01.w_l5, .renew_2021 .select-t01.w_l5{width:460px;}
+
+.renew_2021 .call_type{overflow:hidden;display:inline-block;width:350px;height:48px;border-radius:3px;border:1px solid #ddd;vertical-align:middle;}
+.renew_2021 .call_type > .ipt_num{position:relative;float:left;width:33.3%;}
+.renew_2021 .call_type .ipt_num:before{content:'-';position:absolute;top:0;left:0;line-height:46px;}
+.renew_2021 .call_type .ipt_num:first-child:before{display:none;}
+.renew_2021 .call_type .input-t01{width:100%;height:46px;border:0;text-align:center;}
+
+.renew_2021 .wrap-input .find_address{width:140px;font-size:15px;}
+.renew_2021 .address_type{overflow:hidden;display:inline-block;width:208px;height:48px;border-radius:3px;border:1px solid #ddd;vertical-align:middle;}
+.renew_2021 .address_type > .ipt_num{position:relative;float:left;width:50%;}
+.renew_2021 .address_type .ipt_num:before{content:'-';position:absolute;top:0;left:0;line-height:46px;}
+.renew_2021 .address_type .ipt_num:first-child:before{display:none;}
+.renew_2021 .address_type .input-t01{width:100%;height:46px;border:0;text-align:center;}
+
+.renew_2021 input[type="radio"].renew_cus + label.box-lb01{width:100%;height:auto;margin:0 0 10px;padding:15px 15px 15px 50px;border:1px solid #ddd;border-radius:6px;}
+.renew_2021 input[type="radio"].renew_cus:checked + label.box-lb01{border-color:#f43038;}
+.renew_2021 input[type="radio"].renew_cus + label.box-lb01:before{top:50%;left:15px;margin-top:-10px;}
+.renew_2021 .box-lb01 .tit{display:block;padding:0; color: #111; text-align:left;color:#111;background-color:#fff;border-bottom:0;}
+.renew_2021 .box-lb01 .txt{display:block;margin-top:5px;padding:0;text-align:left;color:#111;}
 
 .renew_2021 .box-shippingForm .areaBuyer{float:right;width:280px;padding:0;}
+.renew_2021 .box-shippingForm .areaBuyer .list-info01{}
+.renew_2021 .box-shippingForm .areaBuyer .list-info01 li{padding:10px 0;}
+.renew_2021 .box-shippingForm .areaBuyer .list-info01 .tit{font-weight:400;color:#898989;line-height:1.4;}
+.renew_2021 .box-shippingForm .areaBuyer .list-info01 .data{color:#111;text-align:left;line-height:1.4;}
+
+.renew_2021 .box-input01{padding:30px 0;border-top:0;border-bottom: 1px solid #111;}
+.renew_2021 .tax_account_box{margin-top:20px;padding:30px;border:1px solid #f2f2f2;border-radius:6px;background-color:#f8f8f8;}
+.renew_2021 .tax_account_box .areaTit{position:relative;}
+.renew_2021 .tax_account_box .areaTit .tit{font-weight:600;}
+.renew_2021 .tax_account_box .areaTit button{position:absolute;top:0;right:0;}
+.renew_2021 .tax_account_box .areaTxt{margin-top:10px;}
+.renew_2021 .tax_account_box .areaTxt .txt{font-size:13px;color:#f43038;}
+.renew_2021 .tax_account_box .areaTxt .info{margin-top:10px;padding:20px 30px 0px;border-radius:3px;border:1px solid #ddd;background-color:#fff;}
+.renew_2021 .tax_account_box .areaTxt .info > li{display:inline-block;margin:0 30px 20px 0;padding-right:30px;border-right:1px solid #ddd;font-size:14px;vertical-align:middle;}
+.renew_2021 .tax_account_box .areaTxt .info > li:last-child{margin-right:0;padding-right:0;border-right:0;}
+.renew_2021 .tax_account_box .areaTxt .info > li .g_tit{display:inline-block;margin-right:10px;color:#898989;}
+.renew_2021 .cart_result{padding:20px;border-bottom:1px solid #111;}
+.renew_2021 .cart_result table th, .renew_2021 .cart_result table td{padding:10px 0;font-size:15px;vertical-align:top;}
+.renew_2021 .cart_result table th{color:#898989;font-weight:400;}
+
+.renew_2021 .cart_result_total{display:table;width:100%;margin-top:-1px;padding:20px 0;border-top:2px solid #111;border-bottom:1px solid #f0e8e8;background-color:#fff6f4;}
+.renew_2021 .cart_result_total .area_calc{display:table-cell;width:50%;padding:0 20px;vertical-align:middle;}
+.renew_2021 .cart_result_total .area_calc .list-info02 li + li{margin-top:15px;}
+.renew_2021 .cart_result_total .area_calc .list-info02 .tit{font-weight:500;color:#111;font-size:15px;}
+.renew_2021 .cart_result_total .area_calc .list-info02 .data{color:#111;font-size:15px;}
+
+.renew_2021 .cart_result_total .area_info{display:table-cell;width:50%;padding:0 20px;border-left:1px solid #f0e8e8;vertical-align: middle;}
+.renew_2021 .cart_result_total .area_info .list-info02 .tit{font-weight:500;color:#111;font-size:15px;}
+.renew_2021 .cart_result_total .area_info .list-info02 .data{color:#111;font-size:24px;color:#FF0000;}
+.renew_2021 .cart_result_total .area_info .list-info02 .data .won{color:#111;}
+.renew_2021 .cart_result_total .area_info .txt_info{margin-top:15px;padding:15px;border-radius:6px;background-color:#fff;}
