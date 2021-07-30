@@ -1233,7 +1233,7 @@
 						<tr>
 							<th scope="row" class="td-vt">주소</th>
 							<td>
-								<div id="tpDeliAddr" class="wrap-input"><%=ht_deli.get("deli_addr")%><button class="btn_normal_line ml10" onClick="showInfo(document.getElementById('editAddr'), parseInt(event.x)-125, parseInt(document.body.scrollTop + event.y))" data-toggle="modal" data-target="#modal_shippingList">배송지 변경</button></div>
+								<div id="tpDeliAddr" class="wrap-input"><%=ht_deli.get("deli_addr")%><button class="btn_white ml10" onClick="showInfo(document.getElementById('editAddr'), parseInt(event.x)-125, parseInt(document.body.scrollTop + event.y))" data-toggle="modal" data-target="#modal_shippingList">배송지 변경</button></div>
 									
 								<div class="wrap-input pse">
 									<!-- 배송지 변경 레이어 시작-->
@@ -1253,7 +1253,7 @@
 														<input name="addr1" readonly  value="" type="text" size=5 maxlength=3 readonly tabindex="1" class="form-control w20 dib verm" />
 														&nbsp;-&nbsp;
 														<input name="addr2"  value="" type="text" size=5 maxlength=3 readonly tabindex="1" class="form-control w20 dib verm">
-														<a href="javascript:f_addr_sears('<%=sestrCust_id%>')" class="btn_normal_line">변경</a>
+														<a href="javascript:f_addr_sears('<%=sestrCust_id%>')" class="btn_white verm">변경</a>
 													</td>
 												</tr>
 												<tr>
@@ -1267,9 +1267,9 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="txt_c" colspan="2" >
-														<a href="javascript:f_modify_deli_addr()" class="btn_normal_line">변경</a>&nbsp;&nbsp;&nbsp;
-														<a href='javascript:hideInfo(document.getElementById("editAddr"))' class="btn_normal_line">취소</a>
+													<td class="txt_c pt20" colspan="2">
+														<a href="javascript:f_modify_deli_addr()" class="btn_red f14">변경</a>
+														<a href='javascript:hideInfo(document.getElementById("editAddr"))' class="btn_white ml05">취소</a>
 													</td>
 												</tr>
 											</table>
@@ -1288,7 +1288,7 @@
 									<iframe id="msgmodi_re" name="msgmodi_re" src="" width="0" height="0" frameborder="0" class="blind"></iframe>
 									<textarea name="txs" id="txs" rows="2" cols="100" class="textarea dib verm w75 h60"><%=ht_deli.get("memo")%></textarea>
 									<!-- 입금전 / 주문완료시만 처리 -->
-									<button class="btn_normal_line verm ml10" onclick="editmode()">수정</button>
+									<button class="btn_white verm ml10" onclick="editmode()">수정</button>
 
 									<input type="hidden" name="tes" />
 									<input type="hidden" name="at" value="2"/>
@@ -1364,7 +1364,7 @@
 						</tr>
 						<tr>
 							<th scope="row">결제 방법</th>
-							<td><%=dstrPaymethodNm %><a href="javascript:show_receipt('<%=dstrTradeId%>');" class="btn_normal">영수증 확인</a></td>
+							<td><%=dstrPaymethodNm %><a href="javascript:show_receipt('<%=dstrTradeId%>');" class="btn_normal ml10">영수증 확인</a></td>
 						</tr>
 						<tr>
 							<th scope="row">카드 종류</th>

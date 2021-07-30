@@ -362,9 +362,8 @@ a{color: #111;}
 
 /* main */
 .renew_2021 .main_top{height:auto;background:#fff;}
-.renew_2021 .main_banner{overflow:hidden;border-radius:12px;transition:all .6s ease-out;}
+.renew_2021 .main_banner{overflow:hidden;border-radius:12px;background-color:#f8f8f8;transition:all .6s ease-out;}
 .renew_2021 .main_banner .swiper-slide > a{display:block;text-align:center;}
-.renew_2021 .main_banner .swiper-slide img{margin:0 auto;}
 .renew_2021 .main_banner .swiper-pagination{bottom:100px;padding:0 160px;text-align:left;}
 .renew_2021 .main_banner .swiper-pagination-bullet{width: 6px;height: 6px;}
 .renew_2021 .main_banner .swiper-pagination-bullet-active{width:20px;border-radius:12px;background-color:#111;transition:all .3s ease-in;}
@@ -378,6 +377,37 @@ a{color: #111;}
 .renew_2021 .main_banner .swiper-button-prev, .renew_2021 .main_banner .swiper-button-next{position:absolute;top:0;width:40px;height:40px;margin-top:0;background-size: 9px auto;}
 .renew_2021 .main_banner .swiper-button-prev, .renew_2021 .main_banner .swiper-container-rtl .swiper-button-next{background-image:url('../images/ico_main_banner_arrow.svg');left:auto;right: 40px;}
 .renew_2021 .main_banner .swiper-button-next, .renew_2021 .main_banner .swiper-container-rtl .swiper-button-prev {background-image:url('../images/ico_main_banner_arrow.svg');right:0;transform:rotate(-180deg);}
+
+.renew_2021 .main_keyword{margin-top:80px;}
+.renew_2021 .main_keyword .title{display:block;margin-bottom:40px;font-size:28px;font-weight:500;text-align:center;}
+.renew_2021 .main_keyword .main_keyword_list{margin-top:40px;padding-right:25px;}
+.renew_2021 .main_keyword .main_keyword_list:after{content:'';position:absolute;top:0;right:0;width:25px;height:100%;background-image:linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 23%);z-index:5;}
+.renew_2021 .main_keyword .main_keyword_list .swiper-slide{min-width:72px;width:auto;text-align:center;}
+.renew_2021 .main_keyword .main_keyword_list .swiper-slide a{position:relative;display:block;padding-top:80px;font-size:15px;}
+.renew_2021 .main_keyword .main_keyword_list .swiper-slide a > span{overflow:hidden;position:absolute;top:0;left:50%;width:72px;height:72px;margin-left:-36px;padding:10px;border:1px solid #ddd;border-radius:100%;}
+.renew_2021 .main_keyword .main_keyword_list .swiper-slide a > span img{width:100%;height:100%;}
+.renew_2021 .main_keyword .main_keyword_list .swiper-slide a.on{color:#f41300;}
+.renew_2021 .main_keyword .main_keyword_list .swiper-slide a.on span{border-color:#f41300;}
+.renew_2021 .main_keyword .main_keyword_list .swiper-slide a:hover span{border-color:#f41300;}
+.renew_2021 .main_keyword .swiper-button-prev, .renew_2021 .main_keyword .swiper-button-next{top:25px;width:36px;height:36px;margin-top:0;box-shadow:0 3px 6px 0 rgba(0, 0, 0, 0.16);border:1px solid #ddd;background-color:#fff;background-size:8px auto;border-radius:100%;}
+.renew_2021 .main_keyword .swiper-button-prev, .renew_2021 .main_keyword .swiper-container-rtl .swiper-button-next {background-image:url('../images/ico_main_banner_arrow.svg');left:0;}
+.renew_2021 .main_keyword .swiper-button-next, .renew_2021 .main_keyword .swiper-container-rtl .swiper-button-prev {background-image:url('../images/ico_main_banner_arrow.svg');right:0;transform:rotate(-180deg);}
+.renew_2021 .main_keyword .swiper-button-prev.swiper-button-disabled, .renew_2021 .main_keyword .swiper-button-next.swiper-button-disabled{display:none;}
+
+.renew_2021 .main_keyword .main_prd_keyword{margin-top:40px;padding:40px 0 0;background-color:rgba(248, 248, 248, .45);}
+.renew_2021 .main_keyword .main_prd_keyword .prd_keyword{display:block;margin-bottom:15px;font-size:18px;font-weight:500;text-align:center;}
+.renew_2021 .main_keyword .main_prd_keyword .prd_hash{text-align:center;}
+.renew_2021 .main_keyword .main_prd_keyword .prd_hash li{display:inline-block;padding:5px 10px;border-radius:15px;background-color:#fff6ef;}
+.renew_2021 .main_keyword .main_prd_keyword .prd_hash li + li{margin-left:10px;}
+.renew_2021 .main_keyword .main_prd_keyword .prd_hash li > a{display:block;padding-right:15px;font-size:13px;background-image:url('../images/ico_lnb_arrow.png');background-repeat:no-repeat;background-position:right 50%;background-size:8px auto;}
+.renew_2021 .main_keyword .main_prd_keyword .prd_hash li.on{background-color:#111;}
+.renew_2021 .main_keyword .main_prd_keyword .prd_hash li.on > a{color:#fff;background-image:url('../images/ico_gnb_arrow.png');}
+.renew_2021 .main_keyword .main_prd_keyword .list_thum{min-height:800px;margin-top:30px;border-top:0;}
+.renew_2021 .main_keyword .main_prd_keyword .list_thum > li{height:400px;padding-top:0;padding-bottom:40px;border-bottom:0;}
+
+.renew_2021 .main_evt{overflow:hidden;margin-top:40px;}
+.renew_2021 .main_evt a{float:left;}
+.renew_2021 .main_evt a + a{float:right;}
 
 /* 카테고리 선택 */
 .renew_2021 .cate_title{margin-bottom:20px;padding:6px 15px;border-radius: 6px;border: solid 1px #e8e8e8;background-color: #f8f8f8;}
@@ -493,6 +523,9 @@ a{color: #111;}
 .renew_2021 .sgoods_tag .label_tag.tag8{border:1px solid #0067dd;color:#0067dd;}
 .renew_2021 .sgoods_tag .label_tag.tag9{border:1px solid #e500c1;color:#e500c1;}
 .renew_2021 .sgoods_tag .label_tag.tag10{border:1px solid #216221;color:#216221;}
+
+.renew_2021 .box-toggleGuide .contToggleGuide{padding:20px 15px;font-size:12px;line-height:1.4;border:1px solid #f2f2f2;border-radius:6px;box-shadow:0 3px 15px 0 rgba(0, 0, 0, 0.16);}
+.renew_2021 .box-toggleGuide .contToggleGuide .list-t01 li{font-size:12px;}
 
 /* 상품상세 */
 .renew_2021 .detail_pic{width:500px;height:500px;}
@@ -682,7 +715,7 @@ a{color: #111;}
 .renew_2021 .box-lb01 .txt{display:block;margin-top:5px;padding:0;text-align:left;color:#111;}
 
 .renew_2021 .box-shippingForm .areaBuyer{float:right;width:280px;padding:0;}
-.renew_2021 .box-shippingForm .areaBuyer .list-info01{}
+.renew_2021 .box-shippingForm .areaBuyer .list-info01{margin-top:20px;}
 .renew_2021 .box-shippingForm .areaBuyer .list-info01 li{padding:10px 0;}
 .renew_2021 .box-shippingForm .areaBuyer .list-info01 .tit{font-weight:400;color:#898989;line-height:1.4;}
 .renew_2021 .box-shippingForm .areaBuyer .list-info01 .data{color:#111;text-align:left;line-height:1.4;}
