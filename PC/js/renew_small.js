@@ -56,22 +56,25 @@ $(function(){
         },
 		on: {
 			slideChangeTransitionStart:function(){
-				//var activeBg = $('.main_banner .swiper-slide-active').attr('data-tag');
+				var activeBg = $('.main_banner .swiper-slide-active').attr('data-tag');
 				var activeIdx = $('.main_banner .swiper-slide-active').attr('data-swiper-slide-index');
 				var realIdx = parseInt(activeIdx);
-				
-				//$('.main_banner').css('background-color', '#' + activeBg );
+
+				$('.main_banner').css('background-color', '#' + activeBg );
 
 				$('.swiper_nav ul li').removeClass('on');
 				$('.swiper_nav ul li').eq(realIdx).addClass('on');
 
 				$('.swiper_nav ul li a').on('click',function(e){
 					e.preventDefault();
-
 					var idx = $(this).parent().index();
+					var idxBg = $(this).parent().attr('data-tag');
 					$('.swiper_nav ul li').removeClass('on');
 					$(this).parent().addClass('on');
+					
 					mainbanner.slideToLoop( idx , 1000, false);
+					$('.main_banner').css('background-color', '#' + idxBg );
+
 				});
 			},
 			

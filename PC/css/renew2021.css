@@ -297,8 +297,8 @@ a{color: #111;}
 .renew_2021 .nav_cate dd + dd{padding-top:10px;}
 
 .renew_2021 .nav_cate li.etc{position:absolute;top:0;right:0;width:120px;height:350px;border-left:0;}
-.renew_2021 .nav_cate li.etc a{position:relative;display:block;width:100%;height:50%;background:#fef5ee;font-size:14px;text-align:center;}
-.renew_2021 .nav_cate li.etc a > span{display:block;position:absolute;top:50%;width:100%;padding-top:60px;background-repeat:no-repeat;background-position:center top;transform:translateY(-50%);}
+.renew_2021 .nav_cate li.etc a{position:relative;display:block;width:100%;height:50%;background:#fef5ee;font-size:13px;text-align:center;}
+.renew_2021 .nav_cate li.etc a > span{display:block;position:absolute;top:50%;width:100%;padding-top:65px;background-repeat:no-repeat;background-position:center top;transform:translateY(-50%);}
 .renew_2021 .nav_cate li.etc a + a{border-top:1px solid #fff;}
 .renew_2021 .nav_cate li.etc a.cate_truck > span{background-image:url('../images/ico_renew_truck.png');}
 .renew_2021 .nav_cate li.etc a.cate_coupon > span{background-image:url('../images/ico_renew_coupon.png');}
@@ -310,7 +310,7 @@ a{color: #111;}
 .renew_2021 #header.fix .header_search{margin-left:0;padding-top:0;vertical-align: middle;}
 .renew_2021 #query.tbg{width:100% !important;padding-left:0 !important;}
 
-.renew_2021 .quick_left{top:180px;border-radius:6px;background-color:#f8f8f8;}
+.renew_2021 .quick_left{top:180px;border-radius:6px;background-color:#f8f8f8;transition:all .3s ease-in-out;}
 .renew_2021 .quick_left > div:first-child{margin-top:0;border-top:0;}
 .renew_2021 .quick_left > div{margin-top:0;}
 .renew_2021 .quick_left .ql_custom{height:auto;padding:15px 0;border:0;border-top:1px solid #fff;background:none;}
@@ -319,7 +319,7 @@ a{color: #111;}
 .renew_2021 .quick_left .ql_custom a.quick_cus{background-image:url('../images/ico_quick_left2.png');}
 .renew_2021 .quick_left .ql_custom a.quick_dev{background-image:url('../images/ico_quick_left3.png');}
 
-.renew_2021 .quick_right{top:180px;padding:20px 10px;background:#fff;border-radius:6px;border:1px solid #ddd;}
+.renew_2021 .quick_right{top:180px;padding:20px 10px;background:#fff;border-radius:6px;border:1px solid #ddd;transition:all .3s ease-in-out;}
 .renew_2021 .quick_right .qr_menu{background:none;}
 .renew_2021 .quick_right .qr_menu li{height:auto;padding:10px 0;border-top:1px solid #f8f8f8;color:#111;}
 .renew_2021 .quick_right .qr_menu li:first-child{padding-top:0;border-top:0;}
@@ -338,6 +338,7 @@ a{color: #111;}
 .renew_2021 .qr_today .carousel-control.right > span{transform:rotate(-180deg);}
 .renew_2021 .qr_today .carousel ol li{color:#898989;}
 
+.renew_2021 .quick_left.fix, .renew_2021 .quick_right.fix{top:120px;}
 /* footer */
 .renew_2021 .footer{margin-top:40px;padding-top:0;border-top:1px solid #e8e8e8;}
 .renew_2021 .footer_line, .renew_2021 .footer_family, .renew_2021 .footer_copy{border-top:0;border-bottom:0;}
